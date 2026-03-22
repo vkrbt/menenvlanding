@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Мужская среда — онлайн-комьюнити для мужчин</title>
+  <meta name="description" content="Закрытый онлайн-клуб для мужчин 25+. Встречи, подкаст, нетворкинг. Старт 1 апреля." />
+
+  <!-- OG -->
+  <meta property="og:title" content="Мужская среда — онлайн-комьюнити для мужчин" />
+  <meta property="og:description" content="Закрытый онлайн-клуб для мужчин 25+. Встречи, подкаст, нетворкинг. Старт 1 апреля." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23000DC3'/></svg>" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAV
+  ============================================================ -->
+  <header class="nav">
+    <a href="/" class="logo" aria-label="Мужская среда">
+      <span class="logo-line">МУЖСКАЯ</span>
+      <span class="logo-line">СРЕДА</span>
+    </a>
+
+    <nav class="nav__links" aria-label="Навигация">
+      <a href="#for-who" class="nav__link">О комьюнити</a>
+      <a href="#features" class="nav__link">Что внутри</a>
+      <a href="#hosts" class="nav__link">Ведущие</a>
+      <a href="#pricing" class="nav__link">Цена</a>
+    </nav>
+
+    <a href="#FORM_URL" class="btn btn--sm btn--outline">Оставить заявку</a>
+  </header>
+
+  <!-- ============================================================
+       1. HERO
+  ============================================================ -->
+  <section class="hero">
+    <div class="hero__bg-grid" aria-hidden="true"></div>
+    <div class="hero__glow" aria-hidden="true"></div>
+
+    <div class="hero__image-wrap" aria-hidden="true">
+      <img src="Frame 17.jpg" alt="" class="hero__image" />
+    </div>
+
+    <div class="container hero__inner">
+      <span class="badge">Старт 1 апреля · Набор открыт</span>
+
+      <h1 class="hero__title">
+        Для мужчин,<br />которым есть<br />что сказать —<br />но некому
+      </h1>
+
+      <p class="hero__sub">
+        Закрытый онлайн-клуб для тех, кто ищет своё место,<br class="br-desktop" />
+        понимающее окружение и честный мужской разговор
+      </p>
+
+      <a href="#FORM_URL" class="btn btn--primary btn--lg">Оставить заявку</a>
+
+      <div class="countdown" id="countdown" aria-label="Обратный отсчёт до старта">
+        <div class="countdown__item">
+          <span class="countdown__num" id="cd-days">--</span>
+          <span class="countdown__label">дней</span>
+        </div>
+        <div class="countdown__sep" aria-hidden="true">:</div>
+        <div class="countdown__item">
+          <span class="countdown__num" id="cd-hours">--</span>
+          <span class="countdown__label">часов</span>
+        </div>
+        <div class="countdown__sep" aria-hidden="true">:</div>
+        <div class="countdown__item">
+          <span class="countdown__num" id="cd-mins">--</span>
+          <span class="countdown__label">минут</span>
+        </div>
+        <div class="countdown__sep" aria-hidden="true">:</div>
+        <div class="countdown__item">
+          <span class="countdown__num" id="cd-secs">--</span>
+          <span class="countdown__label">секунд</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       2. ДЛЯ КОГО
+  ============================================================ -->
+  <section class="section for-who" id="for-who">
+    <div class="container">
+      <h2 class="section-title">Это твоё место</h2>
+
+      <div class="cards-grid cards-grid--2x2">
+
+        <div class="card card--quote">
+          <span class="card__mark" aria-hidden="true">"</span>
+          <p>Погряз в рутине — и чувствуешь, что жизнь стала серой</p>
+        </div>
+
+        <div class="card card--quote">
+          <span class="card__mark" aria-hidden="true">"</span>
+          <p>Не хватает мужского коллектива — друзей становится меньше с каждым годом</p>
+        </div>
+
+        <div class="card card--quote">
+          <span class="card__mark" aria-hidden="true">"</span>
+          <p>Ценности меняются, ориентиры размываются — а поговорить об этом не с кем</p>
+        </div>
+
+        <div class="card card--quote">
+          <span class="card__mark" aria-hidden="true">"</span>
+          <p>Хочется быть среди мужчин, которые сталкиваются с теми же странными вещами, что и ты</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. ЧТО ВНУТРИ
+  ============================================================ -->
+  <section class="section features" id="features">
+    <div class="container">
+      <h2 class="section-title">Что ты получаешь</h2>
+
+      <ul class="features__list">
+
+        <li class="feature-item">
+          <div class="feature-item__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="3" y="4" width="18" height="17" rx="2" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M3 9h18" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8 2v4M16 2v4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <circle cx="8" cy="14" r="1" fill="currentColor"/>
+              <circle cx="12" cy="14" r="1" fill="currentColor"/>
+              <circle cx="16" cy="14" r="1" fill="currentColor"/>
+            </svg>
+          </div>
+          <div class="feature-item__body">
+            <h3>Встречи раз в 2 недели</h3>
+            <p>3 часа в Zoom, группа до 12 человек. Один месяц — одна тема, копаем глубоко</p>
+          </div>
+        </li>
+
+        <li class="feature-item">
+          <div class="feature-item__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="11" r="4" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M8 11v3a4 4 0 008 0v-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M12 18v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="feature-item__body">
+            <h3>Ранний доступ к подкасту</h3>
+            <p>Слушаешь новые выпуски раньше всех, пока они ещё не вышли в публичный доступ</p>
+          </div>
+        </li>
+
+        <li class="feature-item">
+          <div class="feature-item__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2v10z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="feature-item__body">
+            <h3>Закрытый чат</h3>
+            <p>Знакомимся, общаемся, обсуждаем. Там же вместе выбираем тему следующего месяца</p>
+          </div>
+        </li>
+
+        <li class="feature-item">
+          <div class="feature-item__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 19.5A2.5 2.5 0 016.5 17H20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+              <path d="M9 7h6M9 11h4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="feature-item__body">
+            <h3>Материалы в канале</h3>
+            <p>Статьи, видео, инструменты для работы над собой — только отобранное</p>
+          </div>
+        </li>
+
+        <li class="feature-item">
+          <div class="feature-item__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="9" cy="7" r="3" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="17" cy="9" r="2.5" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M3 19c0-3.314 2.686-5 6-5s6 1.686 6 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M15 15c1.5-.7 3.5-.5 5 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div class="feature-item__body">
+            <h3>Нетворкинг</h3>
+            <p>Знакомства с мужчинами на одной волне — и оффлайн-встречи для участников</p>
+          </div>
+        </li>
+
+        <li class="feature-item">
+          <div class="feature-item__icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="12" cy="8" r="4" stroke="currentColor" stroke-width="1.5"/>
+              <path d="M4 20c0-4 3.6-6 8-6s8 2 8 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+              <path d="M18 3l1.5 1.5L22 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="feature-item__body">
+            <h3>Гостевые эксперты</h3>
+            <p>Приглашаем спикеров в комьюнити — люди, которые говорят по делу</p>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       4. ОТЗЫВЫ
+  ============================================================ -->
+  <section class="section testimonials">
+    <div class="container">
+      <h2 class="section-title">Что говорят те, кто был</h2>
+
+      <div class="testimonials__grid">
+
+        <blockquote class="tcard">
+          <p>Не было ролевой модели мужчины. Сейчас, когда начинаю формировать её — мне важно быть среди других мужчин. Помогает достроить образ.</p>
+        </blockquote>
+
+        <blockquote class="tcard">
+          <p>Я <strong>не один</strong> такой.</p>
+        </blockquote>
+
+        <blockquote class="tcard">
+          <p>Смог <strong>идентифицировать</strong> эмоцию — горе. Просто назвать её. Это оказалось важным.</p>
+        </blockquote>
+
+        <blockquote class="tcard">
+          <p>Очень <strong>радостно</strong> сюда приходить. Боялся пропустить группу.</p>
+        </blockquote>
+
+        <blockquote class="tcard">
+          <p>Самоценно — начать <strong>разбираться в чувствах</strong>: своих и других людей.</p>
+        </blockquote>
+
+        <blockquote class="tcard">
+          <p>Бывает тяжело и скучно, а потом раз — и <strong>вспышка</strong>.</p>
+        </blockquote>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. КТО ВЕДЁТ
+  ============================================================ -->
+  <section class="section hosts" id="hosts">
+    <div class="container">
+      <h2 class="section-title">Кто ведёт</h2>
+
+      <div class="hosts__grid">
+
+        <div class="host-card">
+          <div class="host-card__avatar host-card__avatar--vlad" aria-label="Фото Влада">
+            <span>В</span>
+          </div>
+          <div class="host-card__body">
+            <h3 class="host-card__name">Влад</h3>
+            <ul class="host-card__roles">
+              <li>Разработчик в Big Tech</li>
+              <li>Гештальт-терапевт</li>
+              <li>Сексологическая специализация</li>
+            </ul>
+            <blockquote class="host-card__quote">
+              «Я прошёл путь от программиста до понимания себя — и знаю, как сложно начинать»
+            </blockquote>
+          </div>
+        </div>
+
+        <div class="host-card">
+          <div class="host-card__avatar host-card__avatar--zhenya" aria-label="Фото Жени">
+            <span>Ж</span>
+          </div>
+          <div class="host-card__body">
+            <h3 class="host-card__name">Женя</h3>
+            <ul class="host-card__roles">
+              <li>Аналитик данных</li>
+              <li>Врач: психиатр-нарколог</li>
+              <li>Коуч</li>
+            </ul>
+            <blockquote class="host-card__quote">
+              «Я помогаю мужчинам разобраться в том, что мешает им жить так, как они хотят»
+            </blockquote>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. YOUTUBE
+  ============================================================ -->
+  <section class="section youtube">
+    <div class="container youtube__inner">
+
+      <div class="youtube__icon" aria-hidden="true">
+        <svg width="48" height="34" viewBox="0 0 48 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="48" height="34" rx="8" fill="#FF0000"/>
+          <path d="M20 11l12 6-12 6V11z" fill="white"/>
+        </svg>
+      </div>
+
+      <h2 class="section-title youtube__title">Знакомься с нами заочно</h2>
+
+      <p class="youtube__sub">
+        На канале мы говорим вслух о том, о чём обычно молчат.<br class="br-desktop" />
+        Честно и без фильтров.
+      </p>
+
+      <a
+        href="https://www.youtube.com/@men-env"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="btn btn--primary"
+      >
+        Смотреть на YouTube
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. ЦЕНА
+  ============================================================ -->
+  <section class="section pricing" id="pricing">
+    <div class="container">
+      <h2 class="section-title">Стоимость</h2>
+
+      <div class="pricing__grid">
+
+        <!-- Per meeting -->
+        <div class="pricing__card">
+          <p class="pricing__label">За каждую встречу</p>
+          <div class="pricing__price">
+            <span class="pricing__amount">$35</span>
+            <span class="pricing__period">/ встреча</span>
+          </div>
+          <p class="pricing__note">Оплата перед каждым занятием</p>
+          <ul class="pricing__includes">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#000DC3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Все встречи и материалы
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#000DC3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Закрытый чат
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#000DC3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Ранний доступ к подкасту
+            </li>
+          </ul>
+          <a href="#FORM_URL" class="btn btn--outline btn--full">Оставить заявку</a>
+        </div>
+
+        <!-- 2 months — featured -->
+        <div class="pricing__card pricing__card--featured">
+          <div class="pricing__badge">Лучший выбор</div>
+          <p class="pricing__label">Минимальное членство</p>
+          <div class="pricing__price">
+            <span class="pricing__amount">$30</span>
+            <span class="pricing__period">/ встреча</span>
+          </div>
+          <p class="pricing__note pricing__note--accent">$120 за 4 встречи · 2 месяца</p>
+          <ul class="pricing__includes">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#000DC3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Все встречи и материалы
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#000DC3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Закрытый чат и нетворкинг
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#000DC3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Ранний доступ к подкасту
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#000DC3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Гостевые эксперты
+            </li>
+          </ul>
+          <a href="#FORM_URL" class="btn btn--primary btn--full">Хочу попасть в комьюнити</a>
+        </div>
+
+        <!-- 4 months -->
+        <div class="pricing__card">
+          <p class="pricing__label">На 4 месяца</p>
+          <div class="pricing__price">
+            <span class="pricing__amount">$27</span>
+            <span class="pricing__period">/ встреча</span>
+          </div>
+          <p class="pricing__note">
+            <s class="pricing__old">$240</s>
+            <span class="pricing__save">&nbsp;−10%</span>
+            &nbsp;· $215 за 8 встреч
+          </p>
+          <ul class="pricing__includes">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#000DC3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Все встречи и материалы
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#000DC3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Закрытый чат и нетворкинг
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#000DC3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Ранний доступ к подкасту
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#000DC3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Гостевые эксперты
+            </li>
+          </ul>
+          <a href="#FORM_URL" class="btn btn--outline btn--full">Оставить заявку</a>
+        </div>
+
+      </div>
+
+      <p class="pricing__footer-note">На период первых 2 месяцев состав группы фиксируется — новые участники не добавляются.</p>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. КАК ПОПАСТЬ
+  ============================================================ -->
+  <section class="section process">
+    <div class="container">
+      <h2 class="section-title">Как попасть</h2>
+
+      <ol class="steps">
+
+        <li class="step">
+          <div class="step__num" aria-hidden="true">01</div>
+          <div class="step__body">
+            <h3>Оставляешь заявку</h3>
+            <p>Короткая анкета, 3–5 минут — без лишнего</p>
+          </div>
+        </li>
+
+        <li class="step">
+          <div class="step__num" aria-hidden="true">02</div>
+          <div class="step__body">
+            <h3>Короткое знакомство</h3>
+            <p>Мы созваниваемся, чтобы убедиться, что комьюнити подходит тебе — и ты нам</p>
+          </div>
+        </li>
+
+        <li class="step">
+          <div class="step__num" aria-hidden="true">03</div>
+          <div class="step__body">
+            <h3>Вступаешь</h3>
+            <p>Получаешь доступ к чату, материалам и первой встрече</p>
+          </div>
+        </li>
+
+      </ol>
+
+      <p class="process__note">
+        Мы проводим короткое знакомство перед вступлением — не чтобы отфильтровать,<br class="br-desktop" />
+        а чтобы убедиться: это действительно твоё место.
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. FAQ
+  ============================================================ -->
+  <section class="section faq">
+    <div class="container">
+      <h2 class="section-title">Вопросы</h2>
+
+      <dl class="faq__list">
+
+        <div class="faq__item">
+          <dt class="faq__q">
+            <button class="faq__btn" aria-expanded="false">
+              Нужен ли какой-то опыт или образование?
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </dt>
+          <dd class="faq__a">
+            Нет. Главное — желание расти и уважение к другим участникам. Всё остальное не важно.
+          </dd>
+        </div>
+
+        <div class="faq__item">
+          <dt class="faq__q">
+            <button class="faq__btn" aria-expanded="false">
+              Сколько человек в группе?
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </dt>
+          <dd class="faq__a">
+            Группа небольшая — чтобы у каждого было место говорить и быть услышанным.
+          </dd>
+        </div>
+
+        <div class="faq__item">
+          <dt class="faq__q">
+            <button class="faq__btn" aria-expanded="false">
+              Как проходят встречи?
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </dt>
+          <dd class="faq__a">
+            Онлайн в Zoom, раз в 2 недели, 3 часа. Группа до 12 человек. Каждый месяц — одна тема, которую копаем глубоко. Без жёстких слайдов и программы.
+          </dd>
+        </div>
+
+        <div class="faq__item">
+          <dt class="faq__q">
+            <button class="faq__btn" aria-expanded="false">
+              Можно ли отменить подписку?
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </dt>
+          <dd class="faq__a">
+            Минимальное членство — 2 месяца. На это время состав группы замораживается — новые участники не добавляются. После первых двух месяцев можно выйти в любой момент.
+          </dd>
+        </div>
+
+        <div class="faq__item">
+          <dt class="faq__q">
+            <button class="faq__btn" aria-expanded="false">
+              Почему нужно проходить знакомство перед вступлением?
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </dt>
+          <dd class="faq__a">
+            Мы хотим, чтобы все участники были на одной волне. 10 минут разговора помогают понять, подходим ли мы друг другу — это в твоих интересах тоже.
+          </dd>
+        </div>
+
+        <div class="faq__item">
+          <dt class="faq__q">
+            <button class="faq__btn" aria-expanded="false">
+              Это для меня, если я только начинаю работать над собой?
+              <svg class="faq__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                <path d="M5 7.5L10 12.5L15 7.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </dt>
+          <dd class="faq__a">
+            Да. Нам важны не достижения, а намерение. Если ты готов к честному диалогу — ты наш человек.
+          </dd>
+        </div>
+
+      </dl>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       9. ФИНАЛЬНЫЙ CTA
+  ============================================================ -->
+  <section class="section cta-final">
+    <div class="cta-final__glow" aria-hidden="true"></div>
+    <div class="container cta-final__inner">
+      <h2 class="cta-final__title">Старт 1 апреля.<br />Мест немного.</h2>
+      <p class="cta-final__sub">Оставь заявку — мы напишем тебе лично</p>
+      <a href="#FORM_URL" class="btn btn--primary btn--lg">Оставить заявку</a>
+      <p class="cta-final__hint">Это бесплатно и ни к чему не обязывает</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/" class="logo" aria-label="Мужская среда">
+        <span class="logo-line">МУЖСКАЯ</span>
+        <span class="logo-line">СРЕДА</span>
+      </a>
+
+      <a
+        href="https://www.youtube.com/@men-env"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer__yt"
+        aria-label="YouTube канал"
+      >
+        <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="22" height="16" rx="4" fill="#FF0000"/>
+          <path d="M9 5l6 3-6 3V5z" fill="white"/>
+        </svg>
+        youtube.com/@men-env
+      </a>
+
+      <p class="footer__copy">© 2025 Мужская среда</p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
