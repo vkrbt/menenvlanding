@@ -3,7 +3,7 @@
 ============================================================ */
 (function () {
   const TARGET = new Date('2026-04-01T00:00:00');
-  const el = document.getElementById('countdown');
+  const el = document.getElementById('cd-days');
   if (!el) return;
 
   const pad = n => String(n).padStart(2, '0');
@@ -12,7 +12,7 @@
     const diff = TARGET - Date.now();
 
     if (diff <= 0) {
-      el.classList.add('countdown--done');
+      document.getElementById('countdown').classList.add('is-done');
       return;
     }
 

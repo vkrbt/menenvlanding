@@ -291,52 +291,69 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
 /* ============================================================
    COUNTDOWN
 ============================================================ */
+.countdown-section {
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding-block: 48px;
+}
+
+.countdown-section__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+.countdown-section__label {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+
 .countdown {
   display: flex;
-  align-items: center;
-  gap: 6px;
+  align-items: flex-start;
+  gap: 12px;
 }
 
 .countdown__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  min-width: 56px;
-  background: rgba(0,13,195,0.12);
-  border: 1px solid rgba(0,13,195,0.3);
-  border-radius: var(--radius-sm);
-  padding: 10px 12px;
+  gap: 10px;
+  min-width: 100px;
 }
 
 .countdown__num {
-  font-size: 32px;
+  font-size: clamp(56px, 10vw, 96px);
   font-weight: 700;
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.04em;
   font-variant-numeric: tabular-nums;
   color: #fff;
 }
 
-.countdown__label {
-  font-size: 10px;
+.countdown__unit {
+  font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   color: var(--text-dim);
 }
 
 .countdown__sep {
-  font-size: 24px;
-  font-weight: 700;
-  color: rgba(0,13,195,0.6);
-  margin-bottom: 16px;
+  font-size: clamp(40px, 7vw, 72px);
+  font-weight: 300;
+  color: rgba(255,255,255,0.15);
+  line-height: 1;
+  padding-top: 4px;
   user-select: none;
 }
 
-.countdown--done {
-  display: none;
-}
+.countdown-section.is-done { display: none; }
 
 /* ============================================================
    FOR WHO
@@ -947,24 +964,59 @@ button { font: inherit; cursor: pointer; border: none; background: none; }
    MOBILE ADJUSTMENTS
 ============================================================ */
 @media (max-width: 480px) {
-  .nav { padding-inline: 20px; }
+  /* Nav */
+  .nav { padding-inline: 16px; gap: 12px; }
 
-  .hero__inner { padding-block: 60px; }
+  /* Hero */
+  .hero { min-height: 80vh; }
+  .hero__inner { padding-block: 48px; }
+  .hero__sub { font-size: 15px; }
 
-  .section { padding-block: 64px; }
+  /* Buttons */
+  .btn--lg { font-size: 15px; padding: 15px 24px; }
+  .btn--full { white-space: normal; text-align: center; }
 
-  .section-title { margin-bottom: 32px; }
+  /* Countdown — самое важное: влезают в экран */
+  .countdown { gap: 6px; }
+  .countdown__item { min-width: 0; flex: 1; padding: 0; }
+  .countdown__num { font-size: clamp(32px, 8vw, 48px); }
+  .countdown__unit { font-size: 10px; }
+  .countdown__sep { font-size: clamp(24px, 5vw, 40px); }
 
-  .pricing__card { padding: 28px 24px; }
-  .pricing__amount { font-size: 52px; }
+  /* Sections */
+  .section { padding-block: 56px; }
+  .section-title { margin-bottom: 28px; }
+  .countdown-section { padding-block: 36px; }
+  .countdown-section__inner { gap: 24px; }
 
-  .cta-final { padding-block: 80px; }
+  /* Pricing: отступ сверху для badge у featured карты */
+  .pricing__grid { padding-top: 12px; }
+  .pricing__card--featured { margin-top: 4px; }
+  .pricing__amount { font-size: 48px; }
+  .pricing__card--featured .pricing__amount { font-size: 56px; }
+  .pricing__card { padding: 24px 20px; }
 
+  /* Steps */
+  .step__body h3 { font-size: 17px; }
+
+  /* CTA final */
+  .cta-final { padding-block: 72px; }
+
+  /* Footer */
   .footer__inner {
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
   }
+}
+
+/* Промежуточный брейкпоинт: 375–640px — избегаем горизонтального скролла */
+@media (max-width: 639px) {
+  .container { padding-inline: 16px; }
+  .host-card { padding: 24px 20px; }
+  .process__note { padding: 16px 18px; }
+  .faq__btn { padding: 16px 18px; font-size: 15px; }
+  .faq__a { padding: 0 18px 16px; }
 }
 
 /* ============================================================
