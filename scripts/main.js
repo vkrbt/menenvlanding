@@ -1,20 +1,32 @@
 /* ============================================================
-   COUNTDOWN
+   COUNTDOWN — до ближайшей встречи
+   Встречи каждые 2 недели начиная с 2026-04-01
 ============================================================ */
 (function () {
-  const TARGET = new Date('2026-04-01T00:00:00');
   const el = document.getElementById('cd-days');
   if (!el) return;
+
+  const FIRST_MEETING = new Date('2026-04-01T00:00:00');
+  const TWO_WEEKS_MS  = 14 * 24 * 60 * 60 * 1000;
+
+  function getNextMeeting() {
+    const now = Date.now();
+    if (now < FIRST_MEETING.getTime()) return FIRST_MEETING;
+
+    // Сколько двухнедельных периодов прошло с первой встречи
+    const elapsed  = now - FIRST_MEETING.getTime();
+    const periods  = Math.floor(elapsed / TWO_WEEKS_MS);
+    // Следующая встреча — начало следующего периода
+    return new Date(FIRST_MEETING.getTime() + (periods + 1) * TWO_WEEKS_MS);
+  }
 
   const pad = n => String(n).padStart(2, '0');
 
   function tick() {
-    const diff = TARGET - Date.now();
+    const target = getNextMeeting();
+    const diff   = target - Date.now();
 
-    if (diff <= 0) {
-      document.getElementById('countdown').classList.add('is-done');
-      return;
-    }
+    if (diff <= 0) return; // пересчитается на следующем тике
 
     const days  = Math.floor(diff / 86400000);
     const hours = Math.floor((diff % 86400000) / 3600000);
