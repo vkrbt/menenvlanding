@@ -35,15 +35,56 @@
       <span class="logo-line">СРЕДА</span>
     </a>
 
-    <nav class="nav__links" aria-label="Навигация">
-      <a href="#for-who" class="nav__link">О комьюнити</a>
+    <nav class="nav__links" aria-label="Навигация по разделам">
+      <a href="#community-format" class="nav__link">Формат</a>
       <a href="#features" class="nav__link">Что внутри</a>
+      <a href="#testimonials" class="nav__link">Отзывы</a>
       <a href="#hosts" class="nav__link">Ведущие</a>
       <a href="#pricing" class="nav__link">Цена</a>
+      <a href="#faq" class="nav__link">Вопросы</a>
     </nav>
 
-    <a href="https://forms.gle/tvTnJuyBoedpJZ989" class="btn btn--sm btn--outline">Оставить заявку</a>
+    <div class="nav__end">
+      <a href="https://forms.gle/tvTnJuyBoedpJZ989" class="btn btn--sm btn--outline nav__cta">Оставить заявку</a>
+      <button
+        type="button"
+        class="nav__burger"
+        id="nav-burger"
+        aria-expanded="false"
+        aria-controls="mnav-panel"
+        aria-label="Открыть меню"
+      >
+        <span class="nav__burger-lines" aria-hidden="true">
+          <span class="nav__burger-line"></span>
+          <span class="nav__burger-line"></span>
+          <span class="nav__burger-line"></span>
+        </span>
+      </button>
+    </div>
   </header>
+
+  <div class="mnav" id="mnav" aria-hidden="true">
+    <div class="mnav__overlay" id="mnav-overlay" tabindex="-1"></div>
+    <nav class="mnav__panel" id="mnav-panel" role="dialog" aria-modal="true" aria-label="Меню сайта" aria-hidden="true">
+      <div class="mnav__head">
+        <span class="mnav__title">Разделы</span>
+        <button type="button" class="mnav__close" id="mnav-close" aria-label="Закрыть меню">
+          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M4 4l14 14M18 4L4 18" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
+      <div class="mnav__links">
+        <a href="#community-format" class="mnav__link">Формат</a>
+        <a href="#features" class="mnav__link">Что внутри</a>
+        <a href="#testimonials" class="mnav__link">Отзывы</a>
+        <a href="#hosts" class="mnav__link">Ведущие</a>
+        <a href="#pricing" class="mnav__link">Цена</a>
+        <a href="#faq" class="mnav__link">Вопросы</a>
+      </div>
+      <a href="https://forms.gle/tvTnJuyBoedpJZ989" class="btn btn--primary mnav__cta">Оставить заявку</a>
+    </nav>
+  </div>
 
   <!-- ============================================================
        1. HERO
@@ -274,7 +315,7 @@
   <!-- ============================================================
        4. ОТЗЫВЫ
   ============================================================ -->
-  <section class="section testimonials">
+  <section class="section testimonials" id="testimonials">
     <div class="container">
       <h2 class="section-title">Что говорят те, кто был</h2>
 
@@ -540,7 +581,7 @@
   <!-- ============================================================
        8. FAQ
   ============================================================ -->
-  <section class="section faq">
+  <section class="section faq" id="faq">
     <div class="container">
       <h2 class="section-title">Вопросы</h2>
 

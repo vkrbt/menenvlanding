@@ -46,6 +46,95 @@
 /* ============================================================
    FAQ ACCORDION
 ============================================================ */
+/* ============================================================
+   МОБИЛЬНОЕ МЕНЮ (бургер)
+============================================================ */
+(function () {
+  const root = document.getElementById('mnav');
+  const burger = document.getElementById('nav-burger');
+  const panel = document.getElementById('mnav-panel');
+  const overlay = document.getElementById('mnav-overlay');
+  const closeBtn = document.getElementById('mnav-close');
+  const header = document.querySelector('.nav');
+
+  if (!root || !burger || !panel || !overlay || !closeBtn) return;
+
+  let lastFocus = null;
+
+  function isMobile() {
+    return window.matchMedia('(max-width: 767px)').matches;
+  }
+
+  function syncMnavTop() {
+    if (header) {
+      document.documentElement.style.setProperty('--mnav-top', `${header.offsetHeight}px`);
+    }
+  }
+
+  function setOpen(open) {
+    root.classList.toggle('mnav--open', open);
+    header.classList.toggle('nav--menu-open', open);
+    document.body.classList.toggle('mnav-open', open);
+    burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+    burger.setAttribute('aria-label', open ? 'Закрыть меню' : 'Открыть меню');
+    root.setAttribute('aria-hidden', open ? 'false' : 'true');
+    panel.setAttribute('aria-hidden', open ? 'false' : 'true');
+
+    if (open) {
+      syncMnavTop();
+      lastFocus = document.activeElement;
+      closeBtn.focus();
+    } else {
+      const el = lastFocus;
+      lastFocus = null;
+      if (el && typeof el.focus === 'function') {
+        try {
+          el.focus();
+        } catch (_) {
+          burger.focus();
+        }
+      } else {
+        burger.focus();
+      }
+    }
+  }
+
+  function close() {
+    setOpen(false);
+  }
+
+  burger.addEventListener('click', () => {
+    setOpen(!root.classList.contains('mnav--open'));
+  });
+
+  closeBtn.addEventListener('click', close);
+  overlay.addEventListener('click', close);
+
+  root.querySelectorAll('.mnav__link').forEach(link => {
+    link.addEventListener('click', () => {
+      close();
+    });
+  });
+
+  root.querySelector('.mnav__cta')?.addEventListener('click', close);
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && root.classList.contains('mnav--open')) {
+      e.preventDefault();
+      close();
+    }
+  });
+
+  window.addEventListener('resize', () => {
+    syncMnavTop();
+    if (!isMobile() && root.classList.contains('mnav--open')) {
+      close();
+    }
+  });
+
+  syncMnavTop();
+})();
+
 document.querySelectorAll('.faq__btn').forEach(btn => {
   btn.addEventListener('click', () => {
     const isExpanded = btn.getAttribute('aria-expanded') === 'true';
