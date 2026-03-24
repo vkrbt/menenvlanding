@@ -36,8 +36,8 @@
     </a>
 
     <nav class="nav__links" aria-label="Навигация по разделам">
-      <a href="#community-format" class="nav__link">Формат</a>
       <a href="#features" class="nav__link">Что внутри</a>
+      <a href="#community-format" class="nav__link">Формат</a>
       <a href="#testimonials" class="nav__link">Отзывы</a>
       <a href="#hosts" class="nav__link">Ведущие</a>
       <a href="#pricing" class="nav__link">Цена</a>
@@ -66,17 +66,9 @@
   <div class="mnav" id="mnav" aria-hidden="true">
     <div class="mnav__overlay" id="mnav-overlay" tabindex="-1"></div>
     <nav class="mnav__panel" id="mnav-panel" role="dialog" aria-modal="true" aria-label="Меню сайта" aria-hidden="true">
-      <div class="mnav__head">
-        <span class="mnav__title">Разделы</span>
-        <button type="button" class="mnav__close" id="mnav-close" aria-label="Закрыть меню">
-          <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-            <path d="M4 4l14 14M18 4L4 18" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"/>
-          </svg>
-        </button>
-      </div>
       <div class="mnav__links">
-        <a href="#community-format" class="mnav__link">Формат</a>
         <a href="#features" class="mnav__link">Что внутри</a>
+        <a href="#community-format" class="mnav__link">Формат</a>
         <a href="#testimonials" class="mnav__link">Отзывы</a>
         <a href="#hosts" class="mnav__link">Ведущие</a>
         <a href="#pricing" class="mnav__link">Цена</a>
@@ -179,40 +171,6 @@
   </section>
 
   <!-- ============================================================
-       2b. ФОРМАТ КОМЬЮНИТИ
-  ============================================================ -->
-  <section class="section community-format" id="community-format" aria-labelledby="community-format-title">
-    <div class="container">
-      <h2 class="community-format__title" id="community-format-title">Окей, но что конкретно будет?</h2>
-      <p class="community-format__lead">Мы знаем, что неизвестность - это главная причина не прийти. Поэтому вот как это</p>
-
-      <ol class="community-format__list">
-        <li class="community-format__item">
-          <span class="community-format__num" aria-hidden="true">1</span>
-          <div class="community-format__body">
-            <h3>Тема — повод начать разговор</h3>
-            <p>Мы объявляем тему заранее. Работа и отношения, отцы и сыновья, одиночество в эмиграции, деньги, злость, дружба</p>
-          </div>
-        </li>
-        <li class="community-format__item">
-          <span class="community-format__num" aria-hidden="true">2</span>
-          <div class="community-format__body">
-            <h3>Разговор</h3>
-            <p>Уровень самораскрытия выбираешь сам</p>
-          </div>
-        </li>
-        <li class="community-format__item">
-          <span class="community-format__num" aria-hidden="true">3</span>
-          <div class="community-format__body">
-            <h3>Обмен</h3>
-            <p>Важнее быть честным, чем красноречивым. Самое интересное начинается, когда кто-то говорит о себе, и другой понимает: «Блин, у меня же то же самое»</p>
-          </div>
-        </li>
-      </ol>
-    </div>
-  </section>
-
-  <!-- ============================================================
        3. ЧТО ВНУТРИ
   ============================================================ -->
   <section class="section features" id="features">
@@ -262,7 +220,7 @@
           </div>
           <div class="feature-item__body">
             <h3>Эксклюзивные материалы</h3>
-            <p>Контент, который не выходит в подкаст. Для тех, кому мало двух часов раз в две недели.</p>
+            <p>Контент, который не выходит в подкаст. Для тех, кому мало трех часов раз в две недели.</p>
           </div>
         </li>
 
@@ -313,6 +271,40 @@
   </section>
 
   <!-- ============================================================
+       2b. ФОРМАТ КОМЬЮНИТИ
+  ============================================================ -->
+  <section class="section community-format" id="community-format" aria-labelledby="community-format-title">
+    <div class="container">
+      <h2 class="community-format__title" id="community-format-title">Окей, но что конкретно будет на встрече?</h2>
+      <p class="community-format__lead">Мы знаем, что неизвестность - это главная причина не прийти. Поэтому вот как это будет</p>
+
+      <ol class="community-format__list">
+        <li class="community-format__item">
+          <span class="community-format__num" aria-hidden="true">1</span>
+          <div class="community-format__body">
+            <h3>Тема — повод начать разговор</h3>
+            <p>Мы объявляем тему заранее. Работа и отношения, отцы и сыновья, одиночество в эмиграции, деньги, злость, дружба</p>
+          </div>
+        </li>
+        <li class="community-format__item">
+          <span class="community-format__num" aria-hidden="true">2</span>
+          <div class="community-format__body">
+            <h3>Разговор</h3>
+            <p>Уровень самораскрытия выбираешь сам</p>
+          </div>
+        </li>
+        <li class="community-format__item">
+          <span class="community-format__num" aria-hidden="true">3</span>
+          <div class="community-format__body">
+            <h3>Обмен</h3>
+            <p>Важнее быть честным, чем красноречивым. Самое интересное начинается, когда кто-то говорит о себе, и другой понимает: «Блин, у меня же то же самое»</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============================================================
        4. ОТЗЫВЫ
   ============================================================ -->
   <section class="section testimonials" id="testimonials">
@@ -322,27 +314,33 @@
       <div class="testimonials__grid">
 
         <blockquote class="tcard">
-          <p>Не было ролевой модели мужчины. Сейчас, когда начинаю формировать её — мне важно быть среди других мужчин. Помогает достроить образ.</p>
+          <p>«Я ожидал сильно меньшего — мне было радостно приходить каждый раз, я злился когда опаздывал»</p>
+          <footer class="tcard__author">Алексей, Берлин</footer>
         </blockquote>
 
         <blockquote class="tcard">
-          <p>Я <strong>не один</strong> такой.</p>
+          <p>«С первых созвонов понял — обстановка очень уютная, я бы сказал, своя. Сочетание психотерапии без типичной для неё излишней уступчивости — то что нужно мужчинам»</p>
+          <footer class="tcard__author">Николай, Кишинёв</footer>
         </blockquote>
 
         <blockquote class="tcard">
-          <p>Смог <strong>идентифицировать</strong> эмоцию — горе. Просто назвать её. Это оказалось важным.</p>
+          <p>«Попал сюда именно в тот момент, когда это требовалось критически. По началу слегка переживал, но после первой встречи пришло абсолютное осознание, что я в правильном месте. Тут нет привычной схемы "наставник-подопечный" — тут каждый вносит свой вклад. Потому что это про нас и для нас»</p>
+          <footer class="tcard__author">Алексей, Польша</footer>
         </blockquote>
 
         <blockquote class="tcard">
-          <p>Очень <strong>радостно</strong> сюда приходить. Боялся пропустить группу.</p>
+          <p>«Не было ролевой модели мужчины. Сейчас, когда начинаю формировать её — мне важно быть среди других мужчин. Помогает достроить образ»</p>
+          <footer class="tcard__author">Денис, Тбилиси</footer>
         </blockquote>
 
         <blockquote class="tcard">
-          <p>Самоценно — начать <strong>разбираться в чувствах</strong>: своих и других людей.</p>
+          <p>«Помогло осознать, что мне сложно распознать что я чувствую в моменте. Просто увидеть это — оказалось важным»</p>
+          <footer class="tcard__author">Игорь, Минск</footer>
         </blockquote>
 
         <blockquote class="tcard">
-          <p>Бывает тяжело и скучно, а потом раз — и <strong>вспышка</strong>.</p>
+          <p>«Мужская психология — вещь, мягко говоря, тонкая. Фура уважения ребятам за то, что дают возможность поговорить о том, что волнует каждого тигра»</p>
+          <footer class="tcard__author">Дима, Варшава</footer>
         </blockquote>
 
       </div>
@@ -374,7 +372,7 @@
               <li>Гештальт-терапевт</li>
             </ul>
             <blockquote class="host-card__quote">
-              Отвечает за то, чтобы разговор не превращался в лекцию
+              Днём пишет код в Big Tech, вечером ведёт клиентов. Прошёл путь от «я всё решу логикой» до «окей, кажется, не всё» — и теперь помогает другим мужчинам не застрять на первой стадии. Ведущий подкаста «Мужская среда». Следит, чтобы никто не прятался за умными словами — включая себя.
             </blockquote>
           </div>
         </div>
@@ -392,10 +390,10 @@
               </a>
             </div>
             <ul class="host-card__roles">
-              <li>Врач психиатр-нарколог</li>
+              <li>Психиатр-нарколог</li>
             </ul>
             <blockquote class="host-card__quote">
-              Не будет тебя лечить — но если ты будешь врать себе, скорее всего заметит
+              Сбежал в дата-инженерию — не помогло, вокруг оказались мужчины с теми же вопросами, только в Zoom вместо кабинета. Ведущий подкаста «Мужская среда». Не лечит — но если будешь врать себе, заметит.
             </blockquote>
           </div>
         </div>
@@ -420,9 +418,43 @@
       <h2 class="section-title youtube__title">Знакомься с нами заочно</h2>
 
       <p class="youtube__sub">
-        На канале мы говорим вслух о том, о чём обычно молчат.<br class="br-desktop" />
-        Честно и без фильтров.
+        На канале мы говорим вслух о том, о чём другие мужчины предпочитают молчать
       </p>
+
+      <div class="yt-carousel">
+        <button class="yt-carousel__btn yt-carousel__btn--prev" aria-label="Предыдущее видео" onclick="ytCarouselScroll(-1)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="yt-carousel__track" id="ytCarouselTrack">
+          <div class="yt-carousel__item">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PHdg6U57lOU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="yt-carousel__item">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/yb7g3u8kiB4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="yt-carousel__item">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/LF_Gt4MzNlc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+          </div>
+          <div class="yt-carousel__item">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/I2sGt70krXc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen loading="lazy"></iframe>
+          </div>
+        </div>
+        <button class="yt-carousel__btn yt-carousel__btn--next" aria-label="Следующее видео" onclick="ytCarouselScroll(1)">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </div>
+
+      <script>
+        function ytCarouselScroll(dir) {
+          var track = document.getElementById('ytCarouselTrack');
+          var item = track.querySelector('.yt-carousel__item');
+          track.scrollBy({ left: dir * item.offsetWidth, behavior: 'smooth' });
+        }
+      </script>
 
       <a
         href="https://www.youtube.com/@men-env"
@@ -492,10 +524,6 @@
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#000DC3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               Ранний доступ к подкасту
             </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#000DC3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Гостевые эксперты
-            </li>
           </ul>
           <a href="https://forms.gle/tvTnJuyBoedpJZ989" class="btn btn--primary btn--full">Хочу попасть в комьюнити</a>
         </div>
@@ -505,9 +533,9 @@
           <p class="pricing__label">На 3 месяца</p>
           <div class="pricing__price">
             <span class="pricing__amount">€18</span>
-            <span class="pricing__period">/ 6 встреч</span>
+            <span class="pricing__period">/ встреча</span>
           </div>
-          <p class="pricing__note pricing__note--accent">€100 за 6 встреч · 3 месяца</p>
+          <p class="pricing__note pricing__note--accent">€108 за 6 встреч · 3 месяца</p>
           <ul class="pricing__includes">
             <li>
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#000DC3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
@@ -521,17 +549,13 @@
               <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#000DC3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
               Ранний доступ к подкасту
             </li>
-            <li>
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8l3.5 3.5L13 5" stroke="#000DC3" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              Гостевые эксперты
-            </li>
           </ul>
           <a href="https://forms.gle/tvTnJuyBoedpJZ989" class="btn btn--outline btn--full">Оставить заявку</a>
         </div>
 
       </div>
 
-      <p class="pricing__footer-note">Месяц участия — дешевле одной сессии у психолога и полезнее чем раз*ебаться на мотоцикле</p>
+      <p class="pricing__footer-note">Месяц участия — дешевле одной сессии у психолога и полезнее чем разъебаться на мотоцикле</p>
 
     </div>
   </section>
@@ -557,7 +581,7 @@
           <div class="step__num" aria-hidden="true">02</div>
           <div class="step__body">
             <h3>Короткое знакомство</h3>
-            <p>Созвонимся, чтобы убедиться, что комьюнити подходит тебе — и ты нам</p>
+            <p>Созвонимся на 10-15 минут, чтобы убедиться, что комьюнити подходит тебе — и ты нам</p>
           </div>
         </li>
 
@@ -570,10 +594,6 @@
         </li>
 
       </ol>
-
-      <p class="process__note">
-        Мы проводим короткое интервью перед вступлением — чтобы убедиться, что мы подходим друг другу
-      </p>
 
     </div>
   </section>
