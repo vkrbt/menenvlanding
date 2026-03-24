@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <title>OG Image — Книги — Мужская среда</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manrope:wght@500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+    }
+
+    body {
+      font-family: 'Manrope', sans-serif;
+      background: #000DC3;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Dot grid */
+    .grid {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.12) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* Vignette */
+    .vignette {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 90% 90% at 35% 50%,
+        transparent 40%, rgba(0, 8, 120, 0.5) 100%);
+    }
+
+    /* Books — right side, fanned out */
+    .books {
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 440px;
+      height: 520px;
+    }
+
+    .books__item {
+      position: absolute;
+      width: 220px;
+      height: 320px;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: -8px 16px 48px rgba(0,0,0,0.55);
+    }
+
+    .books__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Fan layout */
+    .books__item:nth-child(1) {
+      left: 0;
+      top: 80px;
+      transform: rotate(-6deg);
+      z-index: 1;
+    }
+
+    .books__item:nth-child(2) {
+      left: 120px;
+      top: 40px;
+      transform: rotate(0deg);
+      z-index: 2;
+    }
+
+    .books__item:nth-child(3) {
+      left: 240px;
+      top: 80px;
+      transform: rotate(6deg);
+      z-index: 1;
+    }
+
+    /* Fade books into background on left */
+    .books::before {
+      content: '';
+      position: absolute;
+      top: -100px;
+      bottom: -100px;
+      left: -300px;
+      right: 0;
+      z-index: 3;
+      background: linear-gradient(to right, #000DC3 0%, #000DC3 40%, rgba(0,13,195,0.85) 60%, transparent 100%);
+    }
+
+    /* Content — left aligned */
+    .content {
+      position: relative;
+      z-index: 2;
+      padding: 0 72px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      max-width: 680px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.12);
+      border: 1.5px solid rgba(255,255,255,0.25);
+      color: rgba(255,255,255,0.85);
+      font-size: 22px;
+      font-weight: 600;
+      padding: 10px 24px;
+      border-radius: 100px;
+      letter-spacing: 0.03em;
+      margin-bottom: 36px;
+      width: fit-content;
+    }
+
+    .badge::before {
+      content: '';
+      width: 9px;
+      height: 9px;
+      background: #fff;
+      border-radius: 50%;
+      opacity: 0.9;
+    }
+
+    .logo {
+      font-family: 'Dela Gothic One', sans-serif;
+      font-size: 88px;
+      line-height: 0.92;
+      color: #fff;
+      letter-spacing: -0.01em;
+      margin-bottom: 28px;
+    }
+
+    .title {
+      font-family: 'Dela Gothic One', sans-serif;
+      font-size: 42px;
+      line-height: 1.1;
+      color: rgba(255,255,255,0.55);
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+
+    .sub {
+      font-size: 26px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.4;
+      max-width: 480px;
+    }
+  </style>
+</head>
+<body>
+  <div class="grid"></div>
+  <div class="vignette"></div>
+
+  <div class="books">
+    <div class="books__item">
+      <img src="books/father.JPG" alt="" />
+    </div>
+    <div class="books__item">
+      <img src="books/saturn.jpg" alt="" />
+    </div>
+    <div class="books__item">
+      <img src="books/nice_guy.jpeg" alt="" />
+    </div>
+  </div>
+
+  <div class="content">
+    <span class="badge">Книжный комплект</span>
+    <div class="logo">МУЖСКАЯ<br />СРЕДА</div>
+    <div class="title">ТРИ КНИГИ</div>
+    <p class="sub">Зойя, Холлис, Гловер —<br />проверенный маршрут</p>
+  </div>
+</body>
+</html>
