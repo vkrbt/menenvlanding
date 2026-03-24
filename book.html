@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Три книги для мужчин — Мужская среда</title>
+  <meta name="description" content="Три книги, которые стоило прочитать вчера. Комплект от «Мужской среды»." />
+
+  <!-- OG -->
+  <meta property="og:title" content="Три книги для мужчин — Мужская среда" />
+  <meta property="og:description" content="Три книги, которые дают язык для того, что происходит внутри. Комплект от «Мужской среды»." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%23000DC3'/></svg>" />
+
+  <style>
+    /* ---- Book-page specific styles ---- */
+
+    /* Simplified nav for inner pages */
+    .nav--inner .nav__links { display: none; }
+
+    .nav__back {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--text-dim);
+      transition: color 0.15s;
+    }
+    .nav__back:hover { color: var(--text); }
+
+    /* Hero */
+    .hero-books {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-books__bg-grid {
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,13,195,0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,13,195,0.035) 1px, transparent 1px);
+      background-size: 64px 64px;
+      mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);
+      pointer-events: none;
+    }
+
+    .hero-books__glow {
+      position: absolute;
+      top: 0;
+      left: -10%;
+      width: 70%;
+      height: 100%;
+      background: radial-gradient(ellipse at 40% 20%, rgba(0,13,195,0.18) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .hero-books__inner {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 28px;
+      padding-block: 80px;
+    }
+
+    .hero-books__title {
+      font-size: clamp(42px, 8vw, 80px);
+      font-weight: 700;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      max-width: 20ch;
+    }
+
+    .hero-books__title em {
+      font-style: italic;
+      color: #7b8fff;
+    }
+
+    .hero-books__sub {
+      font-size: clamp(16px, 2.2vw, 19px);
+      color: var(--text-muted);
+      line-height: 1.75;
+      max-width: 52ch;
+    }
+
+    .hero-books__sub strong { color: var(--text); font-weight: 600; }
+
+    /* Books list */
+    .books { background: var(--bg-2); border-block: 1px solid var(--border); }
+
+    .book-card {
+      display: grid;
+      grid-template-columns: 72px 1fr;
+      gap: 32px;
+      padding: 52px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: start;
+    }
+
+    .book-card:last-child { border-bottom: none; }
+
+    @media (max-width: 640px) {
+      .book-card { grid-template-columns: 44px 1fr; gap: 16px; padding: 36px 0; }
+    }
+
+    .book-num {
+      font-family: 'Dela Gothic One', sans-serif;
+      font-size: clamp(2.4rem, 5vw, 3.4rem);
+      color: var(--accent);
+      line-height: 1;
+      opacity: 0.5;
+      padding-top: 4px;
+    }
+
+    .book-author {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #7b8fff;
+      margin-bottom: 8px;
+    }
+
+    .book-title {
+      font-size: clamp(22px, 3.5vw, 30px);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 18px;
+    }
+
+    .book-desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    .book-desc:last-of-type { margin-bottom: 16px; }
+
+    .book-tag {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-dim);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 5px 14px;
+      letter-spacing: 0.02em;
+    }
+
+    /* Arc section */
+    .arc { background: var(--bg); }
+
+    .arc__box {
+      background: var(--bg-3);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+
+    @media (max-width: 640px) { .arc__box { padding: 32px 24px; } }
+
+    .arc__title {
+      font-size: clamp(22px, 3vw, 28px);
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 32px;
+      letter-spacing: -0.02em;
+    }
+
+    .arc__flow {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 32px;
+    }
+
+    .arc__step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      text-align: center;
+    }
+
+    .arc__step-label {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #7b8fff;
+    }
+
+    .arc__step-text {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .arc__arrow {
+      color: var(--text-dim);
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .arc__desc {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    /* Why bundle */
+    .why { background: var(--bg-2); border-block: 1px solid var(--border); }
+
+    .why__eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #7b8fff;
+      margin-bottom: 20px;
+      display: block;
+    }
+
+    .why__title {
+      font-size: clamp(28px, 5vw, 44px);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 32px;
+    }
+
+    .why__title em {
+      font-style: italic;
+      color: #7b8fff;
+    }
+
+    .why__text {
+      font-size: 16px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-bottom: 18px;
+      max-width: 66ch;
+    }
+
+    .why__text:last-child { margin-bottom: 0; }
+
+    /* Support */
+    .support { background: var(--bg); }
+
+    .support__card {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+
+
+    @media (max-width: 640px) { .support__card { padding: 32px 24px; } }
+
+    .support__title {
+      font-size: clamp(20px, 3vw, 26px);
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .support__text {
+      font-size: 15px;
+      color: var(--text-muted);
+      line-height: 1.8;
+      max-width: 62ch;
+    }
+
+    /* Price */
+    .price { background: var(--bg-2); text-align: center; border-block: 1px solid var(--border); }
+
+    .price__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .price__card {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--bg-3);
+      border: 1px solid rgba(0,13,195,0.6);
+      border-radius: var(--radius-lg);
+      padding: 52px 72px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 0 60px rgba(0,13,195,0.2);
+      background: linear-gradient(160deg, #14143a 0%, var(--bg-3) 60%);
+      gap: 20px;
+    }
+
+    @media (max-width: 640px) { .price__card { padding: 40px 28px; width: 100%; } }
+
+
+
+    .price__eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #7b8fff;
+    }
+
+    .price__amount {
+      font-size: 72px;
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: #fff;
+    }
+
+    .price__currencies {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 20px;
+    }
+
+    .price__cur {
+      font-size: 14px;
+      color: var(--text-dim);
+    }
+
+    .price__cur span { color: var(--text-muted); font-weight: 600; }
+
+    .price__note {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.6;
+      max-width: 34ch;
+      text-align: center;
+    }
+
+    .price__telegram {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #7b8fff;
+      font-size: 14px;
+      font-weight: 500;
+      margin-top: 4px;
+      transition: color 0.15s, gap 0.15s;
+    }
+
+    .price__telegram:hover { color: #fff; gap: 12px; }
+
+    /* Shipping */
+    .shipping { background: var(--bg); }
+
+    .shipping__eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #7b8fff;
+      margin-bottom: 32px;
+      display: block;
+    }
+
+    .shipping__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 12px;
+    }
+
+    .shipping__card {
+      background: var(--bg-2);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 24px;
+      transition: border-color 0.2s;
+    }
+
+    .shipping__card:hover { border-color: rgba(0,13,195,0.5); }
+
+    .shipping__label {
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-dim);
+      margin-bottom: 10px;
+    }
+
+    .shipping__text {
+      font-size: 14px;
+      color: var(--text-muted);
+      line-height: 1.65;
+    }
+
+    /* Scroll animations */
+    @media (prefers-reduced-motion: no-preference) {
+      .animate-in {
+        opacity: 0;
+        transform: translateY(24px);
+        transition: opacity 0.55s ease, transform 0.55s ease;
+      }
+      .animate-in.is-visible {
+        opacity: 1;
+        transform: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav nav--inner">
+    <a href="/" class="logo" aria-label="Мужская среда">
+      <span class="logo-line">МУЖСКАЯ</span>
+      <span class="logo-line">СРЕДА</span>
+    </a>
+
+    <a href="/" class="nav__back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M19 12H5M12 19l-7-7 7-7"/>
+      </svg>
+      На главную
+    </a>
+
+    <div class="nav__end">
+      <a href="#order" class="btn btn--sm btn--primary">Заказать</a>
+    </div>
+  </header>
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero-books">
+    <div class="hero-books__bg-grid" aria-hidden="true"></div>
+    <div class="hero-books__glow" aria-hidden="true"></div>
+
+    <div class="container hero-books__inner">
+      <span class="badge">Книжный комплект</span>
+
+      <h1 class="hero-books__title">
+        Три книги,<br />которые стоило<br />прочитать <em>вчера</em>
+      </h1>
+
+      <p class="hero-books__sub">
+        У&nbsp;большинства мужчин одна и та же проблема:
+        <strong>они чувствуют что-то, но не могут это назвать.</strong>
+        Тревога без причины. Злость без адреса. Ощущение, что живёшь чужую жизнь,
+        но непонятно — чью именно.<br /><br />
+        Эти три книги дают то, чего не хватает: <strong>язык.</strong>
+        Когда ты можешь назвать то, что с тобой происходит, — ты перестаёшь
+        с этим бороться и начинаешь с этим&nbsp;работать.
+      </p>
+
+      <a href="#order" class="btn btn--primary btn--lg">Заказать комплект</a>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       КНИГИ
+  ============================================================ -->
+  <section class="section books" id="books">
+    <div class="container">
+
+      <div class="book-card animate-in">
+        <div class="book-num">1</div>
+        <div>
+          <div class="book-author">Луиджи Зойя</div>
+          <div class="book-title">«Отец»</div>
+          <p class="book-desc">
+            Откуда берётся отец? Не из биологии — из решения. Зойя, юнгианский аналитик
+            и бывший президент Международной ассоциации аналитической психологии, прослеживает
+            историю отцовства от приматов до наших дней. Через Гектора, Одиссея и Энея он
+            показывает: отец — это культурное изобретение, а не данность природы. Мужчина
+            стал отцом в тот момент, когда впервые решил вернуться.
+          </p>
+          <p class="book-desc">
+            И если отцовство — проект, а не наследство, то его можно создать заново.
+            Даже тем, у кого образца не&nbsp;было.
+          </p>
+          <span class="book-tag">Книга-фундамент: масштабная, мифологическая, меняющая оптику</span>
+        </div>
+      </div>
+
+      <div class="book-card animate-in">
+        <div class="book-num">2</div>
+        <div>
+          <div class="book-author">Джеймс Холлис</div>
+          <div class="book-title">«Под тенью Сатурна»</div>
+          <p class="book-desc">
+            Почему мужчине плохо, хотя внешне всё нормально? Холлис называет восемь тайн,
+            которые мужчины носят в себе молча: страх, стыд, тоска по отцу, подавленные эмоции,
+            неспособность попросить о помощи. Его главная мысль: мужчина, который не прошёл
+            инициацию — сепарацию от материнского мира, — остаётся мальчиком в теле взрослого.
+          </p>
+          <p class="book-desc">
+            А инициация — это всегда рана. Вопрос в том, найдёшь ли ты в этой ране&nbsp;смысл.
+          </p>
+          <span class="book-tag">Книга-зеркало: короткая, точная, болезненно узнаваемая</span>
+        </div>
+      </div>
+
+      <div class="book-card animate-in">
+        <div class="book-num">3</div>
+        <div>
+          <div class="book-author">Роберт Гловер</div>
+          <div class="book-title">«Хватит быть славным парнем»</div>
+          <p class="book-desc">
+            Ты всегда помогаешь другим, избегаешь конфликтов, стараешься быть хорошим — и при
+            этом злишься, не получаешь того, что хочешь, и не понимаешь почему. Гловер ставит
+            диагноз: «синдром славного парня» — стратегия выживания, усвоенная в детстве.
+            Не доброта, а страх отвержения. Не щедрость, а скрытая сделка: «Я буду хорошим,
+            а мир за это меня полюбит».
+          </p>
+          <p class="book-desc">
+            Книга даёт конкретные инструменты, чтобы перестать предавать себя
+            и начать жить свою&nbsp;жизнь.
+          </p>
+          <span class="book-tag">Книга-инструкция: прямолинейная, практичная, работающая</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ТРАЕКТОРИЯ
+  ============================================================ -->
+  <section class="section arc">
+    <div class="container">
+      <div class="arc__box animate-in">
+        <div class="arc__title">Три книги — одна траектория</div>
+        <div class="arc__flow">
+          <div class="arc__step">
+            <div class="arc__step-label">Зойя</div>
+            <div class="arc__step-text">Откуда пустота</div>
+          </div>
+          <div class="arc__arrow" aria-hidden="true">→</div>
+          <div class="arc__step">
+            <div class="arc__step-label">Холлис</div>
+            <div class="arc__step-text">Почему болит</div>
+          </div>
+          <div class="arc__arrow" aria-hidden="true">→</div>
+          <div class="arc__step">
+            <div class="arc__step-label">Гловер</div>
+            <div class="arc__step-text">Что делать</div>
+          </div>
+        </div>
+        <p class="arc__desc">
+          От понимания — через узнавание — к действию. Зойя даёт масштаб: проблема не в тебе,
+          а в культуре, которая потеряла отца. Холлис сужает фокус: вот как эта потеря живёт
+          конкретно в тебе. Гловер даёт план: вот что делать, начиная с&nbsp;завтрашнего&nbsp;утра.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ЗАЧЕМ КОМПЛЕКТОМ
+  ============================================================ -->
+  <section class="section why">
+    <div class="container">
+      <span class="why__eyebrow animate-in">Зачем комплектом</span>
+      <h2 class="why__title animate-in">
+        Каждую из них можно<br />найти отдельно.<br />Но <em>вместе</em> — другая&nbsp;история
+      </h2>
+      <div class="animate-in">
+        <p class="why__text">
+          По отдельности эти книги — сильные. Но когда ты читаешь их подряд, происходит
+          кумулятивный эффект: Зойя объясняет архитектуру проблемы, Холлис показывает, как она
+          выглядит изнутри, Гловер даёт чертёж выхода. Это не три случайных книги — это
+          продуманная последовательность, которую мы выстроили по опыту работы с&nbsp;мужчинами.
+        </p>
+        <p class="why__text">
+          Все три обсуждались в подкасте «Мужская среда» и прошли через десятки групповых
+          разговоров. Мы знаем, какие главы вызывают самую сильную реакцию, где мужчины молчат,
+          а где начинают говорить. Это не рандомный набор — это проверенный&nbsp;маршрут.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ПОДДЕРЖКА ПРОЕКТА
+  ============================================================ -->
+  <section class="section support">
+    <div class="container">
+      <div class="support__card animate-in">
+        <h2 class="support__title">Покупая комплект, ты поддерживаешь «Мужскую среду»</h2>
+        <p class="support__text">
+          Мы — независимый проект. Без инвесторов, без рекламных контрактов, без корпоративных
+          спонсоров. Подкаст, комьюнити, группы — всё держится на двух людях и тех, кому это&nbsp;важно.<br /><br />
+          Часть денег с каждого комплекта идёт на развитие «Мужской среды»: оплату платформ,
+          запись подкастов, подготовку новых форматов. Покупая книги через нас, ты получаешь
+          то, что пригодится лично тебе, — и при этом помогаешь проекту, который делает
+          это для&nbsp;всех.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ЦЕНА
+  ============================================================ -->
+  <section class="section price" id="order">
+    <div class="container">
+      <div class="price__inner animate-in">
+        <div class="price__card">
+          <div class="price__eyebrow">Комплект из трёх книг</div>
+          <div class="price__amount">60 €</div>
+          <div class="price__currencies">
+            <div class="price__cur"><span>250</span> PLN</div>
+            <div class="price__cur"><span>200</span> BYN</div>
+            <div class="price__cur"><span>70</span> $</div>
+            <div class="price__cur"><span>6 000</span> ₽</div>
+          </div>
+          <p class="price__note">
+            Три книги. Одна посылка. Без наценки за «курирование» —
+            ты платишь за книги и поддерживаешь проект.
+          </p>
+          <a href="https://forms.gle/VammyfFy9fGfKgk87" class="btn btn--primary btn--lg">
+            Заказать комплект
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+          <a href="https://t.me/vkrbt" class="price__telegram">
+            Вопросы? Напиши в Telegram
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ДЕТАЛИ ДОСТАВКИ
+  ============================================================ -->
+  <section class="section shipping">
+    <div class="container">
+      <span class="shipping__eyebrow animate-in">Детали</span>
+      <div class="shipping__grid animate-in">
+        <div class="shipping__card">
+          <div class="shipping__label">Что в комплекте</div>
+          <div class="shipping__text">Три бумажные книги на русском языке. Только комплектом — отдельно не продаём.</div>
+        </div>
+        <div class="shipping__card">
+          <div class="shipping__label">Доставка</div>
+          <div class="shipping__text">Отправляем по всему миру. Сроки и стоимость уточняем индивидуально.</div>
+        </div>
+        <div class="shipping__card">
+          <div class="shipping__label">Оплата</div>
+          <div class="shipping__text">Карты, переводы, крипта — подберём удобный вариант. Детали после оформления заказа.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       ФИНАЛЬНАЯ ЦИТАТА
+  ============================================================ -->
+  <section class="section promo-text">
+    <div class="promo-text__glow" aria-hidden="true"></div>
+    <div class="container promo-text__inner animate-in">
+      <span class="promo-text__mark" aria-hidden="true">"</span>
+      <blockquote class="promo-text__copy">
+        Мужчина, который не знает своей раны,<br />
+        <strong>обречён её воспроизводить.</strong>
+      </blockquote>
+      <p style="font-size: 14px; color: var(--text-dim); margin-top: 12px;">— Джеймс Холлис</p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="/" class="logo" aria-label="Мужская среда">
+        <span class="logo-line">МУЖСКАЯ</span>
+        <span class="logo-line">СРЕДА</span>
+      </a>
+
+      <a
+        href="https://www.youtube.com/@men-env"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="footer__yt"
+        aria-label="YouTube канал"
+      >
+        <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="22" height="16" rx="4" fill="#FF0000"/>
+          <path d="M9 5l6 3-6 3V5z" fill="white"/>
+        </svg>
+        youtube.com/@men-env
+      </a>
+
+      <p class="footer__copy">© 2026 Мужская среда</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.animate-in').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
