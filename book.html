@@ -730,11 +730,13 @@
         youtube.com/@men-env
       </a>
 
-      <p class="footer__copy">© 2026 Мужская среда</p>
+      <p class="footer__copy">© <span id="footer-year"></span> Мужская среда</p>
     </div>
   </footer>
 
   <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+
     // Scroll animations
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {

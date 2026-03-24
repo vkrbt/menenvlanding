@@ -1,3 +1,5 @@
+document.getElementById('footer-year').textContent = new Date().getFullYear();
+
 /* ============================================================
    COUNTDOWN — до ближайшей встречи
    Встречи каждые 2 недели начиная с 2026-04-01
