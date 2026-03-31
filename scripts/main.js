@@ -8,7 +8,8 @@ document.getElementById('footer-year').textContent = new Date().getFullYear();
   const el = document.getElementById('cd-days');
   if (!el) return;
 
-  const FIRST_MEETING = new Date('2026-04-01T00:00:00');
+  // 18:00 по Варшаве (UTC+2 / CEST) = 19:00 по Минску = 16:00 UTC
+  const FIRST_MEETING = new Date('2026-04-01T16:00:00Z');
   const TWO_WEEKS_MS  = 14 * 24 * 60 * 60 * 1000;
 
   function getNextMeeting() {
