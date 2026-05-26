@@ -42,6 +42,28 @@ document.getElementById('footer-year').textContent = new Date().getFullYear();
     document.getElementById('cd-secs').textContent  = pad(secs);
   }
 
+  // Форматирование даты ближайшей встречи для badge и CTA
+  function formatMeetingDate(date) {
+    const months = [
+      'января', 'февраля', 'марта', 'апреля', 'мая', 'июня',
+      'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'
+    ];
+    // Дата в часовом поясе Варшавы (Europe/Warsaw)
+    const warsawStr = date.toLocaleString('en-US', { timeZone: 'Europe/Warsaw' });
+    const warsaw = new Date(warsawStr);
+    return warsaw.getDate() + '\u00a0' + months[warsaw.getMonth()];
+  }
+
+  const nextDate = getNextMeeting();
+  const label = 'Ближайшая встреча ' + formatMeetingDate(nextDate);
+
+  const badgeEl = document.getElementById('badge-date');
+  const badgeMEl = document.getElementById('badge-date-m');
+  const ctaEl = document.getElementById('cta-date');
+  if (badgeEl) badgeEl.textContent = label;
+  if (badgeMEl) badgeMEl.textContent = label;
+  if (ctaEl) ctaEl.textContent = label;
+
   tick();
   setInterval(tick, 1000);
 })();
