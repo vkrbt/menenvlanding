@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="/scripts/theme-init.js"></script>
   <title>Три книги для мужчин — Мужская среда</title>
   <meta name="description" content="Три книги, которые стоило прочитать вчера. Комплект от «Мужской среды»." />
   <link rel="canonical" href="https://sreda.men/book" />
@@ -62,8 +63,8 @@
       position: absolute;
       inset: 0;
       background-image:
-        linear-gradient(rgba(0,13,195,0.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0,13,195,0.035) 1px, transparent 1px);
+        linear-gradient(var(--hero-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--hero-grid) 1px, transparent 1px);
       background-size: 64px 64px;
       mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 0%, transparent 100%);
       pointer-events: none;
@@ -75,7 +76,7 @@
       left: -10%;
       width: 70%;
       height: 100%;
-      background: radial-gradient(ellipse at 40% 20%, rgba(0,13,195,0.18) 0%, transparent 65%);
+      background: radial-gradient(ellipse at 40% 20%, var(--hero-glow) 0%, transparent 65%);
       pointer-events: none;
     }
 
@@ -99,7 +100,7 @@
 
     .hero-books__title em {
       font-style: italic;
-      color: #7b8fff;
+      color: var(--badge-text);
     }
 
     .hero-books__sub {
@@ -143,7 +144,7 @@
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #7b8fff;
+      color: var(--badge-text);
       margin-bottom: 8px;
     }
 
@@ -220,7 +221,7 @@
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #7b8fff;
+      color: var(--badge-text);
     }
 
     .arc__step-text {
@@ -249,7 +250,7 @@
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #7b8fff;
+      color: var(--badge-text);
       margin-bottom: 20px;
       display: block;
     }
@@ -265,7 +266,7 @@
 
     .why__title em {
       font-style: italic;
-      color: #7b8fff;
+      color: var(--badge-text);
     }
 
     .why__text {
@@ -341,7 +342,7 @@
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #7b8fff;
+      color: var(--badge-text);
     }
 
     .price__amount {
@@ -378,7 +379,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      color: #7b8fff;
+      color: var(--badge-text);
       font-size: 14px;
       font-weight: 500;
       margin-top: 4px;
@@ -395,7 +396,7 @@
       font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #7b8fff;
+      color: var(--badge-text);
       margin-bottom: 32px;
       display: block;
     }
@@ -462,6 +463,18 @@
     </a>
 
     <div class="nav__end">
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Тема: как в системе" title="Тема оформления">
+        <svg class="theme-toggle__icon theme-toggle__icon--system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/>
+        </svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+        </svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+
       <a href="#order" class="btn btn--sm btn--primary">Заказать</a>
     </div>
   </header>
@@ -739,6 +752,7 @@
     </div>
   </footer>
 
+  <script src="/scripts/theme.js"></script>
   <script>
     document.getElementById('footer-year').textContent = new Date().getFullYear();
 

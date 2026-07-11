@@ -1,0 +1,24 @@
+---
+id: 321
+title: "**Одежда для детей и гендерКоманда SZ проанализировала (paywall) предложения детской одежды в H&M, Zalando и About you, "
+date: 2022-08-23T11:06:11+00:00
+url: https://t.me/menmasculinities/321
+channel: menmasculinities
+views: "2.03K"
+---
+
+**Одежда для детей и гендерКоманда SZ [проанализировала](https://www.sueddeutsche.de/projekte/artikel/gesellschaft/gegenderte-kindermode-rosa-hotpants-blaue-shorts-e701993/?reduced=true) (paywall) предложения детской одежды в H&M, Zalando и About you, которые они предлагают онлайн для детей младше 10 лет. Их результаты показывают: современная детская мода закрепляет гендерные образы.**
+
+Если в H&M, Zalando и About You мальчикам в основном предлагают синие оттенки, то почти каждая вторая рубашка для девочек — розовая. Эта картина самая экстремальная в коллекции H&M.
+
+На принтах также изображены разные образы жизни. В картинке постом ниже наиболее характерные слова, встречающиеся на рубашках для девочек и мальчиков до десяти лет. Мальчики должны заниматься серфингом, девочки должны мечтать.
+
+Они также собрали и сравнили тысячи шорт для детей от H&M, Zalando и About You. Разница в длине очевидна: в среднем пара шорт шириной 30 см для девочек на шесть см короче шорт для мальчиков. И это при том, что детские тела в этом возрасте почти не отличаются. Мальчики немного выше и тяжелее, но могут просто выбрать на размер больше. Тот факт, что шорты у девочек более узкие и короткие, просто результат моды и социализации. В логике этих рынков девочки — это в первую очередь маленькие женщины; для них одежда предназначена для того, чтобы нравиться. А мальчики должны быть кем угодно, только не «девочками». 
+
+Такое разделение приводит к тому, что некоторых товаров просто нет на рынке: ночных рубашек с динозаврами, например, юбок с футбольными мячами или шорт-карго с единорогами.
+
+## Медиа
+- https://cdn4.telesco.pe/file/tysLXNFtys3gJQfTY5KaVE4HTxaDgafNQUP66KRbazyETTPVd65z2jJKlUlVYqgUrbTyQAk2y_IrwZSJmjKYivjvM8xd_pzMb6ZSGsqLCwqy6OvABtnmGlf_sfluqxT29r2AUkz3MumJPvqpskt2MR_1YUb6WIAYmmAegW4kX9uXy9ityb8L0L41GYi-1DCFUIl2HsEYOHSr5MIISAiBTJ34EjryVjzxUQ8P4yVoyBKZqNit3ew8xxoKlgLnChu6uQ7tc-0-sLag8zjdCO7VLCQ3B4DZF2TCo-LpFK5G0yx7yetD46HUkmC_uQKMD7y76l5UHQTYpuzzrE2Djp08Kw.jpg
+
+## Ссылки
+- https://www.sueddeutsche.de/projekte/artikel/gesellschaft/gegenderte-kindermode-rosa-hotpants-blaue-shorts-e701993/?reduced=true
