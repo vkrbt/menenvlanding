@@ -26,6 +26,26 @@ def strip_html(html: str) -> str:
     return html.strip()
 
 
+def strip_markdown(md: str) -> str:
+    # Отбрасываем YAML-фронтматтер
+    md = re.sub(r"^---\n.*?\n---\n", "", md, flags=re.S)
+    # Служебные маркеры черновика (CTA/источники/дисклеймер) — не считаем как прозу
+    lines = []
+    for line in md.splitlines():
+        if re.match(r"^\s*(<!--|>|\|)", line):
+            continue
+        line = re.sub(r"^#{1,6}\s+", "", line)          # заголовки
+        line = re.sub(r"^\s*[-*]\s+", "", line)          # маркеры списков
+        line = re.sub(r"^\s*\d+\.\s+", "", line)         # нумерация
+        line = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", line)  # ссылки → текст
+        line = re.sub(r"\*\*([^*]+)\*\*", r"\1", line)   # bold
+        line = re.sub(r"[*_`]", "", line)                # прочая разметка
+        lines.append(line)
+    text = "\n".join(lines)
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
 def analyze(text: str) -> dict:
     req = urllib.request.Request(
         API,
@@ -48,6 +68,8 @@ def main() -> None:
         text = f.read()
     if path.endswith((".html", ".htm")):
         text = strip_html(text)
+    elif path.endswith((".md", ".markdown")):
+        text = strip_markdown(text)
 
     result = analyze(text)
     if not result.get("ok"):
