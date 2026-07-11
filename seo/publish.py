@@ -7,6 +7,8 @@ import shutil
 import sys
 from pathlib import Path
 
+from datetime import date
+
 ROOT = Path(__file__).resolve().parents[1]
 READY = ROOT / "drafts" / "ready"
 RELEASED = ROOT / "drafts" / "released"
@@ -18,8 +20,8 @@ sys.path.insert(0, str(ROOT / "seo"))
 from md2html import convert, parse_frontmatter  # noqa: E402
 
 
-def gen_sitemap(slugs_dates: list[tuple[str, str]]) -> str:
-    today = "2026-07-11"
+def gen_sitemap(slugs_dates: list[tuple[str, str]], today: str | None = None) -> str:
+    today = today or date.today().isoformat()
     lines = [
         '<?xml version="1.0" encoding="UTF-8"?>',
         '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',

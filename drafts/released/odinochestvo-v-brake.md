@@ -6,10 +6,10 @@ description: Семья на месте, ипотека платится — а 
 canonical: https://sreda.men/blog/odinochestvo-v-brake
 tag: Влад и Женя — ведущие «Мужской среды»
 author_line: Влад и Женя — ведущие «Мужской среды»
-date_line: 9 октября 2026
+date_line: 14 апреля 2026
 read_line: ≈ 10 минут
-date_published: 2026-10-09
-date_modified: 2026-10-09
+date_published: 2026-04-14
+date_modified: 2026-04-14
 status: released
 ---
 ## Один в браке - это не оксюморон
