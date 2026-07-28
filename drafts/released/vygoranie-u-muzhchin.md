@@ -131,3 +131,5 @@ _Бесплатно и ни к чему не обязывает._
 - [Не могу сосредоточиться: что происходит с вниманием](/blog/ne-mogu-sosredotochitsya)
 
 - [Группа или психолог: что выбрать](/blog/gruppa-ili-psiholog)
+
+- [Как перестать срываться на окружающих, если бесят все подряд](/blog/kak-perestat-sryvatsya-na-okruzhayushchih)

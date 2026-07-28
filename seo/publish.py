@@ -52,7 +52,9 @@ def collect_dates() -> list[tuple[str, str]]:
         if html.stem == "index":
             continue
         dates.setdefault(html.stem, "2026-07-11")
-    return list(dates.items())
+    # В карту сайта попадают только слаги, у которых реально есть страница:
+    # черновики из drafts/writing/ иначе дают 404 для поисковика
+    return [(slug, d) for slug, d in dates.items() if (BLOG / f"{slug}.html").exists()]
 
 
 def main() -> None:

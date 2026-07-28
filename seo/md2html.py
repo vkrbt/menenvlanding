@@ -223,6 +223,13 @@ def breadcrumb_label(h1: str) -> str:
     return h1[:45] + "…"
 
 
+def plain_text(s: str) -> str:
+    """Markdown → простой текст: в JSON-LD разметка не нужна, её видит поисковик."""
+    s = re.sub(r"\[([^\]]+)\]\([^)]+\)", r"\1", s)
+    s = re.sub(r"\*\*([^*]+)\*\*", r"\1", s)
+    return s
+
+
 def faq_json_ld(pairs: list[tuple[str, str]]) -> dict | None:
     if not pairs:
         return None
@@ -231,8 +238,8 @@ def faq_json_ld(pairs: list[tuple[str, str]]) -> dict | None:
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": q,
-                "acceptedAnswer": {"@type": "Answer", "text": a},
+                "name": plain_text(q),
+                "acceptedAnswer": {"@type": "Answer", "text": plain_text(a)},
             }
             for q, a in pairs
         ],
