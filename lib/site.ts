@@ -1,0 +1,59 @@
+/**
+ * Константы сайта. Единственный источник истины для URL, ссылок и авторов —
+ * чтобы они не расползались по компонентам и JSON-LD.
+ */
+
+export const SITE_URL = 'https://sreda.men'
+export const FORMS_URL = 'https://forms.gle/tvTnJuyBoedpJZ989'
+export const YOUTUBE_URL = 'https://www.youtube.com/@men-env'
+export const YOUTUBE_LABEL = 'youtube.com/@men-env'
+
+/** URL раздела блога. Без хвостового слеша — см. trailingSlash в next.config.mjs */
+export const BLOG_URL = '/blog'
+
+// Имя с версией: соцсети кешируют превью по URL, и без смены адреса
+// в шарах ещё долго висела бы старая картинка
+export const OG_IMAGE = `${SITE_URL}/og-v2.png`
+export const OG_IMAGE_BOOK = `${SITE_URL}/og-book.png`
+
+/** Идентификаторы узлов графа schema.org — на них ссылаются страницы блога */
+export const ORG_ID = `${SITE_URL}/#organization`
+export const WEBSITE_ID = `${SITE_URL}/#website`
+
+export const VLAD = {
+  name: 'Влад',
+  jobTitle: 'Гештальт-терапевт, ведущий «Мужской среды»',
+  url: 'https://www.instagram.com/vkrbt/',
+  handle: '@vkrbt',
+} as const
+
+export const ZHENYA = {
+  name: 'Женя',
+  jobTitle: 'Психиатр-нарколог, ведущий «Мужской среды»',
+  url: 'https://www.instagram.com/evgeny_yakubovskiy/',
+  handle: '@evgeny_yakubovskiy',
+} as const
+
+export type NavLink = { href: string; label: string }
+
+/**
+ * Единая навигация для всех страниц: наполнение шапки везде одинаковое.
+ * Отличаются только адреса якорей — на главной это ссылки внутри страницы,
+ * на остальных нужен переход на главную с якорем.
+ */
+const NAV_ITEMS: Array<{ label: string; anchor?: string; href?: string }> = [
+  { label: 'Что внутри', anchor: '#features' },
+  { label: 'Формат', anchor: '#community-format' },
+  { label: 'Отзывы', anchor: '#testimonials' },
+  { label: 'Ведущие', anchor: '#hosts' },
+  { label: 'Цена', anchor: '#pricing' },
+  { label: 'Вопросы', anchor: '#faq' },
+  { label: 'Блог', href: BLOG_URL },
+]
+
+export function navLinks(isHome: boolean): NavLink[] {
+  return NAV_ITEMS.map(({ label, anchor, href }) => ({
+    label,
+    href: href ?? (isHome ? anchor! : `/${anchor}`),
+  }))
+}

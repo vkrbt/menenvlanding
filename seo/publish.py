@@ -1,87 +1,89 @@
 #!/usr/bin/env python3
-"""Публикация: MD → HTML, перенос в drafts/released/, обновление sitemap.xml."""
+"""Публикация статьи: drafts/ready/<slug>.md → content/blog/<slug>.md.
+
+HTML и sitemap.xml больше здесь не собираются — это делает Next при `npm run build`
+из content/blog/. Задача скрипта сузилась до проверки фронтматтера и переноса файла,
+чтобы битая статья не доехала до сборки.
+
+Использование:
+    python3 seo/publish.py            # опубликовать всё из drafts/ready/
+    python3 seo/publish.py --check    # только проверить, ничего не двигать
+"""
 from __future__ import annotations
 
-import re
-import shutil
 import sys
 from pathlib import Path
 
-from datetime import date
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from frontmatter import dump, parse, validate  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 READY = ROOT / "drafts" / "ready"
-RELEASED = ROOT / "drafts" / "released"
-WRITING = ROOT / "drafts" / "writing"
-BLOG = ROOT / "blog"
-SITEMAP = ROOT / "sitemap.xml"
-
-sys.path.insert(0, str(ROOT / "seo"))
-from md2html import convert, parse_frontmatter  # noqa: E402
+CONTENT = ROOT / "content" / "blog"
 
 
-def gen_sitemap(slugs_dates: list[tuple[str, str]], today: str | None = None) -> str:
-    today = today or date.today().isoformat()
-    lines = [
-        '<?xml version="1.0" encoding="UTF-8"?>',
-        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-        f"  <url><loc>https://sreda.men/</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>",
-        f"  <url><loc>https://sreda.men/book</loc><lastmod>{today}</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>",
-        f"  <url><loc>https://sreda.men/blog/</loc><lastmod>{today}</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>",
-    ]
-    for slug, lastmod in sorted(slugs_dates, key=lambda x: x[1], reverse=True):
-        lines.append(
-            f"  <url><loc>https://sreda.men/blog/{slug}</loc>"
-            f"<lastmod>{lastmod}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>"
-        )
-    lines.append("</urlset>")
-    return "\n".join(lines) + "\n"
+def check_all() -> int:
+    """Проверить уже опубликованное — ловит статьи, сломанные ручной правкой."""
+    total = 0
+    problems = 0
+    for md in sorted(CONTENT.glob("*.md")):
+        total += 1
+        fm, _ = parse(md.read_text(encoding="utf-8"))
+        issues = validate(fm)
+        if issues:
+            problems += 1
+            print(f"✗ {md.name}")
+            for i in issues:
+                print(f"    {i}")
+    if not problems:
+        print(f"✓ все {total} статей в content/blog/ корректны")
+    return problems
 
 
-def collect_dates() -> list[tuple[str, str]]:
-    dates: dict[str, str] = {}
-    for folder in (RELEASED, WRITING):
-        if not folder.exists():
+def publish() -> int:
+    CONTENT.mkdir(parents=True, exist_ok=True)
+    drafts = sorted(READY.glob("*.md"))
+
+    if not drafts:
+        print("в drafts/ready/ пусто — публиковать нечего")
+        return 0
+
+    # Сначала проверяем всё, и только потом двигаем файлы:
+    # иначе половина статей уедет, а половина останется
+    staged: list[tuple[Path, dict[str, str], str]] = []
+    failed = 0
+
+    for md in drafts:
+        fm, body = parse(md.read_text(encoding="utf-8"))
+        issues = validate(fm)
+        if issues:
+            failed += 1
+            print(f"✗ {md.name}")
+            for i in issues:
+                print(f"    {i}")
             continue
-        for md in folder.glob("*.md"):
-            fm, _ = parse_frontmatter(md.read_text(encoding="utf-8"))
-            slug = fm.get("slug", md.stem)
-            dates[slug] = fm.get("date_modified", fm.get("date_published", "2026-07-11"))
-    # blog HTML without MD (shouldn't happen)
-    for html in BLOG.glob("*.html"):
-        if html.stem == "index":
-            continue
-        dates.setdefault(html.stem, "2026-07-11")
-    # В карту сайта попадают только слаги, у которых реально есть страница:
-    # черновики из drafts/writing/ иначе дают 404 для поисковика
-    return [(slug, d) for slug, d in dates.items() if (BLOG / f"{slug}.html").exists()]
+        fm["status"] = "released"
+        fm.setdefault("date_modified", fm["date_published"])
+        staged.append((md, fm, body))
+
+    if failed:
+        print(f"\nне опубликовано: {failed}. Исправь и запусти снова — ничего не перенесено")
+        return failed
+
+    for md, fm, body in staged:
+        slug = fm["slug"]
+        (CONTENT / f"{slug}.md").write_text(dump(fm, body), encoding="utf-8")
+        md.unlink()
+        print(f"✓ {slug}")
+
+    print(f"\nопубликовано: {len(staged)}. Дальше — npm run build")
+    return 0
 
 
 def main() -> None:
-    RELEASED.mkdir(parents=True, exist_ok=True)
-
-    md_files = sorted(READY.glob("*.md"))
-    kak = WRITING / "kak-perestat-sryvatsya-na-blizkih.md"
-    if kak.exists():
-        md_files.append(kak)
-
-    for md in md_files:
-        convert(md, BLOG)
-        print(f"html: {md.stem}")
-
-    for md in READY.glob("*.md"):
-        dest = RELEASED / md.name
-        if dest.exists():
-            dest.unlink()
-        shutil.move(str(md), str(dest))
-        fm, _ = parse_frontmatter(dest.read_text(encoding="utf-8"))
-        fm_text = dest.read_text(encoding="utf-8")
-        fm_text = re.sub(r"^status:.*$", "status: released", fm_text, flags=re.M)
-        dest.write_text(fm_text, encoding="utf-8")
-        print(f"released: {md.name}")
-
-    SITEMAP.write_text(gen_sitemap(collect_dates()), encoding="utf-8")
-    print(f"sitemap: {len(collect_dates())} blog URLs")
+    if "--check" in sys.argv:
+        sys.exit(1 if check_all() else 0)
+    sys.exit(1 if publish() else 0)
 
 
 if __name__ == "__main__":

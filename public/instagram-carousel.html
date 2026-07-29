@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram Карусель — Мужская среда</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style id="main-styles">
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Manrope',sans-serif;background:#111118;color:#fff;padding:40px 24px 80px}
+
+    /* UI */
+    .ui-header{max-width:1200px;margin:0 auto 20px;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:16px}
+    .ui-header h1{font-family:'Dela Gothic One',sans-serif;font-size:1.3rem;letter-spacing:.02em}
+    .ui-header p{font-size:.82rem;color:#666;margin-top:4px}
+    .btn-export{display:inline-flex;align-items:center;gap:8px;background:#000DC3;color:#fff;font-family:'Manrope',sans-serif;font-weight:700;font-size:.88rem;padding:11px 22px;border-radius:10px;border:none;cursor:pointer;transition:background .18s;white-space:nowrap}
+    .btn-export:hover{background:#0011e8}
+    .hint-box{max-width:1200px;margin:0 auto 36px;background:rgba(0,13,195,.1);border:1px solid rgba(0,13,195,.3);border-radius:10px;padding:12px 18px;font-size:.8rem;color:#99a;line-height:1.6}
+    .hint-box strong{color:#fff}
+    .slides-wrapper{max-width:1200px;margin:0 auto;display:flex;flex-direction:column;gap:52px}
+    .slide-row{display:flex;flex-direction:column;gap:10px}
+    .slide-label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#444}
+    .slide-preview-wrap{border-radius:16px;overflow:hidden;border:1px solid rgba(255,255,255,.06);position:relative;display:block;width:540px;height:540px}
+    .slide-outer{width:1080px;height:1080px;transform-origin:top left;position:absolute;top:0;left:0;flex-shrink:0}
+
+    /* BASE SLIDE */
+    .slide{width:1080px;height:1080px;position:relative;overflow:hidden;font-family:'Manrope',sans-serif}
+    .s-logo{position:absolute;top:56px;left:64px;display:flex;flex-direction:column;line-height:1;z-index:10}
+    .s-logo span{font-family:'Dela Gothic One',sans-serif;font-size:28px;letter-spacing:.06em}
+    .s-num{position:absolute;top:60px;right:64px;font-size:28px;font-weight:700;letter-spacing:.1em;z-index:10}
+
+    /* SLIDE 1 — HOOK */
+    .s1{background:#06060D}
+    .s1-glow{position:absolute;top:-120px;left:-120px;width:780px;height:780px;background:radial-gradient(circle,rgba(0,13,195,.55) 0%,transparent 60%);pointer-events:none}
+    .s1-glow2{position:absolute;bottom:-200px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(77,111,255,.2) 0%,transparent 60%);pointer-events:none}
+    .s1-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:72px 72px}
+    .s1-content{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:64px;padding-bottom:80px}
+    .s1-tag{display:inline-flex;align-items:center;gap:10px;background:rgba(0,13,195,.25);border:1px solid rgba(0,13,195,.5);border-radius:100px;padding:12px 28px;font-size:26px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#7090ff;margin-bottom:36px;width:fit-content}
+    .s1-title{font-family:'Dela Gothic One',sans-serif;font-size:112px;line-height:.95;letter-spacing:-.02em;color:#fff}
+    .s1-title .accent{color:#4d6fff}
+    .s1-sub{margin-top:36px;font-size:44px;font-weight:500;color:rgba(255,255,255,.55);line-height:1.45;max-width:900px}
+    .s1-bar{position:absolute;bottom:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#000DC3,#4d6fff)}
+    .s1-word{position:absolute;top:148px;left:50%;transform:translateX(-50%);font-family:'Dela Gothic One',sans-serif;font-size:148px;line-height:1;letter-spacing:-.03em;color:transparent;-webkit-text-stroke:2.5px rgba(120,150,255,.38);white-space:nowrap;pointer-events:none;user-select:none;z-index:1;text-shadow:0 0 60px rgba(0,13,195,.5),0 0 120px rgba(0,13,195,.25)}
+
+    /* SLIDE 2 — PROBLEM */
+    .s2{background:#F0EEE8}
+    .s2-stripe{position:absolute;top:0;left:0;width:8px;height:100%;background:#000DC3}
+    .s2-content{position:absolute;inset:0;padding:64px 64px 64px 80px;display:flex;flex-direction:column;justify-content:center}
+    .s2-heading{font-family:'Dela Gothic One',sans-serif;font-size:80px;line-height:1;color:#0A0A0F;margin-bottom:52px}
+    .s2-list{display:flex;flex-direction:column;gap:36px}
+    .s2-item{display:flex;align-items:flex-start;gap:24px}
+    .s2-item__q{font-family:'Dela Gothic One',sans-serif;font-size:60px;line-height:.8;color:#000DC3;flex-shrink:0;margin-top:-4px}
+    .s2-item__text{font-size:44px;font-weight:600;color:#1a1a2e;line-height:1.4}
+    .s2-bar{position:absolute;bottom:0;left:0;right:0;height:5px;background:#000DC3}
+
+    /* SLIDE 3 — FEATURES */
+    .s3{background:#08080F}
+    .s3-glow{position:absolute;bottom:-100px;right:-100px;width:600px;height:600px;background:radial-gradient(circle,rgba(0,13,195,.35) 0%,transparent 60%);pointer-events:none}
+    .s3-content{position:absolute;inset:0;padding:64px;padding-top:148px;display:flex;flex-direction:column}
+    .s3-heading{font-family:'Dela Gothic One',sans-serif;font-size:72px;line-height:1;margin-bottom:48px}
+    .s3-list{display:flex;flex-direction:column;gap:28px;flex:1;justify-content:center}
+    .s3-item{display:flex;align-items:flex-start;gap:24px;padding:28px 32px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:20px}
+    .s3-item__num{font-family:'Dela Gothic One',sans-serif;font-size:28px;color:#000DC3;background:rgba(0,13,195,.15);border:1px solid rgba(0,13,195,.3);border-radius:10px;padding:6px 14px;flex-shrink:0;line-height:1.2}
+    .s3-item__body{display:flex;flex-direction:column;gap:6px}
+    .s3-item__title{font-size:44px;font-weight:800;line-height:1.15;color:#fff}
+    .s3-item__desc{font-size:34px;color:rgba(255,255,255,.5);line-height:1.4}
+    .s3-bar{position:absolute;bottom:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#000DC3,#4d6fff)}
+
+    /* SLIDE 4 — TESTIMONIAL */
+    .s4{background:#000DC3}
+    .s4-circle{position:absolute;top:-200px;right:-200px;width:700px;height:700px;border-radius:50%;background:rgba(255,255,255,.06);pointer-events:none}
+    .s4-circle2{position:absolute;bottom:-300px;left:-150px;width:600px;height:600px;border-radius:50%;background:rgba(255,255,255,.04);pointer-events:none}
+    .s4-content{position:absolute;inset:0;padding:64px;display:flex;flex-direction:column;justify-content:center}
+    .s4-qmark{font-family:'Dela Gothic One',sans-serif;font-size:160px;line-height:.65;color:rgba(255,255,255,.12);margin-bottom:8px;user-select:none}
+    .s4-quote{font-size:56px;font-weight:700;line-height:1.4;color:#fff;max-width:900px}
+    .s4-author{margin-top:48px;display:flex;align-items:center;gap:16px}
+    .s4-author__line{width:40px;height:2px;background:rgba(255,255,255,.4)}
+    .s4-author__name{font-size:32px;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:.04em}
+    .s4-bar{position:absolute;bottom:0;left:0;right:0;height:5px;background:rgba(255,255,255,.25)}
+
+    /* SLIDE 5 — PRICING */
+    .s5{background:#06060D}
+    .s5-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px}
+    .s5-content{position:absolute;inset:0;padding:64px;padding-top:148px;display:flex;flex-direction:column;justify-content:center}
+    .s5-heading{font-family:'Dela Gothic One',sans-serif;font-size:72px;line-height:1;margin-bottom:44px}
+    .s5-cards{display:flex;gap:20px;justify-content:center;align-items:stretch}
+    .s5-card{flex:1;min-width:0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:24px;padding:36px 24px;display:flex;flex-direction:column;gap:10px;position:relative;justify-content:flex-start}
+    .s5-card--hot{background:rgba(0,13,195,.15);border-color:#000DC3}
+    .s5-card__badge{position:absolute;top:-20px;left:50%;transform:translateX(-50%);background:#000DC3;color:#fff;font-size:20px;font-weight:800;padding:8px 22px;border-radius:100px;white-space:nowrap;letter-spacing:.06em;text-transform:uppercase}
+    .s5-card__label{font-size:20px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35)}
+    .s5-card__price{font-family:'Dela Gothic One',sans-serif;font-size:80px;line-height:1;color:#fff}
+    .s5-card__per{font-family:'Manrope',sans-serif;font-size:26px;font-weight:500;color:rgba(255,255,255,.35)}
+    .s5-card__note{font-size:26px;color:rgba(255,255,255,.45);line-height:1.45;margin-top:16px}
+    .s5-footnote{margin-top:28px;font-size:28px;color:rgba(255,255,255,.3);font-style:italic}
+    .s5-bar{position:absolute;bottom:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#000DC3,#4d6fff)}
+
+    /* SLIDE 6 — CTA */
+    .s6{background:#06060D}
+    .s6-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:900px;height:900px;background:radial-gradient(circle,rgba(0,13,195,.5) 0%,transparent 60%);pointer-events:none}
+    .s6-ring{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:700px;border-radius:50%;border:1px solid rgba(0,13,195,.2);pointer-events:none}
+    .s6-ring2{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:900px;height:900px;border-radius:50%;border:1px solid rgba(0,13,195,.1);pointer-events:none}
+    .s6-content{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:64px;gap:0}
+    .s6-eyebrow{font-size:26px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:28px}
+    .s6-title{font-family:'Dela Gothic One',sans-serif;font-size:120px;line-height:.95;letter-spacing:-.02em;color:#fff}
+    .s6-sub{margin-top:36px;font-size:40px;font-weight:500;color:rgba(255,255,255,.5);line-height:1.5;max-width:800px}
+    .s6-cta{margin-top:56px;background:#fff;color:#06060D;font-family:'Dela Gothic One',sans-serif;font-size:44px;letter-spacing:.02em;padding:32px 80px;border-radius:100px}
+    .s6-hint{margin-top:24px;font-size:28px;color:rgba(255,255,255,.25)}
+    .s6-bar{position:absolute;bottom:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#000DC3,#4d6fff)}
+
+    /* SLIDE 7 — FORMAT */
+    .s7{background:#F0EEE8}
+    .s7-stripe{position:absolute;top:0;left:0;width:8px;height:100%;background:#000DC3}
+    .s7-content{position:absolute;inset:0;padding:64px 64px 64px 80px;display:flex;flex-direction:column;justify-content:center}
+    .s7-heading{font-family:'Dela Gothic One',sans-serif;font-size:72px;line-height:1;color:#0A0A0F;margin-bottom:64px}
+    .s7-steps{display:flex;flex-direction:column;gap:40px}
+    .s7-step{display:flex;align-items:flex-start;gap:32px}
+    .s7-step__num{font-family:'Dela Gothic One',sans-serif;font-size:80px;line-height:.85;color:#000DC3;flex-shrink:0;width:68px}
+    .s7-step__body{}
+    .s7-step__title{font-size:44px;font-weight:800;color:#0A0A0F;line-height:1.2;margin-bottom:10px}
+    .s7-step__desc{font-size:36px;font-weight:500;color:#444;line-height:1.45}
+    .s7-bar{position:absolute;bottom:0;left:0;right:0;height:5px;background:#000DC3}
+
+    /* SLIDE 8 — HOSTS */
+    .s8{background:#06060D}
+    .s8-glow{position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:800px;height:800px;background:radial-gradient(circle,rgba(0,13,195,.3) 0%,transparent 60%);pointer-events:none}
+    .s8-content{position:absolute;inset:0;padding:48px 56px;display:flex;flex-direction:column;justify-content:center}
+    .s8-heading{font-family:'Dela Gothic One',sans-serif;font-size:68px;line-height:1;margin-bottom:32px}
+    .s8-hosts{display:flex;flex-direction:row;gap:24px;justify-content:center;align-items:stretch}
+    .s8-host{flex:1;min-width:0;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-radius:24px;overflow:hidden;display:flex;flex-direction:column}
+    .s8-host__photo-wrap{position:relative;width:100%;height:400px;flex-shrink:0}
+    .s8-host__photo{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}
+    .s8-host__photo-wrap::after{content:'';position:absolute;inset:0 0 -2px 0;background:linear-gradient(to bottom,transparent 70%,#0f0f18 100%)}
+    .s8-host__body{padding:20px 24px 28px;display:flex;flex-direction:column;gap:8px;position:relative;z-index:1}
+    .s8-host__name{font-family:'Dela Gothic One',sans-serif;font-size:44px;color:#fff;line-height:1}
+    .s8-host__role{font-size:22px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#4d6fff;margin:4px 0 10px}
+    .s8-host__desc{font-size:28px;color:rgba(255,255,255,.5);line-height:1.45;margin-top:4px}
+    .s8-bar{position:absolute;bottom:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#000DC3,#4d6fff)}
+
+    /* SLIDE 9 — SECOND TESTIMONIAL */
+    .s9{background:#0A0A0F}
+    .s9-accent{position:absolute;top:0;left:0;right:0;height:6px;background:linear-gradient(90deg,#000DC3,#4d6fff)}
+    .s9-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.02) 1px,transparent 1px);background-size:60px 60px}
+    .s9-content{position:absolute;inset:0;padding:64px;display:flex;flex-direction:column;justify-content:center;gap:40px}
+    .s9-label{font-size:14px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.3)}
+    .s9-cards{display:flex;flex-direction:column;gap:24px}
+    .s9-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:20px;padding:32px 36px}
+    .s9-card__text{font-size:26px;font-weight:600;color:#fff;line-height:1.45;margin-bottom:16px}
+    .s9-card__author{font-size:17px;font-weight:700;color:rgba(255,255,255,.4);letter-spacing:.04em}
+    .s9-bar{position:absolute;bottom:0;left:0;right:0;height:5px;background:linear-gradient(90deg,#000DC3,#4d6fff)}
+  </style>
+</head>
+<body>
+
+  <div class="ui-header">
+    <div>
+      <h1>Instagram Карусель — Мужская среда</h1>
+      <p>6 слайдов · 1080×1080 px</p>
+    </div>
+    <button class="btn-export" onclick="openAllSlides()">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      Открыть все слайды
+    </button>
+  </div>
+
+  <div class="hint-box">
+    <strong>Экспорт:</strong> нажмите «Открыть все слайды» — каждый откроется в отдельной вкладке в размере 1080×1080 px.
+    Сделайте скриншот (⌘+Shift+4 на Mac, Snipping Tool на Windows) или используйте расширение для скриншота страницы.
+  </div>
+
+  <div class="slides-wrapper" id="slidesWrapper">
+
+    <!-- SLIDE 1 -->
+    <div class="slide-row">
+      <div class="slide-label">Слайд 1 / 6 — Крючок</div>
+      <div class="slide-preview-wrap" id="wrap-1">
+        <div class="slide-outer" id="outer-1">
+          <div class="slide s1" id="slide-1">
+            <div class="s1-grid"></div>
+            <div class="s1-glow"></div>
+            <div class="s1-glow2"></div>
+            <div class="s-logo"><span>МУЖСКАЯ</span><span>СРЕДА</span></div>
+            <div class="s-num" style="color:rgba(255,255,255,.2)">1 / 9</div>
+            <div class="s1-word">МУЖЧИНА</div>
+            <div class="s1-content">
+              <div class="s1-tag">Онлайн · Старт 1 апреля</div>
+              <h2 class="s1-title">Есть что<br>сказать —<br>но <span class="accent">некому?</span></h2>
+              <p class="s1-sub">Коммьюнити для&nbsp;мужчин, которые хотят говорить о&nbsp;настоящем</p>
+            </div>
+            <div class="s1-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 2 -->
+    <div class="slide-row">
+      <div class="slide-label">Слайд 2 / 9 — Проблема</div>
+      <div class="slide-preview-wrap" id="wrap-2">
+        <div class="slide-outer" id="outer-2">
+          <div class="slide s2" id="slide-2">
+            <div class="s2-stripe"></div>
+            <div class="s-logo" style="left:80px"><span style="color:#0A0A0F">МУЖСКАЯ</span><span style="color:#0A0A0F">СРЕДА</span></div>
+            <div class="s-num" style="color:rgba(0,0,0,.2)">2 / 9</div>
+            <div class="s2-content">
+              <h2 class="s2-heading">Знакомо?</h2>
+              <div class="s2-list">
+                <div class="s2-item">
+                  <span class="s2-item__q">"</span>
+                  <p class="s2-item__text">Есть друзья — но&nbsp;говорить с&nbsp;ними не&nbsp;о&nbsp;чём, кроме работы и&nbsp;новостей</p>
+                </div>
+                <div class="s2-item">
+                  <span class="s2-item__q">"</span>
+                  <p class="s2-item__text">Живёшь на&nbsp;автопилоте. Чего-то не&nbsp;хватает — а&nbsp;чего, непонятно</p>
+                </div>
+                <div class="s2-item">
+                  <span class="s2-item__q">"</span>
+                  <p class="s2-item__text">Тащишь всё в&nbsp;одиночку. Потому что&nbsp;«мужик должен»</p>
+                </div>
+              </div>
+            </div>
+            <div class="s2-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 3 -->
+    <div class="slide-row">
+      <div class="slide-label">Слайд 3 / 6 — Что внутри</div>
+      <div class="slide-preview-wrap" id="wrap-3">
+        <div class="slide-outer" id="outer-3">
+          <div class="slide s3" id="slide-3">
+            <div class="s3-glow"></div>
+            <div class="s-logo"><span>МУЖСКАЯ</span><span>СРЕДА</span></div>
+            <div class="s-num" style="color:rgba(255,255,255,.2)">3 / 9</div>
+            <div class="s3-content">
+              <h2 class="s3-heading">Что ты получаешь</h2>
+              <div class="s3-list">
+                <div class="s3-item">
+                  <div class="s3-item__num">01</div>
+                  <div class="s3-item__body">
+                    <div class="s3-item__title">Встречи раз в&nbsp;2&nbsp;недели</div>
+                    <div class="s3-item__desc">3&nbsp;часа в&nbsp;Zoom. Без затянутых монологов</div>
+                  </div>
+                </div>
+                <div class="s3-item">
+                  <div class="s3-item__num">02</div>
+                  <div class="s3-item__body">
+                    <div class="s3-item__title">Закрытый чат</div>
+                    <div class="s3-item__desc">Продолжаешь разговор между встречами</div>
+                  </div>
+                </div>
+                <div class="s3-item">
+                  <div class="s3-item__num">03</div>
+                  <div class="s3-item__body">
+                    <div class="s3-item__title">Подкаст раньше всех</div>
+                    <div class="s3-item__desc">Слушаешь новые выпуски до публикации</div>
+                  </div>
+                </div>
+                <div class="s3-item">
+                  <div class="s3-item__num">04</div>
+                  <div class="s3-item__body">
+                    <div class="s3-item__title">Нетворкинг</div>
+                    <div class="s3-item__desc">Тет-а-тет встречи с участниками</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="s3-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 4 -->
+    <div class="slide-row">
+      <div class="slide-label">Слайд 4 / 6 — Отзыв</div>
+      <div class="slide-preview-wrap" id="wrap-4">
+        <div class="slide-outer" id="outer-4">
+          <div class="slide s4" id="slide-4">
+            <div class="s4-circle"></div>
+            <div class="s4-circle2"></div>
+            <div class="s-logo"><span style="color:rgba(255,255,255,.6)">МУЖСКАЯ</span><span style="color:rgba(255,255,255,.6)">СРЕДА</span></div>
+            <div class="s-num" style="color:rgba(255,255,255,.3)">4 / 6</div>
+            <div class="s4-content">
+              <div class="s4-qmark">"</div>
+              <blockquote class="s4-quote">Не было ролевой модели мужчины. Сейчас, когда начинаю формировать её — мне важно быть среди других мужчин. Помогает достроить образ</blockquote>
+              <div class="s4-author">
+                <div class="s4-author__line"></div>
+                <div class="s4-author__name">Денис, Тбилиси</div>
+              </div>
+            </div>
+            <div class="s4-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 5 -->
+    <div class="slide-row">
+      <div class="slide-label">Слайд 5 / 6 — Цена</div>
+      <div class="slide-preview-wrap" id="wrap-5">
+        <div class="slide-outer" id="outer-5">
+          <div class="slide s5" id="slide-5">
+            <div class="s5-grid"></div>
+            <div class="s-logo"><span>МУЖСКАЯ</span><span>СРЕДА</span></div>
+            <div class="s-num" style="color:rgba(255,255,255,.2)">5 / 6</div>
+            <div class="s5-content">
+              <h2 class="s5-heading">Стоимость</h2>
+              <div class="s5-cards">
+                <div class="s5-card">
+                  <div class="s5-card__label">За встречу</div>
+                  <div class="s5-card__price">€25</div>
+                  <div class="s5-card__per">/ встреча</div>
+                  <div class="s5-card__note">Оплата перед каждым занятием</div>
+                </div>
+                <div class="s5-card s5-card--hot">
+                  <div class="s5-card__badge">Лучший выбор</div>
+                  <div class="s5-card__label">1 месяц</div>
+                  <div class="s5-card__price">€20</div>
+                  <div class="s5-card__per">/ встреча</div>
+                  <div class="s5-card__note">€40 за 2 встречи · минимальное членство</div>
+                </div>
+                <div class="s5-card">
+                  <div class="s5-card__label">3 месяца</div>
+                  <div class="s5-card__price">€18</div>
+                  <div class="s5-card__per">/ встреча</div>
+                  <div class="s5-card__note">€108 за 6 встреч</div>
+                </div>
+              </div>
+              <div class="s5-footnote">Дешевле одной сессии у психолога</div>
+            </div>
+            <div class="s5-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 6 -->
+    <div class="slide-row">
+      <div class="slide-label">Слайд 6 / 9 — Отзыв 2</div>
+      <div class="slide-preview-wrap" id="wrap-6">
+        <div class="slide-outer" id="outer-6">
+          <div class="slide s4" id="slide-6">
+            <div class="s4-circle"></div>
+            <div class="s4-circle2"></div>
+            <div class="s-logo"><span style="color:rgba(255,255,255,.6)">МУЖСКАЯ</span><span style="color:rgba(255,255,255,.6)">СРЕДА</span></div>
+            <div class="s-num" style="color:rgba(255,255,255,.3)">6 / 9</div>
+            <div class="s4-content">
+              <div class="s4-qmark">"</div>
+              <blockquote class="s4-quote">Попал сюда именно в&nbsp;тот момент, когда это требовалось критически. После первой встречи пришло абсолютное осознание, что я&nbsp;в&nbsp;правильном месте</blockquote>
+              <div class="s4-author">
+                <div class="s4-author__line"></div>
+                <div class="s4-author__name">Алексей, Польша</div>
+              </div>
+            </div>
+            <div class="s4-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 7 — FORMAT -->
+    <div class="slide-row">
+      <div class="slide-label">Слайд 7 / 9 — Формат встречи</div>
+      <div class="slide-preview-wrap" id="wrap-7">
+        <div class="slide-outer" id="outer-7">
+          <div class="slide s7" id="slide-7">
+            <div class="s7-stripe"></div>
+            <div class="s-logo" style="left:80px"><span style="color:#0A0A0F">МУЖСКАЯ</span><span style="color:#0A0A0F">СРЕДА</span></div>
+            <div class="s-num" style="color:rgba(0,0,0,.2)">7 / 9</div>
+            <div class="s7-content">
+              <h2 class="s7-heading">Что будет?</h2>
+              <div class="s7-steps">
+                <div class="s7-step">
+                  <div class="s7-step__num">1</div>
+                  <div class="s7-step__body">
+                    <div class="s7-step__title">Тема — повод начать разговор</div>
+                    <div class="s7-step__desc">Объявляем заранее: работа, отношения, отцы и&nbsp;сыновья, деньги, злость, дружба</div>
+                  </div>
+                </div>
+                <div class="s7-step">
+                  <div class="s7-step__num">2</div>
+                  <div class="s7-step__body">
+                    <div class="s7-step__title">Разговор</div>
+                    <div class="s7-step__desc">Уровень самораскрытия выбираешь сам. Никто не&nbsp;давит</div>
+                  </div>
+                </div>
+                <div class="s7-step">
+                  <div class="s7-step__num">3</div>
+                  <div class="s7-step__body">
+                    <div class="s7-step__title">Обмен</div>
+                    <div class="s7-step__desc">Важнее быть честным, чем красноречивым. «Блин, у&nbsp;меня же то&nbsp;же самое» — вот ради чего это всё</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="s7-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 8 — HOSTS -->
+    <div class="slide-row">
+      <div class="slide-label">Слайд 8 / 9 — Ведущие</div>
+      <div class="slide-preview-wrap" id="wrap-8">
+        <div class="slide-outer" id="outer-8">
+          <div class="slide s8" id="slide-8">
+            <div class="s8-glow"></div>
+            <div class="s-logo"><span>МУЖСКАЯ</span><span>СРЕДА</span></div>
+            <div class="s-num" style="color:rgba(255,255,255,.2)">8 / 9</div>
+            <div class="s8-content">
+              <h2 class="s8-heading">Кто ведёт</h2>
+              <div class="s8-hosts">
+                <div class="s8-host">
+                  <div class="s8-host__photo-wrap">
+                    <img src="photos/vlad.png" alt="Влад" class="s8-host__photo"/>
+                  </div>
+                  <div class="s8-host__body">
+                    <div class="s8-host__name">Влад</div>
+                    <div class="s8-host__role">Гештальт-терапевт</div>
+                    <div class="s8-host__desc">Пишет код в&nbsp;Big Tech. В комьюнити следит, чтобы никто не&nbsp;прятался за&nbsp;умными словами — включая себя</div>
+                  </div>
+                </div>
+                <div class="s8-host">
+                  <div class="s8-host__photo-wrap">
+                    <img src="photos/eugene.jpeg" alt="Женя" class="s8-host__photo"/>
+                  </div>
+                  <div class="s8-host__body">
+                    <div class="s8-host__name">Женя</div>
+                    <div class="s8-host__role">Психиатр-нарколог</div>
+                    <div class="s8-host__desc">Сбежал в&nbsp;дата-инженерию — не&nbsp;помогло. Не&nbsp;лечит, но&nbsp;если будешь врать себе — заметит</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="s8-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SLIDE 9 — CTA -->
+    <div class="slide-row">
+      <div class="slide-label">Слайд 9 / 9 — CTA</div>
+      <div class="slide-preview-wrap" id="wrap-9">
+        <div class="slide-outer" id="outer-9">
+          <div class="slide s6" id="slide-9">
+            <div class="s6-glow"></div>
+            <div class="s6-ring"></div>
+            <div class="s6-ring2"></div>
+            <div class="s-logo"><span style="color:rgba(255,255,255,.7)">МУЖСКАЯ</span><span style="color:rgba(255,255,255,.7)">СРЕДА</span></div>
+            <div class="s-num" style="color:rgba(255,255,255,.2)">9 / 9</div>
+            <div class="s6-content">
+              <div class="s6-eyebrow">Старт 1 апреля · Онлайн в Zoom</div>
+              <h2 class="s6-title">Оставь<br>заявку</h2>
+              <p class="s6-sub">Мы&nbsp;напишем тебе лично<br>и&nbsp;ответим на&nbsp;все вопросы</p>
+              <div class="s6-cta">sreda.men</div>
+              <p class="s6-hint">Это бесплатно и&nbsp;ни к&nbsp;чему не&nbsp;обязывает</p>
+            </div>
+            <div class="s6-bar"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function scaleSlides() {
+      var maxW = Math.min(window.innerWidth - 48, 600);
+      var scale = maxW / 1080;
+      var px = Math.round(1080 * scale);
+      for (var i = 1; i <= 9; i++) {
+        var outer = document.getElementById('outer-' + i);
+        var wrap  = document.getElementById('wrap-' + i);
+        if (!outer || !wrap) continue;
+        outer.style.transform = 'scale(' + scale + ')';
+        outer.style.width  = '1080px';
+        outer.style.height = '1080px';
+        wrap.style.width  = px + 'px';
+        wrap.style.height = px + 'px';
+      }
+    }
+    scaleSlides();
+    window.addEventListener('resize', scaleSlides);
+
+    function openAllSlides() {
+      for (var i = 1; i <= 9; i++) { openSlide(i); }
+    }
+
+    function openSlide(num) {
+      var slide = document.getElementById('slide-' + num);
+      if (!slide) return;
+      var styles = document.getElementById('main-styles').outerHTML;
+      var fonts = '<link rel="preconnect" href="https://fonts.googleapis.com"/>'
+        + '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>'
+        + '<link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>';
+      var html = '<!DOCTYPE html><html lang="ru"><head><meta charset="UTF-8"/>'
+        + '<style>html,body{margin:0;padding:0;width:1080px;height:1080px;overflow:hidden;background:#06060D}</style>'
+        + fonts + styles
+        + '</head><body>' + slide.outerHTML + '</body></html>';
+      var blob = new Blob([html], { type: 'text/html' });
+      window.open(URL.createObjectURL(blob), '_blank');
+    }
+  </script>
+</body>
+</html>

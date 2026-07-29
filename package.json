@@ -1,5 +1,23 @@
 {
+  "name": "sreda-men",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "serve": "npx --yes serve out -p 4174",
+    "verify": "node scripts/verify-parity.mjs"
+  },
+  "dependencies": {
+    "next": "16.2.10",
+    "react": "19.2.7",
+    "react-dom": "19.2.7"
+  },
   "devDependencies": {
-    "puppeteer": "^24.39.1"
+    "@types/node": "^22.10.2",
+    "@types/react": "^19.0.2",
+    "@types/react-dom": "^19.0.2",
+    "lighthouse": "^12.8.2",
+    "puppeteer": "^24.39.1",
+    "typescript": "^5.7.2"
   }
 }
