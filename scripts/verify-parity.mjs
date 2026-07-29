@@ -7,7 +7,13 @@
  *   1) нормализованное DOM-дерево после отработки клиентских скриптов
  *   2) вычисленные стили и геометрию каждого элемента
  *
- * Запуск: node scripts/verify-parity.mjs [--only=/blog/slug] [--shots]
+ * Старый сайт удалён из репозитория, поэтому эталон берётся из worktree
+ * на последнем дореформенном коммите:
+ *
+ *   git worktree add /tmp/sreda-old c596a89
+ *   node scripts/verify-parity.mjs --old=/tmp/sreda-old
+ *
+ * Запуск: node scripts/verify-parity.mjs --old=<dir> [--only=/blog/slug] [--shots]
  */
 import http from 'node:http'
 import fs from 'node:fs'
@@ -15,12 +21,21 @@ import path from 'node:path'
 import puppeteer from 'puppeteer'
 
 const ROOT = process.cwd()
-const OLD_DIR = ROOT
 const NEW_DIR = path.join(ROOT, 'out')
 
 const args = process.argv.slice(2)
 const only = args.find((a) => a.startsWith('--only='))?.slice(7)
 const wantShots = args.includes('--shots')
+const OLD_DIR = args.find((a) => a.startsWith('--old='))?.slice(6)
+
+if (!OLD_DIR || !fs.existsSync(path.join(OLD_DIR, 'index.html'))) {
+  console.error(
+    'Не задан каталог со старым сайтом.\n' +
+      '  git worktree add /tmp/sreda-old c596a89\n' +
+      '  node scripts/verify-parity.mjs --old=/tmp/sreda-old',
+  )
+  process.exit(2)
+}
 
 /* ============================================================
    Статический сервер с поведением Vercel cleanUrls
@@ -87,6 +102,9 @@ const IGNORE_SELECTORS = [
   // а не регрессия — проверяется глазами, см. чек-лист Этапа 5
   'header.nav',
   '.mnav',
+
+  // Переключатель темы переехал из шапки в подвал — тоже по отдельной просьбе
+  '.theme-toggle',
 ]
 
 /**
@@ -119,6 +137,13 @@ const NORMALIZE = [
   // высота <body> = высота всей страницы, а шапка намеренно переделана.
   // Габариты остальных узлов сравниваются как обычно
   (s) => (s.startsWith('0|body|') ? s.replace(/box=\d+x\d+/, 'box=NN') : s),
+  // подвал вырос: в нём появился переключатель темы, на узких экранах
+  // он переносится на новую строку. Классы в снимке отсортированы и склеены
+  // точкой, поэтому проверяем именно поле классов
+  (s) => {
+    const cls = s.split('|')[2] ?? ''
+    return /(^|\.)footer(__inner)?($|\.)/.test(cls) ? s.replace(/box=(\d+)x\d+/, 'box=$1xNN') : s
+  },
 ]
 
 const normalize = (row) => NORMALIZE.reduce((acc, fn) => fn(acc), row)

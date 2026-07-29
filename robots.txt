@@ -1,8 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /og-image
-Disallow: /og-book
-Disallow: /instagram-carousel
-Disallow: /muzhskaya_sreda_books
-
-Sitemap: https://sreda.men/sitemap.xml

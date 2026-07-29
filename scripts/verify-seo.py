@@ -5,7 +5,10 @@
 Дополняет scripts/verify-parity.mjs, который смотрит только на <body>.
 Всё, что не описано в APPROVED, считается регрессией.
 
-Запуск: python3 scripts/verify-seo.py
+Старый сайт удалён из репозитория, эталон берётся из worktree:
+
+    git worktree add /tmp/sreda-old c596a89
+    python3 scripts/verify-seo.py /tmp/sreda-old
 """
 from __future__ import annotations
 
@@ -15,6 +18,7 @@ import re
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parents[1]
+OLD = pathlib.Path(sys.argv[1]) if len(sys.argv) > 1 else None
 
 # Мета-теги, которые Next выводит сам и сравнивать которые бессмысленно
 IGNORE_META = {"viewport", "charset", "next-size-adjust"}
@@ -27,6 +31,7 @@ SITE = "https://sreda.men"
 APPROVED_URL_REWRITES = {
     f"{SITE}/": SITE,                    # корень без хвостового слеша
     f"{SITE}/blog/": f"{SITE}/blog",     # решение №1: раздел блога без слеша
+    f"{SITE}/og.png": f"{SITE}/og-v2.png",  # картинка переименована ради сброса кешей соцсетей
 }
 
 # Next добавляет их автоматически из openGraph; в старой вёрстке их не было
@@ -72,17 +77,21 @@ def canon_ld(obj):
 
 def pairs() -> list[tuple[str, pathlib.Path, pathlib.Path]]:
     out = [
-        ("/", ROOT / "index.html", ROOT / "out/index.html"),
-        ("/book", ROOT / "book.html", ROOT / "out/book.html"),
-        ("/blog", ROOT / "blog/index.html", ROOT / "out/blog.html"),
+        ("/", OLD / "index.html", ROOT / "out/index.html"),
+        ("/book", OLD / "book.html", ROOT / "out/book.html"),
+        ("/blog", OLD / "blog/index.html", ROOT / "out/blog.html"),
     ]
-    for f in sorted((ROOT / "blog").glob("*.html")):
+    for f in sorted((OLD / "blog").glob("*.html")):
         if f.stem != "index":
             out.append((f"/blog/{f.stem}", f, ROOT / "out/blog" / f.name))
     return out
 
 
 def main() -> None:
+    if OLD is None or not (OLD / "index.html").exists():
+        print("Укажи каталог со старым сайтом:\n  git worktree add /tmp/sreda-old c596a89\n  python3 scripts/verify-seo.py /tmp/sreda-old")
+        sys.exit(2)
+
     problems: list[str] = []
     checked = 0
 

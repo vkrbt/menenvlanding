@@ -19,7 +19,8 @@ import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
-const HTML_FILE = resolve(__dirname, 'instagram-carousel.html');
+// Шаблон живёт в public/ — там же лежат photos/, на которые он ссылается
+const HTML_FILE = resolve(__dirname, 'public', 'instagram-carousel.html');
 const OUT_DIR   = resolve(__dirname, 'carousel');
 const SLIDES    = 9;
 const SIZE      = 1080;

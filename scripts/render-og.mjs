@@ -14,8 +14,8 @@ import puppeteer from 'puppeteer'
 const ROOT = process.cwd()
 
 const TARGETS = {
-  'og-image': { template: 'og-image.html', out: 'og-v2.png' },
-  'og-book': { template: 'og-book.html', out: 'og-book.png' },
+  'og-image': { template: 'og-image.html', out: 'public/og-v2.png' },
+  'og-book': { template: 'og-book.html', out: 'public/og-book.png' },
 }
 
 const MIME = {
@@ -28,13 +28,16 @@ const MIME = {
   '.css': 'text/css; charset=utf-8',
 }
 
-// Отдаём из корня репозитория: шаблоны ссылаются на картинки,
-// которые лежат рядом (например «Frame 17.jpg»)
+// Ищем сначала в public/ (там живут шаблоны и фотографии), затем в корне:
+// «Frame 17.jpg» весит 4.8 МБ и в раздаваемую статику ему не место
 const server = http.createServer((req, res) => {
-  const file = path.join(ROOT, decodeURIComponent(req.url.split('?')[0]))
-  if (fs.existsSync(file) && fs.statSync(file).isFile()) {
-    res.writeHead(200, { 'content-type': MIME[path.extname(file)] ?? 'application/octet-stream' })
-    return res.end(fs.readFileSync(file))
+  const rel = decodeURIComponent(req.url.split('?')[0])
+  for (const base of [path.join(ROOT, 'public'), ROOT]) {
+    const file = path.join(base, rel)
+    if (fs.existsSync(file) && fs.statSync(file).isFile()) {
+      res.writeHead(200, { 'content-type': MIME[path.extname(file)] ?? 'application/octet-stream' })
+      return res.end(fs.readFileSync(file))
+    }
   }
   res.writeHead(404)
   res.end()
