@@ -1,6 +1,6 @@
 ---
 id: aHCDMBg0ocw
-title: "What does it mean to be a \"man?\" #ManEnoughPodcast #ManEnough #masculinity"
+title: "What does it mean to be a \\"man?\\" #ManEnoughPodcast #ManEnough #masculinity"
 url: https://www.youtube.com/watch?v=aHCDMBg0ocw
 channel: wearemanenough
 error: "

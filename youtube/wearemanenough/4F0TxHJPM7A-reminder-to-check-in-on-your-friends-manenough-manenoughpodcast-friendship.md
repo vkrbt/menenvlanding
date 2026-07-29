@@ -15,18 +15,18 @@ a couple of years ago I would be out with my friends and I'd come back and my wi
 ## С таймкодами
 
 **[00:00]** a couple of years ago I would be out
-**[00:02]** with my friends and I'd come back and my
-**[00:03]** wife would be like so how's Brian I'm
-**[00:06]** like he's good she'd be like so how are
-**[00:08]** his kids I'm like I don't know how's his
-**[00:11]** wife's new job I I don't know wow I
-**[00:13]** really screwed up that whole encounter
-**[00:16]** where I really did want to catch up not
-**[00:19]** just surface with my friend Che is yeah
-**[00:22]** how what does that look like a a text
-**[00:25]** how are you what's going on with the job
-**[00:27]** what's going on with the girl you know I
-**[00:29]** don't feel like guys don't really check
-**[00:30]** in that much and that's like the the the
-**[00:32]** entry the the entree the entryway to
-**[00:35]** getting deeper
+**[00:00]** with my friends and I'd come back and my
+**[00:00]** wife would be like so how's Brian I'm
+**[00:00]** like he's good she'd be like so how are
+**[00:00]** his kids I'm like I don't know how's his
+**[00:00]** wife's new job I I don't know wow I
+**[00:00]** really screwed up that whole encounter
+**[00:00]** where I really did want to catch up not
+**[00:00]** just surface with my friend Che is yeah
+**[00:00]** how what does that look like a a text
+**[00:00]** how are you what's going on with the job
+**[00:00]** what's going on with the girl you know I
+**[00:00]** don't feel like guys don't really check
+**[00:00]** in that much and that's like the the the
+**[00:00]** entry the the entree the entryway to
+**[00:00]** getting deeper

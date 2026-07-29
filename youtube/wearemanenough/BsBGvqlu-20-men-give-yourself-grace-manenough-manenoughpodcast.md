@@ -15,13 +15,13 @@ what does it mean to you to be man enough to be open vulnerable have Grace for y
 ## С таймкодами
 
 **[00:00]** what does it mean to you to be man
-**[00:02]** enough to be open vulnerable have Grace
-**[00:07]** for yourself that's something that took
-**[00:09]** me CU I love that cuz it feels like love
-**[00:11]** that men can be hard on
-**[00:13]** themselves you know that kind of thing
-**[00:16]** and it's um I just think Grace is such a
-**[00:18]** beautiful thing that a lot of men don't
-**[00:20]** do for themselves a lot oh yeah you know
-**[00:23]** I would say that so be graceful learn
-**[00:25]** Grace and surrender to it
+**[00:00]** enough to be open vulnerable have Grace
+**[00:00]** for yourself that's something that took
+**[00:00]** me CU I love that cuz it feels like love
+**[00:00]** that men can be hard on
+**[00:00]** themselves you know that kind of thing
+**[00:00]** and it's um I just think Grace is such a
+**[00:00]** beautiful thing that a lot of men don't
+**[00:00]** do for themselves a lot oh yeah you know
+**[00:00]** I would say that so be graceful learn
+**[00:00]** Grace and surrender to it

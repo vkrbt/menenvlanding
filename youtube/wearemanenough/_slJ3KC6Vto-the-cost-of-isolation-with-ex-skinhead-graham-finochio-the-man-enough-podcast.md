@@ -15,19 +15,19 @@ was driving past the Target on laaa and uh I like came out into the road and I d
 ## С таймкодами
 
 **[00:00]** was driving past the Target on laaa and
-**[00:03]** uh I like came out into the road and I
-**[00:05]** didn't even notice someone behind me was
-**[00:06]** like
-**[00:07]** really upset with me and they followed
-**[00:10]** me and then pulled up next to me and
-**[00:13]** basically did like a like opened his car
-**[00:17]** door to get out and he was like
-**[00:19]** basically like I need you to stand stand
-**[00:21]** down or else we're going to do this MH
-**[00:24]** and it's it was a really interesting
-**[00:26]** like masculine moment where I I have
-**[00:30]** nothing to win from you there's no
-**[00:33]** reason I would ever want to fight you
-**[00:35]** and I guess in this moment I can back
-**[00:38]** down yeah but there's still like I'm
-**[00:40]** feeling like I'm losing dignity
+**[00:00]** uh I like came out into the road and I
+**[00:00]** didn't even notice someone behind me was
+**[00:00]** like
+**[00:00]** really upset with me and they followed
+**[00:00]** me and then pulled up next to me and
+**[00:00]** basically did like a like opened his car
+**[00:00]** door to get out and he was like
+**[00:00]** basically like I need you to stand stand
+**[00:00]** down or else we're going to do this MH
+**[00:00]** and it's it was a really interesting
+**[00:00]** like masculine moment where I I have
+**[00:00]** nothing to win from you there's no
+**[00:00]** reason I would ever want to fight you
+**[00:00]** and I guess in this moment I can back
+**[00:00]** down yeah but there's still like I'm
+**[00:00]** feeling like I'm losing dignity

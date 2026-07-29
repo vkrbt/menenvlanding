@@ -56,7 +56,8 @@
       "kak-vosstanovit-staruyu-druzhbu",
       "muzhskaya-druzhba-i-blizost",
       "pochemu-u-muzhchin-net-blizkih-druzey",
-      "pochemu-muzhchiny-izbegayut-prikosnoveniy"
+      "pochemu-muzhchiny-izbegayut-prikosnoveniy",
+      "igry-i-odinochestvo"
     ]
   },
   {
@@ -72,7 +73,9 @@
       "vygoranie-u-muzhchin",
       "postoyannaya-ustalost",
       "ne-mogu-rasslabitsya",
-      "mozg-ne-otdyhaet"
+      "mozg-ne-otdyhaet",
+      "stadii-vygoraniya",
+      "vygorel-na-rabote"
     ]
   },
   {
@@ -82,9 +85,10 @@
     "status": "ПРИНЯТ",
     "stage": "TOFU",
     "pillarQuery": "ничего не хочется",
-    "pillarSlug": null,
+    "pillarSlug": "nichego-ne-hochetsya",
     "lede": "Ничего не хочется — состояние, за которым может стоять что угодно: от накопленной усталости до депрессии. Разбираемся, что именно.",
     "articles": [
+      "nichego-ne-hochetsya",
       "apatiya-u-muzhchin",
       "nichego-ne-raduet"
     ]
@@ -103,7 +107,8 @@
       "voskresnaya-trevoga",
       "trevoga-o-dengah",
       "panicheskie-ataki-u-muzhchin",
-      "prosypayus-v-4-utra"
+      "prosypayus-v-4-utra",
+      "trevoga-i-kontrol"
     ]
   },
   {

@@ -174,6 +174,20 @@ def main() -> int:
             if target not in slugs:
                 problems.append(f"[ссылка] {f.name}: /blog/{target} не существует")
 
+    # --- 6a: круглые скобки в адресах ссылок --------------------------------
+    # Парсер ссылок в lib/markdown.ts читает адрес как [^)]+ — первая же
+    # закрывающая скобка обрывает href. DOI вида 10.1016/S0140-6736(16)31140-0
+    # молча превращается в битую ссылку с хвостом в виде текста.
+    for f in md_files:
+        body = f.read_text(encoding="utf-8", errors="replace")
+        for label, href in re.findall(r"\[([^\]]+)\]\(([^)]*)\)", body):
+            if "(" in href:
+                problems.append(
+                    f"[ссылка] {f.name}: адрес «{href}» содержит круглую скобку — "
+                    f"парсер оборвёт href на первой закрывающей "
+                    f"(ссылка «{label[:40]}»)"
+                )
+
     # --- 7: дубли целевых запросов -----------------------------------------
     queries: dict[str, list[str]] = {}
     for f in md_files:

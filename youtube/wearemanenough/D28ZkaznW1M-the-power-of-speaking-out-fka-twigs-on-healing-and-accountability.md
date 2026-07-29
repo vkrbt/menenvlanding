@@ -15,25 +15,25 @@ I'm so grateful to have learned so much about the way that abusers operate um bu
 ## С таймкодами
 
 **[00:00]** I'm so grateful to have learned so much
-**[00:02]** about the way that abusers operate um
-**[00:05]** but I was so disappointed to learn how
-**[00:08]** boring it is because they all operate
-**[00:10]** the same you know I I think one of the
-**[00:13]** most painful things was realizing that I
-**[00:16]** wasn't special that I wasn't in a
-**[00:18]** relationship where it was this thing
-**[00:20]** that we could struggle through together
-**[00:22]** and it was me and him against the world
-**[00:24]** and it was just our energy that no one
-**[00:27]** would understand because this is us it
-**[00:29]** was not about me
-**[00:30]** it's about food I'm just Supply I could
-**[00:33]** have been anyone I could have walked
-**[00:34]** into that room one day or another young
-**[00:37]** actor singer artist could have walked in
-**[00:39]** the room that day it could have really
-**[00:41]** been anyone it was just bad luck that I
-**[00:43]** got a part in a film that's honestly how
-**[00:46]** I feel now I I I choose not to take it
-**[00:48]** personally um
-**[00:51]** it's it's devastatingly boring
+**[00:00]** about the way that abusers operate um
+**[00:00]** but I was so disappointed to learn how
+**[00:00]** boring it is because they all operate
+**[00:00]** the same you know I I think one of the
+**[00:00]** most painful things was realizing that I
+**[00:00]** wasn't special that I wasn't in a
+**[00:00]** relationship where it was this thing
+**[00:00]** that we could struggle through together
+**[00:00]** and it was me and him against the world
+**[00:00]** and it was just our energy that no one
+**[00:00]** would understand because this is us it
+**[00:00]** was not about me
+**[00:00]** it's about food I'm just Supply I could
+**[00:00]** have been anyone I could have walked
+**[00:00]** into that room one day or another young
+**[00:00]** actor singer artist could have walked in
+**[00:00]** the room that day it could have really
+**[00:00]** been anyone it was just bad luck that I
+**[00:00]** got a part in a film that's honestly how
+**[00:00]** I feel now I I I choose not to take it
+**[00:00]** personally um
+**[00:00]** it's it's devastatingly boring

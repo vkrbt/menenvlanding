@@ -15,15 +15,15 @@ you've talked so much about machismo and uh how it affects your community specif
 ## С таймкодами
 
 **[00:00]** you've talked so much about machismo and
-**[00:02]** uh how it affects your community
-**[00:04]** specifically that those those ideals of
-**[00:06]** masculinity there's like a thing where
-**[00:08]** you can't you can't seem soft you can't
-**[00:11]** look soft like and this kind of thing
-**[00:14]** you have to put on on the exterior
-**[00:16]** bleeds into your home home is not a safe
-**[00:19]** place right there's this there's this
-**[00:21]** mentality like I don't talk I just buck
-**[00:24]** and it's like wait but that's the
-**[00:26]** problem right there I ain't realized
-**[00:28]** that until I got around people talk
+**[00:00]** uh how it affects your community
+**[00:00]** specifically that those those ideals of
+**[00:00]** masculinity there's like a thing where
+**[00:00]** you can't you can't seem soft you can't
+**[00:00]** look soft like and this kind of thing
+**[00:00]** you have to put on on the exterior
+**[00:00]** bleeds into your home home is not a safe
+**[00:00]** place right there's this there's this
+**[00:00]** mentality like I don't talk I just buck
+**[00:00]** and it's like wait but that's the
+**[00:00]** problem right there I ain't realized
+**[00:00]** that until I got around people talk

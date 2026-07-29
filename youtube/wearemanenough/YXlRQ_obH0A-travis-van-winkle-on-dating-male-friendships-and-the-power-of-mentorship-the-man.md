@@ -15,10 +15,10 @@ what do you think it means to be man enough for me it's just being available to 
 ## С таймкодами
 
 **[00:00]** what do you think it
-**[00:01]** means to be man enough for me it's just
-**[00:04]** being
-**[00:06]** available to the truth whatever the
-**[00:08]** truth is whether it's what you prefer
-**[00:10]** what you don't prefer what hurts you
-**[00:11]** what doesn't hurt you like to be a part
-**[00:13]** of reality
+**[00:00]** means to be man enough for me it's just
+**[00:00]** being
+**[00:00]** available to the truth whatever the
+**[00:00]** truth is whether it's what you prefer
+**[00:00]** what you don't prefer what hurts you
+**[00:00]** what doesn't hurt you like to be a part
+**[00:00]** of reality

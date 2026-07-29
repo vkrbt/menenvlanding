@@ -15,12 +15,12 @@ one technique I was just telling a friend a CB famous CBT technique is um it's c
 ## С таймкодами
 
 **[00:00]** one technique I was just telling a
-**[00:01]** friend a CB famous CBT technique is um
-**[00:04]** it's called the double standard
-**[00:05]** technique a lot of times we are very
-**[00:08]** self-critical of ourselves shouldn't
-**[00:10]** have done that I'm a failure I'm this
-**[00:11]** and that but the double standard
-**[00:14]** technique says talk to yourself like
-**[00:16]** you're talking to a beloved friend with
-**[00:19]** the same problem what would you say
+**[00:00]** friend a CB famous CBT technique is um
+**[00:00]** it's called the double standard
+**[00:00]** technique a lot of times we are very
+**[00:00]** self-critical of ourselves shouldn't
+**[00:00]** have done that I'm a failure I'm this
+**[00:00]** and that but the double standard
+**[00:00]** technique says talk to yourself like
+**[00:00]** you're talking to a beloved friend with
+**[00:00]** the same problem what would you say

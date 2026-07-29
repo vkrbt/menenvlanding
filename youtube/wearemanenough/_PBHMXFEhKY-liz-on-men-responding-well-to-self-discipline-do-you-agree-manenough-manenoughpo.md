@@ -15,28 +15,28 @@ women always had to be like liked by men and so we figured you out we know every
 ## С таймкодами
 
 **[00:00]** women always had to be like liked by men
-**[00:01]** and so we figured you out we know
-**[00:03]** everything about what you like and we
-**[00:06]** cater to to to what you like our entire
-**[00:08]** Society caters to to male you know a
-**[00:10]** taste in many ways and for once now men
-**[00:14]** have to be likable like men have to be
-**[00:16]** liked
-**[00:17]** because yeah like a lot of women not all
-**[00:20]** women hashtag but women don't need men
-**[00:23]** in the same way and Men respond well to
-**[00:25]** being to like self-discipline and I
-**[00:27]** think that when that self-discipline
-**[00:29]** comes from
-**[00:30]** or or when that request for
-**[00:31]** self-discipline comes from a woman you
-**[00:33]** don't necessarily want to hear it as
-**[00:35]** well and when it comes from a guy that's
-**[00:38]** different I think it's important to um
-**[00:40]** have conversations in logger rooms you
-**[00:42]** know be the Trojan Horse and when you're
-**[00:44]** riding with your motorcycle friends hey
-**[00:47]** you know um what's going on as in like
-**[00:49]** what's coming up for you or things that
-**[00:51]** are kind of deeper how's your
-**[00:53]** relationship with yourself
+**[00:00]** and so we figured you out we know
+**[00:00]** everything about what you like and we
+**[00:00]** cater to to to what you like our entire
+**[00:00]** Society caters to to male you know a
+**[00:00]** taste in many ways and for once now men
+**[00:00]** have to be likable like men have to be
+**[00:00]** liked
+**[00:00]** because yeah like a lot of women not all
+**[00:00]** women hashtag but women don't need men
+**[00:00]** in the same way and Men respond well to
+**[00:00]** being to like self-discipline and I
+**[00:00]** think that when that self-discipline
+**[00:00]** comes from
+**[00:00]** or or when that request for
+**[00:00]** self-discipline comes from a woman you
+**[00:00]** don't necessarily want to hear it as
+**[00:00]** well and when it comes from a guy that's
+**[00:00]** different I think it's important to um
+**[00:00]** have conversations in logger rooms you
+**[00:00]** know be the Trojan Horse and when you're
+**[00:00]** riding with your motorcycle friends hey
+**[00:00]** you know um what's going on as in like
+**[00:00]** what's coming up for you or things that
+**[00:00]** are kind of deeper how's your
+**[00:00]** relationship with yourself

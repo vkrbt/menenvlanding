@@ -15,15 +15,15 @@ what does it mean to you to be man enough oh that's a good question you got all 
 ## С таймкодами
 
 **[00:00]** what does it mean to you to be man
-**[00:01]** enough oh that's a good question you got
-**[00:04]** all the good
-**[00:05]** questions you got all the good answers
-**[00:09]** yes you do um I think to tell the truth
-**[00:12]** and admit when you when you're wrong
-**[00:14]** there you go yeah simple enough yeah
-**[00:17]** think I don't think anyone's everever
-**[00:19]** said that yeah and it's so like just
-**[00:21]** simply the truth yeah no
-**[00:24]** excuses no you know bells and whistles
-**[00:28]** like just tell the truth and admit when
-**[00:29]** you done something wrong yeah
+**[00:00]** enough oh that's a good question you got
+**[00:00]** all the good
+**[00:00]** questions you got all the good answers
+**[00:00]** yes you do um I think to tell the truth
+**[00:00]** and admit when you when you're wrong
+**[00:00]** there you go yeah simple enough yeah
+**[00:00]** think I don't think anyone's everever
+**[00:00]** said that yeah and it's so like just
+**[00:00]** simply the truth yeah no
+**[00:00]** excuses no you know bells and whistles
+**[00:00]** like just tell the truth and admit when
+**[00:00]** you done something wrong yeah

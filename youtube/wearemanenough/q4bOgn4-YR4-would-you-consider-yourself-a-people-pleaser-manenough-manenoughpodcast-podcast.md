@@ -15,20 +15,20 @@ what does people pleasing look like for for men going along with things that lik
 ## С таймкодами
 
 **[00:00]** what does people pleasing look like for
-**[00:01]** for men going along with things that
-**[00:03]** like I didn't necessarily want to do
-**[00:05]** going on a date with I have no interest
-**[00:06]** in this person but everybody's like ah
-**[00:09]** she's cute she's okay sure I don't want
-**[00:11]** to sleep with you but everybody thinks
-**[00:13]** we're hitting it off so maybe I should
-**[00:15]** follow this it's like what am I doing
-**[00:17]** that is um a form of people pleasing
-**[00:19]** that we don't really talk about like but
-**[00:20]** how it impacts you like sexually and
-**[00:22]** intimately um that you end up not again
-**[00:24]** not necessarily being in a situation
-**[00:26]** where you're being assaulted but where
-**[00:27]** you're like I didn't want to do that and
-**[00:29]** I went along with with it and I don't
-**[00:30]** even know why
+**[00:00]** for men going along with things that
+**[00:00]** like I didn't necessarily want to do
+**[00:00]** going on a date with I have no interest
+**[00:00]** in this person but everybody's like ah
+**[00:00]** she's cute she's okay sure I don't want
+**[00:00]** to sleep with you but everybody thinks
+**[00:00]** we're hitting it off so maybe I should
+**[00:00]** follow this it's like what am I doing
+**[00:00]** that is um a form of people pleasing
+**[00:00]** that we don't really talk about like but
+**[00:00]** how it impacts you like sexually and
+**[00:00]** intimately um that you end up not again
+**[00:00]** not necessarily being in a situation
+**[00:00]** where you're being assaulted but where
+**[00:00]** you're like I didn't want to do that and
+**[00:00]** I went along with with it and I don't
+**[00:00]** even know why

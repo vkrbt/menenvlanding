@@ -15,19 +15,19 @@ I really believe that mothers and children are like a forgotten species in our m
 ## С таймкодами
 
 **[00:00]** I really believe that mothers and
-**[00:03]** children are like a forgotten species in
-**[00:08]** our modern day Society like you become a
-**[00:11]** mom and then suddenly you're like pushed
-**[00:13]** out go find your mommy and me group go
-**[00:16]** figure it out on your own um and we'll
-**[00:19]** see you when you can be productive again
-**[00:21]** the job of being a mother it feels a lot
-**[00:23]** for one person because it was never
-**[00:25]** meant to be for one person exactly it
-**[00:27]** was meant for a village a village like
-**[00:30]** let's remember how to take care of our
-**[00:31]** moms yeah they need rest they need
-**[00:35]** proper nutrition they need help they
-**[00:37]** need love they need loving touch they
-**[00:39]** you know they to just help them through
-**[00:41]** this transition from woman to mother
+**[00:00]** children are like a forgotten species in
+**[00:00]** our modern day Society like you become a
+**[00:00]** mom and then suddenly you're like pushed
+**[00:00]** out go find your mommy and me group go
+**[00:00]** figure it out on your own um and we'll
+**[00:00]** see you when you can be productive again
+**[00:00]** the job of being a mother it feels a lot
+**[00:00]** for one person because it was never
+**[00:00]** meant to be for one person exactly it
+**[00:00]** was meant for a village a village like
+**[00:00]** let's remember how to take care of our
+**[00:00]** moms yeah they need rest they need
+**[00:00]** proper nutrition they need help they
+**[00:00]** need love they need loving touch they
+**[00:00]** you know they to just help them through
+**[00:00]** this transition from woman to mother

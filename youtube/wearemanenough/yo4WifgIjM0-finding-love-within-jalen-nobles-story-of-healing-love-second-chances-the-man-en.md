@@ -15,10 +15,10 @@ what were the questions you wish he had asked you what do you want to do how can
 ## С таймкодами
 
 **[00:00]** what were the questions you wish he had
-**[00:01]** asked
-**[00:03]** you what do you want to
-**[00:06]** do how can I be your support system if
-**[00:10]** your choices in life aren't this what do
-**[00:14]** you need from
-**[00:15]** me and if you would asked me that at
-**[00:17]** that age I would have lost it
+**[00:00]** asked
+**[00:00]** you what do you want to
+**[00:00]** do how can I be your support system if
+**[00:00]** your choices in life aren't this what do
+**[00:00]** you need from
+**[00:00]** me and if you would asked me that at
+**[00:00]** that age I would have lost it

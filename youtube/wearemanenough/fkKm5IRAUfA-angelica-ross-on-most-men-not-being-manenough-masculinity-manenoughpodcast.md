@@ -15,11 +15,11 @@ I should be able to walk down the street and know that as a transperson that the
 ## С таймкодами
 
 **[00:00]** I should be able to walk down the street
-**[00:02]** and know that as a transperson that
-**[00:04]** there are enough upstanding men in the
-**[00:08]** world that if they saw something they
-**[00:11]** would say something or do something but
-**[00:13]** we just don't live in that kind of world
-**[00:15]** because
-**[00:17]** honestly in my
-**[00:20]** experience most men are not man enough
+**[00:00]** and know that as a transperson that
+**[00:00]** there are enough upstanding men in the
+**[00:00]** world that if they saw something they
+**[00:00]** would say something or do something but
+**[00:00]** we just don't live in that kind of world
+**[00:00]** because
+**[00:00]** honestly in my
+**[00:00]** experience most men are not man enough

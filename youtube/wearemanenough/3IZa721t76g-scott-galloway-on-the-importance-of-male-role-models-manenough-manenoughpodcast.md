@@ -15,13 +15,13 @@ if you just do a little bit of exploration you're going to find that there's boy
 ## С таймкодами
 
 **[00:00]** if you just do a little bit of
-**[00:02]** exploration you're going to find that
-**[00:05]** there's boys everywhere that don't have
-**[00:07]** male role models and it takes a very
-**[00:10]** small amount of effort to get involved
-**[00:12]** in their life and have a big impact the
-**[00:14]** cohort that I get the most passionate
-**[00:17]** support from mothers my daughters at
-**[00:21]** Penn my other daughters in PR and a
-**[00:23]** great firm in Chicago my son is in the
-**[00:25]** basement vaping and playing video games
+**[00:00]** exploration you're going to find that
+**[00:00]** there's boys everywhere that don't have
+**[00:00]** male role models and it takes a very
+**[00:00]** small amount of effort to get involved
+**[00:00]** in their life and have a big impact the
+**[00:00]** cohort that I get the most passionate
+**[00:00]** support from mothers my daughters at
+**[00:00]** Penn my other daughters in PR and a
+**[00:00]** great firm in Chicago my son is in the
+**[00:00]** basement vaping and playing video games

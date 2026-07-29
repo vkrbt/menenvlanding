@@ -15,17 +15,17 @@ although women may get wiser as we age we're told that our value is declining as
 ## С таймкодами
 
 **[00:00]** although women may get wiser as we age
-**[00:03]** we're told that our value is declining
-**[00:05]** as we age right so as we start to be
-**[00:08]** become more confident in ourselves and
-**[00:10]** we feel wiser and we feel like we
-**[00:12]** understand the world a little bit better
-**[00:14]** maybe we feel more valuable to ourselves
-**[00:16]** but the world is saying that we're
-**[00:17]** losing value right every day every year
-**[00:21]** right our youth and our Beauty and our
-**[00:24]** these are the things that we've been
-**[00:25]** defined by um but I don't think there's
-**[00:28]** a lot of emphasis on who we are what we
-**[00:32]** provide to ourselves and really what
-**[00:34]** that means
+**[00:00]** we're told that our value is declining
+**[00:00]** as we age right so as we start to be
+**[00:00]** become more confident in ourselves and
+**[00:00]** we feel wiser and we feel like we
+**[00:00]** understand the world a little bit better
+**[00:00]** maybe we feel more valuable to ourselves
+**[00:00]** but the world is saying that we're
+**[00:00]** losing value right every day every year
+**[00:00]** right our youth and our Beauty and our
+**[00:00]** these are the things that we've been
+**[00:00]** defined by um but I don't think there's
+**[00:00]** a lot of emphasis on who we are what we
+**[00:00]** provide to ourselves and really what
+**[00:00]** that means

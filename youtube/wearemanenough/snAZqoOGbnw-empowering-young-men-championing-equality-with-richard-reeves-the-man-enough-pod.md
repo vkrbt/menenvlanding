@@ -15,14 +15,14 @@ the goal of feminism and gender equality was not to be better than men was not t
 ## С таймкодами
 
 **[00:00]** the goal of feminism and gender equality
-**[00:02]** was not to be better than men was not to
-**[00:04]** supersede men right it was never to you
-**[00:07]** know compete or to dominate the goal of
-**[00:10]** equality and and truly feminist
-**[00:12]** scholarship if you go back to the you
-**[00:14]** know the roots of it which is mostly
-**[00:16]** black women like Audrey Lord and Bell
-**[00:17]** hooks right like what they're talking
-**[00:19]** about is creating a whole new system
-**[00:21]** that goes outside of that male versus
-**[00:23]** female
+**[00:00]** was not to be better than men was not to
+**[00:00]** supersede men right it was never to you
+**[00:00]** know compete or to dominate the goal of
+**[00:00]** equality and and truly feminist
+**[00:00]** scholarship if you go back to the you
+**[00:00]** know the roots of it which is mostly
+**[00:00]** black women like Audrey Lord and Bell
+**[00:00]** hooks right like what they're talking
+**[00:00]** about is creating a whole new system
+**[00:00]** that goes outside of that male versus
+**[00:00]** female
