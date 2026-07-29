@@ -96,6 +96,7 @@ _Перед первой встречей — короткий созвон-зн
 <!-- NOTE -->
 > **Автор:** Влад — гештальт-терапевт, ведущий «Мужской среды».
 > Статья информационная и не заменяет консультацию специалиста. Приведённое сравнение вмешательств выполнено на выборке врачей; перенос выводов на другие профессии требует осторожности.
+> Примеры в тексте собирательные: они описывают повторяющиеся ситуации из практики, а не историю конкретного человека.
 > **Телефоны доверия:** Россия — 8-800-2000-122 и 051 (Москва), Беларусь — 8-801-100-16-11 (круглосуточно), из любой страны — [findahelpline.com](https://findahelpline.com/ru). Экстренные службы в ЕС — 112.
 > **Источники:** [Controlled Interventions to Reduce Burnout in Physicians (JAMA Internal Medicine)](https://doi.org/10.1001/jamainternmed.2016.7674) · [ВОЗ: выгорание как профессиональное явление в МКБ-11](https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases) · [Maslach & Leiter. Understanding the burnout experience (World Psychiatry, 2016)](https://pubmed.ncbi.nlm.nih.gov/27265691/)
 
