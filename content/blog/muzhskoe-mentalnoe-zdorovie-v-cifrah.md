@@ -7,9 +7,9 @@ og_title: Мужское ментальное здоровье в цифрах: 
 description: Женя и Влад разбирают цифры про депрессию, одиночество и выгорание у мужчин — с переводом на обычную жизнь, без «ну, терпи, у всех так».
 canonical: https://sreda.men/blog/muzhskoe-mentalnoe-zdorovie-v-cifrah
 author_line: Женя и Влад — ведущие «Мужской среды»
-date_line: 18 апреля 2026
+date_line: 21 мая 2026
 read_line: ≈ 12 минут
-date_published: 2026-04-18
+date_published: 2026-05-21
 date_modified: 2026-07-29
 status: released
 category: Состояния

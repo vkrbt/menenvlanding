@@ -7,10 +7,10 @@ og_title: Кризис среднего возраста у мужчин: что
 description: Кризис среднего возраста у мужчин — не миф и не обязательный этап. Разбираем данные о U-образной кривой благополучия и что из них следует.
 canonical: https://sreda.men/blog/krizis-srednego-vozrasta-u-muzhchin
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 27 июля 2026
 read_line: ≈ 10 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-07-27
+date_modified: 2026-07-27
 status: released
 category: Смысл и возраст
 card_title: Кризис среднего возраста у мужчин: что известно

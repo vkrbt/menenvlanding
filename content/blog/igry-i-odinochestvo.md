@@ -7,10 +7,10 @@ og_title: Игры и одиночество у мужчин: мост или п
 description: Игры и одиночество у мужчин связаны не так прямо, как принято думать. Одни и те же часы за игрой могут и лечить изоляцию, и углублять — разбираем, от чего это зависит.
 canonical: https://sreda.men/blog/igry-i-odinochestvo
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 20 марта 2026
+date_line: 2 мая 2026
 read_line: ≈ 9 минут
-date_published: 2026-03-20
-date_modified: 2026-03-20
+date_published: 2026-05-02
+date_modified: 2026-05-02
 status: released
 category: Одиночество
 card_title: Игры и одиночество у мужчин: мост или побег

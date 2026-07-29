@@ -7,9 +7,9 @@ og_title: Голова не выключается — что с этим дел
 description: «Голова не выключается» — жалоба, которую я слышу на приёме чаще, чем «депрессия». Психиатр о руминации, тревоге, выгорании и бессоннице — без «просто не думай».
 canonical: https://sreda.men/blog/mozg-ne-otdyhaet
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 4 апреля 2026
+date_line: 14 мая 2026
 read_line: ≈ 10 минут
-date_published: 2026-04-04
+date_published: 2026-05-14
 date_modified: 2026-07-29
 status: released
 category: Состояния

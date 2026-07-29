@@ -7,9 +7,9 @@ og_title: Тревожность у мужчин: как она маскируе
 description: Мужская тревога редко выглядит как паника. Чаще — как контроль, раздражительность и невозможность расслабиться. Психиатр разбирает, как её распознать и что с ней делать.
 canonical: https://sreda.men/blog/trevozhnost-u-muzhchin
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 28 апреля 2026
+date_line: 27 мая 2026
 read_line: ≈ 11 минут
-date_published: 2026-04-28
+date_published: 2026-05-27
 date_modified: 2026-07-29
 status: released
 category: Состояния

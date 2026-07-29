@@ -7,10 +7,10 @@ og_title: Потерял работу мужчина как пережить: п
 description: Потерял работу мужчина как пережить: разбираем данные метаанализа о влиянии безработицы на психику и что делать в первые недели.
 canonical: https://sreda.men/blog/poteryal-rabotu-kak-perezhit
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 1 июля 2026
+date_line: 10 июля 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-01
-date_modified: 2026-07-01
+date_published: 2026-07-10
+date_modified: 2026-07-10
 status: released
 category: Работа и деньги
 card_title: Потерял работу мужчина как пережить: первые недели

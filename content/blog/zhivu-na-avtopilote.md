@@ -7,10 +7,10 @@ og_title: Живу на автопилоте: почему день не зап�
 description: Живу на автопилоте — ощущение, что жизнь идёт мимо. Разбираем, что показали данные о блуждающем уме и почему дело не в скучной жизни, а в отсутствии в ней.
 canonical: https://sreda.men/blog/zhivu-na-avtopilote
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 1 мая 2026
+date_line: 28 мая 2026
 read_line: ≈ 9 минут
-date_published: 2026-05-01
-date_modified: 2026-05-01
+date_published: 2026-05-28
+date_modified: 2026-05-28
 status: released
 category: Состояния
 card_title: Живу на автопилоте: почему день не запоминается

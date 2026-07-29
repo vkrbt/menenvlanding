@@ -7,9 +7,9 @@ og_title: Как перестать срываться на окружающих
 description: Хамишь курьеру, взрываешься в рабочем чате, орёшь в машине на чужого водителя. Гештальт-терапевт — почему упал порог вне дома.
 canonical: https://sreda.men/blog/kak-perestat-sryvatsya-na-okruzhayushchih
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 22 июля 2026
+date_line: 19 июля 2026
 read_line: ≈ 11 минут
-date_published: 2026-07-22
+date_published: 2026-07-19
 date_modified: 2026-07-29
 status: released
 category: Состояния

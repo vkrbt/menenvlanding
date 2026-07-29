@@ -7,10 +7,10 @@ og_title: Как уговорить мужа пойти к психологу
 description: Как уговорить мужа пойти к психологу, если он отказывается: что мешает мужчинам обращаться за помощью и какие формулировки работают лучше уговоров.
 canonical: https://sreda.men/blog/kak-ugovorit-muzha-k-psihologu
 author_line: Влад и Женя — ведущие «Мужской среды»
-date_line: 18 мая 2026
+date_line: 14 июня 2026
 read_line: ≈ 10 минут
-date_published: 2026-05-18
-date_modified: 2026-05-18
+date_published: 2026-06-14
+date_modified: 2026-06-14
 status: released
 category: Для близких
 card_title: Как уговорить мужа пойти к психологу

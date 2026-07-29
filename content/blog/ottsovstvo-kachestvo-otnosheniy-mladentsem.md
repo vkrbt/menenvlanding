@@ -7,10 +7,10 @@ og_title: Отношения отца с младенцем: качество в
 description: Учёные 9 месяцев наблюдали 182 пары с первенцем. Оказалось, для связи отца и ребёнка важны не часы рядом, а установки отца, отношения с матерью и то, пускает ли она.
 canonical: https://sreda.men/blog/ottsovstvo-kachestvo-otnosheniy-mladentsem
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 11 мая 2026
+date_line: 7 июня 2026
 read_line: ≈ 8 минут
-date_published: 2026-05-11
-date_modified: 2026-05-11
+date_published: 2026-06-07
+date_modified: 2026-06-07
 status: released
 category: Отцовство
 card_title: Отношения отца с младенцем: качество важнее часов

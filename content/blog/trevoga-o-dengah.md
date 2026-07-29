@@ -7,9 +7,9 @@ og_title: Финансовая тревога: когда деньги есть,
 description: Пересчитываешь бюджет по ночам, хотя на счету не ноль? Разбираем, почему тревога о деньгах бьёт по мужчинам сильнее, при чём тут роль кормильца и что делать, когда.
 canonical: https://sreda.men/blog/trevoga-o-dengah
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 7 мая 2026
+date_line: 5 июня 2026
 read_line: ≈ 11 минут
-date_published: 2026-05-07
+date_published: 2026-06-05
 date_modified: 2026-07-29
 status: released
 category: Состояния

@@ -7,10 +7,10 @@ og_title: Сколько стоит мужская группа и за что �
 description: Сколько стоит мужская группа: бесплатные форматы, цены платных, сравнение с индивидуальной терапией и что именно покупается за эти деньги.
 canonical: https://sreda.men/blog/skolko-stoit-muzhskaya-gruppa
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 11 февраля 2026
+date_line: 1 апреля 2026
 read_line: ≈ 8 минут
-date_published: 2026-02-11
-date_modified: 2026-02-11
+date_published: 2026-04-01
+date_modified: 2026-04-01
 status: released
 category: Формат
 card_title: Сколько стоит мужская группа и за что там платят

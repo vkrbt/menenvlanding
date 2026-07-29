@@ -7,10 +7,10 @@ og_title: Тоска по дому у мужчин: как устроена но
 description: Тоска по дому у мужчин выглядит не как грусть, а как раздражение и обесценивание новой страны. Как устроена ностальгия и что с ней делать.
 canonical: https://sreda.men/blog/toska-po-domu-u-muzhchin
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 26 февраля 2026
+date_line: 11 апреля 2026
 read_line: ≈ 8 минут
-date_published: 2026-02-26
-date_modified: 2026-02-26
+date_published: 2026-04-11
+date_modified: 2026-04-11
 status: released
 category: Эмиграция
 card_title: Тоска по дому у мужчин: как устроена ностальгия

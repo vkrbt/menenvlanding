@@ -7,9 +7,9 @@ og_title: Мужская группа онлайн: как проходит вс
 description: Мужская группа онлайн: как проходит встреча в Zoom по шагам, чем формат отличается от очного, какие правила и сколько стоит участие.
 canonical: https://sreda.men/blog/muzhskaya-gruppa-online
 author_line: Влад и Женя — ведущие «Мужской среды»
-date_line: 7 февраля 2026
+date_line: 28 марта 2026
 read_line: ≈ 11 минут
-date_published: 2026-02-07
+date_published: 2026-03-28
 date_modified: 2026-07-29
 status: released
 category: Формат

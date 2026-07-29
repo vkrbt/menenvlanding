@@ -7,9 +7,9 @@ og_title: Пью каждый вечер: где граница между пр�
 description: Пара банок пива после работы — это ещё норма или уже нет? Нарколог без морали: почему регулярность важнее дозы, что показывает тест AUDIT и как проверить себя за две.
 canonical: https://sreda.men/blog/alkogol-kazhdyy-vecher
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 18 июня 2026
+date_line: 1 июля 2026
 read_line: ≈ 12 минут
-date_published: 2026-06-18
+date_published: 2026-07-01
 date_modified: 2026-07-29
 status: released
 category: Зависимости

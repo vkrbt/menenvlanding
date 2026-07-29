@@ -7,9 +7,9 @@ og_title: Постоянная усталость: почему сон не по
 description: Спишь по восемь часов, а встаёшь разбитым, и кофе уже не спасает. Психиатр разбирает усталость как диагностическую задачу: анализы, апноэ, стресс, депрессия — в каком.
 canonical: https://sreda.men/blog/postoyannaya-ustalost
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 31 мая 2026
+date_line: 22 июня 2026
 read_line: ≈ 11 минут
-date_published: 2026-05-31
+date_published: 2026-06-22
 date_modified: 2026-07-29
 status: released
 category: Состояния

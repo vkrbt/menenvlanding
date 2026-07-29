@@ -7,9 +7,9 @@ og_title: Игры до трёх ночи: когда хобби станови�
 description: Взрослый мужик, семья, работа — и четыре часа в игре каждую ночь. Психиатр разбирает без паники: где хобби, где эскапизм, где расстройство по МКБ-11, и почему чинить.
 canonical: https://sreda.men/blog/igrovaya-zavisimost
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 28 июня 2026
+date_line: 7 июля 2026
 read_line: ≈ 11 минут
-date_published: 2026-06-28
+date_published: 2026-07-07
 date_modified: 2026-07-29
 status: released
 category: Зависимости

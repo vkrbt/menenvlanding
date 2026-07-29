@@ -7,9 +7,9 @@ og_title: Как перестать срываться на близких: до
 description: Дома срываешься на жену и детей, потом стыдно, через неделю снова. Почему падает порог именно в семье и что из советов работает.
 canonical: https://sreda.men/blog/kak-perestat-sryvatsya-na-blizkih
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 9 апреля 2026
+date_line: 15 мая 2026
 read_line: ≈ 11 минут
-date_published: 2026-04-09
+date_published: 2026-05-15
 date_modified: 2026-07-29
 status: released
 category: Отношения

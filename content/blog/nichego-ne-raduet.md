@@ -7,9 +7,9 @@ og_title: Ничего не радует: ангедония и как верн�
 description: Еда как картон, отпуск как обязанность, хобби по инерции. Психиатр про ангедонию: почему глохнет система удовольствия и что помогает.
 canonical: https://sreda.men/blog/nichego-ne-raduet
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 26 мая 2026
+date_line: 20 июня 2026
 read_line: ≈ 11 минут
-date_published: 2026-05-26
+date_published: 2026-06-20
 date_modified: 2026-07-29
 status: released
 category: Состояния

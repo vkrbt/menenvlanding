@@ -7,10 +7,10 @@ og_title: Почему мужчины скрывают эмоции: данны�
 description: Почему мужчины скрывают эмоции — вопрос с неожиданным ответом. Эксперимент показал: спрятать грусть не получается, она проступает в поведении и пульсе.
 canonical: https://sreda.men/blog/pochemu-muzhchiny-skryvayut-emocii
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 16 марта 2026
+date_line: 30 апреля 2026
 read_line: ≈ 8 минут
-date_published: 2026-03-16
-date_modified: 2026-03-16
+date_published: 2026-04-30
+date_modified: 2026-04-30
 status: released
 category: Исследования
 card_title: Почему мужчины скрывают эмоции: данные эксперимента

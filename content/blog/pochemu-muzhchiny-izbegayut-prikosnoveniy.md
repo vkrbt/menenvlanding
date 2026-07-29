@@ -7,10 +7,10 @@ og_title: Почему мужчины избегают прикосновени�
 description: Почему мужчины избегают прикосновений даже с близкими друзьями: исследование 467 человек показало разрыв между тем, чего хотят, и тем, что себе разрешают.
 canonical: https://sreda.men/blog/pochemu-muzhchiny-izbegayut-prikosnoveniy
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 2 апреля 2026
+date_line: 14 мая 2026
 read_line: ≈ 8 минут
-date_published: 2026-04-02
-date_modified: 2026-04-02
+date_published: 2026-05-14
+date_modified: 2026-05-14
 status: released
 category: Одиночество
 card_title: Почему мужчины избегают прикосновений с друзьями

@@ -7,9 +7,9 @@ og_title: Не с кем выговориться: телефон полный, 
 description: Контактов хватает, а выговориться о проблемах некому — у мужчин это не редкость. Влад разбирает, почему молчим при нормальной жизни и куда идти, кроме «просто откройся».
 canonical: https://sreda.men/blog/ne-s-kem-pogovorit
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 30 марта 2026
+date_line: 10 мая 2026
 read_line: ≈ 8 минут
-date_published: 2026-03-30
+date_published: 2026-05-10
 date_modified: 2026-07-29
 status: released
 category: Состояния

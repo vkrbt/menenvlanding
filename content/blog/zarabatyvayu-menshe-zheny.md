@@ -7,10 +7,10 @@ og_title: Зарабатываю меньше жены: что с этим де�
 description: Зарабатываю меньше жены — ситуация, о которой мужчины молчат. Разбираем данные о связи доходов супругов с мужским состоянием и что с этим делать.
 canonical: https://sreda.men/blog/zarabatyvayu-menshe-zheny
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 9 июля 2026
+date_line: 11 июля 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-09
-date_modified: 2026-07-09
+date_published: 2026-07-11
+date_modified: 2026-07-11
 status: released
 category: Работа и деньги
 card_title: Зарабатываю меньше жены: что с этим делать

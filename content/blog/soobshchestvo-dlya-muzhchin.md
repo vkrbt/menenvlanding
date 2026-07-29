@@ -7,10 +7,10 @@ og_title: Сообщество для мужчин: чем это не клуб 
 description: Сообщество для мужчин — чем оно отличается от клуба по интересам, бизнес-нетворкинга и «клубов успеха», и зачем взрослому мужчине регулярный разговор.
 canonical: https://sreda.men/blog/soobshchestvo-dlya-muzhchin
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 15 февраля 2026
+date_line: 2 апреля 2026
 read_line: ≈ 9 минут
-date_published: 2026-02-15
-date_modified: 2026-02-15
+date_published: 2026-04-02
+date_modified: 2026-04-02
 status: released
 category: Формат
 card_title: Сообщество для мужчин: чем это не клуб успеха

@@ -7,9 +7,9 @@ og_title: Одиночество в эмиграции: как мужчине н
 description: Переехал — и общаться стало не с кем: старые друзья далеко, местные за барьером. Почему в эмиграции так одиноко и как реально строить круг общения заново. Без «просто.
 canonical: https://sreda.men/blog/odinochestvo-v-emigracii
 author_line: Влад и Женя — ведущие «Мужской среды»
-date_line: 26 марта 2026
+date_line: 8 мая 2026
 read_line: ≈ 11 минут
-date_published: 2026-03-26
+date_published: 2026-05-08
 date_modified: 2026-07-29
 status: released
 category: Эмиграция

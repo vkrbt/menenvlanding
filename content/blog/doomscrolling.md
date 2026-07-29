@@ -7,9 +7,9 @@ og_title: Думскроллинг: почему не можешь отложи�
 description: Лента закончилась — открываешь следующую. Психиатр разбирает doomscrolling: что говорят исследования, когда это норма, а когда сигнал про тревогу.
 canonical: https://sreda.men/blog/doomscrolling
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 3 июля 2026
+date_line: 9 июля 2026
 read_line: ≈ 10 минут
-date_published: 2026-07-03
+date_published: 2026-07-09
 date_modified: 2026-07-29
 status: released
 category: Зависимости

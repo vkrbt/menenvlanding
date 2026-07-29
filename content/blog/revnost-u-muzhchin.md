@@ -7,10 +7,10 @@ og_title: Ревность у мужчин: что за ней стоит
 description: Ревность у мужчин — не про любовь и не про недоверие. Разбираем исследование о значимости и объясняем, где проходит граница между чувством и контролем.
 canonical: https://sreda.men/blog/revnost-u-muzhchin
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 3 июня 2026
+date_line: 24 июня 2026
 read_line: ≈ 9 минут
-date_published: 2026-06-03
-date_modified: 2026-06-03
+date_published: 2026-06-24
+date_modified: 2026-06-24
 status: released
 category: Отношения
 card_title: Ревность у мужчин: что за ней стоит

@@ -7,10 +7,10 @@ og_title: Стыдно идти к психологу мужчине
 description: Стыдно идти к психологу мужчине — разбираем, из чего этот стыд состоит, что происходит на первой встрече на самом деле и как снизить цену входа.
 canonical: https://sreda.men/blog/stydno-idti-k-psihologu
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 24 июня 2026
+date_line: 4 июля 2026
 read_line: ≈ 9 минут
-date_published: 2026-06-24
-date_modified: 2026-06-24
+date_published: 2026-07-04
+date_modified: 2026-07-04
 status: released
 category: Помощь
 card_title: Стыдно идти к психологу мужчине

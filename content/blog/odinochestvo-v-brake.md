@@ -7,9 +7,9 @@ og_title: Одиночество в браке: жена рядом, а выго
 description: Семья на месте, ипотека платится — а поговорить о настоящем не с кем. Влад и Женя без обвинений разбирают дистанцию в браке и почему один человек не закрывает все.
 canonical: https://sreda.men/blog/odinochestvo-v-brake
 author_line: Влад и Женя — ведущие «Мужской среды»
-date_line: 14 апреля 2026
+date_line: 20 мая 2026
 read_line: ≈ 10 минут
-date_published: 2026-04-14
+date_published: 2026-05-20
 date_modified: 2026-07-29
 status: released
 category: Отношения

@@ -7,9 +7,9 @@ og_title: Мужская терапевтическая группа: что з�
 description: Мужская терапевтическая группа — чем слово «терапевтическая» отличает её от круга и группы поддержки, кто ведёт и по каким признакам выбирать.
 canonical: https://sreda.men/blog/muzhskaya-terapevticheskaya-gruppa
 author_line: Влад и Женя — ведущие «Мужской среды»
-date_line: 28 июля 2026
+date_line: 29 июля 2026
 read_line: ≈ 12 минут
-date_published: 2026-07-28
+date_published: 2026-07-29
 date_modified: 2026-07-29
 status: released
 category: Формат

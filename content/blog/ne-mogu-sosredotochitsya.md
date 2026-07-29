@@ -7,9 +7,9 @@ og_title: Не могу сосредоточиться: что происход�
 description: Открыл документ — через четыре минуты уже в телефоне. Женя, психиатр, про сон, тревогу, депрессию и почему модный СДВГ тут обычно ни при чём.
 canonical: https://sreda.men/blog/ne-mogu-sosredotochitsya
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 2 марта 2026
+date_line: 17 апреля 2026
 read_line: ≈ 11 минут
-date_published: 2026-03-02
+date_published: 2026-04-17
 date_modified: 2026-07-29
 status: released
 category: Состояния

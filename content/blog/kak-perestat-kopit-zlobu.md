@@ -7,9 +7,9 @@ og_title: Как перестать копить злобу в себе: раз�
 description: Промолчал на совещании, а вечером в машине орёшь на радио. Гештальт-терапевт объясняет, почему злость копится, чем это оборачивается для тела и близких и что с этим.
 canonical: https://sreda.men/blog/kak-perestat-kopit-zlobu
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 20 июля 2026
+date_line: 18 июля 2026
 read_line: ≈ 11 минут
-date_published: 2026-07-20
+date_published: 2026-07-18
 date_modified: 2026-07-29
 status: released
 category: Состояния

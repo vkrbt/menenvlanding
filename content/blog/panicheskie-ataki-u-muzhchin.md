@@ -7,9 +7,9 @@ og_title: Паническая атака у мужчин: «думал, сер�
 description: Сердце колотится, воздуха нет, скорая ничего не находит. Психиатр объясняет, как устроена паническая атака у мужчин, чем она отличается от инфаркта и что делать в.
 canonical: https://sreda.men/blog/panicheskie-ataki-u-muzhchin
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 2 мая 2026
+date_line: 31 мая 2026
 read_line: ≈ 11 минут
-date_published: 2026-05-02
+date_published: 2026-05-31
 date_modified: 2026-07-29
 status: released
 category: Состояния

@@ -7,10 +7,10 @@ og_title: Исследования о мужчинах и психике: как
 description: Исследования о мужчинах и психике легко переврать заголовком. Разбираем, что данные показывают на самом деле, где проходят границы выводов и чему верить.
 canonical: https://sreda.men/blog/issledovaniya-o-muzhchinah-i-psihike
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 28 февраля 2026
+date_line: 17 апреля 2026
 read_line: ≈ 9 минут
-date_published: 2026-02-28
-date_modified: 2026-02-28
+date_published: 2026-04-17
+date_modified: 2026-04-17
 status: released
 category: Исследования
 card_title: Исследования о мужчинах и психике: как их читать

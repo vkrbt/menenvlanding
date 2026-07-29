@@ -7,9 +7,9 @@ og_title: Расстался с девушкой: что делать в пер�
 description: Разбор от психиатра: почему разрыв бьёт сильнее, чем ты рассчитывал, что делать в первые дни, чего лучше не делать вообще и по каким признакам понять, что пора к врачу.
 canonical: https://sreda.men/blog/rasstalsya-s-devushkoy
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 24 июля 2026
+date_line: 26 июля 2026
 read_line: ≈ 11 минут
-date_published: 2026-07-24
+date_published: 2026-07-26
 date_modified: 2026-07-29
 status: released
 category: Отношения

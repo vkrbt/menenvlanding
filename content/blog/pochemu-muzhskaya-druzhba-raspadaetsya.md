@@ -7,10 +7,10 @@ og_title: Почему мужская дружба распадается пос
 description: Почему мужская дружба распадается: не потому что все заняты. Разбираем механику — от инструментальных связей до правил, которые мужчины держат сами.
 canonical: https://sreda.men/blog/pochemu-muzhskaya-druzhba-raspadaetsya
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 6 апреля 2026
+date_line: 15 мая 2026
 read_line: ≈ 9 минут
-date_published: 2026-04-06
-date_modified: 2026-04-06
+date_published: 2026-05-15
+date_modified: 2026-05-15
 status: released
 category: Одиночество
 card_title: Почему мужская дружба распадается после тридцати

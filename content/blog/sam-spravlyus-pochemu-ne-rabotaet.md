@@ -7,10 +7,10 @@ og_title: Сам справлюсь почему не работает
 description: Сам справлюсь почему не работает: разбираем установку на самодостаточность — почему она подкреплена опытом и в каких задачах гарантированно проигрывает.
 canonical: https://sreda.men/blog/sam-spravlyus-pochemu-ne-rabotaet
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 21 июня 2026
+date_line: 3 июля 2026
 read_line: ≈ 9 минут
-date_published: 2026-06-21
-date_modified: 2026-06-21
+date_published: 2026-07-03
+date_modified: 2026-07-03
 status: released
 category: Помощь
 card_title: Сам справлюсь почему не работает

@@ -7,10 +7,10 @@ og_title: Как перестать срываться: механика всп�
 description: Как перестать срываться — вопрос, который задают уже после срыва. Разбираем, что запускает вспышку на самом деле, и почему «просто успокойся» не работает.
 canonical: https://sreda.men/blog/kak-perestat-sryvatsya
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 12 апреля 2026
+date_line: 17 мая 2026
 read_line: ≈ 10 минут
-date_published: 2026-04-12
-date_modified: 2026-04-12
+date_published: 2026-05-17
+date_modified: 2026-05-17
 status: released
 category: Злость
 card_title: Как перестать срываться: механика вспышек

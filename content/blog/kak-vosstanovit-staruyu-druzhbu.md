@@ -7,10 +7,10 @@ og_title: Как восстановить старую дружбу и напи�
 description: Как восстановить старую дружбу, если не общались годами: почему написать первым так страшно, что на самом деле думает тот, кому пишут, и с чего начать.
 canonical: https://sreda.men/blog/kak-vosstanovit-staruyu-druzhbu
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 27 марта 2026
+date_line: 9 мая 2026
 read_line: ≈ 8 минут
-date_published: 2026-03-27
-date_modified: 2026-03-27
+date_published: 2026-05-09
+date_modified: 2026-05-09
 status: released
 category: Одиночество
 card_title: Как восстановить старую дружбу и написать первым

@@ -7,10 +7,10 @@ og_title: Не могу обеспечить семью: что с этим де
 description: Не могу обеспечить семью — мысль, которая бьёт по мужчинам сильнее, чем сама нехватка денег. Разбираем, откуда она берётся и что с ней делать.
 canonical: https://sreda.men/blog/ne-mogu-obespechit-semyu
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июня 2026
+date_line: 8 июля 2026
 read_line: ≈ 9 минут
-date_published: 2026-06-29
-date_modified: 2026-06-29
+date_published: 2026-07-08
+date_modified: 2026-07-08
 status: released
 category: Работа и деньги
 card_title: Не могу обеспечить семью: что с этим делать

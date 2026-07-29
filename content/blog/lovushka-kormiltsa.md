@@ -7,10 +7,10 @@ og_title: Ловушка кормильца: цена роли добытчик�
 description: Ловушка кормильца — роль, которая выглядит как ответственность и работает как клетка. Разбираем, что показали данные и во что обходится эта конструкция.
 canonical: https://sreda.men/blog/lovushka-kormiltsa
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 27 июня 2026
+date_line: 5 июля 2026
 read_line: ≈ 10 минут
-date_published: 2026-06-27
-date_modified: 2026-06-27
+date_published: 2026-07-05
+date_modified: 2026-07-05
 status: released
 category: Работа и деньги
 card_title: Ловушка кормильца: цена роли добытчика

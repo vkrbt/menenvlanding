@@ -7,10 +7,10 @@ og_title: Страх бедности у мужчин: почему деньги
 description: Страх бедности у мужчин не проходит с ростом дохода. Разбираем, почему тревога о деньгах живёт отдельно от финансового положения и что с ней делать.
 canonical: https://sreda.men/blog/strah-bednosti-u-muzhchin
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 5 июля 2026
+date_line: 10 июля 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-05
-date_modified: 2026-07-05
+date_published: 2026-07-10
+date_modified: 2026-07-10
 status: released
 category: Работа и деньги
 card_title: Страх бедности у мужчин: почему деньги не лечат

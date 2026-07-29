@@ -7,10 +7,10 @@ og_title: Выгорел на работе что делать: с чего на
 description: Выгорел на работе что делать — вопрос, на который обычно отвечают советами про отдых. Разбираем, почему они работают слабо и что даёт эффект по данным.
 canonical: https://sreda.men/blog/vygorel-na-rabote
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 15 июля 2026
+date_line: 14 июля 2026
 read_line: ≈ 10 минут
-date_published: 2026-07-15
-date_modified: 2026-07-15
+date_published: 2026-07-14
+date_modified: 2026-07-14
 status: released
 category: Состояния
 card_title: Выгорел на работе что делать: с чего начать

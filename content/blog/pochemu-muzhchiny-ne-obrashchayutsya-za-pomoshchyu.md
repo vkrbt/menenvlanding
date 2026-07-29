@@ -7,10 +7,10 @@ og_title: Почему мужчины не обращаются за помощ�
 description: Почему мужчины не обращаются за помощью — разбираем по данным метаанализов: какая именно норма мешает сильнее прочих и что с этим удалось сделать.
 canonical: https://sreda.men/blog/pochemu-muzhchiny-ne-obrashchayutsya-za-pomoshchyu
 author_line: Влад и Женя — ведущие «Мужской среды»
-date_line: 7 июня 2026
+date_line: 26 июня 2026
 read_line: ≈ 10 минут
-date_published: 2026-06-07
-date_modified: 2026-06-07
+date_published: 2026-06-26
+date_modified: 2026-06-26
 status: released
 category: Помощь
 card_title: Почему мужчины не обращаются за помощью

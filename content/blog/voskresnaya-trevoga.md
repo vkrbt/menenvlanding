@@ -7,9 +7,9 @@ og_title: Воскресная тревога: почему к вечеру вы
 description: Воскресенье, часов пять вечера — и настроение поехало вниз. Разбираем «страх понедельника»: почему он накрывает 8 из 10 работающих, когда это норма, а когда сигнал.
 canonical: https://sreda.men/blog/voskresnaya-trevoga
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 12 мая 2026
+date_line: 9 июня 2026
 read_line: ≈ 10 минут
-date_published: 2026-05-12
+date_published: 2026-06-09
 date_modified: 2026-07-29
 status: released
 category: Состояния

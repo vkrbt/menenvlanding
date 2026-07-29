@@ -7,10 +7,10 @@ og_title: Психолог мужчина или женщина: что пока
 description: Психолог мужчина или женщина — вопрос, который мужчины задают чаще всего перед первым визитом. Опрос двух тысяч человек дал неожиданный ответ.
 canonical: https://sreda.men/blog/psiholog-muzhchina-ili-zhenshchina
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 16 марта 2026
+date_line: 1 мая 2026
 read_line: ≈ 8 минут
-date_published: 2026-03-16
-date_modified: 2026-03-16
+date_published: 2026-05-01
+date_modified: 2026-05-01
 status: released
 category: Исследования
 card_title: Психолог мужчина или женщина: что показал опрос

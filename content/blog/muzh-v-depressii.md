@@ -7,9 +7,9 @@ og_title: Муж в депрессии: как помочь — и как не �
 description: Он злой, молчит или лежит, к психологу не хочет. Психиатр — о том, как распознать мужскую депрессию, что говорить и чего не говорить, как довести до помощи и не.
 canonical: https://sreda.men/blog/muzh-v-depressii
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 4 июня 2026
+date_line: 25 июня 2026
 read_line: ≈ 12 минут
-date_published: 2026-06-04
+date_published: 2026-06-25
 date_modified: 2026-07-29
 status: released
 category: Для близких

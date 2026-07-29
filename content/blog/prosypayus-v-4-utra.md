@@ -7,9 +7,9 @@ og_title: Просыпаюсь в 4 утра и не могу уснуть: чт
 description: Глаза открываются в четыре, голова уже считает проблемы, сна нет. Психиатр объясняет, почему ранние пробуждения — маркер тревоги и депрессии, при чём тут алкоголь и.
 canonical: https://sreda.men/blog/prosypayus-v-4-utra
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 21 мая 2026
+date_line: 17 июня 2026
 read_line: ≈ 11 минут
-date_published: 2026-05-21
+date_published: 2026-06-17
 date_modified: 2026-07-29
 status: released
 category: Состояния

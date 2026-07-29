@@ -7,9 +7,9 @@ og_title: Устал от саморазвития: почему достига�
 description: Курсы закрыты, цели достигнуты — счастья нет. Влад про достигаторство, гедоническую адаптацию и где искать опору, когда гонка больше не работает.
 canonical: https://sreda.men/blog/ustal-ot-samorazvitiya
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 21 марта 2026
+date_line: 4 мая 2026
 read_line: ≈ 11 минут
-date_published: 2026-03-21
+date_published: 2026-05-04
 date_modified: 2026-07-29
 status: released
 category: Достигаторство

@@ -7,10 +7,10 @@ og_title: Мужская группа поддержки онлайн: как в
 description: Мужская группа поддержки онлайн — что это за формат, какие бывают виды, где найти бесплатные и платные, и как отличить нормальную группу от сомнительной.
 canonical: https://sreda.men/blog/muzhskaya-gruppa-podderzhki-online
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 6 февраля 2026
+date_line: 26 марта 2026
 read_line: ≈ 12 минут
-date_published: 2026-02-06
-date_modified: 2026-02-06
+date_published: 2026-03-26
+date_modified: 2026-03-26
 status: released
 category: Формат
 card_title: Мужская группа поддержки онлайн: как выбрать и чего ждать

@@ -7,10 +7,10 @@ og_title: Мужчины не обнимаются и не ходят вдвоё
 description: Пять исследований показали: чем больше совместное занятие похоже на свидание, тем сильнее мужчины избегают звать туда друга. Разбираем, откуда это «мне нельзя» и чем.
 canonical: https://sreda.men/blog/muzhskaya-druzhba-i-blizost
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 31 марта 2026
+date_line: 12 мая 2026
 read_line: ≈ 9 минут
-date_published: 2026-03-31
-date_modified: 2026-03-31
+date_published: 2026-05-12
+date_modified: 2026-05-12
 status: released
 category: Одиночество
 card_title: Мужчины не обнимаются и не ходят вдвоём в кино: почему

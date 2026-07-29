@@ -7,10 +7,10 @@ og_title: Мужской круг что это: формат, история и
 description: Мужской круг — что это за формат, откуда он взялся, чем отличается от группы поддержки и как отличить осмысленную практику от бубнов и внутреннего воина.
 canonical: https://sreda.men/blog/muzhskoy-krug-chto-eto
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 9 февраля 2026
+date_line: 29 марта 2026
 read_line: ≈ 9 минут
-date_published: 2026-02-09
-date_modified: 2026-02-09
+date_published: 2026-03-29
+date_modified: 2026-03-29
 status: released
 category: Формат
 card_title: Мужской круг что это: формат, история и где там эзотерика

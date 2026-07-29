@@ -7,9 +7,9 @@ og_title: Депрессия у мужчин: признаки, которых �
 description: Мужчина редко говорит «у меня депрессия» — чаще «срываюсь на жену» или «спина болит, а анализы чистые». Женя, психиатр, про маски мужской депрессии и что с ними делать.
 canonical: https://sreda.men/blog/depressiya-u-muzhchin-priznaki
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 21 февраля 2026
+date_line: 8 апреля 2026
 read_line: ≈ 12 минут
-date_published: 2026-02-21
+date_published: 2026-04-08
 date_modified: 2026-07-29
 status: released
 category: Состояния

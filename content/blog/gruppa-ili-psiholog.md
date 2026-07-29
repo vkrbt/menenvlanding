@@ -7,9 +7,9 @@ og_title: Группа или психолог: что выбрать, если 
 description: Терапия или мужская группа — куда идти первым, если никогда не пробовал ни то ни другое? Влад и Женя честно сравнивают форматы, цены и три типичных сценария.
 canonical: https://sreda.men/blog/gruppa-ili-psiholog
 author_line: Влад и Женя — ведущие «Мужской среды»
-date_line: 16 февраля 2026
+date_line: 2 апреля 2026
 read_line: ≈ 10 минут
-date_published: 2026-02-16
+date_published: 2026-04-02
 date_modified: 2026-07-29
 status: released
 category: Формат

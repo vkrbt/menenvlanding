@@ -7,9 +7,9 @@ og_title: Апатия у мужчин: нет сил и мотивации — 
 description: Апатия у мужчин: сил нет, мотивации нет, всё равно стало нормой. Психиатр — чем это отличается от усталости и какие анализы сдать.
 canonical: https://sreda.men/blog/apatiya-u-muzhchin
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 23 апреля 2026
+date_line: 24 мая 2026
 read_line: ≈ 11 минут
-date_published: 2026-04-23
+date_published: 2026-05-24
 date_modified: 2026-07-29
 status: released
 category: Состояния

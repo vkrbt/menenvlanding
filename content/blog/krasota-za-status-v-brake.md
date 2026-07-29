@@ -7,10 +7,10 @@ og_title: Красота за статус в браке: что показал�
 description: Красота за статус в браке — обмен, который считали разовой сделкой при выборе партнёра. Двадцать лет наблюдения за 3744 парами показали другое.
 canonical: https://sreda.men/blog/krasota-za-status-v-brake
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 10 марта 2026
+date_line: 24 апреля 2026
 read_line: ≈ 8 минут
-date_published: 2026-03-10
-date_modified: 2026-03-10
+date_published: 2026-04-24
+date_modified: 2026-04-24
 status: released
 category: Исследования
 card_title: Красота за статус в браке: что показали данные

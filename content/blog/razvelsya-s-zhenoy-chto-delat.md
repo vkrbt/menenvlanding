@@ -7,9 +7,9 @@ og_title: Развёлся с женой: что делать в первые м
 description: Порядок действий для мужчины после развода: где жить, что с детьми и деньгами, что говорить на работе и родителям, как не спиться в первый год и когда пора к врачу.
 canonical: https://sreda.men/blog/razvelsya-s-zhenoy-chto-delat
 author_line: Влад и Женя — ведущие «Мужской среды»
-date_line: 26 июля 2026
+date_line: 29 июля 2026
 read_line: ≈ 12 минут
-date_published: 2026-07-26
+date_published: 2026-07-29
 date_modified: 2026-07-29
 status: released
 category: Отношения

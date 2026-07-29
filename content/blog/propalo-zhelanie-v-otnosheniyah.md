@@ -7,10 +7,10 @@ og_title: Пропало желание в отношениях: что изве
 description: Пропало желание в отношениях — разбираем, что показал систематический обзор о поддержании влечения в долгих парах и почему расхождение уровней это норма.
 canonical: https://sreda.men/blog/propalo-zhelanie-v-otnosheniyah
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 1 июня 2026
+date_line: 23 июня 2026
 read_line: ≈ 9 минут
-date_published: 2026-06-01
-date_modified: 2026-06-01
+date_published: 2026-06-23
+date_modified: 2026-06-23
 status: released
 category: Отношения
 card_title: Пропало желание в отношениях: что известно

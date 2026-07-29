@@ -7,10 +7,10 @@ og_title: Как не спиться после развода: где гран�
 description: Как не спиться после развода — вопрос, который задают, когда вечерняя доза стала ежедневной. Разбираем механику, признаки и что делать вместо запрета себе.
 canonical: https://sreda.men/blog/kak-ne-spitsya-posle-razvoda
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 20 июля 2026
+date_line: 17 июля 2026
 read_line: ≈ 10 минут
-date_published: 2026-07-20
-date_modified: 2026-07-20
+date_published: 2026-07-17
+date_modified: 2026-07-17
 status: released
 category: Отношения
 card_title: Как не спиться после развода: где граница

@@ -7,10 +7,10 @@ og_title: Нет сил ни на что: усталость, которая н�
 description: Нет сил ни на что — состояние, при котором отдых не помогает. Разбираем, чем оно отличается от обычной усталости и почему покой иногда работает против.
 canonical: https://sreda.men/blog/net-sil-ni-na-chto
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 25 апреля 2026
+date_line: 25 мая 2026
 read_line: ≈ 9 минут
-date_published: 2026-04-25
-date_modified: 2026-04-25
+date_published: 2026-05-25
+date_modified: 2026-05-25
 status: released
 category: Состояния
 card_title: Нет сил ни на что: усталость, которая не лечится сном

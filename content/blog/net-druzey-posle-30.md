@@ -7,9 +7,9 @@ og_title: Нет друзей после 30: почему так вышло и �
 description: После 30 друзья куда-то деваются почти у всех мужчин - это статистика, а не твой личный провал. Разбираем, почему дружба рассыпается и как во взрослом возрасте.
 canonical: https://sreda.men/blog/net-druzey-posle-30
 author_line: Влад - гештальт-терапевт, ведущий «Мужской среды»
-date_line: 11 февраля 2026
+date_line: 31 марта 2026
 read_line: ≈ 12 минут
-date_published: 2026-02-11
+date_published: 2026-03-31
 date_modified: 2026-07-29
 status: released
 category: Одиночество

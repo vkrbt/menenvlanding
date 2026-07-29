@@ -7,9 +7,9 @@ og_title: Порнозависимость: что наука говорит н�
 description: Диагноза «порнозависимость» в МКБ-11 нет — а проблема у части мужчин есть. Психиатр спокойно разбирает: где граница, что за компульсивное расстройство, почему.
 canonical: https://sreda.men/blog/pornozavisimost
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 23 июня 2026
+date_line: 3 июля 2026
 read_line: ≈ 12 минут
-date_published: 2026-06-23
+date_published: 2026-07-03
 date_modified: 2026-07-29
 status: released
 category: Зависимости

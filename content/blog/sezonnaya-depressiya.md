@@ -7,9 +7,9 @@ og_title: Сезонная депрессия: почему на севере Е
 description: С октября по март ты не человек, а функция: сонливость, тяга к сладкому, всё серое. Психиатр — про сезонное аффективное расстройство, лампы на 10 000 люкс и когда.
 canonical: https://sreda.men/blog/sezonnaya-depressiya
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 9 июня 2026
+date_line: 29 июня 2026
 read_line: ≈ 11 минут
-date_published: 2026-06-09
+date_published: 2026-06-29
 date_modified: 2026-07-29
 status: released
 category: Состояния

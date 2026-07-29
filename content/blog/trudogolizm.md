@@ -7,9 +7,9 @@ og_title: Трудоголизм: социально одобряемая зав
 description: Работаешь до полуночи и на выходных — карьера или зависимость? Психиатр про BWAS, цифры из мета-анализа и как отличить трудоголизм от вовлечённости.
 canonical: https://sreda.men/blog/trudogolizm
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 7 июля 2026
+date_line: 10 июля 2026
 read_line: ≈ 11 минут
-date_published: 2026-07-07
+date_published: 2026-07-10
 date_modified: 2026-07-29
 status: released
 category: Зависимости

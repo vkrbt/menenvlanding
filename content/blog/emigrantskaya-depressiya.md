@@ -7,9 +7,9 @@ og_title: Эмигрантская депрессия у мужчин: поче�
 description: Переехал, всё устроил - а сил нет и ничего не радует. Женя, психиатр и сам эмигрант, про U-кривую адаптации, мужские маски депрессии и что реально помогает.
 canonical: https://sreda.men/blog/emigrantskaya-depressiya
 author_line: Женя - психиатр-нарколог, ведущий «Мужской среды»
-date_line: 2 февраля 2026
+date_line: 24 марта 2026
 read_line: ≈ 13 минут
-date_published: 2026-02-02
+date_published: 2026-03-24
 date_modified: 2026-07-29
 status: released
 category: Эмиграция

@@ -7,9 +7,9 @@ og_title: Друг в депрессии: как поговорить с ним 
 description: Друг пропал или отшучивается? Как спросить «как ты на самом деле», не превращаясь в психолога — модель ALEC простыми словами.
 canonical: https://sreda.men/blog/kak-pomoch-drugu-v-depressii
 author_line: Влад и Женя — ведущие «Мужской среды»
-date_line: 12 марта 2026
+date_line: 25 апреля 2026
 read_line: ≈ 10 минут
-date_published: 2026-03-12
+date_published: 2026-04-25
 date_modified: 2026-07-29
 status: released
 category: Для близких

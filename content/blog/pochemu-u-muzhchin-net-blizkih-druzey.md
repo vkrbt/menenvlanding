@@ -7,10 +7,10 @@ og_title: Почему у мужчин нет близких друзей: пр�
 description: Почему у мужчин нет близких друзей — не про занятость и не про характер. Разбираем негласные правила, которые мужчины соблюдают, не проговаривая вслух.
 canonical: https://sreda.men/blog/pochemu-u-muzhchin-net-blizkih-druzey
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 10 апреля 2026
+date_line: 19 мая 2026
 read_line: ≈ 9 минут
-date_published: 2026-04-10
-date_modified: 2026-04-10
+date_published: 2026-05-19
+date_modified: 2026-05-19
 status: released
 category: Одиночество
 card_title: Почему у мужчин нет близких друзей: правила игры

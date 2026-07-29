@@ -7,9 +7,9 @@ og_title: Муж замкнулся в себе: что делать и чего
 description: Муж молчит, раздражается, ушёл в работу или телефон? Терапевт и психиатр объясняют, что стоит за мужским молчанием, как поговорить и как не превратиться в его психолога.
 canonical: https://sreda.men/blog/muzh-zamknulsya
 author_line: Влад и Женя — ведущие «Мужской среды»
-date_line: 16 марта 2026
+date_line: 29 апреля 2026
 read_line: ≈ 10 минут
-date_published: 2026-03-16
+date_published: 2026-04-29
 date_modified: 2026-07-29
 status: released
 category: Для близких

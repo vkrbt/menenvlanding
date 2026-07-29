@@ -7,9 +7,9 @@ og_title: Выгорание у мужчин: как отличить от ус�
 description: «Выгорел» теперь говорят про любую лень. Как отличить настоящее выгорание от усталости — и почему отпуск не лечит.
 canonical: https://sreda.men/blog/vygoranie-u-muzhchin
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 26 февраля 2026
+date_line: 13 апреля 2026
 read_line: ≈ 11 минут
-date_published: 2026-02-26
+date_published: 2026-04-13
 date_modified: 2026-07-29
 status: released
 category: Состояния

@@ -7,9 +7,9 @@ og_title: Стал отцом - и накрыло: мужская послеро
 description: Ребёнок родился, все поздравляют, а внутри пусто и злость. Психиатр - о послеродовой депрессии у мужчин: каждый десятый отец, пик в 3–6 месяцев, и почему об этом молчат.
 canonical: https://sreda.men/blog/muzhskaya-poslerodovaya-depressiya
 author_line: Женя - психиатр-нарколог, ведущий «Мужской среды»
-date_line: 14 июня 2026
+date_line: 2 июля 2026
 read_line: ≈ 12 минут
-date_published: 2026-06-14
+date_published: 2026-07-02
 date_modified: 2026-07-29
 status: released
 category: Отцовство

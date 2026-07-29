@@ -7,10 +7,10 @@ og_title: Сын не вписывается в мужские рамки
 description: Сын не вписывается в мужские рамки — тревога, знакомая многим отцам. Разбираем, что известно о передаче норм от отца к сыну и чем оборачивается закалка.
 canonical: https://sreda.men/blog/syn-ne-vpisyvaetsya-v-ramki
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 13 мая 2026
+date_line: 11 июня 2026
 read_line: ≈ 9 минут
-date_published: 2026-05-13
-date_modified: 2026-05-13
+date_published: 2026-06-11
+date_modified: 2026-06-11
 status: released
 category: Отцовство
 card_title: Сын не вписывается в мужские рамки

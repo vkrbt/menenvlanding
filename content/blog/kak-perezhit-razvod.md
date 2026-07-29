@@ -7,9 +7,9 @@ og_title: Как пережить развод: инструкция для му
 description: «Да нормально всё» — самая частая фраза разведённого мужчины. Как развод бьёт на самом деле, типичные ошибки первых месяцев и что помогает.
 canonical: https://sreda.men/blog/kak-perezhit-razvod
 author_line: Влад и Женя — ведущие «Мужской среды»
-date_line: 7 марта 2026
+date_line: 22 апреля 2026
 read_line: ≈ 12 минут
-date_published: 2026-03-07
+date_published: 2026-04-22
 date_modified: 2026-07-29
 status: released
 category: Отношения
