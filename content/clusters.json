@@ -217,6 +217,24 @@
     ]
   },
   {
+    "key": "stigma",
+    "slug": "stigma",
+    "name": "Стигма и обращение за помощью",
+    "status": "ПРИНЯТ",
+    "stage": "TOFU→MOFU",
+    "pillarQuery": "почему мужчины не обращаются за помощью",
+    "pillarSlug": "pochemu-muzhchiny-ne-obrashchayutsya-za-pomoshchyu",
+    "lede": "Почему мужчины не обращаются за помощью — вопрос не про характер, а про усвоенные нормы. Разбираем механику стигмы и что с ней делать.",
+    "articles": [
+      "pochemu-muzhchiny-ne-obrashchayutsya-za-pomoshchyu",
+      "muzhchine-ne-prinyato-zhalovatsya",
+      "sam-spravlyus-pochemu-ne-rabotaet",
+      "stydno-idti-k-psihologu",
+      "kak-poprosit-o-pomoshchi",
+      "prilozheniya-dlya-mentalnogo-zdorovya"
+    ]
+  },
+  {
     "key": "research",
     "slug": "issledovaniya",
     "name": "Исследования",

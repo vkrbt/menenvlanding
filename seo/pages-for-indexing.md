@@ -1,6 +1,6 @@
 # Страницы sreda.men для ручной отправки в индекс
 
-Всего в карте сайта: 114 URL. Порядок — по приоритету отправки.
+Всего в карте сайта: 121 URL. Порядок — по приоритету отправки.
 
 Google Search Console → Проверка URL → «Запросить индексирование». Лимит примерно 10–15 в сутки,
 поэтому идти сверху вниз. Пагинацию (`/blog/page/N`) отправлять не нужно — она нужна роботу для обхода,
@@ -29,6 +29,7 @@ https://sreda.men/blog/muzhskaya-gruppa-podderzhki-online
 https://sreda.men/blog/ne-mogu-sosredotochitsya
 https://sreda.men/blog/net-druzey-posle-30
 https://sreda.men/blog/nichego-ne-hochetsya
+https://sreda.men/blog/pochemu-muzhchiny-ne-obrashchayutsya-za-pomoshchyu
 https://sreda.men/blog/stal-otcom-i-nakrylo
 https://sreda.men/blog/trevozhnost-u-muzhchin
 https://sreda.men/blog/ustal-ot-samorazvitiya
@@ -45,6 +46,7 @@ https://sreda.men/blog/tema/odinochestvo
 https://sreda.men/blog/tema/otcovstvo
 https://sreda.men/blog/tema/razvod
 https://sreda.men/blog/tema/soobshchestvo
+https://sreda.men/blog/tema/stigma
 https://sreda.men/blog/tema/trevoga
 https://sreda.men/blog/tema/vnimanie
 https://sreda.men/blog/tema/vygoranie
@@ -69,6 +71,7 @@ https://sreda.men/blog/kak-perestat-kopit-zlobu
 https://sreda.men/blog/kak-perestat-sryvatsya-na-blizkih
 https://sreda.men/blog/kak-perestat-sryvatsya-na-okruzhayushchih
 https://sreda.men/blog/kak-pomoch-drugu-v-depressii
+https://sreda.men/blog/kak-poprosit-o-pomoshchi
 https://sreda.men/blog/kak-ugovorit-muzha-k-psihologu
 https://sreda.men/blog/kak-vosstanovit-staruyu-druzhbu
 https://sreda.men/blog/krasota-za-status-v-brake
@@ -78,6 +81,7 @@ https://sreda.men/blog/mozg-ne-otdyhaet
 https://sreda.men/blog/muzh-ne-razgovarivaet-po-dusham
 https://sreda.men/blog/muzh-stal-razdrazhitelnym
 https://sreda.men/blog/muzh-v-depressii
+https://sreda.men/blog/muzhchine-ne-prinyato-zhalovatsya
 https://sreda.men/blog/muzhskaya-druzhba-i-blizost
 https://sreda.men/blog/muzhskaya-gruppa-online
 https://sreda.men/blog/muzhskaya-poslerodovaya-depressiya
@@ -103,17 +107,20 @@ https://sreda.men/blog/pornozavisimost
 https://sreda.men/blog/postoyannaya-ustalost
 https://sreda.men/blog/poteryal-interes-k-zhizni
 https://sreda.men/blog/poteryal-sebya-posle-pereezda
+https://sreda.men/blog/prilozheniya-dlya-mentalnogo-zdorovya
 https://sreda.men/blog/prosypayus-v-4-utra
 https://sreda.men/blog/psiholog-muzhchina-ili-zhenshchina
 https://sreda.men/blog/rabota-ne-po-specialnosti-posle-pereezda
 https://sreda.men/blog/rasstalsya-s-devushkoy
 https://sreda.men/blog/razvelsya-s-zhenoy-chto-delat
+https://sreda.men/blog/sam-spravlyus-pochemu-ne-rabotaet
 https://sreda.men/blog/sezonnaya-depressiya
 https://sreda.men/blog/skolko-stoit-muzhskaya-gruppa
 https://sreda.men/blog/soobshchestvo-dlya-muzhchin
 https://sreda.men/blog/stadii-vygoraniya
 https://sreda.men/blog/stavki-na-sport
 https://sreda.men/blog/strashno-idti-v-gruppu
+https://sreda.men/blog/stydno-idti-k-psihologu
 https://sreda.men/blog/syn-ne-vpisyvaetsya-v-ramki
 https://sreda.men/blog/toska-po-domu-u-muzhchin
 https://sreda.men/blog/trevoga-i-kontrol
