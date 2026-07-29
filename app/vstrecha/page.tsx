@@ -99,8 +99,11 @@ export default function MeetingPage() {
         <section className="container meeting-section">
           <h2 className="meeting-section__title">Коротко о формате</h2>
           <ul className="meeting-facts">
-            <li><strong>Раз в две недели</strong>, онлайн в Zoom</li>
+            <li><strong>Раз в две недели, по средам</strong> — 18:00 по Варшаве, 19:00 по Минску</li>
+            <li>Длительность — <strong>три часа</strong>, в Zoom</li>
+            <li><strong>Десять-двенадцать мужчин</strong> 25+, состав постоянный</li>
             <li>Ведут <strong>двое</strong>: {VLAD.name} — {VLAD.jobTitle.toLowerCase()}, {ZHENYA.name} — {ZHENYA.jobTitle.toLowerCase()}</li>
+            <li>Начинается с <strong>короткого созвона-знакомства</strong> — до первой встречи</li>
             <li>Сообщество <strong>русскоязычное</strong>: без страховок, направлений и языкового барьера</li>
             <li>Тема каждой встречи известна заранее</li>
           </ul>

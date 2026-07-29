@@ -6,12 +6,17 @@
     "status": "ПРИНЯТ",
     "stage": "BOFU",
     "pillarQuery": "мужская группа поддержки онлайн",
-    "pillarSlug": null,
+    "pillarSlug": "muzhskaya-gruppa-podderzhki-online",
     "lede": "Мужская группа поддержки онлайн — формат, о котором чаще всего спрашивают: что там происходит, кто ведёт, обязательно ли говорить. Здесь собрано всё, что стоит знать до первой встречи.",
     "articles": [
+      "muzhskaya-gruppa-podderzhki-online",
       "muzhskaya-terapevticheskaya-gruppa",
       "muzhskaya-gruppa-online",
-      "gruppa-ili-psiholog"
+      "gruppa-ili-psiholog",
+      "muzhskoy-krug-chto-eto",
+      "soobshchestvo-dlya-muzhchin",
+      "skolko-stoit-muzhskaya-gruppa",
+      "strashno-idti-v-gruppu"
     ]
   },
   {
