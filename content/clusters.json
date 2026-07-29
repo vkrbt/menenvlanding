@@ -287,6 +287,23 @@
     ]
   },
   {
+    "key": "soma",
+    "slug": "telo",
+    "name": "Тело и психосоматика",
+    "status": "ПРИНЯТ",
+    "stage": "TOFU",
+    "pillarQuery": "болит а анализы в норме",
+    "pillarSlug": "bolit-a-analizy-v-norme",
+    "lede": "Болит, а анализы в норме — частый мужской сценарий: тело говорит за психику. Про психосоматику без эзотерики.",
+    "articles": [
+      "bolit-a-analizy-v-norme",
+      "psihosomatika-u-muzhchin",
+      "bol-v-spine-ot-stressa",
+      "kom-v-gorle-i-tyazhest-v-grudi",
+      "problemy-s-potentsiey-ot-stressa"
+    ]
+  },
+  {
     "key": "research",
     "slug": "issledovaniya",
     "name": "Исследования",
