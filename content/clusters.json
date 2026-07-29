@@ -50,7 +50,8 @@
     "articles": [
       "net-druzey-posle-30",
       "ne-s-kem-pogovorit",
-      "odinochestvo-v-brake"
+      "odinochestvo-v-brake",
+      "muzhskaya-druzhba-i-blizost"
     ]
   },
   {
@@ -155,7 +156,8 @@
     "pillarSlug": null,
     "lede": "Стал отцом и накрыло — про это почти не говорят. Отцовство глазами мужчины: от послеродовой депрессии до усталости от роли.",
     "articles": [
-      "muzhskaya-poslerodovaya-depressiya"
+      "muzhskaya-poslerodovaya-depressiya",
+      "ottsovstvo-kachestvo-otnosheniy-mladentsem"
     ]
   },
   {
@@ -193,9 +195,10 @@
     "status": "ПРИНЯТ",
     "stage": "TOFU",
     "pillarQuery": "исследования о мужчинах и психике",
-    "pillarSlug": null,
+    "pillarSlug": "issledovaniya-o-muzhchinah-i-psihike",
     "lede": "Исследования о мужчинах и психике: разборы научных работ со ссылками на первоисточники. Что показывают данные и как это читать.",
     "articles": [
+      "issledovaniya-o-muzhchinah-i-psihike",
       "muzhskoe-mentalnoe-zdorovie-v-cifrah"
     ]
   },
