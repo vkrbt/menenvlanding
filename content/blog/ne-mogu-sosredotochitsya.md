@@ -71,6 +71,5 @@ _Бесплатно и ни к чему не обязывает._
 > **Источники:** [Van Dongen et al. — кумулятивный эффект недосыпа на когнитивные функции (Sleep, 2003)](https://pubmed.ncbi.nlm.nih.gov/12683469/) · [Ophir et al. — многозадачность и контроль внимания (PNAS, 2009)](https://pubmed.ncbi.nlm.nih.gov/19014069/) · [Song et al. — распространённость СДВГ у взрослых (метаанализ)](https://pubmed.ncbi.nlm.nih.gov/33849525/)
 
 ## Читать дальше
-- [Выгорание у мужчин: как отличить от усталости](/blog/vygoranie-u-muzhchin)
-- [Как на самом деле выглядит депрессия у мужчин](/blog/depressiya-u-muzhchin-priznaki)
-- [Группа или психолог: что выбрать](/blog/gruppa-ili-psiholog)
+- [Думскроллинг: почему не можешь отложить телефон](/blog/doomscrolling)
+- [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

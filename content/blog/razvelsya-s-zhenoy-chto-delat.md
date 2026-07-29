@@ -130,6 +130,6 @@ _Бесплатно и ни к чему не обязывает._
 > **Источники:** [Holmes & Rahe. The Social Readjustment Rating Scale (1967)](https://pubmed.ncbi.nlm.nih.gov/6059863/) · [Исследование связи развода и здоровья мужчин](https://pubmed.ncbi.nlm.nih.gov/23784180/) · [Seidler et al., 2016 — мужчины и обращение за помощью](https://pubmed.ncbi.nlm.nih.gov/27664823/)
 
 ## Читать дальше
-- [Как пережить развод мужчине: инструкция для того, кто «в порядке»](/blog/kak-perezhit-razvod)
-- [Не с кем поговорить: почему у взрослого мужчины пропали собеседники](/blog/ne-s-kem-pogovorit)
-- [Алкоголь каждый вечер: где заканчивается расслабление](/blog/alkogol-kazhdyy-vecher)
+- [Как пережить развод: инструкция для мужчины, который «в порядке»](/blog/kak-perezhit-razvod)
+- [Расстался с девушкой: что делать в первые недели](/blog/rasstalsya-s-devushkoy)
+- [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

@@ -4,7 +4,7 @@ cluster: addiction
 target_query: пью каждый вечер
 title: Пью каждый вечер: где граница между привычкой и зависимостью | Мужская среда
 og_title: Пью каждый вечер: где граница между привычкой и зависимостью
-description: Пара банок пива после работы — это ещё норма или уже нет? Нарколог без морали: почему регулярность важнее дозы, что показывает тест AUDIT и как проверить себя за две недели.
+description: Пара банок пива после работы — это ещё норма или уже нет? Нарколог без морали: почему регулярность важнее дозы, что показывает тест AUDIT и как проверить себя за две.
 canonical: https://sreda.men/blog/alkogol-kazhdyy-vecher
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
 date_line: 18 июня 2026
@@ -59,6 +59,6 @@ _Сообщество не заменяет нарколога и терапию
 > **Источники:** [ВОЗ - безопасного уровня алкоголя не существует](https://www.who.int/europe/ru/news/item/04-01-2023-no-level-of-alcohol-consumption-is-safe-for-our-health) · [Депздрав Москвы - тест AUDIT](https://mosgorzdrav.ru/ru-RU/test/default/card/5.html) · [Rehab Family - вечерний алкоголизм](https://rehabfamily.com/articles/vecherniy-alkogolizm/) · [Здравница - злоупотребление или зависимость](https://narcorehab.com/articles/zloupotreblenie-alkogolem-ili-alkogolizm-raznica/) · [Consilium - скрытые признаки зависимости](https://consilium.by/poleznye-stati/kak-raspoznat-skrytuyu-alkogolnuyu-zavisimost-priznaki-kotorye-chasto-upuskayut/)
 
 ## Читать дальше
-- [Тревожность у мужчин: как она маскируется под контроль](/blog/trevozhnost-u-muzhchin)
-- [Просыпаюсь в 4 утра и не могу уснуть](/blog/prosypayus-v-4-utra)
-- [Ничего не радует: куда пропадает удовольствие](/blog/nichego-ne-raduet)
+- [Порнозависимость: что наука говорит на самом деле](/blog/pornozavisimost)
+- [Игры до трёх ночи: когда хобби становится побегом](/blog/igrovaya-zavisimost)
+- [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

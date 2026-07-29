@@ -35,7 +35,7 @@ CDC за 2020-й: за год к врачу дошла каждая четвёр
 ВОЗ за 2019-й: смертность от самоубийств у мужчин 12,6 на 100 000, у женщин 5,4. Мысли о смерти как о выходе — симптом, с ним идут к врачу сегодня. Gallup: 76% «иногда» выгоревших, 28% «очень часто». Тимлид на ретро цитирует «28%» как оправдание — я спрашиваю: ты в этих 28% уже год? Замолкает. Подробнее — в [моём разборе](/blog/vygoranie-u-muzhchin). OutRush / Re:Russia, 2022: у 39% эмигрантов депрессивное состояние большую часть трёх месяцев. Женя в [тексте про эмигрантскую депрессию](/blog/emigrantskaya-depressiya) разбирал маскировку под «адаптация же».
 ## «У всех устали» — и что с этим делать
 Тут без морали, только наблюдение. Когда мужчина приносит в кабинет готовую статистику вместо симптомов, Женя обычно вздыхает. Не из раздражения — из опыта. «У всех так» снимает стыд на пять минут и возвращает его на полгода, потому что действовать не надо: раз у всех, значит, норма. Норма и правда системная. Но системная не значит обязательная для тебя лично.
-Есть ли человек, с которым можно говорить о настоящем? Одна встреча по расписанию лучше десяти «когда-нибудь созвонимся». Про механику — в [разборе про друзей после 30](/blog/net-druzey-posle-30). Узнал себя в цифрах? Это карта. Не приговор.
+Есть ли человек, с которым можно говорить о настоящем? Одна встреча по расписанию лучше десяти «когда-нибудь созвонимся». Про механику — в разборе про друзей после 30. Узнал себя в цифрах? Это карта. Не приговор.
 
 <!-- CTA -->
 **Разобрать свою ситуацию с теми, кто понимает**
@@ -58,7 +58,5 @@ _Бесплатно и ни к чему не обязывает._
 > **Источники:** [Seidler et al. The role of masculinity in men's help-seeking for depression (Clinical Psychology Review, 2016)](https://pubmed.ncbi.nlm.nih.gov/27664823/) · [CDC / NCHS — Mental Health Treatment Among Adults, 2020](https://www.cdc.gov/nchs/products/databriefs/db419.htm) · [Martin et al. The experience of symptoms of depression in men vs women (JAMA Psychiatry, 2013)](https://pubmed.ncbi.nlm.nih.gov/24190765/) · [Holt-Lunstad et al. Loneliness and social isolation as risk factors for mortality (Perspectives on Psychological Science, 2015)](https://pubmed.ncbi.nlm.nih.gov/25910392/) · [ВОЗ — Suicide worldwide in 2019: global health estimates](https://www.who.int/publications/i/item/9789240026643) · [PBS / Survey Center on American Life — friendship recession](https://www.pbs.org/newshour/show/why-a-growing-number-of-american-men-say-they-are-in-a-friendship-recession) · [ВЦИОМ — индекс потребности в психологической поддержке](https://wciom.ru/analytical-reviews/analiticheskii-obzor/indeks-potrebnosti-rossijan-v-psikhologicheskoi-podderzhke) · [Re:Russia / OutRush — The Russian Rhizome (2022)](https://re-russia.net/en/expertise/045/) · [Gallup — Employee Burnout: Causes and Cures](https://www.gallup.com/workplace/288539/employee-burnout-biggest-myth.aspx) · [ВОЗ о выгорании в МКБ-11](https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases)
 
 ## Читать дальше
-- [Как на самом деле выглядит депрессия у мужчин](/blog/depressiya-u-muzhchin-priznaki)
-- [Нет друзей после 30: почему так вышло](/blog/net-druzey-posle-30)
-- [Выгорание у мужчин: как отличить от усталости](/blog/vygoranie-u-muzhchin)
-- [Эмигрантская депрессия у мужчин](/blog/emigrantskaya-depressiya)
+- [Исследования о мужчинах и психике: как их читать](/blog/issledovaniya-o-muzhchinah-i-psihike)
+- [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

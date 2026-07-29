@@ -63,8 +63,6 @@ _Бесплатно и ни к чему не обязывает._
 > **Источники:** [Holmes & Rahe. The Social Readjustment Rating Scale (1967)](https://pubmed.ncbi.nlm.nih.gov/6059863/) · [Исследование связи развода и здоровья мужчин](https://pubmed.ncbi.nlm.nih.gov/23784180/) · [Seidler et al., 2016 — мужчины и обращение за помощью](https://pubmed.ncbi.nlm.nih.gov/27664823/)
 
 ## Читать дальше
-- [Нет друзей после 30: почему так вышло и что с этим делать](/blog/net-druzey-posle-30)
-- [Как на самом деле выглядит депрессия у мужчин](/blog/depressiya-u-muzhchin-priznaki)
-- [Мужская группа онлайн: что происходит на встречах](/blog/muzhskaya-gruppa-online)
 - [Развёлся с женой: что делать в первые месяцы](/blog/razvelsya-s-zhenoy-chto-delat)
 - [Расстался с девушкой: что делать в первые недели](/blog/rasstalsya-s-devushkoy)
+- [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

@@ -109,9 +109,5 @@ _Бесплатно и ни к чему не обязывает._
 > **Источники:** [Crocker & Wolfe — контингентная самооценка (Psychological Review)](https://pubmed.ncbi.nlm.nih.gov/11414343/) · [Гедоническая адаптация и удовлетворённость жизнью](https://pubmed.ncbi.nlm.nih.gov/16719675/)
 
 ## Читать дальше
-
-- [Выгорание у мужчин: как отличить от усталости](/blog/vygoranie-u-muzhchin)
-
-- [Не могу сосредоточиться: что происходит с вниманием](/blog/ne-mogu-sosredotochitsya)
-
-- [Мужская группа онлайн: что происходит на встречах](/blog/muzhskaya-gruppa-online)
+- [Трудоголизм: социально одобряемая зависимость](/blog/trudogolizm)
+- [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

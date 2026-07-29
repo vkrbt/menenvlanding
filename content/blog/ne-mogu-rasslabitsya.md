@@ -4,7 +4,7 @@ cluster: burnout
 target_query: не умею отдыхать
 title: Не умею отдыхать: почему в отпуске хуже, чем на работе | Мужская среда
 og_title: Не умею отдыхать: почему в отпуске хуже, чем на работе
-description: Второй день отпуска, а ты уже проверяешь рабочий чат и злишься на всех. Разбираем вину за непродуктивность: почему расслабиться страшно, при чём тут контроль и как отдых становится навыком.
+description: Второй день отпуска, а ты уже проверяешь рабочий чат и злишься на всех. Разбираем вину за непродуктивность: почему расслабиться страшно, при чём тут контроль и как.
 canonical: https://sreda.men/blog/ne-mogu-rasslabitsya
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
 date_line: 17 мая 2026
@@ -101,9 +101,6 @@ _Заявка бесплатна и ни к чему не обязывает._
 > **Источники:** [DailyMoscow — почему мы не умеем отдыхать даже в отпуске](https://dailymoscow.ru/society/hronicheskaya-trevoga-pochemu-my-ne-umeem-otdyhat-dazhe-v-otpuske) · [Prosto — как отдыхать без чувства вины](https://www.prostoapp.ru/posts/kak-nauchitsya-otdyhat-bez-chuvstva-viny) · [Skillbox — «Я не умею отдыхать»: что такое трудоголизм](https://skillbox.ru/media/management/ya-ne-umeyu-otdyhat-chto-takoe-trudogolizm-kak-ego-raspoznat-i-preodolet/) · [Nice and Easy — чувство вины за отдых](https://www.niceandeasy.me/daily/guilty-but-not-pleasure)
 
 ## Читать дальше
-
-- [Воскресная тревога: почему к вечеру выходного накрывает](/blog/voskresnaya-trevoga)
-
-- [Выгорание у мужчин: как отличить от усталости](/blog/vygoranie-u-muzhchin)
-
-- [Устал от саморазвития: почему достигаторство выжигает](/blog/ustal-ot-samorazvitiya)
+- [Выгорание у мужчин: как отличить от усталости и что делать](/blog/vygoranie-u-muzhchin)
+- [Постоянная усталость: почему сон не помогает и где искать утечку](/blog/postoyannaya-ustalost)
+- [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

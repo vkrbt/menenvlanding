@@ -122,6 +122,6 @@ _Заявка бесплатна и ни к чему не обязывает._
 > **Источники:** [Bushman, 2002 — развенчание идеи катарсиса злости](https://doi.org/10.1177/0146167202289002) · [Martin et al., 2013 — «мужские» симптомы депрессии (JAMA Psychiatry)](https://pubmed.ncbi.nlm.nih.gov/23945186/) · [Seidler et al., 2016 — барьеры обращения за помощью у мужчин](https://pubmed.ncbi.nlm.nih.gov/27664823/)
 
 ## Читать дальше
-- [Как перестать срываться на близких: когда достаётся дома](/blog/kak-perestat-sryvatsya-na-blizkih)
-- [Как перестать копить злобу в себе](/blog/kak-perestat-kopit-zlobu)
-- [Выгорание у мужчин: как отличить от обычной усталости](/blog/vygoranie-u-muzhchin)
+- [Как перестать срываться на близких: дома, на жену и детей](/blog/kak-perestat-sryvatsya-na-blizkih)
+- [Как перестать копить злобу в себе: разбор для мужчин](/blog/kak-perestat-kopit-zlobu)
+- [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

@@ -4,7 +4,7 @@ cluster: anxiety
 target_query: воскресная тревога
 title: Воскресная тревога: почему к вечеру выходного накрывает — и что это говорит о твоей неделе | Мужская среда
 og_title: Воскресная тревога: почему к вечеру выходного накрывает
-description: Воскресенье, часов пять вечера — и настроение поехало вниз. Разбираем «страх понедельника»: почему он накрывает 8 из 10 работающих, когда это норма, а когда сигнал про выгорание.
+description: Воскресенье, часов пять вечера — и настроение поехало вниз. Разбираем «страх понедельника»: почему он накрывает 8 из 10 работающих, когда это норма, а когда сигнал.
 canonical: https://sreda.men/blog/voskresnaya-trevoga
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
 date_line: 12 мая 2026
@@ -63,6 +63,6 @@ _Заявка бесплатна и ни к чему не обязывает._
 > **Источники:** [Ladders — опрос LinkedIn о Sunday scaries](https://www.theladders.com/career-advice/this-is-the-number-of-people-who-have-major-sunday-night-scaries) · [Inc. — данные Adobe](https://www.inc.com/bruce-crumley/the-sunday-scaries-are-worse-and-more-widespread-than-we-realize/91271040) · [Рамблер — синдром понедельника, данные SuperJob](https://www.rambler.ru/pro/produktivnost/54214726-sindrom-ponedelnika-chto-eto-i-kak-perestat-nenavidet-pervyy-rabochiy-den-nedeli/) · [Психологи об упреждающей тревоге](https://health.yahoo.com/conditions/mental-health/anxiety/articles/ever-sunday-scaries-psychologists-list-164513860.html) · [Psychology Today — 5 приёмов против Sunday scaries](https://www.psychologytoday.com/us/blog/mapping-your-mental-health-journey/202405/5-ways-to-overcome-the-sunday-scaries)
 
 ## Читать дальше
-- [Выгорание у мужчин: как отличить от усталости](/blog/vygoranie-u-muzhchin)
-- [Тревожность у мужчин: как она маскируется под контроль](/blog/trevozhnost-u-muzhchin)
-- [Мозг не отдыхает: что делать, когда голова не выключается](/blog/mozg-ne-otdyhaet)
+- [Тревожность у мужчин: как она маскируется под контроль и раздражение](/blog/trevozhnost-u-muzhchin)
+- [Финансовая тревога: когда деньги есть, а страшно всё равно](/blog/trevoga-o-dengah)
+- [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

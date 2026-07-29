@@ -59,6 +59,5 @@ _Сообщество не заменяет врача и терапию. Зая
 > **Источники:** [Нож - послеродовая депрессия у мужчин и её влияние на детей](https://knife.media/dads-depression/) · [Медуза - карточки о депрессии у отцов](https://meduza.io/cards/depressiya-posle-rozhdeniya-rebenka-byvaet-ne-tolko-u-materey-no-i-u-ottsov-pochemu-ona-voznikaet-i-kak-s-ney-borotsya) · [Коммерсант - у отцов тоже бывает послеродовая депрессия](https://www.kommersant.ru/doc/6296565) · [UT Southwestern - 1 из 10 отцов](https://utswmed.org/medblog/paternal-postpartum-depression/) · [Мета-анализ распространённости отцовской депрессии](https://www.sciencedirect.com/science/article/abs/pii/S0165032716305705)
 
 ## Читать дальше
-- [Как на самом деле выглядит депрессия у мужчин](/blog/depressiya-u-muzhchin-priznaki)
-- [Постоянная усталость: почему сон не помогает](/blog/postoyannaya-ustalost)
-- [Муж в депрессии: статья для жён](/blog/muzh-v-depressii)
+- [Отношения отца с младенцем: качество важнее часов](/blog/ottsovstvo-kachestvo-otnosheniy-mladentsem)
+- [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)
