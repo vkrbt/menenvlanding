@@ -7,10 +7,10 @@ og_title: Проблемы с потенцией на фоне стресса
 description: Проблемы с потенцией на фоне стресса — тема, о которой молчат до последнего. Разбираем механизм, что проверить у врача и как разорвать круг тревоги.
 canonical: https://sreda.men/blog/problemy-s-potentsiey-ot-stressa
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 13 июня 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-06-13
+date_modified: 2026-06-13
 status: released
 category: Тело
 card_title: Проблемы с потенцией на фоне стресса

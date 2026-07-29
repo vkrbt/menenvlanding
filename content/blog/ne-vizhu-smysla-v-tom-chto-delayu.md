@@ -7,10 +7,10 @@ og_title: Не вижу смысла в том что делаю: разбор
 description: Не вижу смысла в том что делаю — состояние, при котором работа исправна, а зачем непонятно. Разбираем, чем это отличается от выгорания и депрессии.
 canonical: https://sreda.men/blog/ne-vizhu-smysla-v-tom-chto-delayu
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 16 июля 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-07-16
+date_modified: 2026-07-16
 status: released
 category: Смысл и возраст
 card_title: Не вижу смысла в том что делаю: разбор

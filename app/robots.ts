@@ -9,8 +9,14 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
-      // Служебные страницы: шаблоны OG-картинок и одноразовые лендинги
-      disallow: ['/og-image', '/og-book', '/instagram-carousel', '/muzhskaya_sreda_books'],
+      disallow: [
+        // Служебные страницы: шаблоны OG-картинок и одноразовые лендинги
+        '/og-image', '/og-book', '/instagram-carousel', '/muzhskaya_sreda_books',
+        // Пагинация блога: страницы-списки без собственного содержания.
+        // Все статьи и так есть в карте сайта и в рубриках, так что обход
+        // /blog/page/N только тратит краулинговый бюджет.
+        '/blog/page/',
+      ],
     },
     sitemap: `${SITE_URL}/sitemap.xml`,
   }

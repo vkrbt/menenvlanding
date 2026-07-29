@@ -1,6 +1,6 @@
 # Страницы sreda.men для ручной отправки в индекс
 
-Всего в карте сайта: 129 URL. Порядок — по приоритету отправки.
+Всего в карте сайта: 148 URL. Порядок — по приоритету отправки.
 
 Google Search Console → Проверка URL → «Запросить индексирование». Лимит примерно 10–15 в сутки,
 поэтому идти сверху вниз. Пагинацию (`/blog/page/N`) отправлять не нужно — она нужна роботу для обхода,
@@ -19,11 +19,14 @@ https://sreda.men/blog
 
 ## Пиллар
 https://sreda.men/blog/alkogol-kazhdyy-vecher
+https://sreda.men/blog/bolit-a-analizy-v-norme
 https://sreda.men/blog/depressiya-u-muzhchin-priznaki
 https://sreda.men/blog/emigrantskaya-depressiya
 https://sreda.men/blog/issledovaniya-o-muzhchinah-i-psihike
 https://sreda.men/blog/kak-perestat-sryvatsya
 https://sreda.men/blog/kak-perezhit-razvod
+https://sreda.men/blog/krizis-srednego-vozrasta-u-muzhchin
+https://sreda.men/blog/lovushka-kormiltsa
 https://sreda.men/blog/muzh-zamknulsya
 https://sreda.men/blog/muzhskaya-gruppa-podderzhki-online
 https://sreda.men/blog/ne-chuvstvuyu-blizosti-s-zhenoy
@@ -38,17 +41,20 @@ https://sreda.men/blog/vygoranie-u-muzhchin
 
 ## Рубрика
 https://sreda.men/blog/tema/apatiya
+https://sreda.men/blog/tema/dengi-i-rabota
 https://sreda.men/blog/tema/depressiya
 https://sreda.men/blog/tema/dlya-blizkih
 https://sreda.men/blog/tema/dostigatorstvo
 https://sreda.men/blog/tema/emigraciya
 https://sreda.men/blog/tema/issledovaniya
+https://sreda.men/blog/tema/krizis-srednego-vozrasta
 https://sreda.men/blog/tema/odinochestvo
 https://sreda.men/blog/tema/otcovstvo
 https://sreda.men/blog/tema/otnosheniya
 https://sreda.men/blog/tema/razvod
 https://sreda.men/blog/tema/soobshchestvo
 https://sreda.men/blog/tema/stigma
+https://sreda.men/blog/tema/telo
 https://sreda.men/blog/tema/trevoga
 https://sreda.men/blog/tema/vnimanie
 https://sreda.men/blog/tema/vygoranie
@@ -58,11 +64,16 @@ https://sreda.men/blog/tema/zlost
 ## Статья
 https://sreda.men/blog/apatiya-u-muzhchin
 https://sreda.men/blog/bet-znachit-lyubit
+https://sreda.men/blog/bol-v-spine-ot-stressa
+https://sreda.men/blog/dobilsya-vsego-no-net-schastya
 https://sreda.men/blog/doomscrolling
 https://sreda.men/blog/etapy-adaptacii-v-emigracii
 https://sreda.men/blog/gruppa-ili-psiholog
+https://sreda.men/blog/harakter-i-otnosheniya-u-muzhchin
+https://sreda.men/blog/hochu-vse-brosit-i-uehat
 https://sreda.men/blog/igrovaya-zavisimost
 https://sreda.men/blog/igry-i-odinochestvo
+https://sreda.men/blog/informatsionnaya-peregruzka
 https://sreda.men/blog/issledovaniya-muzhskoy-druzhby
 https://sreda.men/blog/issledovaniya-ob-otcovstve
 https://sreda.men/blog/issledovaniya-odnopolyh-par
@@ -77,7 +88,10 @@ https://sreda.men/blog/kak-pomoch-drugu-v-depressii
 https://sreda.men/blog/kak-poprosit-o-pomoshchi
 https://sreda.men/blog/kak-ugovorit-muzha-k-psihologu
 https://sreda.men/blog/kak-vosstanovit-staruyu-druzhbu
+https://sreda.men/blog/karernyy-tupik-v-40
+https://sreda.men/blog/kom-v-gorle-i-tyazhest-v-grudi
 https://sreda.men/blog/krasota-za-status-v-brake
+https://sreda.men/blog/krizis-40-let-u-muzhchin
 https://sreda.men/blog/kto-tyazhelee-perezhivaet-rasstavanie
 https://sreda.men/blog/maskulinnye-normy-issledovaniya
 https://sreda.men/blog/mozg-ne-otdyhaet
@@ -91,8 +105,10 @@ https://sreda.men/blog/muzhskaya-poslerodovaya-depressiya
 https://sreda.men/blog/muzhskaya-terapevticheskaya-gruppa
 https://sreda.men/blog/muzhskoe-mentalnoe-zdorovie-v-cifrah
 https://sreda.men/blog/muzhskoy-krug-chto-eto
+https://sreda.men/blog/ne-mogu-obespechit-semyu
 https://sreda.men/blog/ne-mogu-rasslabitsya
 https://sreda.men/blog/ne-s-kem-pogovorit
+https://sreda.men/blog/ne-vizhu-smysla-v-tom-chto-delayu
 https://sreda.men/blog/net-sil-ni-na-chto
 https://sreda.men/blog/nichego-ne-raduet
 https://sreda.men/blog/novye-otnosheniya-posle-razvoda
@@ -109,26 +125,35 @@ https://sreda.men/blog/pochemu-muzhskaya-druzhba-raspadaetsya
 https://sreda.men/blog/pochemu-u-muzhchin-net-blizkih-druzey
 https://sreda.men/blog/pornozavisimost
 https://sreda.men/blog/postoyannaya-ustalost
+https://sreda.men/blog/postoyanno-otvlekayus-na-telefon
 https://sreda.men/blog/postoyannye-ssory-v-brake
 https://sreda.men/blog/poteryal-interes-k-zhizni
+https://sreda.men/blog/poteryal-rabotu-kak-perezhit
 https://sreda.men/blog/poteryal-sebya-posle-pereezda
 https://sreda.men/blog/prilozheniya-dlya-mentalnogo-zdorovya
+https://sreda.men/blog/problemy-s-potentsiey-ot-stressa
+https://sreda.men/blog/prokrastinatsiya-u-muzhchin
 https://sreda.men/blog/propalo-zhelanie-v-otnosheniyah
 https://sreda.men/blog/prosypayus-v-4-utra
 https://sreda.men/blog/psiholog-muzhchina-ili-zhenshchina
+https://sreda.men/blog/psihosomatika-u-muzhchin
 https://sreda.men/blog/rabota-ne-po-specialnosti-posle-pereezda
 https://sreda.men/blog/rasstalsya-s-devushkoy
 https://sreda.men/blog/razvelsya-s-zhenoy-chto-delat
 https://sreda.men/blog/revnost-u-muzhchin
 https://sreda.men/blog/sam-spravlyus-pochemu-ne-rabotaet
+https://sreda.men/blog/sdvg-u-vzroslyh-muzhchin
 https://sreda.men/blog/sezonnaya-depressiya
+https://sreda.men/blog/sindrom-samozvanca-u-muzhchin
 https://sreda.men/blog/skolko-stoit-muzhskaya-gruppa
 https://sreda.men/blog/soobshchestvo-dlya-muzhchin
 https://sreda.men/blog/stadii-vygoraniya
 https://sreda.men/blog/stavki-na-sport
+https://sreda.men/blog/strah-bednosti-u-muzhchin
 https://sreda.men/blog/strashno-idti-v-gruppu
 https://sreda.men/blog/stydno-idti-k-psihologu
 https://sreda.men/blog/syn-ne-vpisyvaetsya-v-ramki
+https://sreda.men/blog/toksichnaya-produktivnost
 https://sreda.men/blog/toska-po-domu-u-muzhchin
 https://sreda.men/blog/trevoga-i-kontrol
 https://sreda.men/blog/trevoga-o-dengah
@@ -137,18 +162,10 @@ https://sreda.men/blog/ustal-ot-otcovstva
 https://sreda.men/blog/voskresnaya-trevoga
 https://sreda.men/blog/vse-besit-i-razdrazhaet
 https://sreda.men/blog/vspylchivost-u-muzhchin
+https://sreda.men/blog/vtoraya-polovina-zhizni
 https://sreda.men/blog/vygorel-na-rabote
+https://sreda.men/blog/zarabatyvayu-menshe-zheny
 https://sreda.men/blog/zhivu-na-avtopilote
 
 ## Прочее
 https://sreda.men/book
-
-## Пагинация
-https://sreda.men/blog/page/2
-https://sreda.men/blog/page/3
-https://sreda.men/blog/page/4
-https://sreda.men/blog/page/5
-https://sreda.men/blog/page/6
-https://sreda.men/blog/page/7
-https://sreda.men/blog/page/8
-https://sreda.men/blog/page/9

@@ -7,10 +7,10 @@ og_title: Боль в спине от стресса: как это устрое
 description: Боль в спине от стресса — не выдумка. Разбираем, что известно о связи, почему покой вредит и что рекомендуют вместо поиска грыжи.
 canonical: https://sreda.men/blog/bol-v-spine-ot-stressa
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 4 июня 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-06-04
+date_modified: 2026-06-04
 status: released
 category: Тело
 card_title: Боль в спине от стресса: как это устроено

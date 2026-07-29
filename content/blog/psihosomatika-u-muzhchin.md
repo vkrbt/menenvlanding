@@ -7,10 +7,10 @@ og_title: Психосоматика у мужчин: что это на сам�
 description: Психосоматика у мужчин обросла мифами про «болезни от обид». Разбираем, что за этим термином стоит в медицине и как это работает на самом деле.
 canonical: https://sreda.men/blog/psihosomatika-u-muzhchin
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 24 июня 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-06-24
+date_modified: 2026-06-24
 status: released
 category: Тело
 card_title: Психосоматика у мужчин: что это на самом деле

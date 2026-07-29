@@ -43,6 +43,10 @@ EXCLUDED_STEMS = {
     "muzhskaya_sreda_books",
 }
 
+# Пагинация блога закрыта в robots.txt ради краулингового бюджета,
+# поэтому её нет ни в карте сайта, ни в проверках метаданных
+EXCLUDED_PREFIXES = ("/blog/page/",)
+
 
 def page_url(path: pathlib.Path, out_dir: pathlib.Path) -> str:
     """URL страницы по её файлу в экспорте. index.html -> корень сайта."""
@@ -65,7 +69,13 @@ def meta_content(doc: str, name: str) -> str | None:
 
 
 def collect_pages(out_dir: pathlib.Path) -> list[pathlib.Path]:
-    pages = sorted(p for p in out_dir.rglob("*.html") if p.stem not in EXCLUDED_STEMS)
+    pages = []
+    for p in sorted(out_dir.rglob("*.html")):
+        if p.stem in EXCLUDED_STEMS:
+            continue
+        if page_url(p, out_dir).replace(SITE_URL, "").startswith(EXCLUDED_PREFIXES):
+            continue
+        pages.append(p)
     return pages
 
 

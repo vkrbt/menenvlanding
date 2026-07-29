@@ -7,10 +7,10 @@ og_title: Вторая половина жизни у мужчин: что ме�
 description: Вторая половина жизни у мужчин устроена иначе первой. Разбираем, что перестаёт работать из прежних опор и что приходит им на замену.
 canonical: https://sreda.men/blog/vtoraya-polovina-zhizni
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 22 июля 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-07-22
+date_modified: 2026-07-22
 status: released
 category: Смысл и возраст
 card_title: Вторая половина жизни у мужчин: что меняется

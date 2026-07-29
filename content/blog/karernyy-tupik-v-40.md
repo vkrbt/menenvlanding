@@ -7,10 +7,10 @@ og_title: Карьерный тупик в 40: что с этим делать
 description: Карьерный тупик в 40 — расти некуда, уходить страшно, оставаться тошно. Разбираем, из чего складывается ощущение тупика и какие выходы реально есть.
 canonical: https://sreda.men/blog/karernyy-tupik-v-40
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 29 июня 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-06-29
+date_modified: 2026-06-29
 status: released
 category: Смысл и возраст
 card_title: Карьерный тупик в 40: что с этим делать

@@ -7,10 +7,10 @@ og_title: Ком в горле и тяжесть в груди: что это
 description: Ком в горле и тяжесть в груди — частая пара симптомов, за которой обычно нет находок. Разбираем механизм и что проверить в первую очередь.
 canonical: https://sreda.men/blog/kom-v-gorle-i-tyazhest-v-grudi
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 6 июня 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-06-06
+date_modified: 2026-06-06
 status: released
 category: Тело
 card_title: Ком в горле и тяжесть в груди: что это
