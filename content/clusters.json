@@ -54,7 +54,9 @@
       "kak-nayti-druzey-vzroslomu-muzhchine",
       "pochemu-muzhskaya-druzhba-raspadaetsya",
       "kak-vosstanovit-staruyu-druzhbu",
-      "muzhskaya-druzhba-i-blizost"
+      "muzhskaya-druzhba-i-blizost",
+      "pochemu-u-muzhchin-net-blizkih-druzey",
+      "pochemu-muzhchiny-izbegayut-prikosnoveniy"
     ]
   },
   {
@@ -111,12 +113,15 @@
     "status": "ПРИНЯТ",
     "stage": "TOFU",
     "pillarQuery": "как перестать срываться",
-    "pillarSlug": null,
+    "pillarSlug": "kak-perestat-sryvatsya",
     "lede": "Как перестать срываться — вопрос, который мужчины задают уже после того, как сорвались. Про упавший порог, накопленный стресс и что реально работает.",
     "articles": [
+      "kak-perestat-sryvatsya",
       "kak-perestat-sryvatsya-na-blizkih",
       "kak-perestat-sryvatsya-na-okruzhayushchih",
-      "kak-perestat-kopit-zlobu"
+      "kak-perestat-kopit-zlobu",
+      "vse-besit-i-razdrazhaet",
+      "vspylchivost-u-muzhchin"
     ]
   },
   {
