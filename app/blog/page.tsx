@@ -1,11 +1,12 @@
 import type { Metadata } from 'next'
-import BlogCard from '@/components/BlogCard'
+import BlogList from '@/components/BlogList'
+import Pagination from '@/components/Pagination'
 import JsonLd from '@/components/JsonLd'
 import SiteFooter from '@/components/SiteFooter'
 import SiteHeader from '@/components/SiteHeader'
 import { nonEmptyClusters, topicUrl } from '@/lib/clusters'
 import { blogListGraph } from '@/lib/jsonld'
-import { getAllPosts } from '@/lib/posts'
+import { postsForPage, totalPages, allPostCards } from '@/lib/posts'
 import { BLOG_URL, OG_IMAGE, SITE_URL } from '@/lib/site'
 
 export const metadata: Metadata = {
@@ -26,7 +27,8 @@ export const metadata: Metadata = {
 }
 
 export default function BlogIndexPage() {
-  const posts = getAllPosts()
+  const total = totalPages()
+  const cards = allPostCards().slice(0, postsForPage(1).length)
   const topics = nonEmptyClusters()
 
   return (
@@ -61,11 +63,8 @@ export default function BlogIndexPage() {
         </section>
 
         <section className="container">
-          <div className="blog-list">
-            {posts.map((post) => (
-              <BlogCard post={post} key={post.slug} />
-            ))}
-          </div>
+          <BlogList initial={cards} page={1} totalPages={total} />
+          <Pagination page={1} totalPages={total} />
         </section>
       </main>
 

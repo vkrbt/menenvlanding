@@ -2218,3 +2218,100 @@ main > section:last-of-type .blog-topics {
   font-size: 0.9rem;
   line-height: 1.5;
 }
+
+/* ============================================================
+   BLOG: пагинация и подгрузка
+============================================================ */
+.blog-more {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 24px;
+}
+
+.blog-more__btn {
+  padding: 14px 28px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg-2);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.blog-more__btn:hover:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent-hover);
+}
+
+.blog-more__btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.blog-more__note {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  padding-bottom: 16px;
+}
+
+/*
+  Постраничная навигация нужна поисковым системам и режиму без JS.
+  Человек до неё обычно не доходит — работает бесконечная лента,
+  поэтому блок неброский и стоит в самом низу.
+*/
+.pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-block: 8px 96px;
+}
+
+.pager__list {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pager__num,
+.pager__side {
+  display: grid;
+  place-items: center;
+  /* тап-таргет 44×44 */
+  min-width: 44px;
+  height: 44px;
+  padding-inline: 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  text-decoration: none;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+a.pager__num:hover,
+a.pager__side:hover {
+  border-color: var(--accent);
+  color: var(--accent-hover);
+}
+
+.pager__num--current {
+  border-color: var(--accent);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.pager__gap {
+  display: grid;
+  place-items: center;
+  min-width: 24px;
+  height: 44px;
+  color: var(--text-muted);
+}

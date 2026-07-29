@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 import { nonEmptyClusters, postsOfCluster, topicCanonical } from '@/lib/clusters'
-import { getAllPosts } from '@/lib/posts'
+import { blogPageUrl, getAllPosts, totalPages } from '@/lib/posts'
 import { BLOG_URL, MEETING_URL, SITE_URL } from '@/lib/site'
 
 // output: 'export' требует явно объявить маршрут статическим
@@ -21,6 +21,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}${MEETING_URL}`, lastModified: newest, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/book`, lastModified: newest, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${SITE_URL}${BLOG_URL}`, lastModified: newest, changeFrequency: 'weekly', priority: 0.8 },
+    // Страницы пагинации: приоритет ниже листинга — это маршрут обхода, а не цель
+    ...Array.from({ length: Math.max(0, totalPages() - 1) }, (_, i) => ({
+      url: `${SITE_URL}${blogPageUrl(i + 2)}`,
+      lastModified: newest,
+      changeFrequency: 'weekly' as const,
+      priority: 0.4,
+    })),
     // Рубрики: приоритет выше статей — это хабы кластеров, они собирают вес
     ...nonEmptyClusters().map((c) => {
       const inCluster = postsOfCluster(c)

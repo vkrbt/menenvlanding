@@ -101,3 +101,47 @@ export function getPostBySlug(slug: string): Post {
   if (!post) throw new Error(`Статья не найдена: ${slug}`)
   return post
 }
+
+/* ============================================================
+   Пагинация листинга
+============================================================ */
+
+/** Статей на странице листинга. 12 = 4 ряда по 3 на широком экране */
+export const POSTS_PER_PAGE = 12
+
+export function totalPages(): number {
+  return Math.max(1, Math.ceil(getAllPosts().length / POSTS_PER_PAGE))
+}
+
+/** Срез статей для страницы n (нумерация с 1) */
+export function postsForPage(page: number): Post[] {
+  const start = (page - 1) * POSTS_PER_PAGE
+  return getAllPosts().slice(start, start + POSTS_PER_PAGE)
+}
+
+/**
+ * URL страницы листинга. Первая страница живёт на /blog без суффикса —
+ * иначе появился бы дубль: /blog и /blog/page/1 с одинаковым содержимым.
+ */
+export function blogPageUrl(page: number): string {
+  return page <= 1 ? BLOG_URL : `${BLOG_URL}/page/${page}`
+}
+
+/** Карточка для клиентской подгрузки: только то, что рисует BlogCard */
+export type PostCard = {
+  slug: string
+  category: string
+  cardTitle: string
+  cardDesc: string
+  cardMeta: string
+}
+
+export function allPostCards(): PostCard[] {
+  return getAllPosts().map((p) => ({
+    slug: p.slug,
+    category: p.category,
+    cardTitle: p.cardTitle,
+    cardDesc: p.cardDesc,
+    cardMeta: p.cardMeta,
+  }))
+}
