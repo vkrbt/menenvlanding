@@ -1,12 +1,12 @@
 # Страницы sreda.men для ручной отправки в индекс
 
-Всего в карте сайта: 108 URL. Порядок — по приоритету отправки.
+Всего в карте сайта: 114 URL. Порядок — по приоритету отправки.
 
 Google Search Console → Проверка URL → «Запросить индексирование». Лимит примерно 10–15 в сутки,
 поэтому идти сверху вниз. Пагинацию (`/blog/page/N`) отправлять не нужно — она нужна роботу для обхода,
 а не для попадания в индекс.
 
-Файл пересобирается из `out/sitemap.xml` после каждого батча — актуален на момент последнего коммита.
+Файл пересобирается из `out/sitemap.xml` после каждого батча.
 
 ## Лендинг
 https://sreda.men
@@ -29,6 +29,7 @@ https://sreda.men/blog/muzhskaya-gruppa-podderzhki-online
 https://sreda.men/blog/ne-mogu-sosredotochitsya
 https://sreda.men/blog/net-druzey-posle-30
 https://sreda.men/blog/nichego-ne-hochetsya
+https://sreda.men/blog/stal-otcom-i-nakrylo
 https://sreda.men/blog/trevozhnost-u-muzhchin
 https://sreda.men/blog/ustal-ot-samorazvitiya
 https://sreda.men/blog/vygoranie-u-muzhchin
@@ -60,6 +61,7 @@ https://sreda.men/blog/igry-i-odinochestvo
 https://sreda.men/blog/issledovaniya-muzhskoy-druzhby
 https://sreda.men/blog/issledovaniya-ob-otcovstve
 https://sreda.men/blog/issledovaniya-odnopolyh-par
+https://sreda.men/blog/kak-byt-otcom-esli-svoego-ne-bylo
 https://sreda.men/blog/kak-nayti-druzey-v-emigracii
 https://sreda.men/blog/kak-nayti-druzey-vzroslomu-muzhchine
 https://sreda.men/blog/kak-ne-spitsya-posle-razvoda
@@ -90,6 +92,7 @@ https://sreda.men/blog/novye-otnosheniya-posle-razvoda
 https://sreda.men/blog/odinochestvo-v-brake
 https://sreda.men/blog/odinochestvo-v-emigracii
 https://sreda.men/blog/otec-posle-razvoda
+https://sreda.men/blog/otpusk-po-uhodu-dlya-otca
 https://sreda.men/blog/ottsovstvo-kachestvo-otnosheniy-mladentsem
 https://sreda.men/blog/panicheskie-ataki-u-muzhchin
 https://sreda.men/blog/pochemu-muzhchiny-izbegayut-prikosnoveniy
@@ -111,10 +114,12 @@ https://sreda.men/blog/soobshchestvo-dlya-muzhchin
 https://sreda.men/blog/stadii-vygoraniya
 https://sreda.men/blog/stavki-na-sport
 https://sreda.men/blog/strashno-idti-v-gruppu
+https://sreda.men/blog/syn-ne-vpisyvaetsya-v-ramki
 https://sreda.men/blog/toska-po-domu-u-muzhchin
 https://sreda.men/blog/trevoga-i-kontrol
 https://sreda.men/blog/trevoga-o-dengah
 https://sreda.men/blog/trudogolizm
+https://sreda.men/blog/ustal-ot-otcovstva
 https://sreda.men/blog/voskresnaya-trevoga
 https://sreda.men/blog/vse-besit-i-razdrazhaet
 https://sreda.men/blog/vspylchivost-u-muzhchin
@@ -131,3 +136,4 @@ https://sreda.men/blog/page/4
 https://sreda.men/blog/page/5
 https://sreda.men/blog/page/6
 https://sreda.men/blog/page/7
+https://sreda.men/blog/page/8
