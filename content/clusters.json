@@ -235,6 +235,24 @@
     ]
   },
   {
+    "key": "couple",
+    "slug": "otnosheniya",
+    "name": "Отношения с партнёршей",
+    "status": "ПРИНЯТ",
+    "stage": "MOFU",
+    "pillarQuery": "не чувствую близости с женой",
+    "pillarSlug": "ne-chuvstvuyu-blizosti-s-zhenoy",
+    "lede": "Не чувствую близости с женой — отношения продолжаются, а дистанция растёт. Материалы про то, что происходит внутри пары.",
+    "articles": [
+      "ne-chuvstvuyu-blizosti-s-zhenoy",
+      "perestali-razgovarivat-s-zhenoy",
+      "postoyannye-ssory-v-brake",
+      "propalo-zhelanie-v-otnosheniyah",
+      "revnost-u-muzhchin",
+      "bet-znachit-lyubit"
+    ]
+  },
+  {
     "key": "research",
     "slug": "issledovaniya",
     "name": "Исследования",

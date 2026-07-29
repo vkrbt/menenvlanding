@@ -1,6 +1,6 @@
 # Страницы sreda.men для ручной отправки в индекс
 
-Всего в карте сайта: 121 URL. Порядок — по приоритету отправки.
+Всего в карте сайта: 129 URL. Порядок — по приоритету отправки.
 
 Google Search Console → Проверка URL → «Запросить индексирование». Лимит примерно 10–15 в сутки,
 поэтому идти сверху вниз. Пагинацию (`/blog/page/N`) отправлять не нужно — она нужна роботу для обхода,
@@ -26,6 +26,7 @@ https://sreda.men/blog/kak-perestat-sryvatsya
 https://sreda.men/blog/kak-perezhit-razvod
 https://sreda.men/blog/muzh-zamknulsya
 https://sreda.men/blog/muzhskaya-gruppa-podderzhki-online
+https://sreda.men/blog/ne-chuvstvuyu-blizosti-s-zhenoy
 https://sreda.men/blog/ne-mogu-sosredotochitsya
 https://sreda.men/blog/net-druzey-posle-30
 https://sreda.men/blog/nichego-ne-hochetsya
@@ -44,6 +45,7 @@ https://sreda.men/blog/tema/emigraciya
 https://sreda.men/blog/tema/issledovaniya
 https://sreda.men/blog/tema/odinochestvo
 https://sreda.men/blog/tema/otcovstvo
+https://sreda.men/blog/tema/otnosheniya
 https://sreda.men/blog/tema/razvod
 https://sreda.men/blog/tema/soobshchestvo
 https://sreda.men/blog/tema/stigma
@@ -55,6 +57,7 @@ https://sreda.men/blog/tema/zlost
 
 ## Статья
 https://sreda.men/blog/apatiya-u-muzhchin
+https://sreda.men/blog/bet-znachit-lyubit
 https://sreda.men/blog/doomscrolling
 https://sreda.men/blog/etapy-adaptacii-v-emigracii
 https://sreda.men/blog/gruppa-ili-psiholog
@@ -99,20 +102,24 @@ https://sreda.men/blog/otec-posle-razvoda
 https://sreda.men/blog/otpusk-po-uhodu-dlya-otca
 https://sreda.men/blog/ottsovstvo-kachestvo-otnosheniy-mladentsem
 https://sreda.men/blog/panicheskie-ataki-u-muzhchin
+https://sreda.men/blog/perestali-razgovarivat-s-zhenoy
 https://sreda.men/blog/pochemu-muzhchiny-izbegayut-prikosnoveniy
 https://sreda.men/blog/pochemu-muzhchiny-skryvayut-emocii
 https://sreda.men/blog/pochemu-muzhskaya-druzhba-raspadaetsya
 https://sreda.men/blog/pochemu-u-muzhchin-net-blizkih-druzey
 https://sreda.men/blog/pornozavisimost
 https://sreda.men/blog/postoyannaya-ustalost
+https://sreda.men/blog/postoyannye-ssory-v-brake
 https://sreda.men/blog/poteryal-interes-k-zhizni
 https://sreda.men/blog/poteryal-sebya-posle-pereezda
 https://sreda.men/blog/prilozheniya-dlya-mentalnogo-zdorovya
+https://sreda.men/blog/propalo-zhelanie-v-otnosheniyah
 https://sreda.men/blog/prosypayus-v-4-utra
 https://sreda.men/blog/psiholog-muzhchina-ili-zhenshchina
 https://sreda.men/blog/rabota-ne-po-specialnosti-posle-pereezda
 https://sreda.men/blog/rasstalsya-s-devushkoy
 https://sreda.men/blog/razvelsya-s-zhenoy-chto-delat
+https://sreda.men/blog/revnost-u-muzhchin
 https://sreda.men/blog/sam-spravlyus-pochemu-ne-rabotaet
 https://sreda.men/blog/sezonnaya-depressiya
 https://sreda.men/blog/skolko-stoit-muzhskaya-gruppa
@@ -144,3 +151,4 @@ https://sreda.men/blog/page/5
 https://sreda.men/blog/page/6
 https://sreda.men/blog/page/7
 https://sreda.men/blog/page/8
+https://sreda.men/blog/page/9
