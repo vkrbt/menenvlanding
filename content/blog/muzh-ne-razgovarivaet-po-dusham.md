@@ -7,10 +7,10 @@ og_title: Муж не разговаривает со мной по душам
 description: Муж не разговаривает по душам — это редко про закрытость характера. Разбираем, что показали данные о мужской близости и какой заход работает вместо разговоров.
 canonical: https://sreda.men/blog/muzh-ne-razgovarivaet-po-dusham
 author_line: Влад и Женя — ведущие «Мужской среды»
-date_line: 29 июля 2026
+date_line: 22 мая 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-05-22
+date_modified: 2026-05-22
 status: released
 category: Для близких
 card_title: Муж не разговаривает со мной по душам

@@ -7,10 +7,10 @@ og_title: Устал от отцовства: родительское выго�
 description: Устал от отцовства — признание, за которое стыдно. Разбираем родительское выгорание: чем оно отличается от усталости и почему любовь к ребёнку тут ни при чём.
 canonical: https://sreda.men/blog/ustal-ot-otcovstva
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 13 мая 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-05-13
+date_modified: 2026-05-13
 status: released
 category: Отцовство
 card_title: Устал от отцовства: родительское выгорание

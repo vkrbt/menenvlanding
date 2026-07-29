@@ -7,10 +7,10 @@ og_title: Страшно идти в группу: разбор шести ко�
 description: Страшно идти в группу — нормально, и почти всегда страх состоит из конкретных пунктов. Разбираем шесть самых частых и что с каждым делать.
 canonical: https://sreda.men/blog/strashno-idti-v-gruppu
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 16 февраля 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-02-16
+date_modified: 2026-02-16
 status: released
 category: Формат
 card_title: Страшно идти в группу: разбор шести конкретных страхов

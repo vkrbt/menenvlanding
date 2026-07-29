@@ -7,10 +7,10 @@ og_title: Как найти друзей взрослому мужчине: чт
 description: Как найти друзей взрослому мужчине: почему знакомства не работают, а регулярность работает, сколько это занимает и с чего начать на этой неделе.
 canonical: https://sreda.men/blog/kak-nayti-druzey-vzroslomu-muzhchine
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 25 марта 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-03-25
+date_modified: 2026-03-25
 status: released
 category: Одиночество
 card_title: Как найти друзей взрослому мужчине: что работает

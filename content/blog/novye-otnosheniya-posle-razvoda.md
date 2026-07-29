@@ -7,10 +7,10 @@ og_title: Новые отношения после развода: когда р
 description: Новые отношения после развода принято считать бегством от боли. Данные говорят сложнее — разбираем, что показало исследование и где настоящая граница.
 canonical: https://sreda.men/blog/novye-otnosheniya-posle-razvoda
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 23 июля 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-07-23
+date_modified: 2026-07-23
 status: released
 category: Отношения
 card_title: Новые отношения после развода: когда рано

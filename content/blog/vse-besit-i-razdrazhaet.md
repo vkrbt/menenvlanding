@@ -7,10 +7,10 @@ og_title: Всё бесит и раздражает: что за этим сто
 description: Всё бесит и раздражает — состояние, где злит не конкретное, а вообще всё. Разбираем, что опускает порог и когда за этим стоит не характер.
 canonical: https://sreda.men/blog/vse-besit-i-razdrazhaet
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 13 апреля 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-04-13
+date_modified: 2026-04-13
 status: released
 category: Злость
 card_title: Всё бесит и раздражает: что за этим стоит

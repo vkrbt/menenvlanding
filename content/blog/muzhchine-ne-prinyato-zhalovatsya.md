@@ -7,10 +7,10 @@ og_title: Мужчине не принято жаловаться: цена но
 description: Мужчине не принято жаловаться — норма, которая усваивается рано и работает всю жизнь. Разбираем, кто её поддерживает и во что она обходится.
 canonical: https://sreda.men/blog/muzhchine-ne-prinyato-zhalovatsya
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 12 июня 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-06-12
+date_modified: 2026-06-12
 status: released
 category: Помощь
 card_title: Мужчине не принято жаловаться: цена нормы

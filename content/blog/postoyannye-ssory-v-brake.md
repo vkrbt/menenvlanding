@@ -7,10 +7,10 @@ og_title: Постоянные ссоры в браке: что предсказ
 description: Постоянные ссоры в браке сами по себе не предсказывают развод. Разбираем, что именно предсказывает по данным исследований и как выходить из круга.
 canonical: https://sreda.men/blog/postoyannye-ssory-v-brake
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 30 мая 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-05-30
+date_modified: 2026-05-30
 status: released
 category: Отношения
 card_title: Постоянные ссоры в браке: что предсказывает распад

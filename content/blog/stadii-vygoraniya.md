@@ -7,10 +7,10 @@ og_title: Стадии выгорания: чего нет в диагнозе
 description: Стадии выгорания расписаны по пунктам в десятках статей, но в диагностических документах их нет. Разбираем, что там есть вместо и почему это полезнее.
 canonical: https://sreda.men/blog/stadii-vygoraniya
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 13 июля 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-07-13
+date_modified: 2026-07-13
 status: released
 category: Состояния
 card_title: Стадии выгорания: чего нет в диагнозе

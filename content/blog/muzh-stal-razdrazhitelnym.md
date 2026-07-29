@@ -7,10 +7,10 @@ og_title: Муж стал раздражительным и агрессивны
 description: Муж стал раздражительным и агрессивным — что за этим стоит, где проходит граница безопасности и что делать раньше, чем начинать разговор по душам.
 canonical: https://sreda.men/blog/muzh-stal-razdrazhitelnym
 author_line: Влад и Женя — ведущие «Мужской среды»
-date_line: 29 июля 2026
+date_line: 23 мая 2026
 read_line: ≈ 10 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-05-23
+date_modified: 2026-05-23
 status: released
 category: Для близких
 card_title: Муж стал раздражительным и агрессивным

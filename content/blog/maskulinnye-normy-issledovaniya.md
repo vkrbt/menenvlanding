@@ -7,10 +7,10 @@ og_title: Маскулинные нормы исследования: шатки
 description: Маскулинные нормы в исследованиях выглядят так: мужчиной не рождаются, им становятся — и этот статус легко потерять. Разбираем международные данные.
 canonical: https://sreda.men/blog/maskulinnye-normy-issledovaniya
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 13 марта 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-03-13
+date_modified: 2026-03-13
 status: released
 category: Исследования
 card_title: Маскулинные нормы исследования: шаткий мужской статус

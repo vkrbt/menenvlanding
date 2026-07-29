@@ -7,10 +7,10 @@ og_title: Как быть отцом если своего не было
 description: Как быть отцом если своего не было: разбираем, что передаётся от отца к сыну по данным исследования и почему отсутствие образца — не приговор.
 canonical: https://sreda.men/blog/kak-byt-otcom-esli-svoego-ne-bylo
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 7 мая 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-05-07
+date_modified: 2026-05-07
 status: released
 category: Отцовство
 card_title: Как быть отцом если своего не было

@@ -7,10 +7,10 @@ og_title: Стал отцом и накрыло: что это такое
 description: Стал отцом и накрыло — состояние, о котором почти не предупреждают. Разбираем, насколько оно частое по данным метаанализа и что с ним делать.
 canonical: https://sreda.men/blog/stal-otcom-i-nakrylo
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 3 мая 2026
 read_line: ≈ 10 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-05-03
+date_modified: 2026-05-03
 status: released
 category: Отцовство
 card_title: Стал отцом и накрыло: что это такое

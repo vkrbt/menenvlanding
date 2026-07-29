@@ -7,10 +7,10 @@ og_title: Исследования мужской дружбы: что пока�
 description: Исследования мужской дружбы объясняют, почему близких друзей у мужчин мало: дело не в характере, а в нормах, которые мужчины отслеживают друг у друга.
 canonical: https://sreda.men/blog/issledovaniya-muzhskoy-druzhby
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 2 марта 2026
 read_line: ≈ 10 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-03-02
+date_modified: 2026-03-02
 status: released
 category: Исследования
 card_title: Исследования мужской дружбы: что показали данные

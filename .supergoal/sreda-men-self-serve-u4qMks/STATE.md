@@ -1,0 +1,49 @@
+# State: стратегия внешних упоминаний sreda.men (self-serve)
+
+**Status:** READY_TO_DISPATCH
+**Current phase:** 1
+**Started:** 2026-07-29
+**Last update:** 2026-07-29
+**Run root:** .supergoal/sreda-men-self-serve-u4qMks
+**Baseline ref:** 38c744e84d35cef8d2a20b3ac48db0ae72e2c884
+
+## Phase progress
+
+| # | Phase | Status | Started | Completed | Notes |
+|---|-------|--------|---------|-----------|-------|
+| 1 | Инвентаризация активов и запретов | pending | — | — | — |
+| 2 | Реестр: UGC и сообщества | pending | — | — | — |
+| 3 | Реестр: медиа, каталоги, подкасты | pending | — | — | — |
+| 4 | Реестр: Q&A, форумы, профили | pending | — | — | — |
+| 5 | Верификация площадок | pending | — | — | — |
+| 6 | Правила контента, ссылок, темпа | pending | — | — | — |
+| 7 | Приоритизация и переиспользование | pending | — | — | — |
+| 8 | Помесячный план и метрики | pending | — | — | — |
+| 9 | Сборка документа и приложение | pending | — | — | — |
+| 10 | Polish & Harden | pending | — | — | — |
+
+## Engineering check status
+
+- Build (`npm run build`): —
+- SEO (`python3 scripts/seo-check.py`): —
+- Neurocheck (`python3 seo/neurocheck.py seo/linkbuilding.md`): —
+
+## Baseline facts (не перепроверять, зафиксировано 2026-07-29)
+
+- Внешних ссылок на `sreda.men` в Яндекс.Вебмастере: **0** (`get-external-links`, host `https:sreda.men:443`)
+- Домен создан 2026-03-24 → возраст 4 месяца
+- Счётчик Метрики: 111109205
+- Опубликовано статей в `content/blog/`: 96 файлов на момент старта прогона
+
+## Notable events
+
+- 2026-07-29 — Рамка зафиксирована владельцем: только self-serve, outreach отдельным приложением, максимальный безопасный темп.
+- 2026-07-29 — Установлено поиском: большинство UGC-площадок отдаёт nofollow/ugc. Акцент стратегии развёрнут с веса на упоминания и трафик.
+
+## Failure log
+
+_(пусто)_
+
+## Escalation queue
+
+_(пусто)_

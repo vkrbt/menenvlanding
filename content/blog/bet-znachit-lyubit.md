@@ -7,10 +7,10 @@ og_title: Бьёт значит любит: откуда взялась пого
 description: Бьёт значит любит — поговорка, которая объясняет насилие любовью. Разбираем, что показали исследования и почему связь тут обратная.
 canonical: https://sreda.men/blog/bet-znachit-lyubit
 author_line: Влад и Женя — ведущие «Мужской среды»
-date_line: 29 июля 2026
+date_line: 26 мая 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-05-26
+date_modified: 2026-05-26
 status: released
 category: Отношения
 card_title: Бьёт значит любит: откуда взялась поговорка

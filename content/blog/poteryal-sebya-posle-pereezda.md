@@ -7,10 +7,10 @@ og_title: Потерял себя после переезда: про утрат
 description: Потерял себя после переезда — частое состояние у мужчин в эмиграции. Про утрату статуса «взрослого, который справляется», и что с этим делать.
 canonical: https://sreda.men/blog/poteryal-sebya-posle-pereezda
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 20 февраля 2026
 read_line: ≈ 10 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-02-20
+date_modified: 2026-02-20
 status: released
 category: Эмиграция
 card_title: Потерял себя после переезда: про утрату статуса

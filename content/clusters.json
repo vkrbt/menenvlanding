@@ -235,6 +235,23 @@
     ]
   },
   {
+    "key": "provider",
+    "slug": "dengi-i-rabota",
+    "name": "Работа, деньги и роль кормильца",
+    "status": "ПРИНЯТ",
+    "stage": "TOFU",
+    "pillarQuery": "ловушка кормильца",
+    "pillarSlug": "lovushka-kormiltsa",
+    "lede": "Ловушка кормильца: роль обеспечивающего даёт статус и одновременно не оставляет права на слабость. Про деньги, работу и самооценку.",
+    "articles": [
+      "lovushka-kormiltsa",
+      "poteryal-rabotu-kak-perezhit",
+      "ne-mogu-obespechit-semyu",
+      "strah-bednosti-u-muzhchin",
+      "zarabatyvayu-menshe-zheny"
+    ]
+  },
+  {
     "key": "couple",
     "slug": "otnosheniya",
     "name": "Отношения с партнёршей",

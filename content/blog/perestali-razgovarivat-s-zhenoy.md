@@ -7,10 +7,10 @@ og_title: Перестали разговаривать с женой: как ч
 description: Перестали разговаривать с женой — не молчание, а разговоры без содержания. Разбираем, как зарастает канал и что его открывает обратно.
 canonical: https://sreda.men/blog/perestali-razgovarivat-s-zhenoy
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 27 мая 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-05-27
+date_modified: 2026-05-27
 status: released
 category: Отношения
 card_title: Перестали разговаривать с женой: как чинится

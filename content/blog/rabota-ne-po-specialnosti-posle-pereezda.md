@@ -7,10 +7,10 @@ og_title: Работа не по специальности после пере�
 description: Работа не по специальности после переезда — почему падение в должности бьёт сильнее падения дохода, сколько это обычно длится и что помогает не застрять.
 canonical: https://sreda.men/blog/rabota-ne-po-specialnosti-posle-pereezda
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 22 февраля 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-02-22
+date_modified: 2026-02-22
 status: released
 category: Эмиграция
 card_title: Работа не по специальности после переезда: про откат

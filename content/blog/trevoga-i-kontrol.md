@@ -7,10 +7,10 @@ og_title: Тревога и потребность всё контролиров
 description: Тревога и потребность всё контролировать — одно и то же явление с двух сторон. Разбираем, почему контроль не снижает тревогу, а кормит её, и что работает вместо.
 canonical: https://sreda.men/blog/trevoga-i-kontrol
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 17 июля 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-07-17
+date_modified: 2026-07-17
 status: released
 category: Состояния
 card_title: Тревога и потребность всё контролировать

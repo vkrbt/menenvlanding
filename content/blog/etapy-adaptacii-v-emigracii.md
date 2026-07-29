@@ -7,10 +7,10 @@ og_title: Этапы адаптации в эмиграции: что норма
 description: Этапы адаптации в эмиграции по срокам: медовый месяц, откат, дно второго года и выход. Что происходит на каждом и когда пора не ждать, а действовать.
 canonical: https://sreda.men/blog/etapy-adaptacii-v-emigracii
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 18 февраля 2026
 read_line: ≈ 10 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-02-18
+date_modified: 2026-02-18
 status: released
 category: Эмиграция
 card_title: Этапы адаптации в эмиграции: что нормально на каком сроке

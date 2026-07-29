@@ -7,10 +7,10 @@ og_title: Приложения для психического здоровья 
 description: Приложения для психического здоровья мужчинам: что они реально дают, где их предел и почему для многих это единственный посильный первый шаг.
 canonical: https://sreda.men/blog/prilozheniya-dlya-mentalnogo-zdorovya
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 18 июня 2026
 read_line: ≈ 8 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-06-18
+date_modified: 2026-06-18
 status: released
 category: Помощь
 card_title: Приложения для психического здоровья мужчинам

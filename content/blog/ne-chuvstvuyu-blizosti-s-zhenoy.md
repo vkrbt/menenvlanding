@@ -7,10 +7,10 @@ og_title: Не чувствую близости с женой: что прои�
 description: Не чувствую близости с женой — состояние, при котором формально всё в порядке. Разбираем, куда девается близость и почему разговоры её не возвращают.
 canonical: https://sreda.men/blog/ne-chuvstvuyu-blizosti-s-zhenoy
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 25 мая 2026
 read_line: ≈ 10 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-05-25
+date_modified: 2026-05-25
 status: released
 category: Отношения
 card_title: Не чувствую близости с женой: что произошло

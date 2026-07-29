@@ -7,10 +7,10 @@ og_title: Как найти друзей в эмиграции мужчине: �
 description: Как найти друзей в эмиграции мужчине — почему по паспорту не срабатывает, что даёт регулярность вместо знакомств и сколько времени это реально занимает.
 canonical: https://sreda.men/blog/kak-nayti-druzey-v-emigracii
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 19 февраля 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-02-19
+date_modified: 2026-02-19
 status: released
 category: Эмиграция
 card_title: Как найти друзей в эмиграции мужчине: что работает

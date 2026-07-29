@@ -7,10 +7,10 @@ og_title: Потерял интерес к жизни: что с этим дел
 description: Потерял интерес к жизни — состояние, при котором всё исправно и ничего не отзывается. Разбираем, почему борьба с тяжестью его не снимает и что работает.
 canonical: https://sreda.men/blog/poteryal-interes-k-zhizni
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 29 апреля 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-04-29
+date_modified: 2026-04-29
 status: released
 category: Состояния
 card_title: Потерял интерес к жизни: что с этим делают

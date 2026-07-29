@@ -7,10 +7,10 @@ og_title: Отпуск по уходу за ребёнком для отца
 description: Отпуск по уходу за ребёнком для отца — что показал шведский опыт за пятьдесят лет и что известно о влиянии такого отпуска на самих мужчин.
 canonical: https://sreda.men/blog/otpusk-po-uhodu-dlya-otca
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 11 мая 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-05-11
+date_modified: 2026-05-11
 status: released
 category: Отцовство
 card_title: Отпуск по уходу за ребёнком для отца

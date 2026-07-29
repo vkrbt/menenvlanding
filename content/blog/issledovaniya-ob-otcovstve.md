@@ -7,10 +7,10 @@ og_title: Исследования об отцовстве: качество в�
 description: Исследования об отцовстве отвечают на вопрос, который грызёт почти каждого отца: сколько времени надо проводить с ребёнком. Ответ оказался не про часы.
 canonical: https://sreda.men/blog/issledovaniya-ob-otcovstve
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 5 марта 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-03-05
+date_modified: 2026-03-05
 status: released
 category: Исследования
 card_title: Исследования об отцовстве: качество важнее часов

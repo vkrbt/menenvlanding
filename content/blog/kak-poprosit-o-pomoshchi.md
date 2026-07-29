@@ -7,10 +7,10 @@ og_title: Как попросить о помощи мужчине: что го�
 description: Как попросить о помощи мужчине, если непонятно, какими словами. Разбираем конкретные формулировки для друга, партнёрши, врача и рабочей ситуации.
 canonical: https://sreda.men/blog/kak-poprosit-o-pomoshchi
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 9 июня 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-06-09
+date_modified: 2026-06-09
 status: released
 category: Помощь
 card_title: Как попросить о помощи мужчине: что говорить

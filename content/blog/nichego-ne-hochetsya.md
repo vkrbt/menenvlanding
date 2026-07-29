@@ -7,10 +7,10 @@ og_title: Ничего не хочется: куда смотреть и что 
 description: Ничего не хочется — состояние, которое обычно объясняют ленью и пробуют лечить дисциплиной. Разбираем, почему это не работает и что даёт эффект по данным.
 canonical: https://sreda.men/blog/nichego-ne-hochetsya
 author_line: Женя — психиатр-нарколог, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 20 апреля 2026
 read_line: ≈ 10 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-04-20
+date_modified: 2026-04-20
 status: released
 category: Состояния
 card_title: Ничего не хочется: куда смотреть и что делать

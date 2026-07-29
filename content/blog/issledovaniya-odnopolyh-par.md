@@ -7,10 +7,10 @@ og_title: Исследования однополых пар: чему тут п
 description: Исследования однополых пар показали неожиданное: мужские браки держатся устойчивее, чем принято думать. Разбираем данные и что из них следует любой паре.
 canonical: https://sreda.men/blog/issledovaniya-odnopolyh-par
 author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
-date_line: 29 июля 2026
+date_line: 7 марта 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-03-07
+date_modified: 2026-03-07
 status: released
 category: Исследования
 card_title: Исследования однополых пар: чему тут поучиться

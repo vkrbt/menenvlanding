@@ -7,10 +7,10 @@ og_title: Кто тяжелее переживает расставание
 description: Кто тяжелее переживает расставание — мужчины или женщины. Разбираем работу, которая переворачивает привычный ответ, и объясняем, откуда берётся разница.
 canonical: https://sreda.men/blog/kto-tyazhelee-perezhivaet-rasstavanie
 author_line: Влад и Женя — ведущие «Мужской среды»
-date_line: 29 июля 2026
+date_line: 22 июля 2026
 read_line: ≈ 9 минут
-date_published: 2026-07-29
-date_modified: 2026-07-29
+date_published: 2026-07-22
+date_modified: 2026-07-22
 status: released
 category: Отношения
 card_title: Кто тяжелее переживает расставание
