@@ -235,6 +235,23 @@
     ]
   },
   {
+    "key": "midlife",
+    "slug": "krizis-srednego-vozrasta",
+    "name": "Кризис среднего возраста",
+    "status": "ПРИНЯТ",
+    "stage": "TOFU→MOFU",
+    "pillarQuery": "кризис среднего возраста у мужчин",
+    "pillarSlug": "krizis-srednego-vozrasta-u-muzhchin",
+    "lede": "Кризис среднего возраста у мужчин — не про красную машину. Про переоценку того, что казалось решённым.",
+    "articles": [
+      "krizis-srednego-vozrasta-u-muzhchin",
+      "krizis-40-let-u-muzhchin",
+      "ne-vizhu-smysla-v-tom-chto-delayu",
+      "vtoraya-polovina-zhizni",
+      "karernyy-tupik-v-40"
+    ]
+  },
+  {
     "key": "provider",
     "slug": "dengi-i-rabota",
     "name": "Работа, деньги и роль кормильца",
