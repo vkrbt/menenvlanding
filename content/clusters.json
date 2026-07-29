@@ -1,0 +1,222 @@
+[
+  {
+    "key": "format",
+    "slug": "soobshchestvo",
+    "name": "Формат и сообщество",
+    "status": "ПРИНЯТ",
+    "stage": "BOFU",
+    "pillarQuery": "мужская группа поддержки онлайн",
+    "pillarSlug": null,
+    "lede": "Мужская группа поддержки онлайн — формат, о котором чаще всего спрашивают: что там происходит, кто ведёт, обязательно ли говорить. Здесь собрано всё, что стоит знать до первой встречи.",
+    "articles": [
+      "muzhskaya-terapevticheskaya-gruppa",
+      "muzhskaya-gruppa-online",
+      "gruppa-ili-psiholog"
+    ]
+  },
+  {
+    "key": "emigration",
+    "slug": "emigraciya",
+    "name": "Мужчина в эмиграции",
+    "status": "ПРИНЯТ",
+    "stage": "TOFU→MOFU",
+    "pillarQuery": "эмигрантская депрессия у мужчин",
+    "pillarSlug": "emigrantskaya-depressiya",
+    "lede": "Эмигрантская депрессия у мужчин накрывает не в первый месяц, а когда быт уже налажен. Разборы про адаптацию, потерю статуса и одиночество в чужой стране.",
+    "articles": [
+      "emigrantskaya-depressiya",
+      "odinochestvo-v-emigracii"
+    ]
+  },
+  {
+    "key": "loneliness",
+    "slug": "odinochestvo",
+    "name": "Одиночество и мужская дружба",
+    "status": "ПРИНЯТ",
+    "stage": "TOFU→MOFU",
+    "pillarQuery": "нет друзей после 30",
+    "pillarSlug": "net-druzey-posle-30",
+    "lede": "Нет друзей после 30 — не личный провал, а статистика. Про то, куда девается мужской круг общения и что с этим делать.",
+    "articles": [
+      "net-druzey-posle-30",
+      "ne-s-kem-pogovorit",
+      "odinochestvo-v-brake"
+    ]
+  },
+  {
+    "key": "burnout",
+    "slug": "vygoranie",
+    "name": "Выгорание и усталость",
+    "status": "ПРИНЯТ",
+    "stage": "TOFU",
+    "pillarQuery": "выгорание у мужчин",
+    "pillarSlug": "vygoranie-u-muzhchin",
+    "lede": "Выгорание у мужчин легко спутать с усталостью и с ленью. Разбираем, чем они отличаются, по каким стадиям это разворачивается и что помогает.",
+    "articles": [
+      "vygoranie-u-muzhchin",
+      "postoyannaya-ustalost",
+      "ne-mogu-rasslabitsya",
+      "mozg-ne-otdyhaet"
+    ]
+  },
+  {
+    "key": "apathy",
+    "slug": "apatiya",
+    "name": "Апатия и потеря интереса",
+    "status": "ПРИНЯТ",
+    "stage": "TOFU",
+    "pillarQuery": "ничего не хочется",
+    "pillarSlug": null,
+    "lede": "Ничего не хочется — состояние, за которым может стоять что угодно: от накопленной усталости до депрессии. Разбираемся, что именно.",
+    "articles": [
+      "apatiya-u-muzhchin",
+      "nichego-ne-raduet"
+    ]
+  },
+  {
+    "key": "anxiety",
+    "slug": "trevoga",
+    "name": "Тревога у мужчин",
+    "status": "ПРИНЯТ",
+    "stage": "TOFU",
+    "pillarQuery": "тревожность у мужчин",
+    "pillarSlug": "trevozhnost-u-muzhchin",
+    "lede": "Тревожность у мужчин редко выглядит как паника. Чаще — как контроль, раздражительность и невозможность расслабиться.",
+    "articles": [
+      "trevozhnost-u-muzhchin",
+      "voskresnaya-trevoga",
+      "trevoga-o-dengah",
+      "panicheskie-ataki-u-muzhchin",
+      "prosypayus-v-4-utra"
+    ]
+  },
+  {
+    "key": "anger",
+    "slug": "zlost",
+    "name": "Злость и раздражительность",
+    "status": "ПРИНЯТ",
+    "stage": "TOFU",
+    "pillarQuery": "как перестать срываться",
+    "pillarSlug": null,
+    "lede": "Как перестать срываться — вопрос, который мужчины задают уже после того, как сорвались. Про упавший порог, накопленный стресс и что реально работает.",
+    "articles": [
+      "kak-perestat-sryvatsya-na-blizkih",
+      "kak-perestat-sryvatsya-na-okruzhayushchih",
+      "kak-perestat-kopit-zlobu"
+    ]
+  },
+  {
+    "key": "breakup",
+    "slug": "razvod",
+    "name": "Развод и расставание",
+    "status": "ПРИНЯТ",
+    "stage": "MOFU",
+    "pillarQuery": "как пережить развод мужчине",
+    "pillarSlug": "kak-perezhit-razvod",
+    "lede": "Как пережить развод мужчине: что происходит на самом деле, какие ошибки делают почти все и что помогает в первые месяцы.",
+    "articles": [
+      "kak-perezhit-razvod",
+      "razvelsya-s-zhenoy-chto-delat",
+      "rasstalsya-s-devushkoy"
+    ]
+  },
+  {
+    "key": "relatives",
+    "slug": "dlya-blizkih",
+    "name": "Для близких: как помочь мужчине",
+    "status": "ПРИНЯТ",
+    "stage": "TOFU→MOFU",
+    "pillarQuery": "муж замкнулся в себе",
+    "pillarSlug": "muzh-zamknulsya",
+    "lede": "Муж замкнулся в себе, друг перестал отвечать — здесь материалы для тех, кто рядом с мужчиной и хочет помочь, не превращаясь в психолога.",
+    "articles": [
+      "muzh-zamknulsya",
+      "muzh-v-depressii",
+      "kak-pomoch-drugu-v-depressii"
+    ]
+  },
+  {
+    "key": "fatherhood",
+    "slug": "otcovstvo",
+    "name": "Отцовство",
+    "status": "ПРИНЯТ",
+    "stage": "TOFU→MOFU",
+    "pillarQuery": "стал отцом и накрыло",
+    "pillarSlug": null,
+    "lede": "Стал отцом и накрыло — про это почти не говорят. Отцовство глазами мужчины: от послеродовой депрессии до усталости от роли.",
+    "articles": [
+      "muzhskaya-poslerodovaya-depressiya"
+    ]
+  },
+  {
+    "key": "achievement",
+    "slug": "dostigatorstvo",
+    "name": "Достигаторство и самореализация",
+    "status": "ПРИНЯТ",
+    "stage": "TOFU",
+    "pillarQuery": "устал от саморазвития",
+    "pillarSlug": "ustal-ot-samorazvitiya",
+    "lede": "Устал от саморазвития — точка, в которую приходят многие после нескольких лет гонки за результатом. Про достигаторство и его цену.",
+    "articles": [
+      "ustal-ot-samorazvitiya",
+      "trudogolizm"
+    ]
+  },
+  {
+    "key": "attention",
+    "slug": "vnimanie",
+    "name": "Внимание и информационный перегруз",
+    "status": "ПРИНЯТ",
+    "stage": "TOFU",
+    "pillarQuery": "не могу сосредоточиться",
+    "pillarSlug": "ne-mogu-sosredotochitsya",
+    "lede": "Не могу сосредоточиться — жалоба, за которой чаще стоит не дефицит дисциплины, а перегруз, тревога или недосып.",
+    "articles": [
+      "ne-mogu-sosredotochitsya",
+      "doomscrolling"
+    ]
+  },
+  {
+    "key": "research",
+    "slug": "issledovaniya",
+    "name": "Исследования",
+    "status": "ПРИНЯТ",
+    "stage": "TOFU",
+    "pillarQuery": "исследования о мужчинах и психике",
+    "pillarSlug": null,
+    "lede": "Исследования о мужчинах и психике: разборы научных работ со ссылками на первоисточники. Что показывают данные и как это читать.",
+    "articles": [
+      "muzhskoe-mentalnoe-zdorovie-v-cifrah"
+    ]
+  },
+  {
+    "key": "depression",
+    "slug": "depressiya",
+    "name": "Депрессия у мужчин",
+    "status": "ЗАМОРОЖЕН",
+    "stage": "TOFU",
+    "pillarQuery": "депрессия у мужчин признаки",
+    "pillarSlug": "depressiya-u-muzhchin-priznaki",
+    "lede": "Материалы о мужской депрессии. Раздел не пополняется — см. решение Р-003.",
+    "articles": [
+      "depressiya-u-muzhchin-priznaki",
+      "sezonnaya-depressiya"
+    ]
+  },
+  {
+    "key": "addiction",
+    "slug": "zavisimosti",
+    "name": "Зависимости у мужчин",
+    "status": "ЗАМОРОЖЕН",
+    "stage": "TOFU",
+    "pillarQuery": "пью каждый вечер",
+    "pillarSlug": "alkogol-kazhdyy-vecher",
+    "lede": "Материалы о зависимостях у мужчин. Раздел не пополняется — см. решение Р-003.",
+    "articles": [
+      "alkogol-kazhdyy-vecher",
+      "pornozavisimost",
+      "igrovaya-zavisimost",
+      "stavki-na-sport"
+    ]
+  }
+]

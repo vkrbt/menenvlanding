@@ -5,6 +5,26 @@
 
 export const SITE_URL = 'https://sreda.men'
 export const FORMS_URL = 'https://forms.gle/tvTnJuyBoedpJZ989'
+/** URL страницы «Как проходит встреча» — узел конверсии между статьёй и заявкой */
+export const MEETING_URL = '/vstrecha'
+
+/**
+ * Яндекс.Метрика. Идентификатор счётчика и цели держим здесь, а не в компонентах:
+ * на них ссылаются и счётчик, и обработчик кликов по CTA.
+ * Цели создаются в интерфейсе Метрики вручную, тип — «JavaScript-событие».
+ */
+export const METRIKA_COUNTER_ID = 111109205
+
+export const METRIKA_GOALS = {
+  /** Любой клик по CTA-ссылке на заявку — итоговая цель */
+  ctaAny: 'cta_click',
+  /** Клик со страницы «Как проходит встреча» */
+  ctaMeetingPage: 'cta_vstrecha',
+  /** Клик из статьи блога */
+  ctaArticle: 'cta_article',
+  /** Клик с лендинга или любой другой страницы */
+  ctaLanding: 'cta_landing',
+} as const
 export const YOUTUBE_URL = 'https://www.youtube.com/@men-env'
 export const YOUTUBE_LABEL = 'youtube.com/@men-env'
 

@@ -3,6 +3,7 @@ import BlogCard from '@/components/BlogCard'
 import JsonLd from '@/components/JsonLd'
 import SiteFooter from '@/components/SiteFooter'
 import SiteHeader from '@/components/SiteHeader'
+import { nonEmptyClusters, topicUrl } from '@/lib/clusters'
 import { blogListGraph } from '@/lib/jsonld'
 import { getAllPosts } from '@/lib/posts'
 import { BLOG_URL, OG_IMAGE, SITE_URL } from '@/lib/site'
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
 
 export default function BlogIndexPage() {
   const posts = getAllPosts()
+  const topics = nonEmptyClusters()
 
   return (
     <>
@@ -41,6 +43,19 @@ export default function BlogIndexPage() {
               О том, о чём мужчины предпочитают молчать: одиночество, выгорание, эмиграция, отношения. Пишут ведущие «Мужской среды» — гештальт-терапевт и психиатр. Без клише и морализаторства.
             </p>
           </div>
+        </section>
+
+        <section className="container">
+          <nav className="blog-topics" aria-label="Темы блога">
+            <h2 className="blog-topics__title">Темы</h2>
+            <ul className="blog-topics__list">
+              {topics.map((c) => (
+                <li key={c.slug}>
+                  <a href={topicUrl(c.slug)}>{c.name}</a>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </section>
 
         <section className="container">

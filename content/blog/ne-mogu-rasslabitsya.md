@@ -1,5 +1,7 @@
 ---
 slug: ne-mogu-rasslabitsya
+cluster: burnout
+target_query: не умею отдыхать
 title: Не умею отдыхать: почему в отпуске хуже, чем на работе | Мужская среда
 og_title: Не умею отдыхать: почему в отпуске хуже, чем на работе
 description: Второй день отпуска, а ты уже проверяешь рабочий чат и злишься на всех. Разбираем вину за непродуктивность: почему расслабиться страшно, при чём тут контроль и как отдых становится навыком.
@@ -8,7 +10,7 @@ author_line: Влад — гештальт-терапевт, ведущий «М
 date_line: 17 мая 2026
 read_line: ≈ 10 минут
 date_published: 2026-05-17
-date_modified: 2026-05-17
+date_modified: 2026-07-29
 status: released
 category: Состояния
 card_title: Не умею отдыхать: почему в отпуске хуже, чем на работе
@@ -93,6 +95,8 @@ _Заявка бесплатна и ни к чему не обязывает._
 > **Автор:** Влад — гештальт-терапевт, ведущий «Мужской среды». Днём пишет код в Big Tech; проверять рабочий чат из отпуска умеет, бороться с этим — тоже.
 
 > Статья носит информационный характер и не заменяет консультацию специалиста.
+
+> **Телефоны доверия:** Россия — 8-800-2000-122 и 051 (Москва), Беларусь — 8-801-100-16-11 (круглосуточно), из любой страны — [findahelpline.com](https://findahelpline.com/ru) (подбор линии по стране, есть русскоязычные). Экстренные службы в ЕС — 112.
 
 > **Источники:** [DailyMoscow — почему мы не умеем отдыхать даже в отпуске](https://dailymoscow.ru/society/hronicheskaya-trevoga-pochemu-my-ne-umeem-otdyhat-dazhe-v-otpuske) · [Prosto — как отдыхать без чувства вины](https://www.prostoapp.ru/posts/kak-nauchitsya-otdyhat-bez-chuvstva-viny) · [Skillbox — «Я не умею отдыхать»: что такое трудоголизм](https://skillbox.ru/media/management/ya-ne-umeyu-otdyhat-chto-takoe-trudogolizm-kak-ego-raspoznat-i-preodolet/) · [Nice and Easy — чувство вины за отдых](https://www.niceandeasy.me/daily/guilty-but-not-pleasure)
 

@@ -1,6 +1,8 @@
 import Script from 'next/script'
+import { METRIKA_COUNTER_ID } from '@/lib/site'
 
-const COUNTER_ID = 111109205
+// Идентификатор живёт в lib/site.ts: на него ссылается ещё и обработчик целей
+const COUNTER_ID = METRIKA_COUNTER_ID
 
 /**
  * Яндекс.Метрика. Код счётчика вендорский — оставлен как есть, включая

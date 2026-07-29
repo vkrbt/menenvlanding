@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ThemeInit from '@/components/ThemeInit'
+import MetrikaGoals from '@/components/MetrikaGoals'
 import YandexMetrika from '@/components/YandexMetrika'
 import { DELA_HREF, MANROPE_HREF } from '@/lib/fonts'
 import { SITE_URL } from '@/lib/site'
@@ -39,6 +40,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <ThemeInit />
         {children}
         <YandexMetrika />
+        <MetrikaGoals />
       </body>
     </html>
   )

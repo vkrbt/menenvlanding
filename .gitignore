@@ -12,3 +12,11 @@ next-env.d.ts
 
 # локальное окружение для python-скриптов
 .venv-tg/
+
+# сырые выгрузки из панелей — в репозиторий не тащим, README остаётся
+seo/data/*
+!seo/data/README.md
+
+# байткод python-скриптов
+__pycache__/
+*.pyc
