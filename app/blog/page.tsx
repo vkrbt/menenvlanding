@@ -48,13 +48,15 @@ export default function BlogIndexPage() {
         <section className="container">
           <nav className="blog-topics" aria-label="Темы блога">
             <h2 className="blog-topics__title">Темы</h2>
-            <ul className="blog-topics__list">
-              {topics.map((c) => (
-                <li key={c.slug}>
-                  <a href={topicUrl(c.slug)}>{c.name}</a>
-                </li>
-              ))}
-            </ul>
+            <div className="blog-topics__scroller">
+              <ul className="blog-topics__list">
+                {topics.map((c) => (
+                  <li key={c.slug}>
+                    <a href={topicUrl(c.slug)}>{c.name}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </nav>
         </section>
 

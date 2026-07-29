@@ -96,13 +96,15 @@ export default async function TopicPage({
         <section className="container">
           <nav className="blog-topics" aria-label="Другие темы">
             <h2 className="blog-topics__title">Другие темы</h2>
-            <ul className="blog-topics__list">
-              {others.map((o) => (
-                <li key={o.slug}>
-                  <a href={topicUrl(o.slug)}>{o.name}</a>
-                </li>
-              ))}
-            </ul>
+            <div className="blog-topics__scroller">
+              <ul className="blog-topics__list">
+                {others.map((o) => (
+                  <li key={o.slug}>
+                    <a href={topicUrl(o.slug)}>{o.name}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </nav>
         </section>
       </main>
