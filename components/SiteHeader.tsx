@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import Logo from './Logo'
-import ThemeToggle from './ThemeToggle'
 import { FORMS_URL, navLinks } from '@/lib/site'
 
 /**
@@ -94,8 +93,6 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
         </nav>
 
         <div className="nav__end">
-          <ThemeToggle />
-
           <a href={FORMS_URL} className="btn btn--sm btn--primary nav__cta">
             Оставить заявку
           </a>

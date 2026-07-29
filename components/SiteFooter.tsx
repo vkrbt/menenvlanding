@@ -1,4 +1,5 @@
 import Logo from './Logo'
+import ThemeToggle from './ThemeToggle'
 import { YOUTUBE_LABEL, YOUTUBE_URL } from '@/lib/site'
 
 /**
@@ -31,6 +32,8 @@ export default function SiteFooter() {
         <p className="footer__copy">
           © <span id="footer-year">{new Date().getFullYear()}</span> Мужская среда
         </p>
+
+        <ThemeToggle />
       </div>
     </footer>
   )
