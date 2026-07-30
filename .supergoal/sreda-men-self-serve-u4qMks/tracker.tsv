@@ -1,0 +1,4 @@
+date	platform	post_url	link_type	anchor	anchor_type	target_url	indexed	visits_30d	goals_30d	note
+2026-08-05	youtube.com	https://www.youtube.com/watch?v=EXAMPLE1	nofollow	Мужская среда	brand	https://sreda.men/blog/strashno-idti-v-gruppu	pending			пример строки: описание ролика ведёт на статью по теме выпуска
+2026-08-12	dzen.ru	https://dzen.ru/a/EXAMPLE2	pending	вот здесь	naked	https://sreda.men/blog/vygoranie-u-muzhchin	pending			пример строки: атрибут проверить в исходном коде страницы
+2026-10-03	b17.ru	https://www.b17.ru/article/EXAMPLE3/	pending	Мужская среда — онлайн-сообщество для мужчин	brand	https://sreda.men/blog/muzhskoy-krug-chto-eto	pending			пример строки: комбинированный анкор, засчитывается в брендовые
