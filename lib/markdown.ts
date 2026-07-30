@@ -177,14 +177,22 @@ function parseCta(block: string): string {
   let h3 = ''
   let p = ''
   let hint = ''
+  // Кнопку можно задать в самом блоке строкой вида [Подпись](/vstrecha).
+  // Без неё поведение прежнее — прямая ссылка на форму заявки.
+  let btnLabel = 'Оставить заявку'
+  let btnHref = FORMS_URL
 
   for (const raw of block.split('\n')) {
     const line = raw.trim()
     if (!line) continue
+    const btn = /^\[([^\]]+)\]\(([^)]+)\)$/.exec(line)
     if (line.startsWith('**') && line.endsWith('**')) {
       h3 = line.replace(/^\*+|\*+$/g, '')
     } else if (line.startsWith('_') && line.endsWith('_')) {
       hint = line.replace(/^_+|_+$/g, '')
+    } else if (btn) {
+      btnLabel = btn[1]
+      btnHref = btn[2]
     } else {
       p = line
     }
@@ -193,7 +201,7 @@ function parseCta(block: string): string {
   return `    <div class="article__cta">
       <h3>${inlineMd(h3)}</h3>
       <p>${inlineMd(p)}</p>
-      <a href="${FORMS_URL}" class="btn btn--primary">Оставить заявку</a>
+      <a href="${escapeAttr(btnHref)}" class="btn btn--primary">${escapeText(btnLabel)}</a>
       <p class="article__cta-hint">${inlineMd(hint)}</p>
     </div>`
 }

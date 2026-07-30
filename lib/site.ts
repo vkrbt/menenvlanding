@@ -24,6 +24,12 @@ export const METRIKA_GOALS = {
   ctaArticle: 'cta_article',
   /** Клик с лендинга или любой другой страницы */
   ctaLanding: 'cta_landing',
+  /**
+   * Переход из статьи на страницу встречи. Отдельная цель нужна потому,
+   * что CTA статей ведёт не в форму, а на /vstrecha (см. funnel.md §2):
+   * без неё не видно, какие материалы двигают человека к заявке.
+   */
+  ctaArticleToMeeting: 'cta_k_vstreche',
 } as const
 export const YOUTUBE_URL = 'https://www.youtube.com/@men-env'
 export const YOUTUBE_LABEL = 'youtube.com/@men-env'

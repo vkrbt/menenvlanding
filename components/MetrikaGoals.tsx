@@ -22,10 +22,22 @@ export default function MetrikaGoals() {
       if (!link) return
 
       const href = link.getAttribute('href') || ''
+      const path = window.location.pathname
+
+      const ymFn = (window as unknown as { ym?: (id: number, action: string, ...rest: unknown[]) => void }).ym
+
+      // Переход из статьи на страницу встречи — промежуточный шаг воронки.
+      // Считаем отдельно: заявка отсюда ещё не подана, но материал сработал.
+      if (href.startsWith('/vstrecha') && path.startsWith('/blog')) {
+        if (typeof ymFn === 'function') {
+          ymFn(METRIKA_COUNTER_ID, 'reachGoal', METRIKA_GOALS.ctaArticleToMeeting, { page: path })
+        }
+        return
+      }
+
       if (!href.includes('forms.gle')) return
 
       // Откуда кликнули — это и есть ответ на вопрос «какие материалы приводят заявки»
-      const path = window.location.pathname
       const goal = path.startsWith('/vstrecha')
         ? METRIKA_GOALS.ctaMeetingPage
         : path.startsWith('/blog')
