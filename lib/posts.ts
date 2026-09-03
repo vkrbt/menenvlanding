@@ -40,7 +40,7 @@ function shortRead(readLine: string): string {
   return m ? `${m[1]} мин` : readLine
 }
 
-/** «Влад — гештальт-терапевт, …» → «Влад»; для двух авторов — «Влад и Женя» */
+/** «Влад — психолог, …» → «Влад»; для двух авторов — «Влад и Женя» */
 function shortAuthor(fm: Frontmatter): string {
   const names = authorsOf(fm).map((a) => a.name)
   return names.join(' и ')

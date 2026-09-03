@@ -4,8 +4,8 @@ title: Отпуск по уходу за ребёнком и мужское зд
 og_title: Отпуск по уходу за ребёнком и мужское здоровье: чему учит опыт Швеции
 description: 50 лет Швеция приучала отцов брать отпуск с ребёнком. Итог неожиданный: у таких мужчин меньше депрессии, выгорания и запоев. Разбираем цифры и что за ними стоит.
 canonical: https://sreda.men/blog/finansiruemyy-gos-om-otpusk-uhodu-za
-tag: Влад — гештальт-терапевт, ведущий «Мужской среды»
-author_line: Влад — гештальт-терапевт, ведущий «Мужской среды»
+tag: Влад — психолог, ведущий «Мужской среды»
+author_line: Влад — психолог, ведущий «Мужской среды»
 date_line: 12 июля 2026
 read_line: ≈ 9 минут
 date_published: 2027-05-07
@@ -81,7 +81,7 @@ _Заявка бесплатна и ни к чему не обязывает._
 Это очень распространённая установка, ты не один такой. Только по цифрам она бьёт по самому мужчине: мужики, которые держатся от заботы подальше, в среднем не выигрывают, а проигрывают — и в настроении, и в отношениях. Ломать себя не нужно. Стоит разве что проверить, откуда эта установка взялась и правда ли она твоя, а не дедова.
 
 <!-- NOTE -->
-> **Автор:** Влад — гештальт-терапевт, ведущий «Мужской среды». Днём пишет код в Big Tech, вечером ведёт клиентов.
+> **Автор:** Влад — психолог, ведущий «Мужской среды». Днём пишет код в Big Tech, вечером ведёт клиентов.
 > Статья носит информационный характер и не заменяет консультацию специалиста.
 > **Источники:** [BBC Worklife — Sweden, where it's taboo for dads to skip parental leave](https://www.bbc.com/worklife/article/20240130-sweden-where-its-taboo-for-dads-to-skip-parental-leave) · [Försäkringskassan — история родительского страхования](https://www.forsakringskassan.se/privatperson/foralder/foraldraforsakringens-historia) · [Försäkringskassan — parental benefit](https://www.forsakringskassan.se/english/parents/when-the-child-is-born/parental-benefit) · [OECD — Use of childbirth leave](https://www.oecd.org/els/family/PF2-2-Use-childbirth-leave.pdf) · [ISF — Fathers who do not use parental leave (2023)](https://isf.se/publikationer/rapporter/2023/2023-04-04-fathers-who-do-not-use-parental-leave) · [BBC News — business](https://www.bbc.com/news/business-56585698) · [Population Europe — щедрый отпуск и психическое здоровье](https://population-europe.eu/research/popdigests/generous-parental-leave-protective-against-poorer-mental-health-among-parents) · [Population Europe — отпуск и алкоголь](https://population-europe.eu/research/policy-insights/fathers-parental-leave-protects-against-alcohol-related-morbidity) · [Population Europe — психическое здоровье отцов-мигрантов](https://population-europe.eu/research/policy-insights/use-parental-leave-improves-mental-health-migrant-fathers) · [Journal of Marriage and Family — маскулинные отрасли](https://doi.org/10.1111/j.1741-3737.2006.00258.x) · [IFFS — матери и неполный рабочий день](https://www.iffs.se/media/1118/20051201134956filU8YIJLRAaC7u4FV7gUmy.pdf) · [Nordic Gender Effect at Work](https://www.norden.org/en/publication/nordic-gender-effect-work)
 

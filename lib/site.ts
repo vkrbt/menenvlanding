@@ -48,7 +48,7 @@ export const WEBSITE_ID = `${SITE_URL}/#website`
 
 export const VLAD = {
   name: 'Влад',
-  jobTitle: 'Гештальт-терапевт, ведущий «Мужской среды»',
+  jobTitle: 'Психолог, ведущий «Мужской среды»',
   url: 'https://www.instagram.com/vkrbt/',
   handle: '@vkrbt',
 } as const
