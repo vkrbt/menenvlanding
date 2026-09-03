@@ -102,7 +102,7 @@ export default function MeetingPage() {
             <li><strong>Раз в две недели, по средам</strong> — 18:00 по Варшаве, 19:00 по Минску</li>
             <li>Длительность — <strong>три часа</strong>, в Zoom</li>
             <li><strong>Мужчины 25+</strong>, состав постоянный</li>
-            <li>Ведут <strong>двое</strong>: {VLAD.name} — {VLAD.jobTitle.toLowerCase()}, {ZHENYA.name} — {ZHENYA.jobTitle.toLowerCase()}</li>
+            <li>Ведут <strong>двое</strong>: {VLAD.name} — {VLAD.profession}, {ZHENYA.name} — {ZHENYA.profession}</li>
             <li>Начинается с <strong>короткого созвона-знакомства</strong> — до первой встречи</li>
             <li>Сообщество <strong>русскоязычное</strong>: без страховок, направлений и языкового барьера</li>
             <li>Тема каждой встречи известна заранее</li>

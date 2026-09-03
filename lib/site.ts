@@ -46,9 +46,15 @@ export const OG_IMAGE_BOOK = `${SITE_URL}/og-book.png`
 export const ORG_ID = `${SITE_URL}/#organization`
 export const WEBSITE_ID = `${SITE_URL}/#website`
 
+/**
+ * `jobTitle` уходит в schema.org и потому пишется полностью, с ролью в проекте.
+ * `profession` — то же самое для вёрстки: одно слово, строчными, без хвоста
+ * «ведущий „Мужской среды“», который на самом сайте только мешает
+ */
 export const VLAD = {
   name: 'Влад',
   jobTitle: 'Психолог, ведущий «Мужской среды»',
+  profession: 'психолог',
   url: 'https://www.instagram.com/vkrbt/',
   handle: '@vkrbt',
 } as const
@@ -56,6 +62,7 @@ export const VLAD = {
 export const ZHENYA = {
   name: 'Женя',
   jobTitle: 'Психиатр-нарколог, ведущий «Мужской среды»',
+  profession: 'психиатр-нарколог',
   url: 'https://www.instagram.com/evgeny_yakubovskiy/',
   handle: '@evgeny_yakubovskiy',
 } as const
