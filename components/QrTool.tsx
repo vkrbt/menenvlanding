@@ -7,30 +7,15 @@ import { SITE_URL } from '@/lib/site'
 /** Параметры UTM в том порядке, в каком их ждут Метрика и GA. */
 const UTM_FIELDS = [
   { key: 'utm_source', label: 'Источник', hint: 'откуда трафик: telegram, instagram, flyer' },
-  { key: 'utm_medium', label: 'Тип', hint: 'канал: qr, social, cpc, email' },
   { key: 'utm_campaign', label: 'Кампания', hint: 'что рекламируем: vstrecha-oct, kniga' },
-  { key: 'utm_content', label: 'Содержание', hint: 'вариант креатива: flyer-a5, banner-2' },
-  { key: 'utm_term', label: 'Ключевое слово', hint: 'для платного поиска, обычно пусто' },
 ] as const
 
 type UtmKey = (typeof UTM_FIELDS)[number]['key']
 type Utm = Record<UtmKey, string>
 
-const EMPTY_UTM: Utm = {
-  utm_source: '', utm_medium: '', utm_campaign: '', utm_content: '', utm_term: '',
-}
+const EMPTY_UTM: Utm = { utm_source: '', utm_campaign: '' }
 
 const PNG_SIZES = [512, 1024, 2048]
-
-/** Уровни коррекции ошибок: чем выше, тем больше грязи и перекрытий переживёт код. */
-const LEVELS = [
-  { value: 'L', label: 'L — 7%' },
-  { value: 'M', label: 'M — 15%' },
-  { value: 'Q', label: 'Q — 25%' },
-  { value: 'H', label: 'H — 30%' },
-] as const
-
-type Level = (typeof LEVELS)[number]['value']
 
 /** Сборка ссылки: пустые метки не добавляем, существующие в URL — перетираем. */
 function buildUrl(base: string, utm: Utm): { url: string; error: string | null } {
@@ -62,7 +47,7 @@ function buildUrl(base: string, utm: Utm): { url: string; error: string | null }
 
 /** Имя файла из кампании и источника — чтобы в папке «Загрузки» их можно было различить. */
 function fileName(utm: Utm, ext: string): string {
-  const parts = [utm.utm_campaign, utm.utm_source, utm.utm_content]
+  const parts = [utm.utm_campaign, utm.utm_source]
     .map((p) => p.trim().toLowerCase().replace(/[^a-z0-9-]+/g, '-').replace(/^-|-$/g, ''))
     .filter(Boolean)
   return `qr-${parts.join('-') || 'sreda'}.${ext}`
@@ -80,9 +65,12 @@ function download(blob: Blob, name: string): void {
 export default function QrTool() {
   const [base, setBase] = useState(SITE_URL)
   const [utm, setUtm] = useState<Utm>(EMPTY_UTM)
-  const [logo, setLogo] = useState(true)
-  const [level, setLevel] = useState<Level>('H')
+  const [logo, setLogo] = useState(false)
   const [pngSize, setPngSize] = useState(1024)
+
+  // Коррекцию не выносим в настройку: она нужна ровно под одно решение — знак в
+  // центре перекрывает модули, и без максимального уровня код может не прочитаться.
+  const level = logo ? 'H' : 'M'
   const [svg, setSvg] = useState('')
   const [copied, setCopied] = useState(false)
   const [failed, setFailed] = useState<string | null>(null)
@@ -173,30 +161,11 @@ export default function QrTool() {
         </div>
 
         <label className="qr__toggle">
-          <input
-            type="checkbox"
-            checked={logo}
-            onChange={(e) => {
-              setLogo(e.target.checked)
-              // Логотип перекрывает модули — без максимальной коррекции код может не прочитаться
-              if (e.target.checked) setLevel('H')
-            }}
-          />
-          <span>
-            Логотип «Мужская среда» в центре
-            {logo && level !== 'H' && <em className="qr__warn"> — с ним нужен уровень H</em>}
-          </span>
+          <input type="checkbox" checked={logo} onChange={(e) => setLogo(e.target.checked)} />
+          <span>Логотип «Мужская среда» в центре</span>
         </label>
 
         <div className="qr__row">
-          <label className="qr__field qr__field--inline">
-            <span className="qr__label">Коррекция ошибок</span>
-            <select className="qr__input" value={level} onChange={(e) => setLevel(e.target.value as Level)}>
-              {LEVELS.map((l) => (
-                <option key={l.value} value={l.value}>{l.label}</option>
-              ))}
-            </select>
-          </label>
           <label className="qr__field qr__field--inline">
             <span className="qr__label">Размер PNG</span>
             <select className="qr__input" value={pngSize} onChange={(e) => setPngSize(Number(e.target.value))}>

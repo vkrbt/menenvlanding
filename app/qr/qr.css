@@ -106,11 +106,6 @@ select.qr__input { cursor: pointer; }
   cursor: pointer;
 }
 
-.qr__warn {
-  font-style: normal;
-  color: var(--pricing-note-accent);
-}
-
 .qr__clear {
   font-size: 13px;
   color: var(--text-dim);
