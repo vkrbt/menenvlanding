@@ -268,6 +268,10 @@ section[id] {
   50% { opacity: 0.4; }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .badge::before { animation: none; }
+}
+
 /* ============================================================
    SECTION TITLE
 ============================================================ */
@@ -656,9 +660,11 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
   color: var(--text-muted);
   line-height: 1.65;
   max-width: 56ch;
-  margin-top: 4px;
+  margin-top: -12px;
   opacity: 0.85;
 }
+
+.hero__inner > .btn { margin-top: 8px; }
 
 /* ============================================================
    COUNTDOWN
@@ -905,7 +911,7 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
 ============================================================ */
 .features__list {
   display: grid;
-  gap: 8px;
+  gap: 16px;
   grid-template-columns: 1fr;
 }
 
@@ -1114,6 +1120,7 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
   gap: 12px;
   width: 100%;
   max-width: 720px;
+  margin-block: 16px;
 }
 
 .yt-carousel__track {
@@ -1132,6 +1139,8 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
   flex: 0 0 100%;
   scroll-snap-align: start;
   aspect-ratio: 16 / 9;
+  background: var(--bg-2);
+  border-radius: 12px;
 }
 
 .yt-carousel__item iframe {
@@ -1381,7 +1390,7 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
 .faq__list {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 8px;
   max-width: 720px;
 }
 
@@ -1536,9 +1545,12 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
   color: var(--text-muted);
 }
 
+.cta-final__inner > .btn { margin-top: 8px; }
+
 .cta-final__hint {
   font-size: 13px;
   color: var(--text-dim);
+  margin-top: -8px;
 }
 
 /* ============================================================
@@ -1581,7 +1593,7 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
 
 .testimonials__grid {
   display: grid;
-  gap: 12px;
+  gap: 16px;
   grid-template-columns: 1fr;
 }
 
@@ -1599,6 +1611,8 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
   border-radius: var(--radius);
   padding: 28px 24px;
   position: relative;
+  display: flex;
+  flex-direction: column;
   transition: border-color 0.2s;
 }
 
@@ -1621,6 +1635,14 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
   line-height: 1.6;
   color: var(--text-muted);
   padding-top: 20px;
+}
+
+.tcard__author {
+  margin-top: auto;
+  padding-top: 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
 }
 
 .tcard strong {
@@ -1699,8 +1721,12 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
 @media (prefers-reduced-motion: no-preference) {
   .animate-in {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transform: translateY(20px);
+    transition:
+      opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+      transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+      border-color 0.2s,
+      box-shadow 0.25s;
   }
 
   .animate-in.is-visible {
@@ -1715,7 +1741,7 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
 .attendance-policy__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 16px;
   margin-top: 48px;
 }
 
@@ -1745,6 +1771,10 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
   color: var(--text-muted);
   line-height: 1.65;
 }
+
+/* Политика пропусков и «Как попасть» стоят подряд на одном фоне —
+   без этого между ними двойной отступ секции */
+.attendance-policy + .process { padding-top: 0; }
 
 @media (max-width: 900px) {
   .attendance-policy__grid {

@@ -26,12 +26,18 @@ export default function ScrollAnimations({
   rootMargin,
 }: Props) {
   useEffect(() => {
+    const timers: number[] = []
     const io = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (!entry.isIntersecting) continue
-          entry.target.classList.add('is-visible')
-          io.unobserve(entry.target)
+          const el = entry.target as HTMLElement
+          el.classList.add('is-visible')
+          io.unobserve(el)
+          // После появления задержка не нужна: иначе с ней же срабатывает hover карточки
+          if (el.style.transitionDelay) {
+            timers.push(window.setTimeout(() => { el.style.transitionDelay = '' }, 900))
+          }
         }
       },
       rootMargin ? { threshold, rootMargin } : { threshold },
@@ -39,16 +45,21 @@ export default function ScrollAnimations({
 
     const nodes = document.querySelectorAll<HTMLElement>(targets ?? selector)
 
-    nodes.forEach((el, i) => {
+    nodes.forEach((el) => {
       if (targets) {
         el.classList.add('animate-in')
-        // Задержка считается по сквозному индексу по всему списку — как в оригинале
-        el.style.transitionDelay = `${(i % 4) * 60}ms`
+        // Лесенка внутри своей группы: первая карточка секции стартует без задержки
+        const siblings = el.parentElement ? Array.from(el.parentElement.children) : [el]
+        const i = siblings.indexOf(el)
+        el.style.transitionDelay = `${Math.min(i, 3) * 70}ms`
       }
       io.observe(el)
     })
 
-    return () => io.disconnect()
+    return () => {
+      io.disconnect()
+      timers.forEach(clearTimeout)
+    }
   }, [targets, selector, threshold, rootMargin])
 
   return null
