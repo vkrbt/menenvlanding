@@ -112,9 +112,9 @@ export function homeGraph(faq: Array<{ q: string; a: string }>) {
           availableLanguage: 'ru',
         },
         offers: [
-          { '@type': 'Offer', name: 'За каждую встречу', price: '25', priceCurrency: 'EUR', url: `${SITE_URL}/#pricing` },
-          { '@type': 'Offer', name: 'Минимальное членство — 2 встречи в месяц', price: '20', priceCurrency: 'EUR', url: `${SITE_URL}/#pricing` },
-          { '@type': 'Offer', name: '3 месяца — 6 встреч', price: '18', priceCurrency: 'EUR', url: `${SITE_URL}/#pricing` },
+          { '@type': 'Offer', name: 'За каждую встречу', price: '50', priceCurrency: 'EUR', url: `${SITE_URL}/#pricing` },
+          { '@type': 'Offer', name: 'Минимальное членство — 2 встречи в месяц', price: '40', priceCurrency: 'EUR', url: `${SITE_URL}/#pricing` },
+          { '@type': 'Offer', name: '3 месяца — 6 встреч', price: '36', priceCurrency: 'EUR', url: `${SITE_URL}/#pricing` },
         ],
       },
       {
