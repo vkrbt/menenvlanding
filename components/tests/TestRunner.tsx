@@ -60,6 +60,9 @@ export default function TestRunner({ scale, questions }: { scale: Scale; questio
 
   const item = scale.items[state.index]
   const total = scale.items.length
+  // Номер вопроса по бланку: уточнение «19а» идёт под номером своего пункта
+  const isExtra = item ? !/^\d+$/.test(item.id) : false
+  const number = scale.items.slice(0, state.index + 1).filter((i) => /^\d+$/.test(i.id)).length
   const answered = item ? state.answers[item.id] : undefined
   const prevPart = state.index > 0 ? scale.items[state.index - 1].part : undefined
   const part =
@@ -76,7 +79,8 @@ export default function TestRunner({ scale, questions }: { scale: Scale; questio
     if (state.screen === 'question') heading.current?.focus({ preventScroll: true })
     if (state.screen !== 'intro') {
       const top = root.current?.getBoundingClientRect().top ?? 0
-      if (top < 0) root.current?.scrollIntoView({ block: 'start' })
+      // Результат всегда к верху экрана; между вопросами — только если блок ушёл вверх
+      if (state.screen === 'result' || top < 0) root.current?.scrollIntoView({ block: 'start' })
     }
   }, [state.screen, state.index])
 
@@ -129,10 +133,11 @@ export default function TestRunner({ scale, questions }: { scale: Scale; questio
   return (
     <div className="trun ym-hide-content" ref={root}>
       <div className="trun__progress" aria-hidden="true">
-        <div className="trun__progress-bar" style={{ transform: `scaleX(${state.index / total})` }} />
+        <div className="trun__progress-bar" style={{ transform: `scaleX(${(number - 1) / questions})` }} />
       </div>
       <p className="trun__count">
-        Вопрос {item.id} из {questions}
+        Вопрос {number} из {questions}
+        {isExtra && <span className="trun__frame"> · уточнение</span>}
         {scale.timeframe && <span className="trun__frame"> · {scale.timeframe}</span>}
       </p>
 

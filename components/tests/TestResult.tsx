@@ -110,8 +110,6 @@ export default function TestResult({
         Твой результат
       </h2>
 
-      {risk === 2 && <CrisisBlock urgent />}
-
       {graded.length > 3 ? (
         <Profile scale={scale} rows={graded} />
       ) : (
@@ -133,7 +131,7 @@ export default function TestResult({
         </p>
       )}
 
-      {risk === 1 && <CrisisBlock />}
+      {risk !== undefined && <CrisisBlock urgent={risk === 2} />}
 
       {toSpecialist && (
         <section className="tres__next">

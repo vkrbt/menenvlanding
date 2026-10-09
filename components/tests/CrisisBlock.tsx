@@ -2,7 +2,9 @@ import { CRISIS_CHECKED, CRISIS_CONTACTS, CRISIS_INTERNATIONAL } from '@/lib/tes
 
 /**
  * Блок экстренной помощи. Показывается по ответу на пункт о суицидальных
- * мыслях независимо от суммы баллов; urgent — над результатом.
+ * мыслях независимо от суммы баллов. Стоит сразу под баллом: результат
+ * остаётся главным на экране, а 112 видно без прокрутки; линии по странам
+ * раскрываются по клику. urgent — усиленная рамка при выраженных мыслях.
  */
 export default function CrisisBlock({ urgent = false }: { urgent?: boolean }) {
   return (
@@ -14,6 +16,8 @@ export default function CrisisBlock({ urgent = false }: { urgent?: boolean }) {
         в экстренную службу <a href="tel:112">112</a>.
       </p>
 
+      <details className="crisis__more">
+        <summary>Линии помощи по странам</summary>
       <ul className="crisis__list">
         {CRISIS_CONTACTS.map((c) => (
           <li key={c.country}>
@@ -29,6 +33,7 @@ export default function CrisisBlock({ urgent = false }: { urgent?: boolean }) {
           </li>
         ))}
       </ul>
+      </details>
 
       <p className="crisis__other">
         Другая страна — линию подберёт{' '}

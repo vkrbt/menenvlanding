@@ -434,7 +434,7 @@
   background: var(--accent-soft-bg);
 }
 
-.crisis--urgent { border-width: 2px; }
+.crisis--urgent { border-width: 2px; background: color-mix(in srgb, var(--community-accent) 14%, var(--bg)); }
 
 .crisis h3 { font-size: 1.15rem; margin-bottom: 8px; }
 
@@ -445,6 +445,19 @@
 }
 
 .crisis a { color: var(--link); font-weight: 700; }
+
+.crisis__more { margin-top: 12px; }
+
+.crisis__more summary {
+  cursor: pointer;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  color: var(--link);
+}
+
+.crisis__more summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
 
 .crisis__list {
   display: flex;
