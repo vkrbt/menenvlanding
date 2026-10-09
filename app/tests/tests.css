@@ -47,11 +47,19 @@
 .tpage__related a:hover { color: var(--link-hover); }
 
 /* ---------- Хаб ---------- */
+.thub__group + .thub__group { margin-top: 48px; }
+
+.thub__topic-title {
+  font-family: 'Dela Gothic One', sans-serif;
+  font-size: clamp(1.2rem, 2.8vw, 1.5rem);
+  line-height: 1.25;
+  margin-bottom: 16px;
+}
+
 .thub {
   display: grid;
   gap: 16px;
   grid-template-columns: 1fr;
-  padding-top: 16px;
 }
 
 @media (min-width: 720px) {

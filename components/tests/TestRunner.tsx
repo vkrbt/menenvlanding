@@ -21,22 +21,44 @@ type Action =
   | { type: 'back' }
   | { type: 'restart' }
 
+/** Пропускаемый вопрос: ответ на нём подставляется сам */
+function skipped(scale: Scale, index: number, answers: Answers): boolean {
+  const s = scale.items[index]?.skipIf
+  return !!s && answers[s.ifItem] === s.equals
+}
+
+/** Подставить ответы всем пропускаемым вопросам — до подсчёта и при переходе */
+function fillSkipped(scale: Scale, answers: Answers): Answers {
+  const out = { ...answers }
+  for (const item of scale.items) {
+    if (item.skipIf && out[item.skipIf.ifItem] === item.skipIf.equals) out[item.id] = item.skipIf.value
+  }
+  return out
+}
+
 function reducer(scale: Scale) {
   const last = scale.items.length - 1
+  const step = (from: number, dir: 1 | -1, answers: Answers) => {
+    let i = from + dir
+    while (i >= 0 && i <= last && skipped(scale, i, answers)) i += dir
+    return i
+  }
   return (state: State, action: Action): State => {
     switch (action.type) {
       case 'start':
         return { screen: 'question', index: 0, answers: {} }
       case 'answer':
         return { ...state, answers: { ...state.answers, [action.id]: action.value } }
-      case 'next':
-        return state.index < last
-          ? { ...state, index: state.index + 1 }
-          : { ...state, screen: 'result' }
-      case 'back':
-        return state.screen === 'result'
-          ? { ...state, screen: 'question', index: last }
-          : { ...state, index: Math.max(0, state.index - 1) }
+      case 'next': {
+        const answers = fillSkipped(scale, state.answers)
+        const i = step(state.index, 1, answers)
+        return i <= last ? { ...state, answers, index: i } : { ...state, answers, screen: 'result' }
+      }
+      case 'back': {
+        const from = state.screen === 'result' ? last + 1 : state.index
+        const i = step(from, -1, state.answers)
+        return { ...state, screen: 'question', index: Math.max(0, i) }
+      }
       case 'restart':
         return { screen: 'question', index: 0, answers: {} }
     }

@@ -235,7 +235,7 @@ export function testsHubGraph() {
       {
         '@type': 'CollectionPage',
         '@id': url,
-        name: 'Тесты на депрессию и тревогу',
+        name: 'Психологические тесты',
         inLanguage: 'ru',
         isPartOf: { '@id': WEBSITE_ID },
         publisher: { '@id': ORG_ID },

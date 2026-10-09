@@ -1,4 +1,4 @@
-import { explanation, SPECIALIST_FROM_SEVERITY, YM_LEGEND } from '@/lib/tests/copy'
+import { explanation, LEGENDS, SPECIALIST_FROM_SEVERITY } from '@/lib/tests/copy'
 import type { Scale, ScoreResult, Subscale, SubscaleResult } from '@/lib/tests/types'
 import { MEETING_URL, TESTS_URL } from '@/lib/site'
 import CrisisBlock from './CrisisBlock'
@@ -7,9 +7,9 @@ type Ok = Extract<ScoreResult, { ok: true }>
 
 /** Число для показа: целые как есть, сотые — со знаком и запятой */
 function fmt(sub: Subscale, value: number): string {
-  if (!sub.divisor || sub.divisor === 1) return String(value)
-  const s = Math.abs(value).toFixed(2).replace('.', ',')
-  return value > 0 ? `+${s}` : value < 0 ? `−${s}` : s
+  const abs = !sub.divisor || sub.divisor === 1 ? String(Math.abs(value)) : Math.abs(value).toFixed(2).replace('.', ',')
+  if (value < 0) return `−${abs}`
+  return value > 0 && sub.signed ? `+${abs}` : abs
 }
 
 /** Доля позиции raw на отрезке [min, max] — для полосы и маркера */
@@ -42,7 +42,7 @@ function Track({ sub, raw }: { sub: Subscale; raw: number }) {
 }
 
 function Card({ scale, sub, r }: { scale: Scale; sub: Subscale; r: SubscaleResult }) {
-  const ex = r.category ? explanation(scale.slug, sub.id, r.category.severity) : undefined
+  const ex = r.category ? explanation(scale.slug, sub.id, r.category.severity, r.category.id) : undefined
   return (
     <section className="tres__card">
       <h3 className="tres__name">{sub.title}</h3>
@@ -66,7 +66,7 @@ function Card({ scale, sub, r }: { scale: Scale; sub: Subscale; r: SubscaleResul
 function Profile({ scale, rows }: { scale: Scale; rows: Array<[Subscale, SubscaleResult]> }) {
   return (
     <section className="tres__card">
-      <h3 className="tres__name">Профиль по шести шкалам</h3>
+      <h3 className="tres__name">Профиль по шкалам</h3>
       <ul className="tres__profile">
         {rows.map(([sub, r]) => (
           <li key={sub.id}>
@@ -74,16 +74,18 @@ function Profile({ scale, rows }: { scale: Scale; rows: Array<[Subscale, Subscal
             <span className="tres__profile-value">{fmt(sub, r.value)}</span>
             <Track sub={sub} raw={r.raw} />
             <span className={`tres__profile-cat tres__profile-cat--${r.category?.severity ?? 0}`}>
-              {r.category ? explanation(scale.slug, sub.id, r.category.severity)?.title : ''}
+              {r.category ? (explanation(scale.slug, sub.id, r.category.severity, r.category.id)?.title ?? r.category.label) : ''}
             </span>
           </li>
         ))}
       </ul>
-      <ul className="tres__legend">
-        {YM_LEGEND.map((l) => (
-          <li key={l}>{l}</li>
-        ))}
-      </ul>
+      {LEGENDS[scale.slug] && (
+        <ul className="tres__legend">
+          {LEGENDS[scale.slug].map((l) => (
+            <li key={l}>{l}</li>
+          ))}
+        </ul>
+      )}
     </section>
   )
 }
@@ -138,7 +140,7 @@ export default function TestResult({
           <h3>Что делать дальше</h3>
           <p>
             {maxSeverity >= SPECIALIST_FROM_SEVERITY
-              ? 'Результат в диапазоне, при котором методика советует консультацию специалиста.'
+              ? 'Результат в зоне высоких значений этой шкалы — его стоит обсудить со специалистом.'
               : 'Ты отметил мысли о смерти — об этом стоит поговорить со специалистом, даже если общий балл невысокий.'}{' '}
             Тест — не диагноз: оценить состояние может только врач. Начать можно с
             психотерапевта или психиатра — результат этого теста можно показать ему.

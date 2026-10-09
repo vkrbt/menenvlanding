@@ -249,6 +249,7 @@ const subscales: Subscale[] = SUBSCALE_IDS.map((id) => {
     min: rows.reduce((s, r) => s + Math.min(...r), 0),
     max: rows.reduce((s, r) => s + Math.max(...r), 0),
     divisor: 100,
+    signed: true,
     categories,
   }
 })
