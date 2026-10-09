@@ -1,7 +1,8 @@
 import { clusterOfPost, topicCanonical, type Cluster } from './clusters'
 import { plainText } from './markdown'
 import type { Post } from './posts'
-import { BLOG_URL, MEETING_URL, OG_IMAGE, ORG_ID, SITE_URL, VLAD, WEBSITE_ID, ZHENYA } from './site'
+import { BLOG_URL, MEETING_URL, OG_IMAGE, ORG_ID, SITE_URL, TESTS_URL, VLAD, WEBSITE_ID, ZHENYA } from './site'
+import { TESTS, type TestEntry } from './tests/registry'
 
 /**
  * Сборка JSON-LD. Граф статей ссылается на #organization с главной,
@@ -214,6 +215,72 @@ export function meetingGraph() {
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Главная', item: SITE_URL },
           { '@type': 'ListItem', position: 2, name: 'Как проходит встреча' },
+        ],
+      },
+    ],
+  }
+}
+
+/**
+ * Самотесты. Намеренно WebPage, а не MedicalWebPage: это скрининг, не
+ * медицинская услуга, а тематика и так YMYL.
+ */
+const testsCrumb = { '@type': 'ListItem', position: 2, name: 'Тесты', item: `${SITE_URL}${TESTS_URL}` }
+
+export function testsHubGraph() {
+  const url = `${SITE_URL}${TESTS_URL}`
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'CollectionPage',
+        '@id': url,
+        name: 'Тесты на депрессию и тревогу',
+        inLanguage: 'ru',
+        isPartOf: { '@id': WEBSITE_ID },
+        publisher: { '@id': ORG_ID },
+        mainEntity: {
+          '@type': 'ItemList',
+          itemListElement: TESTS.map((t, i) => ({
+            '@type': 'ListItem',
+            position: i + 1,
+            name: t.scale.title,
+            url: `${url}/${t.scale.slug}`,
+          })),
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Главная', item: SITE_URL },
+          { '@type': 'ListItem', position: 2, name: 'Тесты' },
+        ],
+      },
+    ],
+  }
+}
+
+export function testGraph(test: TestEntry) {
+  const url = `${SITE_URL}${TESTS_URL}/${test.scale.slug}`
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': url,
+        name: test.scale.title,
+        description: test.seoDescription,
+        inLanguage: 'ru',
+        isPartOf: { '@id': WEBSITE_ID },
+        publisher: { '@id': ORG_ID },
+        about: { '@type': 'Thing', name: test.topic },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Главная', item: SITE_URL },
+          testsCrumb,
+          { '@type': 'ListItem', position: 3, name: test.scale.shortTitle },
         ],
       },
     ],

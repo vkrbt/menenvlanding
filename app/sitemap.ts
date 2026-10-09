@@ -1,7 +1,8 @@
 import type { MetadataRoute } from 'next'
 import { nonEmptyClusters, postsOfCluster, topicCanonical } from '@/lib/clusters'
 import { getAllPosts } from '@/lib/posts'
-import { BLOG_URL, MEETING_URL, SITE_URL } from '@/lib/site'
+import { BLOG_URL, MEETING_URL, SITE_URL, TESTS_URL } from '@/lib/site'
+import { TESTS } from '@/lib/tests/registry'
 
 // output: 'export' требует явно объявить маршрут статическим
 export const dynamic = 'force-static'
@@ -21,6 +22,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}${MEETING_URL}`, lastModified: newest, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/book`, lastModified: newest, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${SITE_URL}${BLOG_URL}`, lastModified: newest, changeFrequency: 'weekly', priority: 0.8 },
+    // Самотесты: вход по симптомным запросам, хаб чуть выше самих тестов
+    { url: `${SITE_URL}${TESTS_URL}`, lastModified: newest, changeFrequency: 'monthly', priority: 0.8 },
+    ...TESTS.map((t) => ({
+      url: `${SITE_URL}${TESTS_URL}/${t.scale.slug}`,
+      lastModified: newest,
+      changeFrequency: 'monthly' as const,
+      priority: 0.7,
+    })),
     // Страницы пагинации: приоритет ниже листинга — это маршрут обхода, а не цель
     // Пагинация в карту не попадает: она закрыта в robots.txt (краулинговый
     // бюджет). Держать в sitemap то, что запрещено обходить, — противоречие.

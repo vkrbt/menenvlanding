@@ -95,6 +95,7 @@ _Первый шаг — короткий созвон-знакомство, д�
 > **Источники:** [Into the unknown: обзор моделей неопределённости (Journal of Anxiety Disorders)](https://doi.org/10.1016/j.janxdis.2016.02.007)
 
 ## Читать дальше
+- [Тест Спилбергера–Ханина: реактивная и личностная тревожность](/tests/spielberger-khanin)
 - [Тревожность у мужчин: как она маскируется](/blog/trevozhnost-u-muzhchin)
 - [Мозг не отдыхает: почему голова не выключается](/blog/mozg-ne-otdyhaet)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

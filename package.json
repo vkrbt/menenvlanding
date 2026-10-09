@@ -5,7 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "serve": "npx --yes serve out -p 4174",
-    "verify": "node scripts/verify-parity.mjs"
+    "verify": "node scripts/verify-parity.mjs",
+    "test": "node --test --experimental-strip-types --no-warnings=ExperimentalWarning \"lib/tests/**/*.test.ts\""
   },
   "dependencies": {
     "next": "16.2.10",

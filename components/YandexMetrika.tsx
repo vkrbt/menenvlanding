@@ -1,5 +1,5 @@
 import Script from 'next/script'
-import { METRIKA_COUNTER_ID } from '@/lib/site'
+import { METRIKA_COUNTER_ID, TESTS_URL } from '@/lib/site'
 
 // Идентификатор живёт в lib/site.ts: на него ссылается ещё и обработчик целей
 const COUNTER_ID = METRIKA_COUNTER_ID
@@ -22,7 +22,9 @@ export default function YandexMetrika() {
     k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
 })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=${COUNTER_ID}', 'ym');
 
-ym(${COUNTER_ID}, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});`}
+// На самотестах ни Вебвизора, ни карты кликов: по координатам клика видно, какой ответ выбран
+var ymPrivate = location.pathname.indexOf('${TESTS_URL}') === 0;
+ym(${COUNTER_ID}, 'init', {ssr:true, webvisor:!ymPrivate, clickmap:!ymPrivate, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});`}
       </Script>
 
       <noscript>

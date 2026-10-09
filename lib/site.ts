@@ -30,12 +30,21 @@ export const METRIKA_GOALS = {
    * без неё не видно, какие материалы двигают человека к заявке.
    */
   ctaArticleToMeeting: 'cta_k_vstreche',
+  /**
+   * Самотесты: начало и завершение. В параметрах — только slug теста.
+   * Ответы, баллы и категории в Метрику не уходят никогда (анонимность).
+   */
+  testStart: 'test_start',
+  testComplete: 'test_complete',
 } as const
 export const YOUTUBE_URL = 'https://www.youtube.com/@men-env'
 export const YOUTUBE_LABEL = 'youtube.com/@men-env'
 
 /** URL раздела блога. Без хвостового слеша — см. trailingSlash в next.config.mjs */
 export const BLOG_URL = '/blog'
+
+/** Хаб самотестов */
+export const TESTS_URL = '/tests'
 
 // Имя с версией: соцсети кешируют превью по URL, и без смены адреса
 // в шарах ещё долго висела бы старая картинка
@@ -82,6 +91,7 @@ const NAV_ITEMS: Array<{ label: string; anchor?: string; href?: string }> = [
   { label: 'Цена', anchor: '#pricing' },
   { label: 'Вопросы', anchor: '#faq' },
   { label: 'Блог', href: BLOG_URL },
+  { label: 'Тесты', href: TESTS_URL },
 ]
 
 export function navLinks(isHome: boolean): NavLink[] {

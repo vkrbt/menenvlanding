@@ -63,6 +63,7 @@ _Вход — через короткий созвон-знакомство._
 > **Источники:** [Ladders — опрос LinkedIn о Sunday scaries](https://www.theladders.com/career-advice/this-is-the-number-of-people-who-have-major-sunday-night-scaries) · [Inc. — данные Adobe](https://www.inc.com/bruce-crumley/the-sunday-scaries-are-worse-and-more-widespread-than-we-realize/91271040) · [Рамблер — синдром понедельника, данные SuperJob](https://www.rambler.ru/pro/produktivnost/54214726-sindrom-ponedelnika-chto-eto-i-kak-perestat-nenavidet-pervyy-rabochiy-den-nedeli/) · [Психологи об упреждающей тревоге](https://health.yahoo.com/conditions/mental-health/anxiety/articles/ever-sunday-scaries-psychologists-list-164513860.html) · [Psychology Today — 5 приёмов против Sunday scaries](https://www.psychologytoday.com/us/blog/mapping-your-mental-health-journey/202405/5-ways-to-overcome-the-sunday-scaries)
 
 ## Читать дальше
+- [Тест Спилбергера–Ханина: реактивная и личностная тревожность](/tests/spielberger-khanin)
 - [Тревожность у мужчин: как она маскируется под контроль и раздражение](/blog/trevozhnost-u-muzhchin)
 - [Финансовая тревога: когда деньги есть, а страшно всё равно](/blog/trevoga-o-dengah)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

@@ -109,6 +109,7 @@ _Первый шаг — короткий созвон-знакомство, д�
 > **Источники:** [Overview of Medically Unexplained Symptoms (Springer)](https://doi.org/10.1007/978-3-030-59181-6_1) · [Метаанализы связи мужских норм и психического здоровья (Journal of Counseling Psychology, 2017)](https://doi.org/10.1037/cou0000176)
 
 ## Читать дальше
+- [Опросник Яхина–Менделевича: тест на невротические состояния](/tests/yakhin-mendelevich)
 - [Болит а анализы в норме: что это значит](/blog/bolit-a-analizy-v-norme)
 - [Боль в спине от стресса: как это устроено](/blog/bol-v-spine-ot-stressa)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

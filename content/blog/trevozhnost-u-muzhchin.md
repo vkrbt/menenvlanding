@@ -68,6 +68,7 @@ _До первой встречи созваниваемся минут на п�
 > **Источники:** [Science.mail.ru — почему мужчины игнорируют тревожность](https://science.mail.ru/news/2768-muzhchiny-ignoriruyut-trevozhnost/) · [IsraClinic — тревожные расстройства у мужчин](https://www.israclinic.com/nashi-publikatsii/psikhiatriya/trevozhnye-rasstroystva-u-muzhchin-pochemu-o-nih-redko-govoryat-vsluh/) · [NEJM / ВОЗ — соматические проявления психических расстройств](https://www.nejm.org/doi/full/10.1056/NEJM199910283411801) · [HeadsUpGuys — мужское ментальное здоровье](https://headsupguys.org/)
 
 ## Читать дальше
+- [Тест Спилбергера–Ханина: реактивная и личностная тревожность](/tests/spielberger-khanin)
 - [Воскресная тревога: почему к вечеру выходного накрывает](/blog/voskresnaya-trevoga)
 - [Финансовая тревога: когда деньги есть, а страшно всё равно](/blog/trevoga-o-dengah)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)
