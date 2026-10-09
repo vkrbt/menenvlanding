@@ -63,7 +63,7 @@ _До первой встречи созваниваемся минут на п�
 
 <!-- NOTE -->
 > **Автор:** Женя (Евгений Якубовский) — психиатр-нарколог, ведущий «Мужской среды».
-> Статья носит информационный характер и не заменяет консультацию врача. Экстренная помощь: Беларусь 8-801-100-16-11 (круглосуточно), Россия 8-800-2000-122 / 051, другие страны — [findahelpline.com](https://findahelpline.com/ru); неотложная помощь в ЕС — 112.
+> Статья носит информационный характер и не заменяет консультацию врача. Экстренная помощь: Беларусь 133 (круглосуточно), Россия 8-800-2000-122 / 051, другие страны — [findahelpline.com](https://findahelpline.com/ru); неотложная помощь в ЕС — 112.
 > **Источники:** [Медуза — как вести себя с человеком с депрессией](https://meduza.io/feature/2017/05/12/kak-vesti-sebya-s-chelovekom-s-depressiey-instruktsiya) · [Zigmund.Online — если близкий отказывается от помощи](https://zigmund.online/journal/opora/go-to-psychologist/) · [Центр Self — у мужа депрессия: что делать жене](https://my-self.ru/articles/depressiya-u-muzha/) · [Psychologies — как помочь мужчине в депрессии](https://www.psychologies.ru/articles/parni-ne-plachut-kak-pomoch-muzhchine-v-depressii/) · [NEJM / ВОЗ — соматические проявления депрессии](https://www.nejm.org/doi/full/10.1056/NEJM199910283411801)
 
 ## Читать дальше

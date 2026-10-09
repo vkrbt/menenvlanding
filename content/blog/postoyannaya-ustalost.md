@@ -85,7 +85,7 @@ _До первой встречи созваниваемся минут на п�
 
 > **Автор:** Женя (Евгений Якубовский) — психиатр-нарколог, ведущий «Мужской среды».
 
-> Статья носит информационный характер и не заменяет консультацию врача. Если усталость доходит до мыслей «жить незачем» — не оставайся с этим один: Беларусь 8-801-100-16-11, Россия 8-800-2000-122 / 051, другие страны — [findahelpline.com](https://findahelpline.com/ru).
+> Статья носит информационный характер и не заменяет консультацию врача. Если усталость доходит до мыслей «жить незачем» — не оставайся с этим один: Беларусь 133, Россия 8-800-2000-122 / 051, другие страны — [findahelpline.com](https://findahelpline.com/ru).
 
 > **Источники:** [Analyz24 — постоянная усталость: 12 анализов](https://analyz24.ru/poleznaya-informatsiya/nauchno-populyarnye-stati/postoyannaya-ustalost-12-analizov-kotorye-nado-sdat.html) · [ЛабСтори — какие анализы сдать при усталости](https://www.labstori.ru/book/postoyannaya-ustalost-kakie-analizy-sdat/) · [Медгород — анализы при упадке сил](https://medgorod-clinic.ru/stati/kakie-analizy-sdat-pri-postoyannoy-ustalosti-i-upadke-sil-/) · [СМ-Клиника — повышенная утомляемость](https://www.smclinic.ru/simptomy/povyshennaya-utomlyaemost/) · [NEJM / ВОЗ — соматические проявления депрессии](https://www.nejm.org/doi/full/10.1056/NEJM199910283411801)
 

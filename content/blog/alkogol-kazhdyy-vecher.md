@@ -55,7 +55,7 @@ _Вход — через короткий созвон-знакомство._
 
 <!-- NOTE -->
 > **Автор:** Женя (Евгений Якубовский) - психиатр-нарколог, ведущий «Мужской среды».
-> Статья носит информационный характер и не заменяет консультацию врача. Резко бросать при длительном ежедневном употреблении в больших дозах опасно - синдром отмены требует врачебного контроля. Если тяжело: Беларусь 8-801-100-16-11, Россия 8-800-2000-122 / 051, другие страны - [findahelpline.com](https://findahelpline.com/ru).
+> Статья носит информационный характер и не заменяет консультацию врача. Резко бросать при длительном ежедневном употреблении в больших дозах опасно - синдром отмены требует врачебного контроля. Если тяжело: Беларусь 133, Россия 8-800-2000-122 / 051, другие страны - [findahelpline.com](https://findahelpline.com/ru).
 > **Источники:** [ВОЗ - безопасного уровня алкоголя не существует](https://www.who.int/europe/ru/news/item/04-01-2023-no-level-of-alcohol-consumption-is-safe-for-our-health) · [Депздрав Москвы - тест AUDIT](https://mosgorzdrav.ru/ru-RU/test/default/card/5.html) · [Rehab Family - вечерний алкоголизм](https://rehabfamily.com/articles/vecherniy-alkogolizm/) · [Здравница - злоупотребление или зависимость](https://narcorehab.com/articles/zloupotreblenie-alkogolem-ili-alkogolizm-raznica/) · [Consilium - скрытые признаки зависимости](https://consilium.by/poleznye-stati/kak-raspoznat-skrytuyu-alkogolnuyu-zavisimost-priznaki-kotorye-chasto-upuskayut/)
 
 ## Читать дальше

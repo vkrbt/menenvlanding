@@ -55,7 +55,7 @@ _Вход — через короткий созвон-знакомство._
 
 <!-- NOTE -->
 > **Автор:** Женя (Евгений Якубовский) — психиатр-нарколог, ведущий «Мужской среды».
-> Статья носит информационный характер и не заменяет консультацию врача. Если состояние доходит до мыслей «жить незачем» — не оставайся один: Беларусь 8-801-100-16-11, Россия 8-800-2000-122 / 051, другие страны — [findahelpline.com](https://findahelpline.com/ru).
+> Статья носит информационный характер и не заменяет консультацию врача. Если состояние доходит до мыслей «жить незачем» — не оставайся один: Беларусь 133, Россия 8-800-2000-122 / 051, другие страны — [findahelpline.com](https://findahelpline.com/ru).
 > **Источники:** [PsyAndNeuro — компульсивное сексуальное расстройство в МКБ-11](https://psyandneuro.ru/stati/compulsive-sexual-behaviour-disorder/) · [ПроБолезни — клинический разбор психиатра](https://probolezny.ru/pornozavisimost/) · [Берег — правда ли существует порнозависимость](https://bereg.io/feature/2024/07/14/pravda-chto-pornozavisimost-suschestvuet-kak-ponyat-chto-u-menya-problemy-provotsiruet-li-prosmotr-takih-video-nasilie-kak-pomoch-blizkomu) · [Нож — как технологии изменили порнографию и мозг](https://knife.media/porn-transformation/)
 
 ## Читать дальше

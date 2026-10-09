@@ -92,7 +92,7 @@ _Первый шаг — короткий созвон-знакомство, д�
 <!-- NOTE -->
 > **Автор:** Влад — психолог, ведущий «Мужской среды».
 > Статья информационная и не заменяет консультацию специалиста и юридическую консультацию. Приведённые связи между отпуском и здоровьем отцов не обязательно являются причинными.
-> **Телефоны доверия:** Россия — 8-800-2000-122 и 051 (Москва), Беларусь — 8-801-100-16-11 (круглосуточно), из любой страны — [findahelpline.com](https://findahelpline.com/ru). Экстренные службы в ЕС — 112.
+> **Телефоны доверия:** Россия — 8-800-2000-122 и 051 (Москва), Беларусь — 133 (круглосуточно), из любой страны — [findahelpline.com](https://findahelpline.com/ru). Экстренные службы в ЕС — 112.
 > **Источники:** [BBC Worklife: Швеция, где отцу не принято пропускать отпуск](https://www.bbc.com/worklife/article/20240130-sweden-where-its-taboo-for-dads-to-skip-parental-leave) · [ОЭСР: использование отпусков при рождении ребёнка](https://www.oecd.org/els/family/PF2-2-Use-childbirth-leave.pdf) · [Population Europe: щедрый отпуск и психическое здоровье родителей](https://population-europe.eu/research/popdigests/generous-parental-leave-protective-against-poorer-mental-health-among-parents) · [Отцы, не использовавшие отпуск: отчёт ISF, 2023](https://isf.se/publikationer/rapporter/2023/2023-04-04-fathers-who-do-not-use-parental-leave) · [Разбор канала «Мужчины и маскулинности»](https://t.me/menmasculinities/432)
 
 ## Читать дальше

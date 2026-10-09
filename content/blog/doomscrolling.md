@@ -57,7 +57,7 @@ _До первой встречи созваниваемся минут на п�
 
 <!-- NOTE -->
 > **Автор:** Женя (Евгений Якубовский)",) — психиатр-нарколог, ведущий «Мужской среды».
-> Статья носит информационный характер и не заменяет консультацию врача. Если на фоне тревоги появляются мысли о самоповреждении — не оставайся один: Беларусь 8-801-100-16-11, Россия 8-800-2000-122 / 051, другие страны — [findahelpline.com](https://findahelpline.com/ru).
+> Статья носит информационный характер и не заменяет консультацию врача. Если на фоне тревоги появляются мысли о самоповреждении — не оставайся один: Беларусь 133, Россия 8-800-2000-122 / 051, другие страны — [findahelpline.com](https://findahelpline.com/ru).
 > **Источники:** [Journal of Social Media Research](https://jsomer.org/index.php/pub/article/view/102) · [Multidisciplinary Reviews](https://malque.pub/ojs/index.php/mr/article/view/17213) · [Current Research in Ecological and Social Psychology](https://www.sciencedirect.com/science/article/pii/S245195882400071X) · [APA Mental Health Poll 2024](https://www.psychiatry.org/news-room/apa-public-opinion-poll-annual-meeting-2024) · [Reuters Institute Digital News Report 2025](https://reutersinstitute.politics.ox.ac.uk/digital-news-report/2025/dnr-executive-summary)
 
 ## Читать дальше

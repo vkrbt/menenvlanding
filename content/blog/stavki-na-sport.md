@@ -52,7 +52,7 @@ _Вход — через короткий созвон-знакомство._
 
 <!-- NOTE -->
 > **Автор:** Женя (Евгений Якубовский) — психиатр-нарколог, ведущий «Мужской среды».
-> Статья носит информационный характер и не заменяет консультацию врача. Если на фоне тревоги появляются мысли о самоповреждении — не оставайся один: Беларусь 8-801-100-16-11, Россия 8-800-2000-122 / 051, другие страны — [findahelpline.com](https://findahelpline.com/ru).
+> Статья носит информационный характер и не заменяет консультацию врача. Если на фоне тревоги появляются мысли о самоповреждении — не оставайся один: Беларусь 133, Россия 8-800-2000-122 / 051, другие страны — [findahelpline.com](https://findahelpline.com/ru).
 > **Источники:** [NCPG NGAGE 3.0 (2024)](https://www.ncpgambling.org/news/national-council-on-problem-gambling-survey-shows-drop-in-problem-gambling-risk-highlights-ongoing-challenges/) · [JAMA — problem gambling among sports bettors](https://doi.org/10.1001/jamanetworkopen.2022.39670) · [Journal of Gambling Studies — systematic review](https://doi.org/10.1007/s10899-023-10196-0) · [NIDA — mobile sports betting](https://nida.nih.gov/about-nida/noras-blog/2025/11/gambling-disorder-in-the-age-of-mobile-sports-betting) · [Sports betting addiction clinical profile](https://doi.org/10.1007/s11469-024-01386-x)
 
 ## Читать дальше

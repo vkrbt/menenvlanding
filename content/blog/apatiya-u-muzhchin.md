@@ -72,7 +72,7 @@ _Вход — через короткий созвон-знакомство._
 
 <!-- NOTE -->
 > **Автор:** Женя (Евгений Якубовский) — психиатр-нарколог, ведущий «Мужской среды».
-> Статья носит информационный характер и не заменяет консультацию врача. Если появляются мысли о том, что жить не хочется — не оставайся с этим один: Беларусь 8-801-100-16-11, Россия 8-800-2000-122 / 051, другие страны — [findahelpline.com](https://findahelpline.com/ru).
+> Статья носит информационный характер и не заменяет консультацию врача. Если появляются мысли о том, что жить не хочется — не оставайся с этим один: Беларусь 133, Россия 8-800-2000-122 / 051, другие страны — [findahelpline.com](https://findahelpline.com/ru).
 > **Источники:** [NEJM / ВОЗ — соматические проявления депрессии](https://www.nejm.org/doi/full/10.1056/NEJM199910283411801) · [Ангедония — обзор](https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B3%D0%B5%D0%B4%D0%BE%D0%BD%D0%B8%D1%8F) · [Zigmund.Online — апатия](https://zigmund.online/journal/uncategorized/apatiya/) · [ВЦИОМ — потребность в психологической поддержке](https://wciom.ru/analytical-reviews/analiticheskii-obzor/indeks-potrebnosti-rossijan-v-psikhologicheskoi-podderzhke) · [Ведомости — мужчины и психологи](https://www.vedomosti.ru/society/articles/2025/10/10/1145770-muzhchini-stali-chasche-obraschatsya-k-psihologam) · [HeadsUpGuys — депрессия у мужчин](https://headsupguys.org/mens-depression/)
 
 ## Читать дальше

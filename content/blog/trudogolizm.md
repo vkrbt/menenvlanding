@@ -79,7 +79,7 @@ _Вход — через короткий созвон-знакомство._
 
 > **Автор:** Женя (Евгений Якубовский) — психиатр-нарколог, ведущий «Мужской среды».
 
-> Статья носит информационный характер и не заменяет консультацию врача. Если на фоне тревоги появляются мысли о самоповреждении — не оставайся один: Беларусь 8-801-100-16-11, Россия 8-800-2000-122 / 051, другие страны — [findahelpline.com](https://findahelpline.com/ru).
+> Статья носит информационный характер и не заменяет консультацию врача. Если на фоне тревоги появляются мысли о самоповреждении — не оставайся один: Беларусь 133, Россия 8-800-2000-122 / 051, другие страны — [findahelpline.com](https://findahelpline.com/ru).
 
 > **Источники:** [Frontiers — meta-analysis 14,1%](https://doi.org/10.3389/fpsyg.2023.1252373) · [Bergen Work Addiction Scale](https://doi.org/10.1111/j.1464-0597.2011.00454.x) · [Danish BWAS validation](https://doi.org/10.1111/sjop.12506) · [Annual Reviews — workaholism](https://www.annualreviews.org/content/journals/10.1146/annurev-orgpsych-111821-035514) · [Workaholism vs engagement](https://doi.org/10.1037/a0024392)
 

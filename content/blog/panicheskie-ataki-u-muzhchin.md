@@ -95,7 +95,7 @@ _Вход — через короткий созвон-знакомство._
 
 > **Автор:** Женя (Евгений Якубовский) — психиатр-нарколог, ведущий «Мужской среды».
 
-> Статья носит информационный характер и не заменяет консультацию врача. При боли в груди — скорая помощь (в ЕС — 112). Если тяжело и появляются мысли, что жить не хочется: Беларусь 8-801-100-16-11, Россия 8-800-2000-122 / 051, другие страны — [findahelpline.com](https://findahelpline.com/ru).
+> Статья носит информационный характер и не заменяет консультацию врача. При боли в груди — скорая помощь (в ЕС — 112). Если тяжело и появляются мысли, что жить не хочется: Беларусь 133, Россия 8-800-2000-122 / 051, другие страны — [findahelpline.com](https://findahelpline.com/ru).
 
 > **Источники:** [Медгород — паническая атака или сердечный приступ](https://medgorod-clinic.ru/stati/panicheskaya-ataka-ili-serdechnyy-pristup--kak-otlichit-trevogu-ot-opasnosti/) · [Клиника «Роса» — панические атаки: симптомы и длительность](https://rosa.clinic/blog/neurologiya/panicheskaya-ataka/) · [МИПЗ — самопомощь при панических атаках](https://mipz.ru/samopomoshch-pri-panicheskih-atakah/) · [IsraClinic — панические атаки у мужчин](https://www.israclinic.com/nashi-publikatsii/psikhiatriya/panicheskie-ataki-u-muzhchin/)
 

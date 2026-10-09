@@ -58,7 +58,7 @@ _Вход — через короткий созвон-знакомство._
 <!-- NOTE -->
 > **Автор:** Влад — психолог, ведущий «Мужской среды». Днём пишет код в Big Tech, воскресную тревогу изучал, к сожалению, не только по книжкам.
 > Статья носит информационный характер и не заменяет консультацию специалиста.
-> **Телефоны доверия:** Россия — 8-800-2000-122 и 051 (Москва), Беларусь — 8-801-100-16-11 (круглосуточно), из любой страны — [findahelpline.com](https://findahelpline.com/ru) (подбор линии по стране, есть русскоязычные). Экстренные службы в ЕС — 112.
+> **Телефоны доверия:** Россия — 8-800-2000-122 и 051 (Москва), Беларусь — 133 (круглосуточно), из любой страны — [findahelpline.com](https://findahelpline.com/ru) (подбор линии по стране, есть русскоязычные). Экстренные службы в ЕС — 112.
 
 > **Источники:** [Ladders — опрос LinkedIn о Sunday scaries](https://www.theladders.com/career-advice/this-is-the-number-of-people-who-have-major-sunday-night-scaries) · [Inc. — данные Adobe](https://www.inc.com/bruce-crumley/the-sunday-scaries-are-worse-and-more-widespread-than-we-realize/91271040) · [Рамблер — синдром понедельника, данные SuperJob](https://www.rambler.ru/pro/produktivnost/54214726-sindrom-ponedelnika-chto-eto-i-kak-perestat-nenavidet-pervyy-rabochiy-den-nedeli/) · [Психологи об упреждающей тревоге](https://health.yahoo.com/conditions/mental-health/anxiety/articles/ever-sunday-scaries-psychologists-list-164513860.html) · [Psychology Today — 5 приёмов против Sunday scaries](https://www.psychologytoday.com/us/blog/mapping-your-mental-health-journey/202405/5-ways-to-overcome-the-sunday-scaries)
 
