@@ -6,7 +6,8 @@ import { typo } from '@/lib/typo'
 export default function Hero() {
   const facts = [
     `${GROUP_MEETINGS} встреч по 3 часа`,
-    `Раз в 2 недели по средам, ${MEETING_TIME}`,
+    'По средам раз в 2 недели',
+    MEETING_TIME,
     `До ${GROUP_SEATS} человек`,
     `От ${PRICE_FROM} за встречу`,
   ]

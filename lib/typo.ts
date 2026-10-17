@@ -7,6 +7,8 @@ import Typograf from 'typograf'
  */
 const tp = new Typograf({ locale: ['ru', 'en-US'] })
 tp.enableRule('common/nbsp/afterNumber')
+// Свои неразрывные пробелы в строках (например, во времени встреч) не трогаем
+tp.disableRule('common/nbsp/replaceNbsp')
 
 /** Диапазон держим со следующим словом: «10–15 минут». Typograf этого не делает */
 const RANGE = /(\d+–\d+) /g
