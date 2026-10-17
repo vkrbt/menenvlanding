@@ -59,6 +59,7 @@ _Вход — через короткий созвон-знакомство._
 > **Источники:** [PsyAndNeuro — компульсивное сексуальное расстройство в МКБ-11](https://psyandneuro.ru/stati/compulsive-sexual-behaviour-disorder/) · [ПроБолезни — клинический разбор психиатра](https://probolezny.ru/pornozavisimost/) · [Берег — правда ли существует порнозависимость](https://bereg.io/feature/2024/07/14/pravda-chto-pornozavisimost-suschestvuet-kak-ponyat-chto-u-menya-problemy-provotsiruet-li-prosmotr-takih-video-nasilie-kak-pomoch-blizkomu) · [Нож — как технологии изменили порнографию и мозг](https://knife.media/porn-transformation/)
 
 ## Читать дальше
+- [Как избавиться от порнозависимости, если воздержание не работает](/blog/kak-izbavitsya-ot-pornozavisimosti)
 - [Пью каждый вечер: где граница между привычкой и зависимостью](/blog/alkogol-kazhdyy-vecher)
 - [Игры до трёх ночи: когда хобби становится побегом](/blog/igrovaya-zavisimost)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

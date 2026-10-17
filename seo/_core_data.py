@@ -548,6 +548,7 @@ CLUSTERS = [
                 "alkogol-kazhdyy-vecher"),
         satellites=[
             ("порнозависимость", "предмет: порно", "pornozavisimost"),
+            ("как избавиться от порнозависимости", "предмет: порно, практический интент", "kak-izbavitsya-ot-pornozavisimosti"),
             ("игровая зависимость у взрослых", "предмет: видеоигры", "igrovaya-zavisimost"),
             ("зависимость от ставок на спорт", "предмет: беттинг", "stavki-na-sport"),
         ],
