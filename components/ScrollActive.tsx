@@ -5,29 +5,46 @@ import { useEffect } from 'react'
 type Props = {
   /** Блоки, чьи иллюстрации оживают (поза — в globals.css, раздел HOVERS) */
   selector: string
-  /** Когда блок считается «в экране»: по умолчанию — верх блока поднялся выше 80% высоты экрана */
-  rootMargin?: string
+  /** Сама картинка внутри блока — за ней и следим, чтобы поза включалась, когда её видно */
+  watch: string
 }
+
+/** Включаем позу, когда картинка доехала до средней части экрана (между 25% и 55% высоты) */
+const ENTER_ZONE = '-25% 0px -45% 0px'
 
 /**
  * На тач-экранах ховера нет, поэтому иллюстрации принимают ту же позу, что на десктопе
- * при наведении, когда блок появляется в экране (.is-active), и возвращаются, когда он уходит.
+ * при наведении (.is-active на блоке): когда картинка доезжает до середины экрана,
+ * и возвращаются, только когда она уходит с экрана совсем.
  * С мышью и при prefers-reduced-motion ничего не делает — там работает обычный :hover.
  */
-export default function ScrollActive({ selector, rootMargin = '0px 0px -20% 0px' }: Props) {
+export default function ScrollActive({ selector, watch }: Props) {
   useEffect(() => {
     if (window.matchMedia('(hover: hover)').matches) return
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-    const io = new IntersectionObserver(
+    const owner = new Map<Element, Element>()
+    const enter = new IntersectionObserver(
       (entries) => {
-        for (const e of entries) e.target.classList.toggle('is-active', e.isIntersecting)
+        for (const e of entries) if (e.isIntersecting) owner.get(e.target)?.classList.add('is-active')
       },
-      { rootMargin },
+      { rootMargin: ENTER_ZONE },
     )
-    document.querySelectorAll(selector).forEach((el) => io.observe(el))
-    return () => io.disconnect()
-  }, [selector, rootMargin])
+    const leave = new IntersectionObserver((entries) => {
+      for (const e of entries) if (!e.isIntersecting) owner.get(e.target)?.classList.remove('is-active')
+    })
+
+    document.querySelectorAll(selector).forEach((block) => {
+      const pic = block.querySelector(watch) ?? block
+      owner.set(pic, block)
+      enter.observe(pic)
+      leave.observe(pic)
+    })
+    return () => {
+      enter.disconnect()
+      leave.disconnect()
+    }
+  }, [selector, watch])
 
   return null
 }

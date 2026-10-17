@@ -100,7 +100,10 @@ export default function HomePage() {
 
       <ScrollAnimations targets={ANIMATED} />
       {/* На телефоне иллюстрации оживают при появлении в экране — как на десктопе при наведении */}
-      <ScrollActive selector=".community-format__item, .attendance-policy__card, .host-card" />
+      <ScrollActive
+        selector=".community-format__item, .attendance-policy__card, .host-card"
+        watch=".fart, .attendance-policy__icon, .host-card__avatar"
+      />
 
       {/* Google Ads. Раньше грузился в <head> синхронно и блокировал отрисовку */}
       <Script src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_ID}`} strategy="afterInteractive" />

@@ -23,7 +23,8 @@ export default function ScrollAnimations({
   targets,
   selector = '.animate-in',
   threshold = 0.12,
-  rootMargin,
+  // Нижние 18% экрана не считаем: иначе блок «появляется» у самого края, и анимацию не видно
+  rootMargin = '0px 0px -18% 0px',
 }: Props) {
   useEffect(() => {
     const timers: number[] = []
@@ -40,7 +41,7 @@ export default function ScrollAnimations({
           }
         }
       },
-      rootMargin ? { threshold, rootMargin } : { threshold },
+      { threshold, rootMargin },
     )
 
     const nodes = document.querySelectorAll<HTMLElement>(targets ?? selector)
