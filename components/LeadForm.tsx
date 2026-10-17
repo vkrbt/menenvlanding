@@ -81,6 +81,7 @@ export default function LeadForm({ copy: t = LEAD_COPY }: { copy?: LeadCopy }) {
   const [fields, setFields] = useState<Fields>(EMPTY)
   const [errors, setErrors] = useState<Errors>({})
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const rootRef = useRef<HTMLDivElement>(null)
   const panelRef = useRef<HTMLDivElement>(null)
   const lastFocus = useRef<HTMLElement | null>(null)
 
@@ -96,6 +97,14 @@ export default function LeadForm({ copy: t = LEAD_COPY }: { copy?: LeadCopy }) {
       // Цели Метрики на клик считает MetrikaGoals — его слушатель тоже на document, мы его не глушим
       e.preventDefault()
       lastFocus.current = link
+      // Фокус в «Имя и фамилия» — прямо в обработчике нажатия: iOS поднимает клавиатуру
+      // только так. Для этого окно делаем видимым сразу, не дожидаясь рендера React
+      const root = rootRef.current
+      if (root) {
+        root.removeAttribute('inert')
+        root.classList.add('lead--open')
+        root.querySelector<HTMLInputElement>('#lead-name')?.focus({ preventScroll: true })
+      }
       setStatus((s) => (s === 'sent' ? 'idle' : s))
       setOpen(true)
     }
@@ -106,7 +115,11 @@ export default function LeadForm({ copy: t = LEAD_COPY }: { copy?: LeadCopy }) {
   useEffect(() => {
     document.body.classList.toggle('lead-open', open)
     if (open) {
-      const t = window.setTimeout(() => panelRef.current?.querySelector<HTMLElement>('input, button.btn')?.focus({ preventScroll: true }), 60)
+      // Запасной путь: если фокус не встал (окно открыто из экрана «Заявка у нас»)
+      const t = window.setTimeout(() => {
+        if (panelRef.current?.contains(document.activeElement)) return
+        panelRef.current?.querySelector<HTMLElement>('#lead-name, button.btn')?.focus({ preventScroll: true })
+      }, 60)
       const onKey = (e: KeyboardEvent) => {
         if (e.key === 'Escape') close()
       }
@@ -175,81 +188,83 @@ export default function LeadForm({ copy: t = LEAD_COPY }: { copy?: LeadCopy }) {
     ) : null
 
   return (
-    <div className={open ? 'lead lead--open' : 'lead'} aria-hidden={!open} inert={!open}>
+    <div className={open ? 'lead lead--open' : 'lead'} ref={rootRef} aria-hidden={!open} inert={!open}>
       <div className="lead__overlay" onClick={close} />
       <div className="lead__panel" ref={panelRef} role="dialog" aria-modal="true" aria-labelledby="lead-title">
-        <button type="button" className="lead__close" aria-label="Закрыть" onClick={close}>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
-            <path d="M18 6 6 18M6 6l12 12" />
-          </svg>
-        </button>
+        <div className="lead__scroll">
+          <button type="button" className="lead__close" aria-label="Закрыть" onClick={close}>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" aria-hidden="true">
+              <path d="M18 6 6 18M6 6l12 12" />
+            </svg>
+          </button>
 
-        {status === 'sent' ? (
-          <div className="lead__done">
-            <div className="lead__done-icon" aria-hidden="true">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M20 6 9 17l-5-5" />
-              </svg>
+          {status === 'sent' ? (
+            <div className="lead__done">
+              <div className="lead__done-icon" aria-hidden="true">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M20 6 9 17l-5-5" />
+                </svg>
+              </div>
+              <h2 className="lead__title" id="lead-title">{t.doneTitle}</h2>
+              <p className="lead__sub">{t.doneText}</p>
+              <button type="button" className="btn btn--primary btn--full" onClick={close}>
+                {t.doneButton}
+              </button>
             </div>
-            <h2 className="lead__title" id="lead-title">{t.doneTitle}</h2>
-            <p className="lead__sub">{t.doneText}</p>
-            <button type="button" className="btn btn--primary btn--full" onClick={close}>
-              {t.doneButton}
-            </button>
-          </div>
-        ) : (
-          <form className="lead__form" onSubmit={submit} noValidate>
-            <h2 className="lead__title" id="lead-title">{t.title}</h2>
-            <p className="lead__sub">{t.sub}</p>
+          ) : (
+            <form className="lead__form" onSubmit={submit} noValidate>
+              <h2 className="lead__title" id="lead-title">{t.title}</h2>
+              <p className="lead__sub">{t.sub}</p>
 
-            <label className="lead__field">
-              <span className="lead__label">{t.name}</span>
-              <input className="lead__input" type="text" autoComplete="name" {...field('name')} />
-              {err('name')}
-            </label>
-
-            <div className="lead__row">
-              <label className="lead__field lead__field--age">
-                <span className="lead__label">{t.age}</span>
-                <input className="lead__input" type="text" inputMode="numeric" maxLength={2} {...field('age')} />
-                {err('age')}
-              </label>
               <label className="lead__field">
-                <span className="lead__label">
-                  {t.city} <span className="lead__opt">{t.optional}</span>
-                </span>
-                <input className="lead__input" type="text" autoComplete="address-level2" {...field('city')} />
+                <span className="lead__label">{t.name}</span>
+                <input className="lead__input" type="text" autoComplete="name" {...field('name')} />
+                {err('name')}
               </label>
-            </div>
 
-            <label className="lead__field">
-              <span className="lead__label">{t.telegram}</span>
-              <input className="lead__input" type="text" placeholder="@username" autoCapitalize="none" autoCorrect="off" spellCheck={false} {...field('telegram')} />
-              {err('telegram')}
-            </label>
+              <div className="lead__row">
+                <label className="lead__field lead__field--age">
+                  <span className="lead__label">{t.age}</span>
+                  <input className="lead__input" type="text" inputMode="numeric" maxLength={2} {...field('age')} />
+                  {err('age')}
+                </label>
+                <label className="lead__field">
+                  <span className="lead__label">
+                    {t.city} <span className="lead__opt">{t.optional}</span>
+                  </span>
+                  <input className="lead__input" type="text" autoComplete="address-level2" {...field('city')} />
+                </label>
+              </div>
 
-            <label className="lead__field">
-              <span className="lead__label">{t.motivation}</span>
-              <textarea className="lead__input lead__textarea" rows={3} {...field('motivation')} />
-              {err('motivation')}
-            </label>
+              <label className="lead__field">
+                <span className="lead__label">{t.telegram}</span>
+                <input className="lead__input" type="text" placeholder="@username" autoCapitalize="none" autoCorrect="off" spellCheck={false} {...field('telegram')} />
+                {err('telegram')}
+              </label>
 
-            {status === 'error' && (
-              <p className="lead__fail" role="alert">
-                {t.fail}{' '}
-                <a href={FORMS_URL} target="_blank" rel="noopener" data-direct>
-                  {t.failLink}
-                </a>
-                .
-              </p>
-            )}
+              <label className="lead__field">
+                <span className="lead__label">{t.motivation}</span>
+                <textarea className="lead__input lead__textarea" rows={3} {...field('motivation')} />
+                {err('motivation')}
+              </label>
 
-            <button type="submit" className="btn btn--primary btn--full lead__submit" disabled={status === 'sending'}>
-              {status === 'sending' ? t.sending : t.submit}
-            </button>
-            <p className="lead__note">{t.note}</p>
-          </form>
-        )}
+              {status === 'error' && (
+                <p className="lead__fail" role="alert">
+                  {t.fail}{' '}
+                  <a href={FORMS_URL} target="_blank" rel="noopener" data-direct>
+                    {t.failLink}
+                  </a>
+                  .
+                </p>
+              )}
+
+              <button type="submit" className="btn btn--primary btn--full lead__submit" disabled={status === 'sending'}>
+                {status === 'sending' ? t.sending : t.submit}
+              </button>
+              <p className="lead__note">{t.note}</p>
+            </form>
+          )}
+        </div>
       </div>
     </div>
   )
