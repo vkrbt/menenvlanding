@@ -14,8 +14,6 @@ export default function Hero() {
 
   return (
     <section className="hero">
-      <div className="hero__glow" aria-hidden="true" />
-
       <div className="hero__image-wrap" aria-hidden="true">
         <img
           src="/assets/images/hero.webp"
@@ -51,7 +49,7 @@ export default function Hero() {
 
         <div className="hero__actions">
           <a href={FORMS_URL} className="btn btn--primary btn--lg">{typo('Занять место в группе')}</a>
-          <a href="#program" className="hero__link">Смотреть программу</a>
+          <a href="#program" className="btn btn--outline btn--lg">Смотреть программу</a>
         </div>
 
         <p className="hero__note">

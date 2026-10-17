@@ -1,39 +1,68 @@
 import Logo from './Logo'
 import ThemeToggle from './ThemeToggle'
-import { YOUTUBE_LABEL, YOUTUBE_URL } from '@/lib/site'
+import { FORMS_URL, VLAD, YOUTUBE_LABEL, YOUTUBE_URL, ZHENYA, navLinks } from '@/lib/site'
 
 /**
- * Подвал. Идентичен на всех страницах — в исходнике различались только
- * переносы строк внутри тега <a>.
+ * Подвал. Одинаковый на всех страницах: логотип слева, колонки ссылок справа.
  *
- * Год раньше подставлялся скриптом в пустой <span id="footer-year">;
- * теперь приходит с сервера — итоговый DOM тот же, минус клиентский JS.
+ * Якоря берутся в виде «/#program»: со всех страниц они ведут на главную,
+ * а на самой главной браузер просто прокручивает к разделу без перезагрузки.
+ *
+ * Год приходит с сервера в <span id="footer-year"> — клиентский JS не нужен.
  */
 export default function SiteFooter() {
+  const links = navLinks(false)
+  const group = links.filter((l) => l.href.startsWith('/#'))
+  const read = links.filter((l) => !l.href.startsWith('/#'))
+
   return (
     <footer className="footer">
       <div className="container footer__inner">
-        <Logo />
+        <div className="footer__brand">
+          <Logo />
+          <p className="footer__copy">
+            © <span id="footer-year">{new Date().getFullYear()}</span> Мужская среда
+          </p>
+          <ThemeToggle />
+        </div>
 
-        <a
-          href={YOUTUBE_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="footer__yt"
-          aria-label="YouTube канал"
-        >
-          <svg width="22" height="16" viewBox="0 0 22 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="22" height="16" rx="4" fill="#FF0000" />
-            <path d="M9 5l6 3-6 3V5z" fill="white" />
-          </svg>
-          {YOUTUBE_LABEL}
-        </a>
+        <nav className="footer__cols" aria-label="Ссылки в подвале">
+          <div className="footer__col">
+            <p className="footer__head">Группа</p>
+            <ul>
+              {group.map((l) => (
+                <li key={l.href}><a href={l.href}>{l.label}</a></li>
+              ))}
+            </ul>
+          </div>
 
-        <p className="footer__copy">
-          © <span id="footer-year">{new Date().getFullYear()}</span> Мужская среда
-        </p>
+          <div className="footer__col">
+            <p className="footer__head">Читать</p>
+            <ul>
+              {read.map((l) => (
+                <li key={l.href}><a href={l.href}>{l.label}</a></li>
+              ))}
+            </ul>
+          </div>
 
-        <ThemeToggle />
+          <div className="footer__col">
+            <p className="footer__head">Связаться</p>
+            <ul>
+              <li><a href={FORMS_URL}>Оставить заявку</a></li>
+              <li>
+                <a href={YOUTUBE_URL} target="_blank" rel="noopener noreferrer" className="footer__ext">
+                  {YOUTUBE_LABEL}
+                </a>
+              </li>
+              <li>
+                <a href={VLAD.url} target="_blank" rel="noopener noreferrer" className="footer__ext">{VLAD.handle}</a>
+              </li>
+              <li>
+                <a href={ZHENYA.url} target="_blank" rel="noopener noreferrer" className="footer__ext">{ZHENYA.handle}</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </footer>
   )

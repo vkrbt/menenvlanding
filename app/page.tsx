@@ -54,20 +54,22 @@ export default function HomePage() {
 
       <SiteHeader home />
 
-      <Hero />
-      <ForWho />
-      <Program />
-      <Offer />
-      <CommunityFormat />
-      <Hosts />
-      <Testimonials />
-      <YouTubeSection />
-      <Pricing />
-      <AttendancePolicy />
-      <Process />
-      <FaqSection />
-      <PromoText />
-      <CtaFinal />
+      <main className="home">
+        <Hero />
+        <ForWho />
+        <Program />
+        <Offer />
+        <CommunityFormat />
+        <Hosts />
+        <Testimonials />
+        <YouTubeSection />
+        <Pricing />
+        <AttendancePolicy />
+        <Process />
+        <FaqSection />
+        <PromoText />
+        <CtaFinal />
+      </main>
 
       <SiteFooter />
 

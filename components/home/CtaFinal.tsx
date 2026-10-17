@@ -1,3 +1,4 @@
+import Strokes from '@/components/Strokes'
 import { startPhrase } from '@/lib/group'
 import { FORMS_URL, GROUP_MEETINGS, GROUP_SEATS, RECRUITMENT_NOTE } from '@/lib/site'
 import { typo } from '@/lib/typo'
@@ -5,7 +6,7 @@ import { typo } from '@/lib/typo'
 export default function CtaFinal() {
   return (
     <section className="section cta-final">
-      <div className="cta-final__glow" aria-hidden="true" />
+      <Strokes />
       <div className="container cta-final__inner">
         <h2 className="cta-final__title">{typo('Займи место в группе')}</h2>
         <p className="cta-final__time">

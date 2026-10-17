@@ -30,7 +30,7 @@ export const DELA_CHARSET = [
   .join('')
 
 export const MANROPE_HREF =
-  'https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap'
+  'https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap'
 
 export const DELA_HREF =
   'https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap' +
