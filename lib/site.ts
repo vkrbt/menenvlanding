@@ -5,6 +5,24 @@
 
 export const SITE_URL = 'https://sreda.men'
 export const FORMS_URL = 'https://forms.gle/tvTnJuyBoedpJZ989'
+
+/**
+ * Форма заявки на сайте (components/LeadForm.tsx) отправляет ответы прямо в ту же
+ * Google-форму — они ложатся в ту же таблицу, и бот видит заявку как обычно.
+ * Ссылки на FORMS_URL остаются запасным путём: без JS откроется сама Google-форма.
+ * Номера полей — entry.* из разметки формы; если вопросы в форме поменяются, обновить здесь.
+ */
+export const GOOGLE_FORM_ACTION =
+  'https://docs.google.com/forms/d/e/1FAIpQLSdz1qf8fgKcohuBZsI2Zj6LD-7z3AvIidoSEnOVib2PIUnHgw/formResponse'
+export const GOOGLE_FORM_FIELDS = {
+  name: 'entry.147118936',
+  age: 'entry.141746075',
+  city: 'entry.1547096498',
+  telegram: 'entry.1262735700',
+  motivation: 'entry.1034861502',
+  /** Вопрос «Откуда ты о нас узнал?» — сюда скрыто пишется UTM-метка; null, пока вопроса нет */
+  utm: null as string | null,
+}
 /**
  * Старый адрес страницы «Как проходит встреча». Страницу убрали: формат, программа
  * и цена теперь на главной. Ссылки из статей переписываются на главную при рендере
@@ -93,6 +111,8 @@ export const METRIKA_GOALS = {
    * а на главную (см. funnel.md §2): без цели не видно, какие материалы двигают к заявке.
    */
   ctaArticleToMeeting: 'cta_k_vstreche',
+  /** Заявка отправлена из формы на сайте */
+  leadSent: 'lead_sent',
   /**
    * Самотесты: начало и завершение. В параметрах — только slug теста.
    * Ответы, баллы и категории в Метрику не уходят никогда (анонимность).

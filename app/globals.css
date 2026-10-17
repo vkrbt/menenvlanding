@@ -2646,3 +2646,235 @@ a.pager__side:hover { background: var(--hover-bg-strong); }
   .community-format__item:hover .fart__card--front { transform: rotate(5deg); }
   .community-format__item:hover .fart__card--back  { transform: rotate(-9deg); }
 }
+
+/* ============================================================
+   LEAD FORM — заявка поверх страницы (components/LeadForm.tsx)
+   На десктопе — карточка по центру, на телефоне — шторка снизу
+============================================================ */
+.lead {
+  --lead-error: #e5484d;
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  visibility: hidden;
+  pointer-events: none;
+  transition: visibility 0s linear 0.3s; /* спрятать после анимации закрытия */
+}
+
+.lead--open {
+  visibility: visible;
+  pointer-events: auto;
+  transition: visibility 0s;
+}
+
+.lead__overlay {
+  position: absolute;
+  inset: 0;
+  background: var(--overlay-bg);
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.lead--open .lead__overlay { opacity: 1; }
+
+.lead__panel {
+  position: relative;
+  width: min(520px, 100%);
+  max-height: calc(100dvh - 48px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 28px 28px 24px;
+  background: var(--bg);
+  border: 2px solid var(--ink);
+  border-bottom-width: 4px;
+  border-radius: var(--radius);
+  box-shadow: var(--panel-shadow);
+  opacity: 0;
+  translate: 0 16px;
+  scale: 0.98;
+  transition:
+    opacity 0.22s ease,
+    translate 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    scale 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.lead--open .lead__panel {
+  opacity: 1;
+  translate: 0 0;
+  scale: 1;
+}
+
+.lead__close {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  color: var(--text-muted);
+  transition: color 0.15s, background 0.15s;
+}
+
+.lead__close:hover { color: var(--text); background: var(--hover-bg-strong); }
+
+.lead__title {
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  padding-right: 44px;
+}
+
+.lead__sub {
+  margin-top: 8px;
+  font-size: 15px;
+  line-height: 1.5;
+  color: var(--text-muted);
+}
+
+.lead__form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.lead__form .lead__sub { margin-bottom: 4px; }
+
+.lead__row {
+  display: grid;
+  grid-template-columns: 96px 1fr;
+  gap: 12px;
+}
+
+.lead__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.lead__label {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.lead__opt {
+  font-weight: 500;
+  color: var(--text-dim);
+}
+
+.lead__input {
+  width: 100%;
+  padding: 12px 14px;
+  font: inherit;
+  font-size: 16px; /* меньше 16px — iOS зумит страницу при фокусе */
+  color: var(--text);
+  background: var(--pane);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius-sm);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.lead__input::placeholder { color: var(--text-dim); }
+
+.lead__input:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 2px 0 var(--accent);
+}
+
+.lead__input[aria-invalid='true'] {
+  border-color: var(--lead-error);
+  box-shadow: 0 2px 0 var(--lead-error);
+}
+
+.lead__textarea {
+  resize: vertical;
+  min-height: 92px;
+  line-height: 1.5;
+}
+
+.lead__err {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--lead-error);
+}
+
+.lead__fail {
+  font-size: 14px;
+  color: var(--lead-error);
+}
+
+.lead__fail a { text-decoration: underline; }
+
+.lead__submit { margin-top: 6px; }
+
+.lead__note {
+  font-size: 13px;
+  color: var(--text-dim);
+  text-align: center;
+}
+
+.lead__done {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.lead__done .lead__sub { margin-bottom: 18px; }
+
+.lead__done-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: #fff;
+  border: 2px solid var(--accent-ink);
+  box-shadow: 0 3px 0 var(--accent-ink);
+}
+
+body.lead-open {
+  overflow: hidden;
+}
+
+@media (max-width: 767px) {
+  .lead {
+    align-items: flex-end;
+    padding: 0;
+  }
+
+  .lead__panel {
+    width: 100%;
+    max-height: 92dvh;
+    padding: 24px 18px calc(20px + env(safe-area-inset-bottom));
+    border-bottom: 0;
+    border-radius: var(--radius) var(--radius) 0 0;
+    translate: 0 100%;
+    scale: 1;
+    opacity: 1;
+  }
+
+  .lead--open .lead__panel { translate: 0 0; }
+
+  .lead__title { font-size: 23px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lead__overlay,
+  .lead__panel {
+    transition: none;
+  }
+}

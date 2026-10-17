@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import ThemeInit from '@/components/ThemeInit'
+import LeadForm from '@/components/LeadForm'
 import MetrikaGoals from '@/components/MetrikaGoals'
 import YandexMetrika from '@/components/YandexMetrika'
 import { DELA_HREF, MANROPE_HREF } from '@/lib/fonts'
@@ -41,6 +42,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <YandexMetrika />
         <MetrikaGoals />
+        <LeadForm />
       </body>
     </html>
   )
