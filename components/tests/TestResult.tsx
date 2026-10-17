@@ -1,6 +1,6 @@
 import { explanation, LEGENDS, SPECIALIST_FROM_SEVERITY } from '@/lib/tests/copy'
 import type { Scale, ScoreResult, Subscale, SubscaleResult } from '@/lib/tests/types'
-import { MEETING_URL, TESTS_URL } from '@/lib/site'
+import { TESTS_URL } from '@/lib/site'
 import CrisisBlock from './CrisisBlock'
 
 type Ok = Extract<ScoreResult, { ok: true }>
@@ -151,10 +151,11 @@ export default function TestResult({
       <section className="tres__community">
         <h3>{toSpecialist ? 'А ещё — не оставаться с этим одному' : 'Если хочется поговорить об этом'}</h3>
         <p>
-          «Мужская среда» — онлайн-клуб для мужчин 25+. Раз в две недели в Zoom разговариваем о том,
-          о чём обычно молчат. Это не терапия и не лечение, а среда, где можно говорить.
+          «Мужская среда» — тематическая онлайн-группа для мужчин 25+. Девять встреч в Zoom,
+          на каждой одна тема: деньги, отношения, злость, родители. Это не терапия и не лечение,
+          а место, где можно поговорить.
         </p>
-        <a href={MEETING_URL} className="btn btn--outline">Как проходит встреча</a>
+        <a href="/" className="btn btn--outline">Узнать про группу</a>
       </section>
 
       <div className="tres__actions">

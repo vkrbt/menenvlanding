@@ -9,7 +9,7 @@
  * см. комментарий в inlineMd().
  */
 
-import { BLOG_URL, FORMS_URL, VLAD, ZHENYA } from './site'
+import { BLOG_URL, FORMS_URL, LEGACY_MEETING_PATH, VLAD, ZHENYA } from './site'
 
 export type Frontmatter = Record<string, string>
 
@@ -75,6 +75,9 @@ const RE_ITALIC = /(?<![\\w<])_([^_]+)_(?![\\w>])/g
 const PH = '\u0000'
 const RE_PH = /\u0000(\d+)\u0000/g
 
+/** Ссылки на убранную страницу встречи ведут на главную */
+const landingHref = (href: string) => (href.startsWith(LEGACY_MEETING_PATH) ? '/' : href)
+
 export function inlineMd(s: string): string {
   let out = escapeText(s)
 
@@ -83,7 +86,8 @@ export function inlineMd(s: string): string {
   // соседних target="_blank" склеивались в <em> — отсюда target="<em>blank"
   // в 38 статьях. Плейсхолдеры убирают саму возможность такого склеивания.
   const links: string[] = []
-  out = out.replace(RE_LINK, (_full, label: string, href: string) => {
+  out = out.replace(RE_LINK, (_full, label: string, rawHref: string) => {
+    const href = landingHref(rawHref)
     const rendered = label.replace(RE_BOLD, '<strong>$1</strong>')
     links.push(
       href.startsWith('http')
@@ -177,8 +181,8 @@ function parseCta(block: string): string {
   let h3 = ''
   let p = ''
   let hint = ''
-  // Кнопку можно задать в самом блоке строкой вида [Подпись](/vstrecha).
-  // Без неё поведение прежнее — прямая ссылка на форму заявки.
+  // Кнопку можно задать в самом блоке строкой вида [Подпись](/vstrecha) — такие
+  // ссылки ведут на главную. Без кнопки поведение прежнее: прямая ссылка на форму заявки.
   let btnLabel = 'Оставить заявку'
   let btnHref = FORMS_URL
 
@@ -192,7 +196,7 @@ function parseCta(block: string): string {
       hint = line.replace(/^_+|_+$/g, '')
     } else if (btn) {
       btnLabel = btn[1]
-      btnHref = btn[2]
+      btnHref = landingHref(btn[2])
     } else {
       p = line
     }
@@ -201,7 +205,7 @@ function parseCta(block: string): string {
   return `    <div class="article__cta">
       <h3>${inlineMd(h3)}</h3>
       <p>${inlineMd(p)}</p>
-      <a href="${escapeAttr(btnHref)}" class="btn btn--primary">${escapeText(btnLabel)}</a>
+      <a href="${escapeAttr(btnHref)}" class="btn btn--primary"${btnHref === '/' ? ' data-cta="landing"' : ''}>${escapeText(btnLabel)}</a>
       <p class="article__cta-hint">${inlineMd(hint)}</p>
     </div>`
 }

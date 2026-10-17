@@ -26,9 +26,10 @@ export default function MetrikaGoals() {
 
       const ymFn = (window as unknown as { ym?: (id: number, action: string, ...rest: unknown[]) => void }).ym
 
-      // Переход из статьи на страницу встречи — промежуточный шаг воронки.
+      // Переход из статьи на главную по кнопке CTA — промежуточный шаг воронки.
       // Считаем отдельно: заявка отсюда ещё не подана, но материал сработал.
-      if (href.startsWith('/vstrecha') && path.startsWith('/blog')) {
+      // По адресу не отличить: на главную ведут ещё логотип и крошки, поэтому метка
+      if (link.dataset.cta === 'landing' && path.startsWith('/blog')) {
         if (typeof ymFn === 'function') {
           ymFn(METRIKA_COUNTER_ID, 'reachGoal', METRIKA_GOALS.ctaArticleToMeeting, { page: path })
         }
@@ -38,11 +39,7 @@ export default function MetrikaGoals() {
       if (!href.includes('forms.gle')) return
 
       // Откуда кликнули — это и есть ответ на вопрос «какие материалы приводят заявки»
-      const goal = path.startsWith('/vstrecha')
-        ? METRIKA_GOALS.ctaMeetingPage
-        : path.startsWith('/blog')
-          ? METRIKA_GOALS.ctaArticle
-          : METRIKA_GOALS.ctaLanding
+      const goal = path.startsWith('/blog') ? METRIKA_GOALS.ctaArticle : METRIKA_GOALS.ctaLanding
 
       const ym = (window as unknown as { ym?: (id: number, action: string, ...rest: unknown[]) => void }).ym
       if (typeof ym !== 'function') return

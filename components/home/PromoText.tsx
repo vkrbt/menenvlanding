@@ -1,3 +1,5 @@
+import { typo } from '@/lib/typo'
+
 export default function PromoText() {
   return (
     <section className="section promo-text">
@@ -5,8 +7,10 @@ export default function PromoText() {
       <div className="container promo-text__inner">
         <span className="promo-text__mark" aria-hidden="true">&quot;</span>
         <blockquote className="promo-text__copy">
-          Мы&nbsp;не обещаем, что жизнь перевернётся после первой встречи. Но&nbsp;мужчины, которые находят нормальное окружение,{' '}
-          <strong>перестают тратить энергию и&nbsp;тащить всё&nbsp;в&nbsp;одиночку.</strong>
+          {typo('Мы не обещаем, что жизнь перевернётся после первой встречи.')}{' '}
+          <br className="br-desktop" />
+          {typo('Но мужчины, которые находят нормальное окружение,')}{' '}
+          <strong>{typo('перестают тратить энергию и тащить всё в одиночку.')}</strong>
         </blockquote>
       </div>
     </section>

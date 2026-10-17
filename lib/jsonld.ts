@@ -1,7 +1,7 @@
 import { clusterOfPost, topicCanonical, type Cluster } from './clusters'
 import { plainText } from './markdown'
 import type { Post } from './posts'
-import { BLOG_URL, MEETING_URL, OG_IMAGE, ORG_ID, SITE_URL, TESTS_URL, VLAD, WEBSITE_ID, ZHENYA } from './site'
+import { BLOG_URL, OG_IMAGE, ORG_ID, SITE_URL, TESTS_URL, VLAD, WEBSITE_ID, ZHENYA } from './site'
 import { TESTS, type TestEntry } from './tests/registry'
 
 /**
@@ -89,7 +89,7 @@ export function homeGraph(faq: Array<{ q: string; a: string }>) {
         name: 'Мужская среда',
         url: SITE_URL,
         description:
-          'Закрытое онлайн-сообщество для русскоязычных мужчин 25+. Встречи в Zoom раз в две недели.',
+          'Тематическая онлайн-группа для русскоязычных мужчин 25+. Девять встреч в Zoom раз в две недели, ведут психолог и психиатр.',
         sameAs: ['https://www.youtube.com/@men-env', VLAD.url, ZHENYA.url],
       },
       {
@@ -103,8 +103,8 @@ export function homeGraph(faq: Array<{ q: string; a: string }>) {
       {
         '@type': 'Service',
         '@id': `${SITE_URL}/#service`,
-        name: 'Мужская среда — онлайн-встречи мужского сообщества',
-        serviceType: 'Мужское онлайн-сообщество',
+        name: 'Мужская среда — тематическая мужская группа онлайн',
+        serviceType: 'Мужская группа онлайн',
         provider: { '@id': ORG_ID },
         areaServed: 'Worldwide',
         availableChannel: {
@@ -182,40 +182,6 @@ export function topicGraph(cluster: Cluster, posts: Post[]) {
           url: p.canonical,
           name: p.ogTitle,
         })),
-      },
-    ],
-  }
-}
-
-/* ============================================================
-   Страница «Как проходит встреча»
-============================================================ */
-
-export function meetingGraph() {
-  const url = `${SITE_URL}${MEETING_URL}`
-
-  return {
-    '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'WebPage',
-        '@id': url,
-        name: 'Как проходит встреча «Мужской среды»',
-        description:
-          'Формат встречи мужского сообщества: тема, разговор, правила круга, конфиденциальность и цены.',
-        inLanguage: 'ru',
-        isPartOf: { '@id': WEBSITE_ID },
-        publisher: { '@id': ORG_ID },
-        // Намеренно не MedicalWebPage: сообщество не оказывает медицинских услуг,
-        // а такая разметка была бы лишним YMYL-сигналом
-        about: { '@id': `${SITE_URL}/#service` },
-      },
-      {
-        '@type': 'BreadcrumbList',
-        itemListElement: [
-          { '@type': 'ListItem', position: 1, name: 'Главная', item: SITE_URL },
-          { '@type': 'ListItem', position: 2, name: 'Как проходит встреча' },
-        ],
       },
     ],
   }

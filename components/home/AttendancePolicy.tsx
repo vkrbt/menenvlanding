@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { typo } from '@/lib/typo'
 
 const CARDS: Array<{ icon: ReactNode; title: string; body: string }> = [
   {
@@ -48,8 +49,8 @@ export default function AttendancePolicy() {
                   {c.icon}
                 </svg>
               </div>
-              <h3>{c.title}</h3>
-              <p>{c.body}</p>
+              <h3>{typo(c.title)}</h3>
+              <p>{typo(c.body)}</p>
             </div>
           ))}
         </div>

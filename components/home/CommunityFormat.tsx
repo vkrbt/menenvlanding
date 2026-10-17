@@ -1,11 +1,14 @@
+import { typo } from '@/lib/typo'
+import TypoLines from '@/components/TypoLines'
+
 const STEPS = [
   {
     title: 'Тема — повод начать разговор',
-    body: 'Мы объявляем тему заранее. Работа и отношения, отцы и сыновья, одиночество в эмиграции, деньги, злость, дружба',
+    body: 'Тему ты знаешь заранее, она есть в программе. Придумывать, с чего начать, не придётся',
   },
   {
     title: 'Разговор',
-    body: 'Уровень самораскрытия выбираешь сам',
+    body: 'Уровень самораскрытия выбираешь сам. Ведущие следят, чтобы разговор не превращался в раздачу советов и оценок',
   },
   {
     title: 'Обмен',
@@ -18,10 +21,12 @@ export default function CommunityFormat() {
     <section className="section community-format" id="community-format" aria-labelledby="community-format-title">
       <div className="container">
         <h2 className="community-format__title" id="community-format-title">
-          Окей, но что конкретно будет на встрече?
+          <TypoLines parts={['Окей, но что конкретно', 'будет на встрече?']} />
         </h2>
         <p className="community-format__lead">
-          Мы знаем, что неизвестность - это главная причина не прийти. Поэтому вот как это будет
+          <TypoLines
+            parts={['Мы знаем, что неизвестность — главная причина не прийти.', 'Поэтому вот как это будет']}
+          />
         </p>
 
         <ol className="community-format__list">
@@ -29,8 +34,8 @@ export default function CommunityFormat() {
             <li className="community-format__item" key={s.title}>
               <span className="community-format__num" aria-hidden="true">{i + 1}</span>
               <div className="community-format__body">
-                <h3>{s.title}</h3>
-                <p>{s.body}</p>
+                <h3>{typo(s.title)}</h3>
+                <p>{typo(s.body)}</p>
               </div>
             </li>
           ))}

@@ -20,5 +20,12 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/vstrecha",
+      "destination": "/",
+      "permanent": true
+    }
   ]
 }

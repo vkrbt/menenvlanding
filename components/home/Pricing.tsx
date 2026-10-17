@@ -1,4 +1,6 @@
 import { FORMS_URL } from '@/lib/site'
+import { typo } from '@/lib/typo'
+import TypoLines from '@/components/TypoLines'
 
 type Plan = {
   label: string
@@ -27,7 +29,7 @@ const PLANS: Plan[] = [
     note: '€215 за 6 встреч · 3 месяца',
     noteAccent: true,
     includes: ['Все встречи и материалы', 'Закрытый чат и нетворкинг', 'Ранний доступ к подкасту'],
-    cta: 'Хочу попасть в комьюнити',
+    cta: 'Занять место в группе',
     ctaClass: 'btn btn--primary btn--full',
     featured: true,
     badge: 'Лучший выбор',
@@ -62,27 +64,29 @@ export default function Pricing() {
           {PLANS.map((p) => (
             <div className={p.featured ? 'pricing__card pricing__card--featured' : 'pricing__card'} key={p.label}>
               {p.badge && <div className="pricing__badge">{p.badge}</div>}
-              <p className="pricing__label">{p.label}</p>
+              <p className="pricing__label">{typo(p.label)}</p>
               <div className="pricing__price">
                 <span className="pricing__amount">{p.amount}</span>
                 <span className="pricing__period">/ встреча</span>
               </div>
-              <p className={p.noteAccent ? 'pricing__note pricing__note--accent' : 'pricing__note'}>{p.note}</p>
+              <p className={p.noteAccent ? 'pricing__note pricing__note--accent' : 'pricing__note'}>{typo(p.note)}</p>
               <ul className="pricing__includes">
                 {p.includes.map((item) => (
                   <li key={item}>
                     <Check />
-                    {item}
+                    {typo(item)}
                   </li>
                 ))}
               </ul>
-              <a href={FORMS_URL} className={p.ctaClass}>{p.cta}</a>
+              <a href={FORMS_URL} className={p.ctaClass}>{typo(p.cta)}</a>
             </div>
           ))}
         </div>
 
         <p className="pricing__footer-note">
-          Месяц участия — дешевле одной сессии у психолога и полезнее чем разъебаться на мотоцикле
+          <TypoLines
+            parts={['Месяц участия — дешевле одной сессии у психолога', 'и полезнее, чем разъебаться на мотоцикле']}
+          />
         </p>
       </div>
     </section>

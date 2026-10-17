@@ -1,5 +1,6 @@
 import YouTubeCarousel from '@/components/YouTubeCarousel'
 import { YOUTUBE_URL } from '@/lib/site'
+import { typo } from '@/lib/typo'
 
 const VIDEO_IDS = ['PHdg6U57lOU', 'yb7g3u8kiB4', 'LF_Gt4MzNlc', 'I2sGt70krXc']
 
@@ -17,7 +18,7 @@ export default function YouTubeSection() {
         <h2 className="section-title youtube__title">Знакомься с нами заочно</h2>
 
         <p className="youtube__sub">
-          На канале мы говорим вслух о том, о чём другие мужчины предпочитают молчать
+          {typo('На канале мы говорим вслух о том, о чём другие мужчины предпочитают молчать')}
         </p>
 
         <YouTubeCarousel ids={VIDEO_IDS} />

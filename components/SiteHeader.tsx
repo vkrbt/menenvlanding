@@ -94,7 +94,7 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
 
         <div className="nav__end">
           <a href={FORMS_URL} className="btn btn--sm btn--primary nav__cta">
-            Оставить заявку
+            Занять место
           </a>
 
           <button
@@ -151,7 +151,7 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
           </div>
 
           <a href={FORMS_URL} className="btn btn--primary mnav__cta" onClick={close}>
-            Оставить заявку
+            Занять место
           </a>
         </nav>
       </div>

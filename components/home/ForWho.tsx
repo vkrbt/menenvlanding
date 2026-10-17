@@ -1,8 +1,13 @@
+import { FORMS_URL } from '@/lib/site'
+import { typo } from '@/lib/typo'
+
 const QUOTES = [
-  'У тебя есть друзья. А ты говорил с ними о чем-то кроме новостей, работы и футбола?',
-  'Живёшь на автопилоте. Чего-то не хватает, а чего — не знаешь',
-  'Решаешь чужие задачи. Но свои ставят тебя в тупик',
-  'Читал книжки, слушал подкасты, ходил к психологу. Но живой контакт с мужчинами — то, что заочно не получишь ',
+  'Хочется компанию мужиков, с которыми можно не только про работу и футбол',
+  'По паспорту взрослый, а внутри будто так и не повзрослел',
+  'Многое хочется сделать, но ссыкотно. И непонятно, что мешает',
+  'Всё время куда-то спешишь. А куда — сам не знаешь',
+  'Интересно, у других мужиков так же? Или это только со мной что-то не так?',
+  'Ни разу не был у психолога и не понимаешь, с чего вообще начать',
 ]
 
 export default function ForWho() {
@@ -11,16 +16,16 @@ export default function ForWho() {
       <div className="container">
         <h2 className="section-title">Знакомо?</h2>
 
-        <div className="cards-grid cards-grid--2x2">
+        <ul className="for-who__list">
           {QUOTES.map((text) => (
-            <div className="card card--quote" key={text}>
-              <span className="card__mark" aria-hidden="true">&quot;</span>
-              <p>{text}</p>
-            </div>
+            <li className="for-who__item" key={text}>{typo(text)}</li>
           ))}
-        </div>
+        </ul>
 
-        <p className="for-who__conclusion">Если узнал себя — «Мужская среда» создана для таких, как ты</p>
+        <p className="for-who__conclusion">
+          {typo('Если узнал себя хотя бы в одном пункте, группа для тебя.')}{' '}
+          <a href={FORMS_URL}>{typo('Занять место в группе')}</a>
+        </p>
       </div>
     </section>
   )

@@ -1,16 +1,19 @@
-import { FORMS_URL } from '@/lib/site'
+import { startPhrase } from '@/lib/group'
+import { FORMS_URL, GROUP_MEETINGS, GROUP_SEATS } from '@/lib/site'
+import { typo } from '@/lib/typo'
 
 export default function CtaFinal() {
   return (
     <section className="section cta-final">
       <div className="cta-final__glow" aria-hidden="true" />
       <div className="container cta-final__inner">
-        {/* Дату подставляет MeetingClock */}
-        <h2 className="cta-final__title" id="cta-date">Ближайшая встреча</h2>
-        <p className="cta-final__time">18:00 по Варшаве&nbsp;(CET+1) · 19:00 по Минску</p>
-        <p className="cta-final__sub">Оставь заявку — мы напишем тебе лично</p>
-        <a href={FORMS_URL} className="btn btn--primary btn--lg">Оставить заявку</a>
-        <p className="cta-final__hint">Это бесплатно и ни к чему не обязывает</p>
+        <h2 className="cta-final__title">{typo('Займи место в группе')}</h2>
+        <p className="cta-final__time">
+          {typo(`Старт ${startPhrase()} · ${GROUP_MEETINGS} встреч · до ${GROUP_SEATS} человек · Zoom`)}
+        </p>
+        <p className="cta-final__sub">{typo('Оставь заявку, мы напишем и договоримся о созвоне')}</p>
+        <a href={FORMS_URL} className="btn btn--primary btn--lg">{typo('Занять место в группе')}</a>
+        <p className="cta-final__hint">{typo('Созвон бесплатный. Поймёшь, что не твоё, — просто скажешь')}</p>
       </div>
     </section>
   )

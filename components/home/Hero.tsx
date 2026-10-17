@@ -1,9 +1,18 @@
-import { FORMS_URL } from '@/lib/site'
+import TypoLines from '@/components/TypoLines'
+import { startPhrase } from '@/lib/group'
+import { FORMS_URL, GROUP_MEETINGS, GROUP_SEATS, MEETING_TIME, PRICE_FROM } from '@/lib/site'
+import { typo } from '@/lib/typo'
 
 export default function Hero() {
+  const facts = [
+    `${GROUP_MEETINGS} встреч по 3 часа`,
+    `Раз в 2 недели по средам, ${MEETING_TIME}`,
+    `До ${GROUP_SEATS} человек`,
+    `От ${PRICE_FROM} за встречу`,
+  ]
+
   return (
     <section className="hero">
-      <div className="hero__bg-grid" aria-hidden="true" />
       <div className="hero__glow" aria-hidden="true" />
 
       <div className="hero__image-wrap" aria-hidden="true">
@@ -19,29 +28,34 @@ export default function Hero() {
       </div>
 
       <div className="container hero__inner">
-        <span className="badge">
-          {/* Дату подставляет MeetingClock; в разметке — та же заглушка, что и раньше */}
-          <span className="badge__desktop">
-            <span id="badge-date">Ближайшая встреча</span> · 18:00 Варшава / 19:00 Минск · Онлайн в Zoom
-          </span>
-          <span className="badge__mobile">
-            <span id="badge-date-m">Ближайшая встреча</span> · Онлайн в Zoom
-          </span>
-        </span>
-
+        {/* Перенос здесь нужен и на мобильном, поэтому обычный <br />, а не TypoLines */}
         <h1 className="hero__title">
-          Для мужчин,<br />которым есть<br />что сказать —<br />но некому
+          {typo('Друзья есть.')}<br />{typo('А поговорить не с кем')}
         </h1>
 
-        <p className="hero__sub">Говорим о том, о чем другие мужчины предпочитают молчать</p>
-
-        <p className="hero__lede">
-          «Мужская среда» — закрытое онлайн-сообщество для русскоязычных мужчин 25+.
-          Раз в две недели участники собираются в Zoom и три часа
-          говорят о своём. Ведут психолог и психиатр.
+        {/* Определение для человека и для сниппета поисковика */}
+        <p className="hero__sub">
+          <TypoLines
+            parts={[
+              '«Мужская среда» — тематическая онлайн-группа для мужчин 25+.',
+              'Девять встреч, на каждой одна тема: деньги, отношения, зависимости, злость, мама, папа. ' +
+                'Говоришь о своём и слышишь, как это у других мужиков. Ведут психолог и психиатр.',
+            ]}
+          />
         </p>
 
-        <a href={FORMS_URL} className="btn btn--primary btn--lg">Оставить заявку</a>
+        <ul className="hero__facts">
+          {facts.map((f) => <li key={f}>{typo(f)}</li>)}
+        </ul>
+
+        <div className="hero__actions">
+          <a href={FORMS_URL} className="btn btn--primary btn--lg">{typo('Занять место в группе')}</a>
+          <a href="#program" className="hero__link">Смотреть программу</a>
+        </div>
+
+        <p className="hero__note">
+          {typo(`Старт ${startPhrase()} · Сначала бесплатный созвон на 10–15 минут`)}
+        </p>
       </div>
     </section>
   )
