@@ -63,11 +63,14 @@ export default function ThemeToggle() {
         fill="none"
         stroke="currentColor"
         strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
         aria-hidden="true"
       >
-        <rect x="2" y="3" width="20" height="14" rx="2" />
-        <path d="M8 21h8" />
-        <path d="M12 17v4" />
+        {/* «Как в системе»: солнце-луна с буквой А (авто) */}
+        <path d="M12 8a2.83 2.83 0 0 0 4 4 4 4 0 1 1-4-4" />
+        <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4" />
+        <path d="M16.4 23.2 19.7 15.6 23 23.2M17.6 20.6h4.2" />
       </svg>
       <svg
         className="theme-toggle__icon theme-toggle__icon--light"
