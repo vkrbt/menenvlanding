@@ -9,6 +9,7 @@ import {
   type Frontmatter,
 } from './markdown'
 import { BLOG_URL, SITE_URL, VLAD, ZHENYA } from './site'
+import { typo } from './typo'
 
 const DIR = path.join(process.cwd(), 'content', 'blog')
 
@@ -58,7 +59,7 @@ function build(file: string): Post {
   return {
     slug,
     fm,
-    html: rendered.html,
+    html: typo(rendered.html),
     h1: rendered.h1,
     crumb: rendered.crumb,
     faq: rendered.faq,
@@ -70,13 +71,14 @@ function build(file: string): Post {
     dateModified: fm.date_modified || datePublished,
     authors: authorsOf(fm),
     category: fm.category || '',
-    cardTitle: fm.card_title || ogTitle,
-    cardDesc: fm.card_desc || fm.description || '',
-    cardMeta:
+    cardTitle: typo(fm.card_title || ogTitle),
+    cardDesc: typo(fm.card_desc || fm.description || ''),
+    cardMeta: typo(
       fm.card_meta ||
-      [fm.author_short || shortAuthor(fm), fm.date_line || '', shortRead(fm.read_line || '')]
-        .filter(Boolean)
-        .join(' · '),
+        [fm.author_short || shortAuthor(fm), fm.date_line || '', shortRead(fm.read_line || '')]
+          .filter(Boolean)
+          .join(' · '),
+    ),
   }
 }
 
@@ -139,7 +141,7 @@ export type PostCard = {
 export function allPostCards(): PostCard[] {
   return getAllPosts().map((p) => ({
     slug: p.slug,
-    category: p.category,
+    category: typo(p.category),
     cardTitle: p.cardTitle,
     cardDesc: p.cardDesc,
     cardMeta: p.cardMeta,

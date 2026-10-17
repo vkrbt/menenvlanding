@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import { typo } from '@/lib/typo'
 import TypoLines from '@/components/TypoLines'
+import Typo from '@/components/Typo'
 
 /**
  * Иллюстрации к шагам — карточки и реплики с толстой обводкой, в духе remotion.dev.
@@ -51,6 +52,7 @@ const STEPS = [
 
 export default function CommunityFormat() {
   return (
+    <Typo>
     <section className="section community-format" id="community-format" aria-labelledby="community-format-title">
       <div className="container">
         <h2 className="section-title" id="community-format-title">
@@ -76,5 +78,6 @@ export default function CommunityFormat() {
         </ol>
       </div>
     </section>
+    </Typo>
   )
 }

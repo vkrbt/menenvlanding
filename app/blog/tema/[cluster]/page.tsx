@@ -13,6 +13,8 @@ import {
 import { topicGraph } from '@/lib/jsonld'
 import { BLOG_URL, OG_IMAGE } from '@/lib/site'
 import ScrollAnimations from '@/components/ScrollAnimations'
+import Typo from '@/components/Typo'
+import { typo } from '@/lib/typo'
 
 /** Рубрики без единой опубликованной статьи не собираются — это была бы пустая страница */
 export function generateStaticParams() {
@@ -74,6 +76,7 @@ export default async function TopicPage({
       <SiteHeader />
 
       <main>
+        <Typo>
         <section className="blog-hero">
           <div className="container">
             <nav className="blog-crumbs" aria-label="Хлебные крошки">
@@ -89,7 +92,7 @@ export default async function TopicPage({
         <section className="container">
           <div className="blog-list">
             {posts.map((post) => (
-              <BlogCard post={post} key={post.slug} />
+              <BlogCard post={{ ...post, category: typo(post.category) }} key={post.slug} />
             ))}
           </div>
         </section>
@@ -108,6 +111,7 @@ export default async function TopicPage({
             </div>
           </nav>
         </section>
+        </Typo>
       </main>
 
       <ScrollAnimations targets=".blog-topics, .blog-card" />

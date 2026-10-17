@@ -5,6 +5,7 @@ import { score } from '@/lib/tests/score'
 import type { Answers, Scale } from '@/lib/tests/types'
 import { METRIKA_COUNTER_ID, METRIKA_GOALS } from '@/lib/site'
 import TestResult from './TestResult'
+import { typo } from '@/lib/typo'
 
 /**
  * Прохождение теста. Состояние живёт только в памяти компонента: никаких
@@ -128,10 +129,10 @@ export default function TestRunner({ scale, questions }: { scale: Scale; questio
           Начать тест
         </button>
         <p className="trun__intro-meta">
-          Около {scale.minutes} мин · можно вернуться к предыдущему вопросу
+          {typo(`Около ${scale.minutes} мин · можно вернуться к предыдущему вопросу`)}
         </p>
         <noscript>
-          <p className="trun__noscript">Чтобы пройти тест, включи JavaScript: подсчёт идёт прямо в браузере.</p>
+          <p className="trun__noscript">{typo('Чтобы пройти тест, включи JavaScript: подсчёт идёт прямо в браузере.')}</p>
         </noscript>
       </div>
     )
@@ -167,15 +168,15 @@ export default function TestRunner({ scale, questions }: { scale: Scale; questio
         {part && (
           <div className="trun__part">
             {scale.parts.length > 1 && <p className="trun__part-title">{part.title}</p>}
-            <p>{part.online ?? part.instruction}</p>
+            <p>{typo(part.online ?? part.instruction)}</p>
           </div>
         )}
 
         <h2 className="trun__text" tabIndex={-1} ref={heading} id={`q-${item.id}`}>
           {/* У пунктов Бека нет вопроса — только набор утверждений */}
-          {item.text || 'Выбери утверждение, которое лучше всего описывает твоё состояние'}
+          {typo(item.text || 'Выбери утверждение, которое лучше всего описывает твоё состояние')}
         </h2>
-        {item.hint && <p className="trun__hint">{item.hint}</p>}
+        {item.hint && <p className="trun__hint">{typo(item.hint)}</p>}
 
         <div className="trun__options" role="radiogroup" aria-labelledby={`q-${item.id}`}>
           {item.options.map((o) => (
@@ -188,7 +189,7 @@ export default function TestRunner({ scale, questions }: { scale: Scale; questio
               onClick={() => choose(o.value)}
             >
               <span className="trun__radio" aria-hidden="true" />
-              <span>{o.label}</span>
+              <span>{typo(o.label)}</span>
             </button>
           ))}
         </div>

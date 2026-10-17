@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useRef, useState, type FormEvent } from 'react'
+import { LEAD_COPY, type LeadCopy } from '@/lib/lead-copy'
 import { FORMS_URL, GOOGLE_FORM_ACTION, GOOGLE_FORM_FIELDS, METRIKA_COUNTER_ID, METRIKA_GOALS } from '@/lib/site'
 
 /**
@@ -56,25 +57,26 @@ function normalizeTelegram(v: string): string {
   return s
 }
 
-function validate(f: Fields): Errors {
+function validate(f: Fields, t: LeadCopy): Errors {
   const e: Errors = {}
-  if (!f.name.trim()) e.name = 'Как к тебе обращаться?'
+  if (!f.name.trim()) e.name = t.errName
   const age = Number(f.age)
-  if (!f.age.trim()) e.age = 'Сколько лет?'
-  else if (!Number.isInteger(age) || age < 16 || age > 99) e.age = 'Числом: 34'
+  if (!f.age.trim()) e.age = t.errAge
+  else if (!Number.isInteger(age) || age < 16 || age > 99) e.age = t.errAgeNumber
   const tg = f.telegram.trim()
-  if (!tg) e.telegram = 'Нужен, чтобы мы могли написать'
+  if (!tg) e.telegram = t.errTelegram
   else if (!/^@?[A-Za-z0-9_]{4,32}$/.test(tg) && !/t(elegram)?\.me\//i.test(tg) && !/^\+?[\d\s()-]{7,}$/.test(tg)) {
-    e.telegram = 'Ник вида @username или номер телефона'
+    e.telegram = t.errTelegramFormat
   }
-  if (!f.motivation.trim()) e.motivation = 'Пара слов — этого достаточно'
+  if (!f.motivation.trim()) e.motivation = t.errMotivation
   return e
 }
 
 type Ym = (id: number, action: string, ...rest: unknown[]) => void
 type Gtag = (...args: unknown[]) => void
 
-export default function LeadForm() {
+/** copy — тексты, уже прогнанные через типограф в layout */
+export default function LeadForm({ copy: t = LEAD_COPY }: { copy?: LeadCopy }) {
   const [open, setOpen] = useState(false)
   const [fields, setFields] = useState<Fields>(EMPTY)
   const [errors, setErrors] = useState<Errors>({})
@@ -125,7 +127,7 @@ export default function LeadForm() {
 
   async function submit(e: FormEvent) {
     e.preventDefault()
-    const found = validate(fields)
+    const found = validate(fields, t)
     setErrors(found)
     if (Object.keys(found).length) {
       panelRef.current?.querySelector<HTMLElement>('[aria-invalid="true"]')?.focus()
@@ -189,63 +191,63 @@ export default function LeadForm() {
                 <path d="M20 6 9 17l-5-5" />
               </svg>
             </div>
-            <h2 className="lead__title" id="lead-title">Заявка у нас</h2>
-            <p className="lead__sub">Скоро напишем тебе в Telegram, чтобы договориться о коротком созвоне на 10–15 минут. Это бесплатно.</p>
+            <h2 className="lead__title" id="lead-title">{t.doneTitle}</h2>
+            <p className="lead__sub">{t.doneText}</p>
             <button type="button" className="btn btn--primary btn--full" onClick={close}>
-              Хорошо
+              {t.doneButton}
             </button>
           </div>
         ) : (
           <form className="lead__form" onSubmit={submit} noValidate>
-            <h2 className="lead__title" id="lead-title">Заявка в группу</h2>
-            <p className="lead__sub">Пара минут. Потом напишем в Telegram и договоримся о коротком бесплатном созвоне.</p>
+            <h2 className="lead__title" id="lead-title">{t.title}</h2>
+            <p className="lead__sub">{t.sub}</p>
 
             <label className="lead__field">
-              <span className="lead__label">Имя и фамилия</span>
+              <span className="lead__label">{t.name}</span>
               <input className="lead__input" type="text" autoComplete="name" {...field('name')} />
               {err('name')}
             </label>
 
             <div className="lead__row">
               <label className="lead__field lead__field--age">
-                <span className="lead__label">Возраст</span>
+                <span className="lead__label">{t.age}</span>
                 <input className="lead__input" type="text" inputMode="numeric" maxLength={2} {...field('age')} />
                 {err('age')}
               </label>
               <label className="lead__field">
                 <span className="lead__label">
-                  Страна и город <span className="lead__opt">необязательно</span>
+                  {t.city} <span className="lead__opt">{t.optional}</span>
                 </span>
                 <input className="lead__input" type="text" autoComplete="address-level2" {...field('city')} />
               </label>
             </div>
 
             <label className="lead__field">
-              <span className="lead__label">Telegram для связи</span>
+              <span className="lead__label">{t.telegram}</span>
               <input className="lead__input" type="text" placeholder="@username" autoCapitalize="none" autoCorrect="off" spellCheck={false} {...field('telegram')} />
               {err('telegram')}
             </label>
 
             <label className="lead__field">
-              <span className="lead__label">Для чего хочешь попасть в Мужскую среду?</span>
+              <span className="lead__label">{t.motivation}</span>
               <textarea className="lead__input lead__textarea" rows={3} {...field('motivation')} />
               {err('motivation')}
             </label>
 
             {status === 'error' && (
               <p className="lead__fail" role="alert">
-                Не получилось отправить — проверь интернет и попробуй ещё раз или{' '}
+                {t.fail}{' '}
                 <a href={FORMS_URL} target="_blank" rel="noopener" data-direct>
-                  заполни Google-форму
+                  {t.failLink}
                 </a>
                 .
               </p>
             )}
 
             <button type="submit" className="btn btn--primary btn--full lead__submit" disabled={status === 'sending'}>
-              {status === 'sending' ? 'Отправляю…' : 'Отправить заявку'}
+              {status === 'sending' ? t.sending : t.submit}
             </button>
-            <p className="lead__note">Анкету видят только ведущие группы.</p>
+            <p className="lead__note">{t.note}</p>
           </form>
         )}
       </div>

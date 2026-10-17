@@ -11,6 +11,7 @@ import { getTest, questionCount, questionsLabel, TESTS } from '@/lib/tests/regis
 import type { Scale } from '@/lib/tests/types'
 import '../tests.css'
 import ScrollAnimations from '@/components/ScrollAnimations'
+import Typo from '@/components/Typo'
 
 type Params = { slug: string }
 
@@ -47,6 +48,7 @@ function FullMethod({ scale }: { scale: Scale }) {
     !Number.isFinite(n) ? (n > 0 ? '∞' : '−∞') : String(n / divisor).replace('.', ',').replace('-', '−')
 
   return (
+    <Typo>
     <details className="tmethod__full">
       <summary>Все вопросы, ключ и пороги</summary>
 
@@ -102,6 +104,7 @@ function FullMethod({ scale }: { scale: Scale }) {
           </div>
         ))}
     </details>
+    </Typo>
   )
 }
 
@@ -118,6 +121,7 @@ export default async function TestPage({ params }: { params: Promise<Params> }) 
       <SiteHeader />
 
       <main className="tpage">
+        <Typo>
         <section className="blog-hero">
           <div className="container">
             <nav className="blog-crumbs" aria-label="Хлебные крошки">
@@ -206,6 +210,7 @@ export default async function TestPage({ params }: { params: Promise<Params> }) 
             </ul>
           </section>
         )}
+        </Typo>
       </main>
 
       <ScrollAnimations targets=".tmethod, .tpage__related" />

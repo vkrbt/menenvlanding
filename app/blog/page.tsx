@@ -9,6 +9,7 @@ import { blogListGraph } from '@/lib/jsonld'
 import { postsForPage, totalPages, allPostCards } from '@/lib/posts'
 import { BLOG_URL, OG_IMAGE, SITE_URL } from '@/lib/site'
 import ScrollAnimations from '@/components/ScrollAnimations'
+import Typo from '@/components/Typo'
 
 export const metadata: Metadata = {
   title: 'Блог «Мужской среды» — о мужском ментальном здоровье без клише',
@@ -39,6 +40,7 @@ export default function BlogIndexPage() {
       <SiteHeader />
 
       <main>
+        <Typo>
         <section className="blog-hero">
           <div className="container">
             <h1 className="blog-hero__title">Блог</h1>
@@ -67,6 +69,7 @@ export default function BlogIndexPage() {
           <BlogList initial={cards} page={1} totalPages={total} />
           <Pagination page={1} totalPages={total} />
         </section>
+        </Typo>
       </main>
 
       <ScrollAnimations targets=".blog-topics, .blog-card" />

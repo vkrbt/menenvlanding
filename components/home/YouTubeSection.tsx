@@ -1,11 +1,13 @@
 import YouTubeCarousel from '@/components/YouTubeCarousel'
 import { YOUTUBE_URL } from '@/lib/site'
 import { typo } from '@/lib/typo'
+import Typo from '@/components/Typo'
 
 const VIDEO_IDS = ['PHdg6U57lOU', 'yb7g3u8kiB4', 'LF_Gt4MzNlc', 'I2sGt70krXc']
 
 export default function YouTubeSection() {
   return (
+    <Typo>
     <section className="section youtube">
       <div className="container youtube__inner">
         <div className="youtube__icon" aria-hidden="true">
@@ -28,5 +30,6 @@ export default function YouTubeSection() {
         </a>
       </div>
     </section>
+    </Typo>
   )
 }

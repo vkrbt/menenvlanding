@@ -5,6 +5,7 @@ import { explanation, LEGENDS, SPECIALIST_FROM_SEVERITY } from '@/lib/tests/copy
 import type { Scale, ScoreResult, Subscale, SubscaleResult } from '@/lib/tests/types'
 import { TESTS_URL } from '@/lib/site'
 import CrisisBlock from './CrisisBlock'
+import { typo } from '@/lib/typo'
 
 type Ok = Extract<ScoreResult, { ok: true }>
 
@@ -56,11 +57,11 @@ function Card({ scale, sub, r }: { scale: Scale; sub: Subscale; r: SubscaleResul
         </span>
       </p>
       <Track sub={sub} raw={r.raw} />
-      {ex && <p className="tres__title">{ex.title}</p>}
+      {ex && <p className="tres__title">{typo(ex.title)}</p>}
       {r.category && r.category.label.toLowerCase() !== ex?.title.toLowerCase() && (
         <p className="tres__official">По методике: «{r.category.label}»</p>
       )}
-      {ex?.text && <p className="tres__text">{ex.text}</p>}
+      {ex?.text && <p className="tres__text">{typo(ex.text)}</p>}
     </section>
   )
 }
@@ -85,7 +86,7 @@ function Profile({ scale, rows }: { scale: Scale; rows: Array<[Subscale, Subscal
       {LEGENDS[scale.slug] && (
         <ul className="tres__legend">
           {LEGENDS[scale.slug].map((l) => (
-            <li key={l}>{l}</li>
+            <li key={l}>{typo(l)}</li>
           ))}
         </ul>
       )}

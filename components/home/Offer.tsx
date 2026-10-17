@@ -13,6 +13,7 @@ import {
 } from '@/lib/site'
 import { typo } from '@/lib/typo'
 import TypoLines from '@/components/TypoLines'
+import Typo from '@/components/Typo'
 
 const INCLUDES = [
   `${GROUP_MEETINGS} встреч по 3 часа в Zoom, раз в две недели по средам в ${MEETING_TIME}`,
@@ -32,6 +33,7 @@ function Check() {
 
 export default function Offer() {
   return (
+    <Typo>
     <section className="section offer" id="offer" aria-labelledby="offer-title">
       <div className="container offer__inner">
         <div className="offer__main">
@@ -63,5 +65,6 @@ export default function Offer() {
         </div>
       </div>
     </section>
+    </Typo>
   )
 }

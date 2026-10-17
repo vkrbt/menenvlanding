@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import ThemeInit from '@/components/ThemeInit'
 import LeadForm from '@/components/LeadForm'
+import { LEAD_COPY, type LeadCopy } from '@/lib/lead-copy'
+import { typo } from '@/lib/typo'
 import MetrikaGoals from '@/components/MetrikaGoals'
 import YandexMetrika from '@/components/YandexMetrika'
 import { DELA_HREF, MANROPE_HREF } from '@/lib/fonts'
@@ -24,6 +26,9 @@ export const metadata: Metadata = {
   },
 }
 
+/** Тексты формы заявки — через типограф при сборке */
+const LEAD_TYPO = Object.fromEntries(Object.entries(LEAD_COPY).map(([k, v]) => [k, typo(v)])) as LeadCopy
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     // ThemeInit проставляет data-theme на <html> до гидратации, поэтому серверная
@@ -42,7 +47,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         <YandexMetrika />
         <MetrikaGoals />
-        <LeadForm />
+        <LeadForm copy={LEAD_TYPO} />
       </body>
     </html>
   )

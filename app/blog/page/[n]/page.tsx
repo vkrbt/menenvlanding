@@ -9,6 +9,7 @@ import { blogListGraph } from '@/lib/jsonld'
 import { allPostCards, blogPageUrl, postsForPage, totalPages, POSTS_PER_PAGE } from '@/lib/posts'
 import { OG_IMAGE, SITE_URL } from '@/lib/site'
 import ScrollAnimations from '@/components/ScrollAnimations'
+import Typo from '@/components/Typo'
 
 /** Страницы со второй и далее. Первая живёт на /blog, дубля не возникает */
 export function generateStaticParams() {
@@ -59,6 +60,7 @@ export default async function BlogPagedPage({ params }: { params: Promise<{ n: s
       <SiteHeader />
 
       <main>
+        <Typo>
         <section className="blog-hero">
           <div className="container">
             <nav className="blog-crumbs" aria-label="Хлебные крошки">
@@ -93,6 +95,7 @@ export default async function BlogPagedPage({ params }: { params: Promise<{ n: s
           <BlogList initial={cards} page={page} totalPages={total} />
           <Pagination page={page} totalPages={total} />
         </section>
+        </Typo>
       </main>
 
       <ScrollAnimations targets=".blog-topics, .blog-card" />

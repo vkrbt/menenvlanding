@@ -7,6 +7,7 @@ import { OG_IMAGE, SITE_URL, TESTS_URL } from '@/lib/site'
 import { questionCount, questionsLabel, TESTS } from '@/lib/tests/registry'
 import './tests.css'
 import ScrollAnimations from '@/components/ScrollAnimations'
+import Typo from '@/components/Typo'
 
 const CANONICAL = `${SITE_URL}${TESTS_URL}`
 
@@ -38,6 +39,7 @@ export default function TestsHub() {
       <SiteHeader />
 
       <main className="tpage">
+        <Typo>
         <section className="blog-hero">
           <div className="container">
             <nav className="blog-crumbs" aria-label="Хлебные крошки">
@@ -79,6 +81,7 @@ export default function TestsHub() {
             Если тебе сейчас очень плохо или есть мысли о самоубийстве — звони в экстренную службу 112.
           </p>
         </section>
+        </Typo>
       </main>
 
       <ScrollAnimations targets=".thub__topic-title, .thub__card" />
