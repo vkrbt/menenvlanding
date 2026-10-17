@@ -740,6 +740,23 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
   background: var(--pane);
   border: 1.5px solid var(--ink);
   border-radius: 100px;
+  transition:
+    translate 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    rotate 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.18s ease,
+    background-color 0.18s ease,
+    border-color 0.18s ease;
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  .hero__facts li:hover {
+    translate: 0 -3px;
+    rotate: -2deg;
+    background: var(--accent-soft-bg);
+    border-color: var(--accent);
+    box-shadow: 0 3px 0 var(--accent);
+  }
+  .hero__facts li:nth-child(even):hover { rotate: 2deg; }
 }
 
 .hero__actions {
@@ -1655,14 +1672,51 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
 }
 
 .faq__a {
-  display: none;
-  padding: 0 24px 22px;
+  /* Раскрытие по высоте: строка сетки 0fr → 1fr, контент обрезается внутри.
+     visibility прячет закрытый ответ от скринридеров — с задержкой, чтобы успела анимация */
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
   font-size: 16px;
   color: var(--text-muted);
   line-height: 1.65;
+  transition:
+    grid-template-rows 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s linear 0.32s;
 }
 
-.faq__a.is-open { display: block; }
+.faq__a.is-open {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  transition:
+    grid-template-rows 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+    visibility 0s;
+}
+
+.faq__a-inner {
+  min-height: 0;
+  overflow: hidden;
+  padding: 0 24px;
+  opacity: 0;
+  translate: 0 -6px;
+  transition: opacity 0.2s ease, translate 0.32s cubic-bezier(0.16, 1, 0.3, 1), padding-bottom 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.faq__a.is-open .faq__a-inner {
+  padding-bottom: 22px;
+  opacity: 1;
+  translate: 0 0;
+  transition: opacity 0.28s ease 0.06s, translate 0.32s cubic-bezier(0.16, 1, 0.3, 1), padding-bottom 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .faq__a,
+  .faq__a.is-open,
+  .faq__a-inner,
+  .faq__a.is-open .faq__a-inner {
+    transition: none;
+  }
+}
 
 /* ============================================================
    PROMO TEXT — крупная мысль с подчёркиванием-маркером
@@ -1844,7 +1898,9 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
   .pricing__card { padding: 28px 20px 22px; }
   .process__note { padding: 18px 20px; }
   .faq__btn { padding: 16px 18px; font-size: 16px; }
-  .faq__a { padding: 0 18px 18px; font-size: 15px; }
+  .faq__a { font-size: 15px; }
+  .faq__a-inner { padding-inline: 18px; }
+  .faq__a.is-open .faq__a-inner { padding-bottom: 18px; }
   .home > .section.cta-final { padding-block: 96px; margin-top: 48px; }
   /* Кольцо на телефоне идёт рамкой у краёв экрана — тексту нужны поля под неё */
   .cta-final__inner { padding-inline: 32px; }

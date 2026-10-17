@@ -27,7 +27,9 @@ export default function Faq({ items }: { items: FaqItem[] }) {
               </svg>
             </button>
           </dt>
-          <dd className={open === i ? 'faq__a is-open' : 'faq__a'}>{item.a}</dd>
+          <dd className={open === i ? 'faq__a is-open' : 'faq__a'}>
+            <div className="faq__a-inner">{item.a}</div>
+          </dd>
         </div>
       ))}
     </dl>
