@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Script from 'next/script'
 import SiteHeader from '@/components/SiteHeader'
 import JsonLd from '@/components/JsonLd'
+import ScrollActive from '@/components/ScrollActive'
 import ScrollAnimations from '@/components/ScrollAnimations'
 import SiteFooter from '@/components/SiteFooter'
 import AttendancePolicy from '@/components/home/AttendancePolicy'
@@ -98,6 +99,8 @@ export default function HomePage() {
       <SiteFooter />
 
       <ScrollAnimations targets={ANIMATED} />
+      {/* На телефоне иллюстрации оживают при появлении в экране — как на десктопе при наведении */}
+      <ScrollActive selector=".community-format__item, .attendance-policy__card, .host-card" />
 
       {/* Google Ads. Раньше грузился в <head> синхронно и блокировал отрисовку */}
       <Script src={`https://www.googletagmanager.com/gtag/js?id=${GTAG_ID}`} strategy="afterInteractive" />

@@ -2546,6 +2546,22 @@ a.pager__side:hover { background: var(--hover-bg-strong); }
   }
 }
 
+/* Тач-экраны: те же позы иллюстраций, пока блок в экране (.is-active ставит ScrollActive;
+   с мышью и при reduced motion класс не появляется) */
+.host-card.is-active .host-card__avatar img { transform: scale(1.04); }
+
+.community-format__item.is-active .fart__card--front { transform: rotate(-3deg) translateY(-10px); }
+.community-format__item.is-active .fart__card--back  { transform: rotate(-15deg) translateX(-8px); }
+.community-format__item.is-active .fart__bubble--l   { translate: -8px 0; }
+.community-format__item.is-active .fart__bubble--r   { translate: 8px 0; }
+.community-format__item.is-active .fart__bubble--accent { transform: rotate(-3deg) scale(1.06); }
+
+.attendance-policy__card.is-active .attendance-policy__icon {
+  transform: rotate(-12deg);
+  translate: 0 -4px;
+  box-shadow: 0 7px 0 var(--accent-ink);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .for-who__item:hover,
   .program__item:hover,
