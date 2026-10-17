@@ -104,6 +104,7 @@ _Первый шаг — короткий созвон-знакомство, д�
 > **Источники:** [Инк. — исследование UCL о вреде финансового стресса](https://incrussia.ru/news/issledovanie-stress-iz-za-finansov-vredit-zdorovyu-silnee-chem-gore/) · [Т—Ж — финансовый стресс: цифры и механика](https://t-j.ru/financial-stress/) · [РИА — исследование Университета Бата о доходах в паре](https://ria.ru/20191119/1561118518.html) · [Даремский университет — доход жены и психика мужа](https://www.zakon.kz/nauka/6463114-muzhchiny-ispytyvayut-stress-esli-zheny-zarabatyvayut-bolshe--issledovanie.html) · [Медуза — доходы российских эмигрантов](https://meduza.io/feature/2024/01/23/rossiyskie-emigranty-zarabatyvayut-menshe-chem-doma-i-zhaluyutsya-na-diskriminatsiyu-no-veryat-v-luchshee-buduschee-dlya-sebya-i-rossii)
 
 ## Читать дальше
+- [Тест на тревожность GAD-7: 7 вопросов, анонимно](/tests/gad-7)
 
 - [Тревожность у мужчин: как она маскируется под контроль](/blog/trevozhnost-u-muzhchin)
 

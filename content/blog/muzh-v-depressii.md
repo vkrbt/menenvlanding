@@ -67,6 +67,7 @@ _До первой встречи созваниваемся минут на п�
 > **Источники:** [Медуза — как вести себя с человеком с депрессией](https://meduza.io/feature/2017/05/12/kak-vesti-sebya-s-chelovekom-s-depressiey-instruktsiya) · [Zigmund.Online — если близкий отказывается от помощи](https://zigmund.online/journal/opora/go-to-psychologist/) · [Центр Self — у мужа депрессия: что делать жене](https://my-self.ru/articles/depressiya-u-muzha/) · [Psychologies — как помочь мужчине в депрессии](https://www.psychologies.ru/articles/parni-ne-plachut-kak-pomoch-muzhchine-v-depressii/) · [NEJM / ВОЗ — соматические проявления депрессии](https://www.nejm.org/doi/full/10.1056/NEJM199910283411801)
 
 ## Читать дальше
+- [Шкала депрессии Цунга: тест с индексом по первоисточнику](/tests/zung)
 - [Муж замкнулся: что делать и чего не делать](/blog/muzh-zamknulsya)
 - [Как на самом деле выглядит депрессия у мужчин](/blog/depressiya-u-muzhchin-priznaki)
 - [Друг замолчал. Как поговорить с ним](/blog/kak-pomoch-drugu-v-depressii)

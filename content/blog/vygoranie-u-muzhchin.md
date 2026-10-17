@@ -130,6 +130,7 @@ _До первой встречи созваниваемся минут на п�
 > **Источники:** [Maslach & Leiter. Understanding the burnout experience (World Psychiatry, 2016)](https://pubmed.ncbi.nlm.nih.gov/27265691/) · [ВОЗ о выгорании в МКБ-11](https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases)
 
 ## Читать дальше
+- [Опросник выгорания Маслач (MBI): тест онлайн](/tests/mbi)
 - [Постоянная усталость: почему сон не помогает и где искать утечку](/blog/postoyannaya-ustalost)
 - [Не умею отдыхать: почему в отпуске хуже, чем на работе](/blog/ne-mogu-rasslabitsya)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

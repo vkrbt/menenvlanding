@@ -99,6 +99,7 @@ _До первой встречи созваниваемся минут на п�
 > **Источники:** [Positive affect treatment for depression and anxiety: рандомизированное испытание (Journal of Consulting and Clinical Psychology)](https://doi.org/10.1037/ccp0000396)
 
 ## Читать дальше
+- [Тест на депрессию по шкале Бека: 21 вопрос, анонимно](/tests/beck)
 - [Ничего не хочется: куда смотреть и что делать](/blog/nichego-ne-hochetsya)
 - [Живу на автопилоте: почему день не запоминается](/blog/zhivu-na-avtopilote)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

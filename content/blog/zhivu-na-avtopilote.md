@@ -101,6 +101,7 @@ _До первой встречи созваниваемся минут на п�
 > **Источники:** [Killingsworth & Gilbert. A Wandering Mind Is an Unhappy Mind (Science, 2010)](https://doi.org/10.1126/science.1192439)
 
 ## Читать дальше
+- [Индекс благополучия ВОЗ (WHO-5): тест из 5 вопросов](/tests/who-5)
 - [Ничего не хочется: куда смотреть и что делать](/blog/nichego-ne-hochetsya)
 - [Ничего не радует: разбор для мужчин](/blog/nichego-ne-raduet)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

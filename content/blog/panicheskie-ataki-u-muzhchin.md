@@ -100,6 +100,7 @@ _Вход — через короткий созвон-знакомство._
 > **Источники:** [Медгород — паническая атака или сердечный приступ](https://medgorod-clinic.ru/stati/panicheskaya-ataka-ili-serdechnyy-pristup--kak-otlichit-trevogu-ot-opasnosti/) · [Клиника «Роса» — панические атаки: симптомы и длительность](https://rosa.clinic/blog/neurologiya/panicheskaya-ataka/) · [МИПЗ — самопомощь при панических атаках](https://mipz.ru/samopomoshch-pri-panicheskih-atakah/) · [IsraClinic — панические атаки у мужчин](https://www.israclinic.com/nashi-publikatsii/psikhiatriya/panicheskie-ataki-u-muzhchin/)
 
 ## Читать дальше
+- [Тест на тревожность GAD-7: 7 вопросов, анонимно](/tests/gad-7)
 
 - [Тревожность у мужчин: как она маскируется под контроль](/blog/trevozhnost-u-muzhchin)
 

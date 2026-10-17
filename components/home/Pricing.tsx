@@ -1,4 +1,4 @@
-import { FORMS_URL } from '@/lib/site'
+import { BLOCK_SIZE, FORMS_URL, GROUP_MEETINGS, PRICE_BLOCK, PRICE_PROGRAM, PRICE_SINGLE } from '@/lib/site'
 import { typo } from '@/lib/typo'
 import TypoLines from '@/components/TypoLines'
 
@@ -14,32 +14,39 @@ type Plan = {
   badge?: string
 }
 
+/** Сколько стоила бы вся программа при оплате за каждую встречу — от неё считаем экономию */
+const FULL_PRICE = PRICE_SINGLE * GROUP_MEETINGS
+const BLOCKS = GROUP_MEETINGS / BLOCK_SIZE
+const PROGRAM = `Вся программа: ${GROUP_MEETINGS} встреч и 8 тем`
+const EXTRAS = 'Чат группы и ранний доступ к подкасту'
+
+/** Программа у всех одна, тарифы — это способы её оплатить. Самый выгодный — по центру */
 const PLANS: Plan[] = [
   {
-    label: 'За каждую встречу',
-    amount: '€50',
-    note: 'Оплата перед каждым занятием',
-    includes: ['Все встречи и материалы', 'Закрытый чат', 'Ранний доступ к подкасту'],
+    label: `Блоками по ${BLOCK_SIZE} встречи`,
+    amount: `€${PRICE_BLOCK / BLOCK_SIZE}`,
+    note: `€${PRICE_BLOCK} за блок · ${BLOCKS} платежа`,
+    noteAccent: true,
+    includes: [PROGRAM, `Экономия €${FULL_PRICE - PRICE_BLOCK * BLOCKS} против оплаты поштучно`, EXTRAS],
     cta: 'Оставить заявку',
     ctaClass: 'btn btn--outline btn--full',
   },
   {
-    label: 'На 3 месяца',
-    amount: '€36',
-    note: '€215 за 6 встреч · 3 месяца',
+    label: 'Вся программа сразу',
+    amount: `€${PRICE_PROGRAM / GROUP_MEETINGS}`,
+    note: `€${PRICE_PROGRAM} за все ${GROUP_MEETINGS} встреч`,
     noteAccent: true,
-    includes: ['Все встречи и материалы', 'Закрытый чат и нетворкинг', 'Ранний доступ к подкасту'],
+    includes: [PROGRAM, `Экономия €${FULL_PRICE - PRICE_PROGRAM} против оплаты поштучно`, EXTRAS],
     cta: 'Занять место в группе',
     ctaClass: 'btn btn--primary btn--full',
     featured: true,
-    badge: 'Лучший выбор',
+    badge: 'Выгоднее всего',
   },
   {
-    label: 'Минимальное членство',
-    amount: '€40',
-    note: '€80 за 2 встречи · 1 месяц',
-    noteAccent: true,
-    includes: ['Все встречи и материалы', 'Закрытый чат и нетворкинг', 'Ранний доступ к подкасту'],
+    label: 'За каждую встречу',
+    amount: `€${PRICE_SINGLE}`,
+    note: 'Оплата перед каждой встречей',
+    includes: [PROGRAM, 'Без оплаты вперёд', EXTRAS],
     cta: 'Оставить заявку',
     ctaClass: 'btn btn--outline btn--full',
   },

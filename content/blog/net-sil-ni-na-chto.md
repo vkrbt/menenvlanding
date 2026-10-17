@@ -105,6 +105,7 @@ _Первый шаг — короткий созвон-знакомство, д�
 > **Источники:** [Effects of chronic exercise on feelings of energy and fatigue (Psychological Bulletin, 2006)](https://doi.org/10.1037/0033-2909.132.6.866)
 
 ## Читать дальше
+- [Индекс благополучия ВОЗ (WHO-5): тест из 5 вопросов](/tests/who-5)
 - [Ничего не хочется: куда смотреть и что делать](/blog/nichego-ne-hochetsya)
 - [Живу на автопилоте: почему день не запоминается](/blog/zhivu-na-avtopilote)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

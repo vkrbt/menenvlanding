@@ -1,7 +1,21 @@
 import { clusterOfPost, topicCanonical, type Cluster } from './clusters'
 import { plainText } from './markdown'
 import type { Post } from './posts'
-import { BLOG_URL, OG_IMAGE, ORG_ID, SITE_URL, TESTS_URL, VLAD, WEBSITE_ID, ZHENYA } from './site'
+import {
+  BLOCK_SIZE,
+  BLOG_URL,
+  GROUP_MEETINGS,
+  OG_IMAGE,
+  ORG_ID,
+  PRICE_BLOCK,
+  PRICE_PROGRAM,
+  PRICE_SINGLE,
+  SITE_URL,
+  TESTS_URL,
+  VLAD,
+  WEBSITE_ID,
+  ZHENYA,
+} from './site'
 import { TESTS, type TestEntry } from './tests/registry'
 
 /**
@@ -113,9 +127,21 @@ export function homeGraph(faq: Array<{ q: string; a: string }>) {
           availableLanguage: 'ru',
         },
         offers: [
-          { '@type': 'Offer', name: 'За каждую встречу', price: '50', priceCurrency: 'EUR', url: `${SITE_URL}/#pricing` },
-          { '@type': 'Offer', name: 'Минимальное членство — 2 встречи в месяц', price: '40', priceCurrency: 'EUR', url: `${SITE_URL}/#pricing` },
-          { '@type': 'Offer', name: '3 месяца — 6 встреч', price: '36', priceCurrency: 'EUR', url: `${SITE_URL}/#pricing` },
+          {
+            '@type': 'Offer',
+            name: `Вся программа — ${GROUP_MEETINGS} встреч`,
+            price: String(PRICE_PROGRAM),
+            priceCurrency: 'EUR',
+            url: `${SITE_URL}/#pricing`,
+          },
+          {
+            '@type': 'Offer',
+            name: `Блок из ${BLOCK_SIZE} встреч`,
+            price: String(PRICE_BLOCK),
+            priceCurrency: 'EUR',
+            url: `${SITE_URL}/#pricing`,
+          },
+          { '@type': 'Offer', name: 'Одна встреча', price: String(PRICE_SINGLE), priceCurrency: 'EUR', url: `${SITE_URL}/#pricing` },
         ],
       },
       {

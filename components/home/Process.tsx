@@ -1,4 +1,5 @@
 import { startPhrase } from '@/lib/group'
+import { GROUP_START } from '@/lib/site'
 import { typo } from '@/lib/typo'
 
 export default function Process() {
@@ -12,7 +13,7 @@ export default function Process() {
     {
       num: '03',
       title: 'Занимаешь место',
-      body: `После созвона делаешь первую оплату, и место твоё. Группа стартует ${startPhrase()}: ближе к делу пришлём точную дату и добавим в чат`,
+      body: `После созвона делаешь первую оплату, и место твоё. Группа стартует ${startPhrase()}: ближе к делу ${GROUP_START ? '' : 'пришлём точную дату и '}добавим в чат`,
     },
   ]
 

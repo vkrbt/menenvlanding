@@ -101,6 +101,7 @@ _Первый шаг — короткий созвон-знакомство, д�
 > **Источники:** [Controlled Interventions to Reduce Burnout in Physicians (JAMA Internal Medicine)](https://doi.org/10.1001/jamainternmed.2016.7674) · [ВОЗ: выгорание как профессиональное явление в МКБ-11](https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases) · [Maslach & Leiter. Understanding the burnout experience (World Psychiatry, 2016)](https://pubmed.ncbi.nlm.nih.gov/27265691/)
 
 ## Читать дальше
+- [Опросник выгорания Маслач (MBI): тест онлайн](/tests/mbi)
 - [Выгорание у мужчин: как отличить от усталости и что делать](/blog/vygoranie-u-muzhchin)
 - [Стадии выгорания: чего нет в диагнозе](/blog/stadii-vygoraniya)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

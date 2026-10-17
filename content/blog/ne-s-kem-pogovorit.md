@@ -59,6 +59,7 @@ _Первый шаг — короткий созвон-знакомство, д�
 > **Источники:** [Lieberman et al., 2007: аффективная маркировка (Psychological Science)](https://pubmed.ncbi.nlm.nih.gov/17576282/) · [Holt-Lunstad et al., 2010: одиночество и риски для здоровья](https://pubmed.ncbi.nlm.nih.gov/20668659/) · [Seidler et al., 2016: мужчины и обращение за помощью](https://pubmed.ncbi.nlm.nih.gov/27664823/)
 
 ## Читать дальше
+- [Как вести смолток и знакомиться с людьми: по шагам](/blog/kak-vesti-smoltok)
 - [Нет друзей после 30: почему так вышло и что с этим делать](/blog/net-druzey-posle-30)
 - [Одиночество в браке: жена рядом, а выговориться не с кем](/blog/odinochestvo-v-brake)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

@@ -76,5 +76,6 @@ _Вход — через короткий созвон-знакомство._
 > **Источники:** [NEJM / ВОЗ — соматические проявления депрессии](https://www.nejm.org/doi/full/10.1056/NEJM199910283411801) · [Ангедония — обзор](https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B3%D0%B5%D0%B4%D0%BE%D0%BD%D0%B8%D1%8F) · [Zigmund.Online — апатия](https://zigmund.online/journal/uncategorized/apatiya/) · [ВЦИОМ — потребность в психологической поддержке](https://wciom.ru/analytical-reviews/analiticheskii-obzor/indeks-potrebnosti-rossijan-v-psikhologicheskoi-podderzhke) · [Ведомости — мужчины и психологи](https://www.vedomosti.ru/society/articles/2025/10/10/1145770-muzhchini-stali-chasche-obraschatsya-k-psihologam) · [HeadsUpGuys — депрессия у мужчин](https://headsupguys.org/mens-depression/)
 
 ## Читать дальше
+- [Индекс благополучия ВОЗ (WHO-5): тест из 5 вопросов](/tests/who-5)
 - [Ничего не радует: ангедония и как вернуть удовольствие](/blog/nichego-ne-raduet)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

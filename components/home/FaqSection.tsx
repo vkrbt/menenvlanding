@@ -1,9 +1,9 @@
 import Faq, { type FaqItem } from '@/components/Faq'
 import { startPhrase } from '@/lib/group'
-import { GROUP_SEATS, RECRUITMENT_NOTE } from '@/lib/site'
+import { GROUP_SEATS, GROUP_START, RECRUITMENT_NOTE } from '@/lib/site'
 import { typo } from '@/lib/typo'
 
-const START_ANSWER = `Старт ${startPhrase()}. Сейчас созваниваемся с каждым, кто оставил заявку, а точную дату первой встречи пришлём лично. ${RECRUITMENT_NOTE || `Мест не больше ${GROUP_SEATS}`}, так что с заявкой лучше не тянуть.`
+const START_ANSWER = `Старт ${startPhrase()}. Сейчас созваниваемся с каждым, кто оставил заявку${GROUP_START ? '' : ', а точную дату первой встречи пришлём лично'}. ${RECRUITMENT_NOTE || `Мест не больше ${GROUP_SEATS}`}, так что с заявкой лучше не тянуть.`
 
 /**
  * Вопросы отдаются и в аккордеон, и в JSON-LD FAQPage.
@@ -29,7 +29,7 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     q: 'Как оплатить?',
-    a: 'Обсудим на созвоне и вместе подберём удобный вариант. Участники живут в разных странах, и способы оплаты у всех свои.',
+    a: 'Сразу за всю программу, блоками по три встречи или за каждую встречу отдельно — цены в разделе «Стоимость». Способ оплаты подберём на созвоне: участники живут в разных странах, и способы у всех свои.',
   },
   {
     q: 'Можно присоединиться не с первой встречи?',

@@ -89,6 +89,7 @@ _Вход — через короткий созвон-знакомство._
 
 > **Источники:** [Watkins — руминация и депрессия (Behaviour Research and Therapy, 2005)](https://pubmed.ncbi.nlm.nih.gov/15945532/) · [Maslach & Leiter — выгорание (World Psychiatry, 2016)](https://pubmed.ncbi.nlm.nih.gov/27265691/) · [Altena et al. — бессонница и руминация (Sleep Medicine Reviews, 2020)](https://pubmed.ncbi.nlm.nih.gov/31985638/)
 ## Читать дальше
+- [Тест на тревожность GAD-7: 7 вопросов, анонимно](/tests/gad-7)
 - [Выгорание у мужчин: как отличить от усталости](/blog/vygoranie-u-muzhchin)
 - [Не могу сосредоточиться: что происходит с вниманием](/blog/ne-mogu-sosredotochitsya)
 - [Как на самом деле выглядит депрессия у мужчин](/blog/depressiya-u-muzhchin-priznaki)

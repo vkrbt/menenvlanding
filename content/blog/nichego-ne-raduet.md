@@ -62,5 +62,6 @@ _До первой встречи созваниваемся минут на п�
 > **Источники:** [Ангедония — обзор](https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B3%D0%B5%D0%B4%D0%BE%D0%BD%D0%B8%D1%8F) · [Психодемия — как вернуть способность испытывать удовольствие](https://psychodemia.ru/blog/angedoniya-kak-pomoch-klientu-vernut-udovolstvie-ot-zhizni) · [Rehab Family — ангедония: причины и лечение](https://rehabfamily.com/articles/angedoniya/) · [HeadsUpGuys — депрессия у мужчин](https://headsupguys.org/mens-depression/)
 
 ## Читать дальше
+- [Тест на депрессию PHQ-9: 9 вопросов, официальный перевод](/tests/phq-9)
 - [Апатия у мужчин: нет сил и мотивации — что за этим стоит](/blog/apatiya-u-muzhchin)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

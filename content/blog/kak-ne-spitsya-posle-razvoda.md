@@ -107,6 +107,7 @@ _Вход — через короткий созвон-знакомство._
 > **Источники:** [ВОЗ: безопасного уровня потребления алкоголя не существует](https://www.who.int/europe/ru/news/item/04-01-2023-no-level-of-alcohol-consumption-is-safe-for-our-health) · [Тест AUDIT, Депздрав Москвы](https://mosgorzdrav.ru/ru-RU/test/default/card/5.html)
 
 ## Читать дальше
+- [Тест AUDIT: есть ли проблема с алкоголем](/tests/audit)
 - [Как пережить развод мужчине: что делать по порядку](/blog/kak-perezhit-razvod)
 - [Алкоголь каждый вечер: где проходит граница](/blog/alkogol-kazhdyy-vecher)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

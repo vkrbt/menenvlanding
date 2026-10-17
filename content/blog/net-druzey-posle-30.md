@@ -77,5 +77,6 @@ _Первый шаг — короткий созвон-знакомство, д�
 > **Источники:** [PBS / Survey Center on American Life - friendship recession](https://www.pbs.org/newshour/show/why-a-growing-number-of-american-men-say-they-are-in-a-friendship-recession) · [AIBM - данные о мужском одиночестве](https://aibm.org/research/male-loneliness-and-isolation-what-the-data-shows/) · [ВЦИОМ - индекс потребности в психологической поддержке](https://wciom.ru/analytical-reviews/analiticheskii-obzor/indeks-potrebnosti-rossijan-v-psikhologicheskoi-podderzhke) · [Jeffrey Hall - How many hours does it take to make a friend?](https://www.tandfonline.com/doi/abs/10.1177/0265407518761225)
 
 ## Читать дальше
+- [Как вести смолток и знакомиться с людьми: по шагам](/blog/kak-vesti-smoltok)
 - [Мужская группа онлайн: что происходит на встречах и кому это подходит](/blog/muzhskaya-gruppa-online)
 - [Эмигрантская депрессия у мужчин: почему накрывает после переезда](/blog/emigrantskaya-depressiya)

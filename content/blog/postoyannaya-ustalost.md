@@ -90,6 +90,7 @@ _До первой встречи созваниваемся минут на п�
 > **Источники:** [Analyz24 — постоянная усталость: 12 анализов](https://analyz24.ru/poleznaya-informatsiya/nauchno-populyarnye-stati/postoyannaya-ustalost-12-analizov-kotorye-nado-sdat.html) · [ЛабСтори — какие анализы сдать при усталости](https://www.labstori.ru/book/postoyannaya-ustalost-kakie-analizy-sdat/) · [Медгород — анализы при упадке сил](https://medgorod-clinic.ru/stati/kakie-analizy-sdat-pri-postoyannoy-ustalosti-i-upadke-sil-/) · [СМ-Клиника — повышенная утомляемость](https://www.smclinic.ru/simptomy/povyshennaya-utomlyaemost/) · [NEJM / ВОЗ — соматические проявления депрессии](https://www.nejm.org/doi/full/10.1056/NEJM199910283411801)
 
 ## Читать дальше
+- [Шкала воспринимаемого стресса PSS-10: тест онлайн](/tests/pss-10)
 - [Выгорание у мужчин: как отличить от усталости и что делать](/blog/vygoranie-u-muzhchin)
 - [Не умею отдыхать: почему в отпуске хуже, чем на работе](/blog/ne-mogu-rasslabitsya)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

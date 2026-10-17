@@ -60,6 +60,7 @@ _Первый шаг — короткий созвон-знакомство, д�
 > **Источники:** [ВОЗ — вопросы и ответы об игровом расстройстве](https://www.who.int/ru/news-room/questions-and-answers/item/gaming-disorder) · [МКБ-11 — критерии 6C51.0](https://www.israclinic.com/icd-11/gaming-disorder-predominantly-online-6c51-0/) · [Социологический журнал — мотивы обращения к видеоиграм](https://www.journal-socjournal.ru/index.php/socjour/article/view/9543) · [Игровое расстройство — обзор](https://ru.wikipedia.org/wiki/%D0%98%D0%B3%D1%80%D0%BE%D0%B2%D0%BE%D0%B5_%D1%80%D0%B0%D1%81%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE)
 
 ## Читать дальше
+- [Как избавиться от порнозависимости без марафонов воздержания](/blog/kak-izbavitsya-ot-pornozavisimosti)
 - [Пью каждый вечер: где граница между привычкой и зависимостью](/blog/alkogol-kazhdyy-vecher)
 - [Порнозависимость: что наука говорит на самом деле](/blog/pornozavisimost)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

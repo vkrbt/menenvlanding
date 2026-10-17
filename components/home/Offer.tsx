@@ -1,5 +1,16 @@
 import { startPhrase } from '@/lib/group'
-import { FORMS_URL, GROUP_MEETINGS, GROUP_SEATS, MEETING_TIME, PRICE_FROM, RECRUITMENT_NOTE, VLAD, ZHENYA } from '@/lib/site'
+import {
+  BLOCK_SIZE,
+  FORMS_URL,
+  GROUP_MEETINGS,
+  GROUP_SEATS,
+  MEETING_TIME,
+  PRICE_FROM,
+  PRICE_PROGRAM,
+  RECRUITMENT_NOTE,
+  VLAD,
+  ZHENYA,
+} from '@/lib/site'
 import { typo } from '@/lib/typo'
 import TypoLines from '@/components/TypoLines'
 
@@ -43,7 +54,8 @@ export default function Offer() {
             <span className="offer__period">за встречу</span>
           </p>
           <p className="offer__terms">
-            {typo('Разовая встреча стоит €50,')}<br />{typo('остальные тарифы')} <a href="#pricing">ниже</a>
+            {typo(`€${PRICE_PROGRAM} сразу за все ${GROUP_MEETINGS} встреч.`)}<br />
+            {typo(`Можно платить блоками по ${BLOCK_SIZE} или за каждую встречу — тарифы`)} <a href="#pricing">ниже</a>
           </p>
           <a href={FORMS_URL} className="btn btn--primary btn--full">{typo('Занять место в группе')}</a>
           <p className="offer__hint">

@@ -18,7 +18,7 @@ export const LEGACY_MEETING_PATH = '/vstrecha'
  * Как только впишешь дату, она появится в первом экране, оффере и у каждой встречи программы.
  * Встреча в 19:00 по Москве — это всегда 16:00 UTC: Москва часы не переводит.
  */
-export const GROUP_START: string | null = null
+export const GROUP_START: string | null = '2026-11-18T16:00:00Z'
 
 /** Ориентир старта, пока точной даты нет. В предложном падеже: «Старт в ноябре 2026» */
 export const GROUP_START_APPROX = 'в ноябре 2026'
@@ -35,11 +35,21 @@ export const GROUP_SEATS = 12
  */
 export const RECRUITMENT_NOTE = 'Осталась ещё пара мест'
 
-/** Минимальная цена встречи — для оффера; полные тарифы в components/home/Pricing.tsx */
-export const PRICE_FROM = '€36'
-
 /** Сколько встреч в группе: восемь тем и завершение */
 export const GROUP_MEETINGS = 9
+
+/**
+ * Тарифы в евро. Программа у всех одна — 9 встреч, тарифы отличаются только способом
+ * оплаты: сразу всё, блоками по BLOCK_SIZE встреч или за каждую встречу отдельно.
+ * Карточки — components/home/Pricing.tsx, они же уходят в JSON-LD (lib/jsonld.ts)
+ */
+export const PRICE_PROGRAM = 360
+export const BLOCK_SIZE = 3
+export const PRICE_BLOCK = 135
+export const PRICE_SINGLE = 50
+
+/** Минимальная цена встречи — для первого экрана и оффера */
+export const PRICE_FROM = `€${PRICE_PROGRAM / GROUP_MEETINGS}`
 
 /**
  * Время встреч: 19:00 по Минску (и Москве) круглый год, то есть 16:00 UTC. Варшава

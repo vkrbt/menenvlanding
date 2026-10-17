@@ -97,6 +97,7 @@ _Первый шаг — короткий созвон-знакомство, д�
 > **Источники:** [ВОЗ: выгорание как профессиональное явление в МКБ-11](https://www.who.int/news/item/28-05-2019-burn-out-an-occupational-phenomenon-international-classification-of-diseases) · [Maslach & Leiter. Understanding the burnout experience (World Psychiatry, 2016)](https://pubmed.ncbi.nlm.nih.gov/27265691/) · [InformedHealth / IQWiG: что такое выгорание](https://www.ncbi.nlm.nih.gov/books/NBK279286/)
 
 ## Читать дальше
+- [Тест на эмоциональное выгорание по Бойко](/tests/boyko)
 - [Выгорание у мужчин: как отличить от усталости и что делать](/blog/vygoranie-u-muzhchin)
 - [Постоянная усталость: что за ней стоит](/blog/postoyannaya-ustalost)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

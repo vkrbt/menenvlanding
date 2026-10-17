@@ -107,6 +107,7 @@ _Вход — через короткий созвон-знакомство._
 > **Источники:** [Lancet: что такое боль в пояснице и почему на неё стоит обратить внимание](https://pubmed.ncbi.nlm.nih.gov/29573870/) · [Overview of Medically Unexplained Symptoms (Springer)](https://doi.org/10.1007/978-3-030-59181-6_1)
 
 ## Читать дальше
+- [Шкала воспринимаемого стресса PSS-10: тест онлайн](/tests/pss-10)
 - [Болит а анализы в норме: что это значит](/blog/bolit-a-analizy-v-norme)
 - [Психосоматика у мужчин: что это на самом деле](/blog/psihosomatika-u-muzhchin)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

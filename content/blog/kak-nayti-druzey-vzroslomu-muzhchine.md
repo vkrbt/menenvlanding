@@ -90,6 +90,7 @@ _Первый шаг — короткий созвон-знакомство, д�
 > **Источники:** [Совместная игра, социальный капитал и одиночество (International Journal of Human–Computer Interaction)](https://www.tandfonline.com/doi/full/10.1080/10447318.2025.2531271) · [Эскапистские мотивы и проблемное игровое поведение (Frontiers in Psychiatry)](https://doi.org/10.3389/fpsyt.2023.1257685) · [Men's Sheds и мужское здоровье (PMC)](https://pmc.ncbi.nlm.nih.gov/articles/PMC8928410/)
 
 ## Читать дальше
+- [Как вести смолток и знакомиться с людьми: по шагам](/blog/kak-vesti-smoltok)
 - [Нет друзей после 30: почему так вышло и что с этим делать](/blog/net-druzey-posle-30)
 - [Почему мужская дружба распадается после тридцати](/blog/pochemu-muzhskaya-druzhba-raspadaetsya)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

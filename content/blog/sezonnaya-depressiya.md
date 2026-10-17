@@ -86,5 +86,6 @@ _Первый шаг — короткий созвон-знакомство, д�
 > **Источники:** [Сезонное аффективное расстройство — обзор](https://ru.wikipedia.org/wiki/%D0%A1%D0%B5%D0%B7%D0%BE%D0%BD%D0%BD%D0%BE%D0%B5_%D0%B0%D1%84%D1%84%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D0%BD%D0%BE%D0%B5_%D1%80%D0%B0%D1%81%D1%81%D1%82%D1%80%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%BE) · [AAFP — вопросы и ответы о SAD](https://www.aafp.org/pubs/afp/issues/2020/1201/p668.html) · [Cochrane — светотерапия при SAD](https://www.cochranelibrary.com/cdsr/doi/10.1002/14651858.CD011269.pub3/full) · [Хабр — руководство по сезонной депрессии и лампам](https://habr.com/ru/articles/517360/)
 
 ## Читать дальше
+- [Тест на депрессию PHQ-9: 9 вопросов, официальный перевод](/tests/phq-9)
 - [Депрессия у мужчин: признаки, которых нет в учебнике](/blog/depressiya-u-muzhchin-priznaki)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

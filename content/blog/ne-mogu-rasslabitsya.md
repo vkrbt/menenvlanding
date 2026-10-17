@@ -98,6 +98,7 @@ _Вход — через короткий созвон-знакомство._
 > **Источники:** [DailyMoscow — почему мы не умеем отдыхать даже в отпуске](https://dailymoscow.ru/society/hronicheskaya-trevoga-pochemu-my-ne-umeem-otdyhat-dazhe-v-otpuske) · [Prosto — как отдыхать без чувства вины](https://www.prostoapp.ru/posts/kak-nauchitsya-otdyhat-bez-chuvstva-viny) · [Skillbox — «Я не умею отдыхать»: что такое трудоголизм](https://skillbox.ru/media/management/ya-ne-umeyu-otdyhat-chto-takoe-trudogolizm-kak-ego-raspoznat-i-preodolet/) · [Nice and Easy — чувство вины за отдых](https://www.niceandeasy.me/daily/guilty-but-not-pleasure)
 
 ## Читать дальше
+- [Шкала воспринимаемого стресса PSS-10: тест онлайн](/tests/pss-10)
 - [Выгорание у мужчин: как отличить от усталости и что делать](/blog/vygoranie-u-muzhchin)
 - [Постоянная усталость: почему сон не помогает и где искать утечку](/blog/postoyannaya-ustalost)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

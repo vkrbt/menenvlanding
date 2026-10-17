@@ -99,6 +99,7 @@ _Вход — через короткий созвон-знакомство._
 > **Источники:** [Overview of Medically Unexplained Symptoms (Springer)](https://doi.org/10.1007/978-3-030-59181-6_1) · [Lancet: что такое боль в пояснице и почему на неё стоит обратить внимание](https://pubmed.ncbi.nlm.nih.gov/29573870/)
 
 ## Читать дальше
+- [Опросник Яхина–Менделевича: тест на невротические состояния](/tests/yakhin-mendelevich)
 - [Психосоматика у мужчин: что это на самом деле](/blog/psihosomatika-u-muzhchin)
 - [Ком в горле и тяжесть в груди: что за этим стоит](/blog/kom-v-gorle-i-tyazhest-v-grudi)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)

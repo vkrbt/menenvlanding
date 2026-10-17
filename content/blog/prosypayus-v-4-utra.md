@@ -88,6 +88,7 @@ _До первой встречи созваниваемся минут на п�
 > **Источники:** [Сомнолог Роман Бузунов — о ранних пробуждениях](https://59.ru/text/health/2022/04/09/71243276/) · [Лайфхакер — почему просыпаешься рано и что делать](https://lifehacker.ru/rannee-probuzhdenie/) · [Сомнолог — кортизол и разбитость по утрам](https://www.sb.by/articles/razbitost-po-utram-iz-za-kortizola-somnolog-obyasnil-kak-stress-vliyaet-na-son.html) · [Модус — почему просыпаешься с тревогой](https://modus-center.ru/articles/pochemu-prosypaeshsya-s-chuvstvom-trevogi) · [N+1 — новые данные об утреннем кортизоле](https://nplus1.ru/news/2025/01/21/car-myth-about-cortisol)
 
 ## Читать дальше
+- [Госпитальная шкала тревоги и депрессии (HADS): тест онлайн](/tests/hads)
 
 - [Мозг не отдыхает: что делать, когда голова не выключается](/blog/mozg-ne-otdyhaet)
 

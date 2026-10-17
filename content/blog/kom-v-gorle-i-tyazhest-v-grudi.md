@@ -107,6 +107,7 @@ _Первый шаг — короткий созвон-знакомство, д�
 > **Источники:** [Overview of Medically Unexplained Symptoms (Springer)](https://doi.org/10.1007/978-3-030-59181-6_1) · [Into the unknown: обзор моделей неопределённости (Journal of Anxiety Disorders)](https://doi.org/10.1016/j.janxdis.2016.02.007)
 
 ## Читать дальше
+- [Опросник Яхина–Менделевича: тест на невротические состояния](/tests/yakhin-mendelevich)
 - [Болит а анализы в норме: что это значит](/blog/bolit-a-analizy-v-norme)
 - [Психосоматика у мужчин: что это на самом деле](/blog/psihosomatika-u-muzhchin)
 - [Мужская группа поддержки онлайн: как выбрать и чего ждать](/blog/muzhskaya-gruppa-podderzhki-online)
