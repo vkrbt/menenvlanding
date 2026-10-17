@@ -43,7 +43,7 @@ export default function Offer() {
             <span className="offer__period">за встречу</span>
           </p>
           <p className="offer__terms">
-            {typo('Разовая встреча стоит €50, остальные тарифы')} <a href="#pricing">ниже</a>
+            {typo('Разовая встреча стоит €50,')}<br />{typo('остальные тарифы')} <a href="#pricing">ниже</a>
           </p>
           <a href={FORMS_URL} className="btn btn--primary btn--full">{typo('Занять место в группе')}</a>
           <p className="offer__hint">
