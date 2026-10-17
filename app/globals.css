@@ -428,11 +428,17 @@ section[id] {
 }
 
 .nav__end {
+  --nav-ctl: 40px; /* одна высота у кнопок шапки: «Занять место» и меню */
   display: flex;
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
   margin-left: auto;
+}
+
+.nav__cta {
+  height: var(--nav-ctl);
+  padding-block: 0;
 }
 
 .nav__links {
@@ -457,8 +463,8 @@ section[id] {
   display: none;
   align-items: center;
   justify-content: center;
-  width: 44px;
-  height: 44px;
+  width: var(--nav-ctl, 40px);
+  height: var(--nav-ctl, 40px);
   margin: 0;
   padding: 0;
   border-radius: var(--radius-sm);
@@ -642,6 +648,7 @@ body.mnav-open {
   .nav__links { display: none; }
   .nav__burger { display: flex; }
   .nav { padding: 10px 16px; gap: 12px; }
+  .nav__end { gap: 8px; }
   .nav__cta {
     padding-inline: 14px;
     font-size: 13px;
