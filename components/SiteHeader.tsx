@@ -7,7 +7,8 @@ import { FORMS_URL, navLinks } from '@/lib/site'
 /**
  * Шапка сайта — одна на все страницы.
  *
- * Бургер живёт внутри .nav__end, а мобильная панель .mnav — соседом <header>,
+ * Бургер живёт внутри .nav__end, а мобильная шторка .mnav — соседом <header>
+ * (выезжает сверху из-под шапки, бургер в это время становится крестиком),
  * поэтому общее состояние держит один компонент, отдающий оба узла фрагментом.
  * Порядок в DOM тот же, что был в index.html.
  */
@@ -16,7 +17,7 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
 
   const [open, setOpen] = useState(false)
   const burgerRef = useRef<HTMLButtonElement>(null)
-  const closeRef = useRef<HTMLButtonElement>(null)
+  const panelRef = useRef<HTMLElement>(null)
   const lastFocus = useRef<Element | null>(null)
 
   const close = useCallback(() => setOpen(false), [])
@@ -51,7 +52,8 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
         document.documentElement.style.setProperty('--mnav-top', `${header.offsetHeight}px`)
       }
       lastFocus.current = document.activeElement
-      closeRef.current?.focus()
+      // фокус — на первый пункт шторки (крестик теперь — сам бургер в шапке)
+      panelRef.current?.querySelector<HTMLElement>('a')?.focus({ preventScroll: true })
     } else if (lastFocus.current) {
       const el = lastFocus.current as HTMLElement
       lastFocus.current = null
@@ -121,27 +123,12 @@ export default function SiteHeader({ home = false }: { home?: boolean }) {
         <nav
           className="mnav__panel"
           id="mnav-panel"
+          ref={panelRef}
           role="dialog"
           aria-modal="true"
           aria-label="Меню сайта"
           aria-hidden={!open}
         >
-          <div className="mnav__head">
-            <span className="mnav__title">Меню</span>
-            <button
-              type="button"
-              className="mnav__close"
-              id="mnav-close"
-              ref={closeRef}
-              aria-label="Закрыть меню"
-              onClick={close}
-            >
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                <path d="M18 6L6 18M6 6l12 12" />
-              </svg>
-            </button>
-          </div>
-
           <div className="mnav__links">
             {links.map((l) => (
               <a key={l.href} href={l.href} className="mnav__link" onClick={close}>
