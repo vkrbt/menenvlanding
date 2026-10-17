@@ -8,6 +8,7 @@ import { nonEmptyClusters, topicUrl } from '@/lib/clusters'
 import { blogListGraph } from '@/lib/jsonld'
 import { postsForPage, totalPages, allPostCards } from '@/lib/posts'
 import { BLOG_URL, OG_IMAGE, SITE_URL } from '@/lib/site'
+import ScrollAnimations from '@/components/ScrollAnimations'
 
 export const metadata: Metadata = {
   title: 'Блог «Мужской среды» — о мужском ментальном здоровье без клише',
@@ -67,6 +68,8 @@ export default function BlogIndexPage() {
           <Pagination page={1} totalPages={total} />
         </section>
       </main>
+
+      <ScrollAnimations targets=".blog-topics, .blog-card" />
 
       <SiteFooter />
     </>

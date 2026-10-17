@@ -5,6 +5,7 @@ import SiteHeader from '@/components/SiteHeader'
 import { articleGraph } from '@/lib/jsonld'
 import { getAllPosts, getPostBySlug } from '@/lib/posts'
 import { OG_IMAGE } from '@/lib/site'
+import ScrollAnimations from '@/components/ScrollAnimations'
 
 /** Все 40 статей известны на этапе билда — рантайм-фетчинга нет */
 export function generateStaticParams() {
@@ -51,6 +52,8 @@ export default async function ArticlePage({ params }: { params: Promise<{ slug: 
         лишней обёртки, а разметка совпадает с текущей побайтово
       */}
       <main className="article" dangerouslySetInnerHTML={{ __html: post.html }} />
+
+      <ScrollAnimations targets=".article__cta, .article__faq, .article__related, .article__note" />
 
       <SiteFooter />
     </>

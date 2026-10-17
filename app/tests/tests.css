@@ -356,6 +356,7 @@
 
 .tres__marker {
   position: absolute;
+  left: var(--pos);
   top: 50%;
   width: 16px;
   height: 16px;
@@ -365,6 +366,27 @@
   border: 3px solid var(--bg);
   transform: translateY(-50%);
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Шкала «рисуется» при появлении в экране (класс --anim ставит TestResult) */
+.tres__track--anim .tres__seg {
+  transform: scaleX(0);
+  transform-origin: left center;
+}
+.tres__track--anim .tres__marker {
+  left: 0;
+  opacity: 0;
+}
+.tres__track--anim.is-visible .tres__seg {
+  transform: scaleX(1);
+  transition: transform 0.55s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--i, 0) * 110ms);
+}
+.tres__track--anim.is-visible .tres__marker {
+  left: var(--pos);
+  opacity: 1;
+  transition:
+    left 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.3s,
+    opacity 0.2s ease 0.3s;
 }
 
 .tres__title {

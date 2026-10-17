@@ -21,8 +21,32 @@ import YouTubeSection from '@/components/home/YouTubeSection'
 import { homeGraph } from '@/lib/jsonld'
 import { OG_IMAGE, SITE_URL } from '@/lib/site'
 
-/** Селекторы, которым скрипт раздаёт .animate-in — как в scripts/main.js */
-const ANIMATED = '.for-who__item, .program__item, .host-card, .step, .faq__item, .pricing__card'
+/**
+ * Что появляется при прокрутке (.animate-in): заголовки секций и все блоки под ними.
+ * Первый экран (Hero) не трогаем — он виден сразу, без ожидания скрипта.
+ */
+const ANIMATED = [
+  '.section-title',
+  '.section-lead',
+  '.program__lead',
+  '.for-who__item',
+  '.for-who__conclusion',
+  '.program__item',
+  '.program__note',
+  '.offer__inner',
+  '.community-format__item',
+  '.host-card',
+  '.tcard',
+  '.youtube__inner',
+  '.pricing__card',
+  '.pricing__footer-note',
+  '.attendance-policy__card',
+  '.step',
+  '.process__note',
+  '.faq__item',
+  '.promo-text__inner',
+  '.cta-final__inner',
+].join(', ')
 
 const GTAG_ID = 'AW-17711060777'
 

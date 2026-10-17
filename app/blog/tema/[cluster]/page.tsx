@@ -12,6 +12,7 @@ import {
 } from '@/lib/clusters'
 import { topicGraph } from '@/lib/jsonld'
 import { BLOG_URL, OG_IMAGE } from '@/lib/site'
+import ScrollAnimations from '@/components/ScrollAnimations'
 
 /** Рубрики без единой опубликованной статьи не собираются — это была бы пустая страница */
 export function generateStaticParams() {
@@ -108,6 +109,8 @@ export default async function TopicPage({
           </nav>
         </section>
       </main>
+
+      <ScrollAnimations targets=".blog-topics, .blog-card" />
 
       <SiteFooter />
     </>

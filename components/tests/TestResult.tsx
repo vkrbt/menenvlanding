@@ -1,3 +1,6 @@
+'use client'
+
+import { useEffect, useRef, type CSSProperties } from 'react'
 import { explanation, LEGENDS, SPECIALIST_FROM_SEVERITY } from '@/lib/tests/copy'
 import type { Scale, ScoreResult, Subscale, SubscaleResult } from '@/lib/tests/types'
 import { TESTS_URL } from '@/lib/site'
@@ -25,18 +28,18 @@ function pos(sub: Subscale, raw: number): number {
 function Track({ sub, raw }: { sub: Subscale; raw: number }) {
   return (
     <div className="tres__track" aria-hidden="true">
-      {sub.categories.map((c) => {
+      {sub.categories.map((c, i) => {
         const from = pos(sub, Math.max(c.min, sub.min))
         const to = pos(sub, Math.min(c.max, sub.max))
         return (
           <span
             key={c.id}
             className={`tres__seg tres__seg--${c.severity}`}
-            style={{ left: `${from}%`, width: `${Math.max(0, to - from)}%` }}
+            style={{ left: `${from}%`, width: `${Math.max(0, to - from)}%`, '--i': i } as CSSProperties}
           />
         )
       })}
-      <span className="tres__marker" style={{ left: `${pos(sub, raw)}%` }} />
+      <span className="tres__marker" style={{ '--pos': `${pos(sub, raw)}%` } as CSSProperties} />
     </div>
   )
 }
@@ -106,8 +109,31 @@ export default function TestResult({
   const risk = result.flags.find((f) => f.id === 'suicide')?.level
   const toSpecialist = maxSeverity >= SPECIALIST_FROM_SEVERITY || risk !== undefined
 
+  // Шкалы «рисуются», когда попадают в экран: сегменты растут слева направо, маркер
+  // доезжает до результата. Без JS и при reduced motion — сразу итоговое состояние.
+  const rootRef = useRef<HTMLDivElement>(null)
+  useEffect(() => {
+    const root = rootRef.current
+    if (!root || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    const tracks = root.querySelectorAll<HTMLElement>('.tres__track')
+    tracks.forEach((t) => t.classList.add('tres__track--anim'))
+    void root.offsetWidth // зафиксировать исходное состояние до старта перехода
+    const io = new IntersectionObserver(
+      (entries) => {
+        for (const e of entries) {
+          if (!e.isIntersecting) continue
+          e.target.classList.add('is-visible')
+          io.unobserve(e.target)
+        }
+      },
+      { threshold: 0.6 },
+    )
+    tracks.forEach((t) => io.observe(t))
+    return () => io.disconnect()
+  }, [])
+
   return (
-    <div className="tres">
+    <div className="tres" ref={rootRef}>
       <h2 className="tres__heading" tabIndex={-1}>
         Твой результат
       </h2>

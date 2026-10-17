@@ -6,6 +6,7 @@ import { testsHubGraph } from '@/lib/jsonld'
 import { OG_IMAGE, SITE_URL, TESTS_URL } from '@/lib/site'
 import { questionCount, questionsLabel, TESTS } from '@/lib/tests/registry'
 import './tests.css'
+import ScrollAnimations from '@/components/ScrollAnimations'
 
 const CANONICAL = `${SITE_URL}${TESTS_URL}`
 
@@ -79,6 +80,8 @@ export default function TestsHub() {
           </p>
         </section>
       </main>
+
+      <ScrollAnimations targets=".thub__topic-title, .thub__card" />
 
       <SiteFooter />
     </>

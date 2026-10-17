@@ -10,6 +10,7 @@ import { BLOG_URL, OG_IMAGE, SITE_URL, TESTS_URL } from '@/lib/site'
 import { getTest, questionCount, questionsLabel, TESTS } from '@/lib/tests/registry'
 import type { Scale } from '@/lib/tests/types'
 import '../tests.css'
+import ScrollAnimations from '@/components/ScrollAnimations'
 
 type Params = { slug: string }
 
@@ -206,6 +207,8 @@ export default async function TestPage({ params }: { params: Promise<Params> }) 
           </section>
         )}
       </main>
+
+      <ScrollAnimations targets=".tmethod, .tpage__related" />
 
       <SiteFooter />
     </>
