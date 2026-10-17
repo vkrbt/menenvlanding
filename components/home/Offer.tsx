@@ -1,5 +1,5 @@
 import { startPhrase } from '@/lib/group'
-import { FORMS_URL, GROUP_MEETINGS, GROUP_SEATS, MEETING_TIME, PRICE_FROM, VLAD, ZHENYA } from '@/lib/site'
+import { FORMS_URL, GROUP_MEETINGS, GROUP_SEATS, MEETING_TIME, PRICE_FROM, RECRUITMENT_NOTE, VLAD, ZHENYA } from '@/lib/site'
 import { typo } from '@/lib/typo'
 import TypoLines from '@/components/TypoLines'
 
@@ -37,7 +37,7 @@ export default function Offer() {
         </div>
 
         <div className="offer__panel">
-          <p className="offer__start">{typo(`Старт ${startPhrase()}`)}</p>
+          <p className="offer__start">{typo([`Старт ${startPhrase()}`, RECRUITMENT_NOTE].filter(Boolean).join(' · '))}</p>
           <p className="offer__price">
             <span className="offer__amount">от {PRICE_FROM}</span>
             <span className="offer__period">за встречу</span>

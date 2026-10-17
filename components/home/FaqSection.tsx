@@ -1,9 +1,9 @@
 import Faq, { type FaqItem } from '@/components/Faq'
 import { startPhrase } from '@/lib/group'
-import { GROUP_SEATS } from '@/lib/site'
+import { GROUP_SEATS, RECRUITMENT_NOTE } from '@/lib/site'
 import { typo } from '@/lib/typo'
 
-const START_ANSWER = `Старт ${startPhrase()}. Сейчас созваниваемся с каждым, кто оставил заявку, а точную дату первой встречи пришлём лично. Мест не больше ${GROUP_SEATS}, так что с заявкой лучше не тянуть.`
+const START_ANSWER = `Старт ${startPhrase()}. Сейчас созваниваемся с каждым, кто оставил заявку, а точную дату первой встречи пришлём лично. ${RECRUITMENT_NOTE || `Мест не больше ${GROUP_SEATS}`}, так что с заявкой лучше не тянуть.`
 
 /**
  * Вопросы отдаются и в аккордеон, и в JSON-LD FAQPage.

@@ -685,6 +685,11 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
   color: var(--text-dim);
 }
 
+.hero__seats {
+  font-weight: 700;
+  color: var(--badge-text);
+}
+
 /* ============================================================
    FOR WHO
 ============================================================ */

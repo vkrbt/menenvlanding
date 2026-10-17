@@ -1,6 +1,6 @@
 import TypoLines from '@/components/TypoLines'
 import { startPhrase } from '@/lib/group'
-import { FORMS_URL, GROUP_MEETINGS, GROUP_SEATS, MEETING_TIME, PRICE_FROM } from '@/lib/site'
+import { FORMS_URL, GROUP_MEETINGS, GROUP_SEATS, MEETING_TIME, PRICE_FROM, RECRUITMENT_NOTE } from '@/lib/site'
 import { typo } from '@/lib/typo'
 
 export default function Hero() {
@@ -37,9 +37,9 @@ export default function Hero() {
         <p className="hero__sub">
           <TypoLines
             parts={[
-              '«Мужская среда» — тематическая онлайн-группа для мужчин 25+.',
-              'Девять встреч, на каждой одна тема: деньги, отношения, зависимости, злость, мама, папа. ' +
-                'Говоришь о своём и слышишь, как это у других мужиков. Ведут психолог и психиатр.',
+              '«Мужская среда» — тематическая онлайн-группа для мужчин, где мы говорим о том, о чём другие мужчины предпочитают молчать.',
+              'Девять встреч, на каждой одна тема: дело и деньги, отношения, зависимости, злость, мама, папа. ' +
+                'Ведут психолог и психиатр.',
             ]}
           />
         </p>
@@ -54,6 +54,7 @@ export default function Hero() {
         </div>
 
         <p className="hero__note">
+          {RECRUITMENT_NOTE && <><span className="hero__seats">{typo(RECRUITMENT_NOTE)}</span> · </>}
           {typo(`Старт ${startPhrase()} · Сначала бесплатный созвон на 10–15 минут`)}
         </p>
       </div>

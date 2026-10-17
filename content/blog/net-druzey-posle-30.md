@@ -72,7 +72,7 @@ _Первый шаг — короткий созвон-знакомство, д�
 Первая встреча - да, непривычно, врать не буду. Но у формата есть преимущество, которого нет у дружбы: не нужно годами наращивать доверие, оно встроено в правила - конфиденциальность, никаких советов без запроса, право молчать. Как это устроено изнутри, мы разобрали в отдельной статье.
 
 <!-- NOTE -->
-> **Автор:** Влад - психолог, ведущий «Мужской среды». Днём пишет код в Big Tech, вечером ведёт клиентов.
+> **Автор:** Влад - психолог, ведущий «Мужской среды». Пишет код в Big Tech.
 > Статья носит информационный характер и не заменяет консультацию специалиста. Если одиночество сопровождается подавленностью, потерей интереса к жизни дольше двух недель - это повод поговорить с психотерапевтом или врачом.
 > **Источники:** [PBS / Survey Center on American Life - friendship recession](https://www.pbs.org/newshour/show/why-a-growing-number-of-american-men-say-they-are-in-a-friendship-recession) · [AIBM - данные о мужском одиночестве](https://aibm.org/research/male-loneliness-and-isolation-what-the-data-shows/) · [ВЦИОМ - индекс потребности в психологической поддержке](https://wciom.ru/analytical-reviews/analiticheskii-obzor/indeks-potrebnosti-rossijan-v-psikhologicheskoi-podderzhke) · [Jeffrey Hall - How many hours does it take to make a friend?](https://www.tandfonline.com/doi/abs/10.1177/0265407518761225)
 

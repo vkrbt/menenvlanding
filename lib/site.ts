@@ -23,8 +23,17 @@ export const GROUP_START: string | null = null
 /** Ориентир старта, пока точной даты нет. В предложном падеже: «Старт в ноябре 2026» */
 export const GROUP_START_APPROX = 'в ноябре 2026'
 
+/** Тот же ориентир датой — по нему считается варшавское время, пока GROUP_START пуст */
+const GROUP_START_APPROX_DATE = '2026-11-01'
+
 /** Сколько мест в группе */
 export const GROUP_SEATS = 12
+
+/**
+ * Как идёт набор — строка рядом с кнопками. Без цифр, намёком на дефицит.
+ * Обновлять вручную по факту; пустая строка прячет её со всей страницы
+ */
+export const RECRUITMENT_NOTE = 'Группа почти собрана'
 
 /** Минимальная цена встречи — для оффера; полные тарифы в components/home/Pricing.tsx */
 export const PRICE_FROM = '€36'
@@ -33,11 +42,26 @@ export const PRICE_FROM = '€36'
 export const GROUP_MEETINGS = 9
 
 /**
- * Время встреч. Привязано к Москве: 19:00 MSK круглый год.
- * CET верно для зимы — с последнего воскресенья марта Варшава живёт по CEST,
- * и та же встреча там в 18:00. Поток стартует в ноябре, поэтому пишем зимнее время
+ * Время встреч: 19:00 по Москве круглый год, то есть 16:00 UTC. Варшава переводит часы,
+ * поэтому её время и пояс (17:00 CET зимой, 18:00 CEST летом) считаются на дату старта,
+ * а после старта — на день сборки. Сайт статический: после перевода часов в конце марта
+ * значение обновится при ближайшем деплое
  */
-export const MEETING_TIME = '17:00 CET / 19:00 MSK'
+function meetingTime(): string {
+  const start = new Date(GROUP_START ?? GROUP_START_APPROX_DATE).getTime()
+  const ref = new Date(Math.max(Date.now(), start))
+  ref.setUTCHours(16, 0, 0, 0)
+  const warsaw = new Intl.DateTimeFormat('en-GB', {
+    timeZone: 'Europe/Warsaw',
+    hour: '2-digit',
+    minute: '2-digit',
+    hourCycle: 'h23',
+    timeZoneName: 'short',
+  }).format(ref)
+  return `${warsaw} / 19:00 MSK`
+}
+
+export const MEETING_TIME = meetingTime()
 
 /**
  * Яндекс.Метрика. Идентификатор счётчика и цели держим здесь, а не в компонентах:
