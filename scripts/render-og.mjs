@@ -14,7 +14,7 @@ import puppeteer from 'puppeteer'
 const ROOT = process.cwd()
 
 const TARGETS = {
-  'og-image': { template: 'og-image.html', out: 'public/og-v2.png' },
+  'og-image': { template: 'og-image.html', out: 'public/og-v3.png' },
   'og-book': { template: 'og-book.html', out: 'public/og-book.png' },
 }
 

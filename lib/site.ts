@@ -131,7 +131,7 @@ export const TESTS_URL = '/tests'
 
 // Имя с версией: соцсети кешируют превью по URL, и без смены адреса
 // в шарах ещё долго висела бы старая картинка
-export const OG_IMAGE = `${SITE_URL}/og-v2.png`
+export const OG_IMAGE = `${SITE_URL}/og-v3.png`
 export const OG_IMAGE_BOOK = `${SITE_URL}/og-book.png`
 
 /** Идентификаторы узлов графа schema.org — на них ссылаются страницы блога */

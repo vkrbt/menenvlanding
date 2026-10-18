@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
+import { startPhrase } from '@/lib/group'
 import SiteHeader from '@/components/SiteHeader'
 import JsonLd from '@/components/JsonLd'
 import ScrollActive from '@/components/ScrollActive'
@@ -63,7 +64,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Мужская среда — тематическая мужская группа',
     description:
-      'Для мужчин, которым есть что сказать — но некому. 9 встреч в Zoom, у каждой своя тема. Набор открыт.',
+      `Друзья есть, а поговорить не с кем? Тематическая группа для мужчин: 9 встреч в Zoom, ведут психолог и психиатр. Старт ${startPhrase()}.`,
     type: 'website',
     url: SITE_URL,
     images: [{ url: OG_IMAGE, width: 1200, height: 630 }],
