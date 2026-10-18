@@ -1,0 +1,76 @@
+/* Стили служебной страницы /reels-demo. Импортируются только из app/reels-demo/page.tsx,
+   поэтому на остальные страницы не протекают — как и qr.css. */
+
+.reels-demo { padding-top: 140px; }
+
+.reels-demo__lead {
+  color: var(--text-muted);
+  text-align: center;
+  margin: -32px auto 48px;
+  max-width: 640px;
+  font-size: 16px;
+}
+
+/* Карточки под вертикальное видео 9:16: на телефоне — одна колонка */
+.reels-demo__grid {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+.reels-demo__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: var(--bg-2);
+  border: 1px solid var(--accent-soft-border);
+  border-radius: 18px;
+  padding: 12px 12px 18px;
+}
+
+.reels-demo__video {
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border-radius: 12px;
+  background: #000;
+  display: block;
+}
+
+.reels-demo__head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-inline: 4px;
+}
+
+.reels-demo__num {
+  font-weight: 800;
+  color: var(--text-dim);
+}
+
+.reels-demo__tag {
+  font-size: 13px;
+  font-weight: 600;
+  padding: 2px 10px;
+  border-radius: 999px;
+  background: var(--accent-soft-bg);
+  border: 1px solid var(--accent-soft-border);
+  color: var(--text);
+}
+
+.reels-demo__title {
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.25;
+  padding-inline: 4px;
+}
+
+.reels-demo__what {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-muted);
+  padding-inline: 4px;
+}
