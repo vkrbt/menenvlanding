@@ -165,12 +165,13 @@ export type NavLink = { href: string; label: string }
  * Единая навигация для всех страниц: наполнение шапки везде одинаковое.
  * Отличаются только адреса якорей — на главной это ссылки внутри страницы,
  * на остальных нужен переход на главную с якорем.
+ * Порядок пунктов — как порядок секций на главной (app/page.tsx).
  */
 const NAV_ITEMS: Array<{ label: string; anchor?: string; href?: string }> = [
   { label: 'Программа', anchor: '#program' },
   { label: 'Формат', anchor: '#community-format' },
-  { label: 'Отзывы', anchor: '#testimonials' },
   { label: 'Ведущие', anchor: '#hosts' },
+  { label: 'Отзывы', anchor: '#testimonials' },
   { label: 'Цена', anchor: '#pricing' },
   { label: 'Вопросы', anchor: '#faq' },
   { label: 'Блог', href: BLOG_URL },
