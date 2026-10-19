@@ -119,7 +119,7 @@ const REELS: Reel[] = [
   {
     slug: 'matematika-muzhikov',
     title: 'Математика мужиков',
-    format: 'Мульт в стиле South Park: spotify Wrapped',
+    format: 'Мульт в стиле South Park: Spotify Wrapped',
     what: 'Итоги года: топ-траты на других, траты на себя — «НЕ КУПЛЕНО», карточка «на других 1085 €, на себя 0 €, топ-жанр «потом»». Башня трат рушится без «ТЫ». Слово: «себе»',
   },
   {
