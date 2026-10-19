@@ -11,27 +11,51 @@
   font-size: 16px;
 }
 
-/* Карточки под вертикальное видео 9:16: на телефоне — одна колонка */
+/* Карточка: видео 9:16 слева, справа текст и кнопки. На десктопе — две колонки карточек */
 .reels-demo__grid {
   list-style: none;
   padding: 0;
   margin: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 28px;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 900px) {
+  .reels-demo__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 .reels-demo__card {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: minmax(130px, 42%) minmax(0, 1fr);
+  gap: 16px;
+  align-items: stretch;
   background: var(--bg-2);
   border: 1px solid var(--accent-soft-border);
   border-radius: 18px;
-  padding: 12px 12px 18px;
+  padding: 12px;
+}
+
+.reels-demo__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  height: 100%;
+  padding-top: 4px;
+}
+
+/* Кнопки прижаты к низу карточки — на одной высоте у соседних карточек */
+.reels-demo__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+  padding-top: 6px;
 }
 
 .reels-demo__video {
+  align-self: start;
   width: 100%;
   aspect-ratio: 9 / 16;
   border-radius: 12px;
@@ -41,9 +65,8 @@
 
 .reels-demo__head {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
-  padding-inline: 4px;
 }
 
 .reels-demo__num {
@@ -55,7 +78,7 @@
   font-size: 13px;
   font-weight: 600;
   padding: 2px 10px;
-  border-radius: 999px;
+  border-radius: 10px; /* в узкой колонке переносится на несколько строк */
   background: var(--accent-soft-bg);
   border: 1px solid var(--accent-soft-border);
   color: var(--text);
@@ -65,12 +88,10 @@
   font-size: 18px;
   font-weight: 800;
   line-height: 1.25;
-  padding-inline: 4px;
 }
 
 .reels-demo__what {
   font-size: 14px;
   line-height: 1.5;
   color: var(--text-muted);
-  padding-inline: 4px;
 }

@@ -26,6 +26,10 @@
         {
           "key": "X-Robots-Tag",
           "value": "noindex, nofollow, noarchive"
+        },
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "https://videonotes.vkrbt.me"
         }
       ]
     },

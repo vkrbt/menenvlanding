@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import SiteFooter from '@/components/SiteFooter'
 import SiteHeader from '@/components/SiteHeader'
 import Typo from '@/components/Typo'
+import { SITE_URL } from '@/lib/site'
 import './reels-demo.css'
 
 /**
@@ -24,6 +25,12 @@ export const metadata: Metadata = {
 }
 
 type Reel = { slug: string; title: string; format: string; what: string }
+
+/** Ссылка, по которой ролик сразу открывается в Video Notes — писать правки по таймкодам */
+function videoNotesUrl(r: Reel) {
+  const src = `${SITE_URL}/reels-demo/${r.slug}.mp4`
+  return `https://videonotes.vkrbt.me/?src=${encodeURIComponent(src)}&title=${encodeURIComponent(r.title)}`
+}
 
 const REELS: Reel[] = [
   {
@@ -281,14 +288,29 @@ export default function ReelsDemoPage() {
                   playsInline
                   preload="none"
                 />
-                <Typo>
-                  <div className="reels-demo__head">
-                    <span className="reels-demo__num">{i + 1}</span>
-                    <span className="reels-demo__tag">{r.format}</span>
+                <div className="reels-demo__body">
+                  <Typo>
+                    <div className="reels-demo__head">
+                      <span className="reels-demo__num">{i + 1}</span>
+                      <span className="reels-demo__tag">{r.format}</span>
+                    </div>
+                    <h2 className="reels-demo__title">{r.title}</h2>
+                    <p className="reels-demo__what">{r.what}</p>
+                  </Typo>
+                  <div className="reels-demo__actions">
+                    <a
+                      className="btn btn--primary btn--sm"
+                      href={videoNotesUrl(r)}
+                      target="_blank"
+                      rel="noopener"
+                    >
+                      Править в Video Notes
+                    </a>
+                    <a className="btn btn--outline btn--sm" href={`/reels-demo/${r.slug}.mp4`} download>
+                      Скачать
+                    </a>
                   </div>
-                  <h2 className="reels-demo__title">{r.title}</h2>
-                  <p className="reels-demo__what">{r.what}</p>
-                </Typo>
+                </div>
               </li>
             ))}
           </ol>
