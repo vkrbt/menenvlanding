@@ -3,6 +3,8 @@ import SiteFooter from '@/components/SiteFooter'
 import SiteHeader from '@/components/SiteHeader'
 import Typo from '@/components/Typo'
 import { SITE_URL } from '@/lib/site'
+import PublicationCaption from './PublicationCaption'
+import captions from './captions.json'
 import './reels-demo.css'
 
 /**
@@ -25,6 +27,8 @@ export const metadata: Metadata = {
 }
 
 type Reel = { slug: string; title: string; format: string; what: string; version?: string }
+
+const CAPTIONS: Record<string, string> = captions
 
 function reelAssetUrl(r: Reel, extension: 'mp4' | 'jpg') {
   return `/reels-demo/${r.slug}.${extension}${r.version ? `?v=${r.version}` : ''}`
@@ -326,7 +330,7 @@ export default function ReelsDemoPage() {
           <Typo>
             <h1 className="section-title">Демки рилсов</h1>
             <p className="reels-demo__lead">
-              Готово к публикации: 31 ролик. Остальные ролики ниже.
+              Готово к публикации: 31 ролик. Под каждым — текст, который можно прочитать и скопировать. Остальные ролики ниже.
             </p>
           </Typo>
 
@@ -350,6 +354,7 @@ export default function ReelsDemoPage() {
                     <h2 className="reels-demo__title">{r.title}</h2>
                     <p className="reels-demo__what">{r.what}</p>
                   </Typo>
+                  {CAPTIONS[r.slug] && <PublicationCaption text={CAPTIONS[r.slug]} />}
                   <div className="reels-demo__actions">
                     <a
                       className="btn btn--primary btn--sm"
