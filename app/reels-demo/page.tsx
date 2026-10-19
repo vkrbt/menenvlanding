@@ -24,11 +24,15 @@ export const metadata: Metadata = {
   },
 }
 
-type Reel = { slug: string; title: string; format: string; what: string }
+type Reel = { slug: string; title: string; format: string; what: string; version?: string }
+
+function reelAssetUrl(r: Reel, extension: 'mp4' | 'jpg') {
+  return `/reels-demo/${r.slug}.${extension}${r.version ? `?v=${r.version}` : ''}`
+}
 
 /** Ссылка, по которой ролик сразу открывается в Video Notes — писать правки по таймкодам */
 function videoNotesUrl(r: Reel) {
-  const src = `${SITE_URL}/reels-demo/${r.slug}.mp4`
+  const src = `${SITE_URL}${reelAssetUrl(r, 'mp4')}`
   return `https://videonotes.vkrbt.me/?src=${encodeURIComponent(src)}&title=${encodeURIComponent(r.title)}`
 }
 
@@ -44,6 +48,7 @@ const REELS: Reel[] = [
     title: 'Скучная жизнь? Нет, хорошая',
     format: 'Мульт в стиле South Park без голоса: семь планов по 3 секунды с плашками под музыку',
     what: 'Андрей за 30: утро на ступеньках с кружкой, электричка, пиво, от которого он отказывается, пробежка, друзья на кухне, отключённые чаты. На каждый вопрос сначала грустное лицо и серый кадр, потом ответ, улыбка и тёплый свет. В конце: «Скучная жизнь? Нет, хорошая».',
+    version: 'b6c1af01e1f4',
   },
   {
     slug: 'pro-sebya',
@@ -110,6 +115,7 @@ const REELS: Reel[] = [
     title: 'Мужской кружок',
     format: 'Мульт в стиле South Park: ремейк скетча @bratusku. Четверо в кружке, один общий план сверху, субтитры показываются там, где сидит говорящий.',
     what: 'Андрей спрашивает пацанов, как они справляются со стрессом. Каждый следующий ответ хуже прошлого: один две недели сидит на рыбалке, второй живёт в гараже, третий сидит в темноте. Остальные с серьёзными лицами одобряют. В конце стоп-кадр уезжает в окошко Zoom, и Влад зовёт в группу.',
+    version: '330918510866',
   },
   {
     slug: 'kayf-top-minus',
@@ -122,6 +128,7 @@ const REELS: Reel[] = [
     title: 'Топ вещей, от которых мужики кайфуют',
     format: 'Мульт в стиле South Park',
     what: 'Быстрый список: припарковаться вплотную к бордюру, почесать спину, обогнать навигатор, прикипевшая гайка поддалась, дёшево и вкусно поесть, приятные кнопки. В финале Влад и Женя и одна строчка про группу',
+    version: '6b94106ed871',
   },
   {
     slug: 'oru-v-mashine',
@@ -146,12 +153,14 @@ const REELS: Reel[] = [
     title: 'Друзья вроде есть, а поговорить не с кем',
     format: 'Мульт в стиле South Park',
     what: 'В чате с друзьями шины, футбол и карьеры, а поговорить Андрею можно только с женой. В конце он пишет Серёге: «В субботу посидим? Есть разговор»',
+    version: 'a005ec16641d',
   },
   {
     slug: 'norm-ty-kak',
     title: '«Норм. Ты как?»',
     format: 'Мульт в стиле South Park',
     what: 'Ночь, Андрей в машине у подъезда. Серёга пишет «Ты как?». Андрей набирает честный ответ и стирает, и так несколько раз, а отправляет «Норм. Ты как?». Серёга делает то же самое. Слово: «СРЕДА»',
+    version: 'ede3784f0db1',
   },
   {
     slug: 'andrey-vse-sam',
@@ -188,6 +197,7 @@ const REELS: Reel[] = [
     title: 'Что мужчина выносит из отношений с мамой',
     format: 'Мульт в стиле South Park: обновление прошивки',
     what: '«Мужчина 1.0» загружается, всплывают ошибки «Обнаружен баг, источник: мама», ставятся исправления 1/5…5/5, в конце — патчноуты «Мужчина 2.0». Ведёт на встречу «Мама». Слово: «мама»',
+    version: 'de8395a98ab6',
   },
   {
     slug: 'men-captialism',
@@ -236,6 +246,7 @@ const REELS: Reel[] = [
     title: 'Останови видео — узнаешь, чем глушишь стресс',
     format: 'Мульт в стиле South Park: мелькание',
     what: 'Карточки по 3 кадра: телефон до 2 ночи, «одно» пиво, «я в норме»… Пересматривают и пишут, что выпало',
+    version: '96edcbe97693',
   },
   {
     slug: 'mankeeping',
@@ -254,6 +265,7 @@ const REELS: Reel[] = [
     title: 'Мужчина после 30 внезапно загорается хобби',
     format: 'Мульт в стиле South Park: стикер-бомбинг',
     what: 'Покупки прыгают с ценниками и штампом «КУПЛЕНО», всё уезжает в гараж, чек за год 3450 €, ценники отклеиваются: скука, пустота, автопилот',
+    version: '26957f0ad179',
   },
   {
     slug: 'gus-vygoranie',
@@ -273,17 +285,17 @@ export default function ReelsDemoPage() {
           <Typo>
             <h1 className="section-title">Демки рилсов</h1>
             <p className="reels-demo__lead">
-              Черновики роликов для @sreda.men. Голос пока синтезированный — в финале его заменит живая запись
+              Сначала — 8 роликов с внесёнными правками для повторного просмотра. Остальные черновики ниже.
             </p>
           </Typo>
 
           <ol className="reels-demo__grid">
-            {REELS.map((r, i) => (
+            {[...REELS].sort((a, b) => Number(!!b.version) - Number(!!a.version)).map((r, i) => (
               <li key={r.slug} className="reels-demo__card">
                 <video
                   className="reels-demo__video"
-                  src={`/reels-demo/${r.slug}.mp4`}
-                  poster={`/reels-demo/${r.slug}.jpg`}
+                  src={reelAssetUrl(r, 'mp4')}
+                  poster={reelAssetUrl(r, 'jpg')}
                   controls
                   playsInline
                   preload="none"
@@ -292,7 +304,7 @@ export default function ReelsDemoPage() {
                   <Typo>
                     <div className="reels-demo__head">
                       <span className="reels-demo__num">{i + 1}</span>
-                      <span className="reels-demo__tag">{r.format}</span>
+                      <span className="reels-demo__tag">{r.version ? 'Правки внесены · ' : ''}{r.format}</span>
                     </div>
                     <h2 className="reels-demo__title">{r.title}</h2>
                     <p className="reels-demo__what">{r.what}</p>
@@ -306,7 +318,7 @@ export default function ReelsDemoPage() {
                     >
                       Править в Video Notes
                     </a>
-                    <a className="btn btn--outline btn--sm" href={`/reels-demo/${r.slug}.mp4`} download>
+                    <a className="btn btn--outline btn--sm" href={reelAssetUrl(r, 'mp4')} download>
                       Скачать
                     </a>
                   </div>
