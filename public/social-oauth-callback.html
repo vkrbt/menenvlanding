@@ -1,0 +1,26 @@
+<!doctype html><html lang="ru"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="referrer" content="no-referrer"><meta name="robots" content="noindex,nofollow,noarchive">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
+<title>Возврат в банк · Мужская среда</title>
+<style>body{font:18px/1.6 system-ui,sans-serif;max-width:680px;margin:10vh auto;padding:24px;background:#f7f5f0;color:#20242a}a{color:#1719be}</style>
+</head><body><h1>Возвращаемся в банк</h1><p id="message">Сервер банка должен работать на этом компьютере на порту 8770.</p><a id="back" href="http://127.0.0.1:8770/reels-bank/publishing.html">Открыть банк</a>
+<script>
+// sreda-oauth-relay-v1. Stateless HTTPS return page; no external assets or storage.
+// All token exchange, cookie/state validation and account verification is local.
+'use strict';
+(()=>{
+ const q=new URLSearchParams(location.search);
+ history.replaceState(null,'',location.pathname);
+ const state=q.get('state')||'',code=q.get('code')||'',error=q.get('error')||'';
+ const match=/^(instagram|youtube_shorts|tiktok)\.[A-Za-z0-9_-]{32,128}$/.exec(state);
+ if(!match||q.getAll('state').length!==1||q.getAll('code').length>1||code.length>4096||(!code&&!error)){
+  document.getElementById('message').textContent='Ответ площадки не распознан. Вернись в банк и начни подключение заново.';return;
+ }
+ const target=new URL('http://127.0.0.1:8770/publisher/oauth/callback/'+match[1]);
+ target.searchParams.set('state',state);
+ if(error)target.searchParams.set('error','access_denied');else target.searchParams.set('code',code);
+ document.getElementById('back').href=target.href;
+ location.replace(target.href);
+})();
+</script></body></html>
