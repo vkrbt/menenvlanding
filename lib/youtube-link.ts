@@ -148,7 +148,12 @@ export function openYoutube(
     const timer = setTimeout(function () {
       if (!document.hidden) location.replace(l.web)
     }, FALLBACK_MS)
-    const cancel = function () { clearTimeout(timer) }
+    // data-yt-left: React грузится позже и сам уход не застанет, а по метке
+    // экран перехода поймёт, что человек возвращается из YouTube
+    const cancel = function () {
+      clearTimeout(timer)
+      document.documentElement.setAttribute('data-yt-left', '')
+    }
     document.addEventListener('visibilitychange', function () { if (document.hidden) cancel() })
     window.addEventListener('pagehide', cancel)
     window.addEventListener('blur', cancel)

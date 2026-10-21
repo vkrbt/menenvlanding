@@ -57,7 +57,6 @@ export default function YoutubePage() {
           </div>
 
           <div className="ytl-opening">
-            <h1 className="section-title ytl-opening__title">Открываем YouTube…</h1>
             <YoutubeOpen />
 
             <aside className="ytl-about">
