@@ -12,6 +12,24 @@
       ]
     },
     {
+      "source": "/youtube",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        }
+      ]
+    },
+    {
+      "source": "/youtube/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow, noarchive"
+        }
+      ]
+    },
+    {
       "source": "/reels-demo",
       "headers": [
         {
@@ -90,6 +108,12 @@
       "source": "/vstrecha",
       "destination": "/",
       "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/youtube/:path*",
+      "destination": "/youtube"
     }
   ]
 }

@@ -1,0 +1,15 @@
+/* Стили страницы /youtube. Поля, кнопки и подписи — из qr.css, здесь только своё. */
+
+.ytl {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  max-width: 640px;
+}
+
+/* Режим выбирает встроенный скрипт атрибутом на <html>, см. app/youtube/page.tsx */
+.ytl-opening { display: none; }
+[data-yt-open] .ytl-opening { display: block; }
+[data-yt-open] .ytl-tool { display: none; }
+
+.ytl--open .qr-page__lead { margin: -16px 0 8px; }
