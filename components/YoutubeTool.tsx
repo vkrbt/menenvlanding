@@ -72,8 +72,10 @@ export function YoutubeTool() {
  * или человек вернулся назад из YouTube.
  *
  * Вкладка остаётся открытой, пока смотрят видео. Когда человек возвращается, заголовок
- * меняется на «Стой, погоди», а data-yt-back на <html> запускает анимацию карточки
- * о группе (youtube.css) — при каждом возвращении заново.
+ * меняется на «Стой, погоди!», кнопки перехода прячутся — YouTube уже открылся, —
+ * а data-yt-back на <html> запускает анимацию (youtube.css) при каждом возвращении заново.
+ * Уходом считаем только уход страницы в фон, не потерю фокуса: иначе «Отмена»
+ * в вопросе «Открыть в YouTube?» спрятала бы кнопки, хотя ничего не открылось.
  */
 export function YoutubeOpen() {
   const [links, setLinks] = useState<{ app: string | null; web: string } | null>(null)
@@ -104,14 +106,12 @@ export function YoutubeOpen() {
 
     document.addEventListener('visibilitychange', onVisibility)
     window.addEventListener('pagehide', leave)
-    window.addEventListener('blur', leave)
     window.addEventListener('pageshow', back)
     window.addEventListener('focus', back)
     back()
     return () => {
       document.removeEventListener('visibilitychange', onVisibility)
       window.removeEventListener('pagehide', leave)
-      window.removeEventListener('blur', leave)
       window.removeEventListener('pageshow', back)
       window.removeEventListener('focus', back)
     }
@@ -119,22 +119,24 @@ export function YoutubeOpen() {
 
   return (
     <>
-      <h1 className="section-title ytl-opening__title">{returned ? 'Стой, погоди' : 'Открываем YouTube…'}</h1>
-      <div className="ytl ytl--open">
-        {!returned && <p className="ytl__hint">Если YouTube не открылся сам, нажми кнопку.</p>}
-        <div className="qr__actions">
-          {links?.app && (
-            <a className="btn btn--primary btn--sm" href={links.app}>
-              Открыть в приложении
-            </a>
-          )}
-          {links && (
-            <a className="btn btn--outline btn--sm" href={links.web}>
-              В браузере
-            </a>
-          )}
+      <h1 className="section-title ytl-opening__title">{returned ? 'Стой, погоди!' : 'Открываем YouTube…'}</h1>
+      {!returned && (
+        <div className="ytl ytl--open">
+          <p className="ytl__hint">Если YouTube не открылся сам, нажми кнопку.</p>
+          <div className="qr__actions">
+            {links?.app && (
+              <a className="btn btn--primary btn--sm" href={links.app}>
+                Открыть в приложении
+              </a>
+            )}
+            {links && (
+              <a className="btn btn--outline btn--sm" href={links.web}>
+                В браузере
+              </a>
+            )}
+          </div>
         </div>
-      </div>
+      )}
     </>
   )
 }

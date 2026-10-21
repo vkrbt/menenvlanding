@@ -148,14 +148,17 @@ export function openYoutube(
     const timer = setTimeout(function () {
       if (!document.hidden) location.replace(l.web)
     }, FALLBACK_MS)
-    // data-yt-left: React грузится позже и сам уход не застанет, а по метке
-    // экран перехода поймёт, что человек возвращается из YouTube
-    const cancel = function () {
-      clearTimeout(timer)
+    const cancel = function () { clearTimeout(timer) }
+    // data-yt-left: страница ушла в фон — значит, открылось приложение. React грузится
+    // позже и сам уход не застанет, а по метке экран перехода поймёт, что человек
+    // вернулся из YouTube. Потерю фокуса уходом не считаем: это может быть просто
+    // вопрос «Открыть в YouTube?», на который нажали «Отмена»
+    const left = function () {
+      cancel()
       document.documentElement.setAttribute('data-yt-left', '')
     }
-    document.addEventListener('visibilitychange', function () { if (document.hidden) cancel() })
-    window.addEventListener('pagehide', cancel)
+    document.addEventListener('visibilitychange', function () { if (document.hidden) left() })
+    window.addEventListener('pagehide', left)
     window.addEventListener('blur', cancel)
 
     location.href = p === 'android' ? l.android : l.ios
