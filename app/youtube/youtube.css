@@ -12,12 +12,27 @@
 [data-yt-open] .ytl-opening { display: block; }
 [data-yt-open] .ytl-tool { display: none; }
 
-.ytl--open .qr-page__lead { margin: -16px 0 8px; }
+/* Экран перехода сжат: на телефоне под ним должна поместиться карточка о группе
+   с кнопкой заявки — и это во встроенном браузере соцсети, где своя панель */
+[data-yt-open] .qr-page { padding-top: 104px; }
+
+.ytl-opening__title {
+  font-size: clamp(26px, 3.2vw, 36px);
+  text-align: left;
+  margin-bottom: 8px;
+}
+
+.ytl--open { gap: 12px; }
+
+.ytl__hint {
+  color: var(--text-muted);
+  font-size: 15px;
+}
 
 /* Коротко о группе под кнопками перехода — для тех, кто вернулся из YouTube */
 .ytl-about {
   max-width: 640px;
-  margin-top: 56px;
+  margin-top: 32px;
   padding: 28px;
   display: flex;
   flex-direction: column;
@@ -56,5 +71,7 @@
 }
 
 @media (max-width: 600px) {
-  .ytl-about { padding: 22px 18px; margin-top: 40px; }
+  [data-yt-open] .qr-page { padding-top: 76px; }
+  .ytl-about { padding: 20px 18px; margin-top: 24px; gap: 14px; }
+  .ytl-about__text { font-size: 15px; line-height: 1.5; }
 }

@@ -84,16 +84,16 @@ export function YoutubeOpen() {
 
   return (
     <div className="ytl ytl--open">
-      <p className="qr-page__lead">Если YouTube не открылся сам, нажми кнопку.</p>
+      <p className="ytl__hint">Если YouTube не открылся сам, нажми кнопку.</p>
       <div className="qr__actions">
         {links?.app && (
-          <a className="btn btn--primary btn--lg" href={links.app}>
+          <a className="btn btn--primary btn--sm" href={links.app}>
             Открыть в приложении
           </a>
         )}
         {links && (
-          <a className="btn btn--outline btn--lg" href={links.web}>
-            Смотреть в браузере
+          <a className="btn btn--outline btn--sm" href={links.web}>
+            В браузере
           </a>
         )}
       </div>
