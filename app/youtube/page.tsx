@@ -2,6 +2,10 @@ import type { Metadata } from 'next'
 import { YoutubeOpen, YoutubeTool } from '@/components/YoutubeTool'
 import SiteFooter from '@/components/SiteFooter'
 import SiteHeader from '@/components/SiteHeader'
+import TypoLines from '@/components/TypoLines'
+import { startPhrase } from '@/lib/group'
+import { FORMS_URL, GROUP_MEETINGS, GROUP_PITCH, GROUP_SEATS, PRICE_FROM, RECRUITMENT_NOTE } from '@/lib/site'
+import { typo } from '@/lib/typo'
 import { OPEN_YOUTUBE_SCRIPT } from '@/lib/youtube-link'
 import '../qr/qr.css'
 import './youtube.css'
@@ -13,7 +17,8 @@ import './youtube.css'
  * - /youtube/<путь YouTube> — переход. Все такие адреса vercel.json переписывает сюда,
  *   встроенный скрипт читает location, ставит data-yt-open на <html> и открывает приложение.
  * Режим переключает CSS по data-yt-open: скрипт успевает до первой отрисовки,
- * и генератор не мелькает.
+ * и генератор не мелькает. Под кнопками перехода — коротко о группе: вкладка остаётся
+ * открытой, и человек видит её, когда возвращается из YouTube.
  *
  * От индексации закрыта так же, как /qr: noindex здесь, Disallow в app/robots.ts,
  * X-Robots-Tag в vercel.json. В sitemap.ts её нет.
@@ -29,6 +34,13 @@ export const metadata: Metadata = {
 }
 
 export default function YoutubePage() {
+  const facts = [
+    `Старт ${startPhrase()}`,
+    `${GROUP_MEETINGS} встреч по 3 часа`,
+    `До ${GROUP_SEATS} человек`,
+    `От ${PRICE_FROM} за встречу`,
+  ]
+
   return (
     <>
       <script dangerouslySetInnerHTML={{ __html: OPEN_YOUTUBE_SCRIPT }} />
@@ -48,6 +60,24 @@ export default function YoutubePage() {
           <div className="ytl-opening">
             <h1 className="section-title">Открываем YouTube…</h1>
             <YoutubeOpen />
+
+            <aside className="ytl-about">
+              <p className="ytl-about__eyebrow">{typo('Ты на сайте «Мужской среды»')}</p>
+              <h2 className="ytl-about__title">{typo('Друзья есть. А поговорить не с кем')}</h2>
+              <p className="ytl-about__text">
+                <TypoLines parts={GROUP_PITCH} />
+              </p>
+              <ul className="hero__facts ytl-about__facts">
+                {facts.map((f) => <li key={f}>{typo(f)}</li>)}
+              </ul>
+              <div className="qr__actions">
+                <a href={FORMS_URL} className="btn btn--primary btn--lg">{typo('Занять место в группе')}</a>
+                <a href="/" className="btn btn--outline btn--lg">{typo('Подробнее о группе')}</a>
+              </div>
+              <p className="ytl-about__note">
+                {typo([RECRUITMENT_NOTE, 'Сначала бесплатный созвон на 10–15 минут'].filter(Boolean).join(' · '))}
+              </p>
+            </aside>
           </div>
         </div>
       </section>

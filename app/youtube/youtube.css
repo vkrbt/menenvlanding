@@ -13,3 +13,48 @@
 [data-yt-open] .ytl-tool { display: none; }
 
 .ytl--open .qr-page__lead { margin: -16px 0 8px; }
+
+/* Коротко о группе под кнопками перехода — для тех, кто вернулся из YouTube */
+.ytl-about {
+  max-width: 640px;
+  margin-top: 56px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+}
+
+.ytl-about__eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.ytl-about__title {
+  font-size: clamp(24px, 5vw, 32px);
+  line-height: 1.15;
+  margin-top: -6px;
+}
+
+.ytl-about__text {
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Плашки как на первом экране главной, только прижаты влево */
+.ytl-about__facts {
+  justify-content: flex-start;
+  margin-top: 0;
+}
+
+.ytl-about__note {
+  font-size: 13px;
+  color: var(--text-dim);
+}
+
+@media (max-width: 600px) {
+  .ytl-about { padding: 22px 18px; margin-top: 40px; }
+}

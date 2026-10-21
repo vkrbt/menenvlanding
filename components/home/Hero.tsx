@@ -1,6 +1,6 @@
 import TypoLines from '@/components/TypoLines'
 import { startPhrase } from '@/lib/group'
-import { FORMS_URL, GROUP_MEETINGS, GROUP_SEATS, MEETING_TIME, PRICE_FROM, RECRUITMENT_NOTE } from '@/lib/site'
+import { FORMS_URL, GROUP_MEETINGS, GROUP_PITCH, GROUP_SEATS, MEETING_TIME, PRICE_FROM, RECRUITMENT_NOTE } from '@/lib/site'
 import { typo } from '@/lib/typo'
 
 export default function Hero() {
@@ -34,13 +34,7 @@ export default function Hero() {
 
         {/* Определение для человека и для сниппета поисковика */}
         <p className="hero__sub">
-          <TypoLines
-            parts={[
-              '«Мужская среда» — тематическая онлайн-группа для мужчин, где мы говорим о том, о чём другие мужчины предпочитают молчать.',
-              'Девять встреч, на каждой одна тема: дело и деньги, отношения, зависимости, злость, мама, папа. ' +
-                'Ведут психолог и психиатр.',
-            ]}
-          />
+          <TypoLines parts={GROUP_PITCH} />
         </p>
 
         <ul className="hero__facts">
