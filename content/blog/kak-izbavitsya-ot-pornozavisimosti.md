@@ -113,6 +113,7 @@ _Сначала бесплатный созвон на 10–15 минут._
 > **Источники:** [Эксперимент Вегнера с белым медведем — пересказ «Вокруг света»](https://www.vokrugsveta.ru/article/194575/) · [Larimer, Palmer, Marlatt, 1999 — модель профилактики срывов](https://pmc.ncbi.nlm.nih.gov/articles/PMC6760427/) · [Grubbs et al., 2019 — моральный конфликт и ощущение зависимости (Archives of Sexual Behavior)](https://pubmed.ncbi.nlm.nih.gov/30076491/) · [PsyAndNeuro — компульсивное сексуальное расстройство в МКБ-11](https://psyandneuro.ru/stati/compulsive-sexual-behaviour-disorder/)
 
 ## Читать дальше
+- [Тест на сексуальную зависимость SAST Карнеса: 25 вопросов](/tests/sast)
 - [Порнозависимость: что наука говорит на самом деле](/blog/pornozavisimost)
 - [Игры до трёх ночи: когда хобби становится побегом](/blog/igrovaya-zavisimost)
 - [Пью каждый вечер: где граница между привычкой и зависимостью](/blog/alkogol-kazhdyy-vecher)
