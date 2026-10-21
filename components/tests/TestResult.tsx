@@ -46,6 +46,18 @@ function Track({ sub, raw }: { sub: Subscale; raw: number }) {
 }
 
 function Card({ scale, sub, r }: { scale: Scale; sub: Subscale; r: SubscaleResult }) {
+  // Подшкала со средним, в которую не вошёл ни один ответ («не помню», «не относится»)
+  if (r.count === 0) {
+    return (
+      <section className="tres__card">
+        <h3 className="tres__name">{sub.title}</h3>
+        <p className="tres__value">
+          <strong>—</strong>
+        </p>
+        <p className="tres__text">{typo('Не считается: на вопросы этой части шкалы нет ответов, которые входят в подсчёт.')}</p>
+      </section>
+    )
+  }
   const ex = r.category ? explanation(scale.slug, sub.id, r.category.severity, r.category.id) : undefined
   return (
     <section className="tres__card">
@@ -108,7 +120,8 @@ export default function TestResult({
   const descriptive = rows.filter(([s]) => !s.categories.length)
   const maxSeverity = Math.max(0, ...graded.map(([, r]) => r.category?.severity ?? 0))
   const risk = result.flags.find((f) => f.id === 'suicide')?.level
-  const toSpecialist = maxSeverity >= SPECIALIST_FROM_SEVERITY || risk !== undefined
+  // У типологических шкал (половая конституция) высокая ступень — тип, а не проблема
+  const toSpecialist = (!scale.typology && maxSeverity >= SPECIALIST_FROM_SEVERITY) || risk !== undefined
 
   // Шкалы «рисуются», когда попадают в экран: сегменты растут слева направо, маркер
   // доезжает до результата. Без JS и при reduced motion — сразу итоговое состояние.
@@ -166,7 +179,7 @@ export default function TestResult({
         <section className="tres__next">
           <h3>Что делать дальше</h3>
           <p>
-            {maxSeverity >= SPECIALIST_FROM_SEVERITY
+            {!scale.typology && maxSeverity >= SPECIALIST_FROM_SEVERITY
               ? 'Результат в зоне высоких значений этой шкалы — его стоит обсудить со специалистом.'
               : 'Ты отметил мысли о смерти — об этом стоит поговорить со специалистом, даже если общий балл невысокий.'}{' '}
             Тест — не диагноз: оценить состояние может только врач. Начать можно с

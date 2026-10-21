@@ -24,6 +24,17 @@
 
 .tpage__runner { max-width: 720px; }
 
+/* Вводный текст теста: что понадобится, как мерить */
+.tpage__intro {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
 .tpage__privacy {
   font-size: 0.9rem;
   color: var(--text-muted);
@@ -207,6 +218,47 @@
   font-size: 0.85rem;
   color: var(--text-dim);
 }
+
+/* Замер (трохантерный индекс): два поля, индекс считается на лету */
+.trun__measure {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.trun__fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+.trun__field { display: flex; flex-direction: column; gap: 6px; }
+.trun__field-label { font-size: 0.9rem; font-weight: 600; }
+.trun__field-hint { font-size: 0.8rem; color: var(--text-dim); }
+
+/* 16px — без зума на iOS при фокусе */
+.trun__input {
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 14px;
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+  color: var(--text);
+  background: var(--btn-bg);
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+}
+
+.trun__input:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+.trun__measure-result { font-size: 1rem; color: var(--text-muted); }
+.trun__measure-result strong { font-size: 1.3rem; color: var(--text); font-variant-numeric: tabular-nums; }
+.trun__measure-warn { font-size: 0.85rem; color: var(--text-muted); }
+.trun__measure .btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.trun__measure-or { margin-top: 8px; font-size: 0.85rem; color: var(--text-dim); }
 
 .trun__options {
   display: flex;

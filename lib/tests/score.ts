@@ -1,4 +1,4 @@
-import type { Answers, Category, Scale, ScoreResult, Subscale } from './types.ts'
+import type { Answers, Category, Option, Scale, ScoreResult, Subscale } from './types.ts'
 
 /** Категория для целого балла; границы включительные */
 export function categorize(subscale: Subscale, raw: number): Category | undefined {
@@ -29,12 +29,32 @@ export function score(scale: Scale, answers: Answers): ScoreResult {
   )
 
   const totals = new Map<string, number>(scale.subscales.map((s) => [s.id, 0]))
+  const counts = new Map<string, number>(scale.subscales.map((s) => [s.id, 0]))
+  const add = (sub: string, points: number) => {
+    totals.set(sub, (totals.get(sub) ?? 0) + points)
+    counts.set(sub, (counts.get(sub) ?? 0) + 1)
+  }
+  const floating: Option[] = []
   for (const item of scale.items) {
     if (zeroed.has(item.id)) continue
     const option = item.options.find((o) => o.value === answers[item.id])!
-    for (const [sub, points] of Object.entries(option.scores)) {
-      totals.set(sub, (totals.get(sub) ?? 0) + points)
+    if (option.span) {
+      floating.push(option)
+      continue
     }
+    for (const [sub, points] of Object.entries(option.scores)) add(sub, points)
+  }
+
+  // «Плывущие» графы — после всех остальных: им нужно среднее соседей
+  // без них самих, поэтому опираемся на снимок до первой подстановки
+  const fixedTotals = new Map(totals)
+  const fixedCounts = new Map(counts)
+  for (const option of floating) {
+    const { min, max, near } = option.span!
+    const n = fixedCounts.get(near) ?? 0
+    const target = n ? fixedTotals.get(near)! / n : (min + max) / 2
+    const points = Math.min(max, Math.max(min, Math.round(target)))
+    for (const sub of Object.keys(option.scores)) add(sub, points)
   }
 
   const flags = (scale.riskFlags ?? []).flatMap((f) => {
@@ -45,8 +65,15 @@ export function score(scale: Scale, answers: Answers): ScoreResult {
   return {
     ok: true,
     subscales: scale.subscales.map((s) => {
-      const raw = totals.get(s.id) ?? 0
-      return { id: s.id, raw, value: raw / (s.divisor ?? 1), category: categorize(s, raw) }
+      const total = totals.get(s.id) ?? 0
+      if (s.aggregate === 'mean') {
+        const count = counts.get(s.id) ?? 0
+        // Среднее в сотых с округлением. Делители 1–7 не дают значений между
+        // x,50 и x,57, так что на границы категорий (x,5) округление не влияет
+        const raw = count ? Math.round((total * 100) / count) : NaN
+        return { id: s.id, raw, value: raw / (s.divisor ?? 1), category: count ? categorize(s, raw) : undefined, count }
+      }
+      return { id: s.id, raw: total, value: total / (s.divisor ?? 1), category: categorize(s, total) }
     }),
     flags,
   }
@@ -70,7 +97,17 @@ export function validateScale(scale: Scale): string[] {
   for (const s of scale.subscales) {
     let min = 0
     let max = 0
-    for (const item of scale.items) {
+    if (s.aggregate === 'mean') {
+      // Среднее лежит между наименьшим и наибольшим вкладом любого варианта; в сотых
+      const pts = scale.items.flatMap((i) =>
+        i.options.flatMap((o) =>
+          o.scores[s.id] === undefined ? [] : o.span ? [o.span.min, o.span.max] : [o.scores[s.id]],
+        ),
+      )
+      min = Math.min(...pts) * 100
+      max = Math.max(...pts) * 100
+      if (s.divisor !== 100) errors.push(`${s.id}: у подшкалы со средним divisor должен быть 100`)
+    } else for (const item of scale.items) {
       const pts = item.options.map((o) => o.scores[s.id]).filter((p): p is number => p !== undefined)
       if (!pts.length) continue
       // Модификатор может обнулить пункт — тогда 0 тоже достижим
@@ -91,6 +128,28 @@ export function validateScale(scale: Scale): string[] {
           errors.push(`${s.id}: между «${sorted[i - 1].label}» и «${sorted[i].label}» дыра или перекрытие`)
         }
       }
+    }
+  }
+
+  for (const item of scale.items) {
+    for (const o of item.options) {
+      if (!o.span) continue
+      const near = scale.subscales.find((x) => x.id === o.span!.near)
+      if (near?.aggregate !== 'mean') errors.push(`пункт ${item.id}: плывущая графа ссылается не на подшкалу со средним`)
+      for (const sub of Object.keys(o.scores)) {
+        if (scale.subscales.find((x) => x.id === sub)?.aggregate !== 'mean') {
+          errors.push(`пункт ${item.id}: плывущая графа входит в подшкалу ${sub} без среднего`)
+        }
+      }
+    }
+    const m = item.measure
+    if (m) {
+      const values = new Set(item.options.map((o) => o.value))
+      for (const b of m.bands) if (!values.has(b.value)) errors.push(`пункт ${item.id}: полоса ведёт к несуществующему варианту ${b.value}`)
+      for (let i = 1; i < m.bands.length; i++) {
+        if (m.bands[i].upTo <= m.bands[i - 1].upTo) errors.push(`пункт ${item.id}: полосы замера не по возрастанию`)
+      }
+      if (m.bands.at(-1)?.upTo !== Infinity) errors.push(`пункт ${item.id}: последняя полоса замера должна быть открытой`)
     }
   }
 

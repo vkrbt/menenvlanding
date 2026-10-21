@@ -1,8 +1,8 @@
 'use client'
 
-import { useEffect, useReducer, useRef } from 'react'
+import { useEffect, useId, useReducer, useRef, useState } from 'react'
 import { score } from '@/lib/tests/score'
-import type { Answers, Scale } from '@/lib/tests/types'
+import type { Answers, Measure, Scale } from '@/lib/tests/types'
 import { METRIKA_COUNTER_ID, METRIKA_GOALS } from '@/lib/site'
 import TestResult from './TestResult'
 import { typo } from '@/lib/typo'
@@ -70,6 +70,78 @@ function reducer(scale: Scale) {
 function reachGoal(goal: string, slug: string) {
   const ym = (window as unknown as { ym?: (...args: unknown[]) => void }).ym
   ym?.(METRIKA_COUNTER_ID, 'reachGoal', goal, { test: slug })
+}
+
+/** «1,97» из сотых */
+const hundredths = (n: number) => (n / 100).toFixed(2).replace('.', ',')
+
+/**
+ * Замер вместо выбора диапазона: два числа → индекс → вариант ответа.
+ * Числа живут только в памяти этого блока, как и остальные ответы.
+ */
+function MeasureForm({ measure, onPick }: { measure: Measure; onPick: (value: number) => void }) {
+  const [a, setA] = useState('')
+  const [b, setB] = useState('')
+  const id = useId()
+  const parse = (v: string) => Number(v.replace(',', '.').trim())
+  const A = parse(a)
+  const B = parse(b)
+  const index = A > 0 && B > 0 && Number.isFinite(A / B) ? Math.round((A / B) * 100) : undefined
+  const band = index !== undefined ? measure.bands.find((x) => index <= x.upTo) : undefined
+  const odd = index !== undefined && (index < measure.plausible.min || index > measure.plausible.max)
+
+  const field = (key: 'a' | 'b', value: string, set: (v: string) => void) => (
+    <label className="trun__field" htmlFor={`${id}-${key}`}>
+      <span className="trun__field-label">
+        {measure[key].label}, {measure.unit}
+      </span>
+      <input
+        id={`${id}-${key}`}
+        className="trun__input"
+        type="text"
+        inputMode="decimal"
+        autoComplete="off"
+        value={value}
+        onChange={(e) => set(e.target.value)}
+      />
+      {measure[key].hint && <span className="trun__field-hint">{typo(measure[key].hint!)}</span>}
+    </label>
+  )
+
+  return (
+    <form
+      className="trun__measure"
+      onSubmit={(e) => {
+        e.preventDefault()
+        if (band) onPick(band.value)
+      }}
+    >
+      <div className="trun__fields">
+        {field('a', a, setA)}
+        {field('b', b, setB)}
+      </div>
+      <p className="trun__measure-result" aria-live="polite">
+        {index !== undefined ? (
+          <>
+            {measure.result}: <strong>{hundredths(index)}</strong>
+          </>
+        ) : (
+          typo('Введи оба числа — индекс посчитается сам')
+        )}
+      </p>
+      {odd && (
+        <p className="trun__measure-warn">
+          {typo(
+            'Похоже на ошибку замера: у взрослых мужчин в справочнике индекс был от 1,84 до 2,16. Проверь, что оба числа в сантиметрах и не перепутаны местами.',
+          )}
+        </p>
+      )}
+      <button type="submit" className="btn btn--primary" disabled={!band}>
+        Засчитать индекс
+      </button>
+      <p className="trun__measure-or">{typo('Или выбери диапазон, если индекс уже знаешь:')}</p>
+    </form>
+  )
 }
 
 /** Пауза перед автопереходом: человек успевает увидеть, что выбрал */
@@ -177,6 +249,7 @@ export default function TestRunner({ scale, questions }: { scale: Scale; questio
           {typo(item.text || 'Выбери утверждение, которое лучше всего описывает твоё состояние')}
         </h2>
         {item.hint && <p className="trun__hint">{typo(item.hint)}</p>}
+        {item.measure && <MeasureForm measure={item.measure} onPick={choose} />}
 
         <div className="trun__options" role="radiogroup" aria-labelledby={`q-${item.id}`}>
           {item.options.map((o) => (

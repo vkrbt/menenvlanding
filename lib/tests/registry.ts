@@ -11,6 +11,8 @@ import { phq9 } from './scales/phq9.ts'
 import { pss10 } from './scales/pss10.ts'
 import { who5 } from './scales/who5.ts'
 import { zung } from './scales/zung.ts'
+import { sast } from './scales/sast.ts'
+import { vasilchenko } from './scales/vasilchenko.ts'
 import type { Scale } from './types.ts'
 
 export { TESTS_URL } from '../site.ts'
@@ -115,6 +117,22 @@ export const TESTS: TestEntry[] = [
     seoDescription:
       'RUS-AUDIT — официальная российская версия теста ВОЗ 2021 года с порогами для мужчин. 10 вопросов, анонимно, результат сразу.',
     related: ['alkogol-kazhdyy-vecher'],
+  },
+  {
+    scale: sast,
+    topic: 'Сексуальность',
+    seoTitle: 'Тест на сексуальную зависимость SAST Карнеса онлайн — 25 вопросов',
+    seoDescription:
+      'Скрининг сексуальной зависимости П. Карнеса (SAST): 25 вопросов «да/нет», порог 13 по первоисточнику, перевод без ошибок ходовой русской версии. Анонимно.',
+    related: ['pornozavisimost', 'kak-izbavitsya-ot-pornozavisimosti'],
+  },
+  {
+    scale: vasilchenko,
+    topic: 'Сексуальность',
+    seoTitle: 'Половая конституция по Васильченко онлайн — тест с трохантерным индексом',
+    seoDescription:
+      'Шкала векторного определения половой конституции мужчины Г.С. Васильченко: 7 признаков, трохантерный индекс считается сам по росту и длине ноги. Анонимно.',
+    related: ['propalo-zhelanie-v-otnosheniyah', 'problemy-s-potentsiey-ot-stressa'],
   },
   {
     scale: who5,

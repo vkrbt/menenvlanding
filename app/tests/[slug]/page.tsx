@@ -65,7 +65,10 @@ function FullMethod({ scale }: { scale: Scale }) {
                   {item.text && <span>{item.text}</span>}
                   <ul>
                     {item.options.map((o) => {
-                      const pts = Object.entries(o.scores)
+                      // «Плывущая» графа: вклад — диапазон, а не число
+                      const pts = Object.entries(o.scores).map(
+                        ([sub, p]) => [sub, o.span ? `${o.span.min}–${o.span.max}` : p] as const,
+                      )
                       return (
                         <li key={o.value}>
                           {o.label}
@@ -73,7 +76,9 @@ function FullMethod({ scale }: { scale: Scale }) {
                             <span className="tmethod__pts">
                               {' '}— {pts.map(([sub, p]) => {
                                 const s = scale.subscales.find((x) => x.id === sub)!
-                                return `${s.title}: ${fmt(p, s.divisor)}`
+                                // Подшкалы со средним хранят сотые только в итоге, вклад пункта — целый индекс
+                                const shown = typeof p === 'string' ? p : fmt(p, s.aggregate === 'mean' ? 1 : s.divisor)
+                                return `${s.title}: ${shown}`
                               }).join('; ')}
                             </span>
                           )}
@@ -142,6 +147,13 @@ export default async function TestPage({ params }: { params: Promise<Params> }) 
         </section>
 
         <section className="container tpage__runner">
+          {scale.intro && (
+            <div className="tpage__intro">
+              {scale.intro.map((p) => (
+                <p key={p}>{p}</p>
+              ))}
+            </div>
+          )}
           <p className="tpage__privacy">
             Анонимно: ответы не покидают твой браузер — мы их не видим и не сохраняем.
           </p>
