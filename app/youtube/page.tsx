@@ -61,7 +61,7 @@ export default function YoutubePage() {
 
             <aside className="ytl-about">
               <p className="ytl-about__eyebrow">{typo('Ты на сайте «Мужской среды»')}</p>
-              <h2 className="ytl-about__title">{typo('Друзья есть. А поговорить не с кем')}</h2>
+              <h2 className="ytl-about__title">{typo('Друзья есть. А поговорить не с кем?')}</h2>
               <p className="ytl-about__text">{typo(GROUP_PITCH[0])}</p>
               <div className="qr__actions">
                 <a href={FORMS_URL} className="btn btn--primary btn--lg">{typo('Занять место в группе')}</a>
