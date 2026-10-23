@@ -27,8 +27,10 @@ export default function Hero() {
       </div>
 
       <div className="container hero__inner">
-        {/* Перенос здесь нужен и на мобильном, поэтому обычный <br />, а не TypoLines */}
+        {/* Перенос здесь нужен и на мобильном, поэтому обычный <br />, а не TypoLines.
+            Надзаголовок — главный поисковый запрос страницы, поэтому он внутри <h1> */}
         <h1 className="hero__title">
+          <span className="hero__kicker">{typo('Мужская терапевтическая группа онлайн')}</span>
           {typo('Друзья есть.')}<br />{typo('А поговорить не с кем')}
         </h1>
 

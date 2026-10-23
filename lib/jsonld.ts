@@ -5,6 +5,8 @@ import {
   BLOCK_SIZE,
   BLOG_URL,
   GROUP_MEETINGS,
+  GROUP_SEATS,
+  GROUP_START,
   OG_IMAGE,
   ORG_ID,
   PRICE_BLOCK,
@@ -103,7 +105,7 @@ export function homeGraph(faq: Array<{ q: string; a: string }>) {
         name: 'Мужская среда',
         url: SITE_URL,
         description:
-          'Тематическая онлайн-группа для русскоязычных мужчин 25+. Девять встреч в Zoom раз в две недели, ведут психолог и психиатр.',
+          'Мужская терапевтическая группа онлайн для русскоязычных мужчин 25+. Девять встреч в Zoom раз в две недели, ведут психолог и психиатр.',
         sameAs: ['https://www.youtube.com/@men-env', VLAD.url, ZHENYA.url],
       },
       {
@@ -117,8 +119,8 @@ export function homeGraph(faq: Array<{ q: string; a: string }>) {
       {
         '@type': 'Service',
         '@id': `${SITE_URL}/#service`,
-        name: 'Мужская среда — тематическая мужская группа онлайн',
-        serviceType: 'Мужская группа онлайн',
+        name: 'Мужская среда — мужская терапевтическая группа онлайн',
+        serviceType: 'Мужская терапевтическая группа',
         provider: { '@id': ORG_ID },
         areaServed: 'Worldwide',
         availableChannel: {
@@ -144,6 +146,33 @@ export function homeGraph(faq: Array<{ q: string; a: string }>) {
           { '@type': 'Offer', name: 'Одна встреча', price: String(PRICE_SINGLE), priceCurrency: 'EUR', url: `${SITE_URL}/#pricing` },
         ],
       },
+      // Старт набранной группы — пока дата назначена. Без даты узла нет
+      ...(GROUP_START
+        ? [
+            {
+              '@type': 'Event',
+              '@id': `${SITE_URL}/#start`,
+              name: 'Мужская терапевтическая группа онлайн — старт',
+              description: `Первая из ${GROUP_MEETINGS} встреч мужской терапевтической группы в Zoom. До ${GROUP_SEATS} человек, ведут психолог и психиатр.`,
+              startDate: GROUP_START,
+              eventStatus: 'https://schema.org/EventScheduled',
+              eventAttendanceMode: 'https://schema.org/OnlineEventAttendanceMode',
+              location: { '@type': 'VirtualLocation', url: SITE_URL },
+              inLanguage: 'ru',
+              image: OG_IMAGE,
+              organizer: { '@id': ORG_ID },
+              performer: [VLAD, ZHENYA].map((h) => ({ '@type': 'Person', name: h.name, jobTitle: h.jobTitle })),
+              maximumAttendeeCapacity: GROUP_SEATS,
+              offers: {
+                '@type': 'Offer',
+                price: String(PRICE_PROGRAM),
+                priceCurrency: 'EUR',
+                url: `${SITE_URL}/#pricing`,
+                availability: 'https://schema.org/LimitedAvailability',
+              },
+            },
+          ]
+        : []),
       {
         '@type': 'FAQPage',
         '@id': `${SITE_URL}/#faq`,
