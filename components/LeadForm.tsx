@@ -2,9 +2,13 @@
 
 import { useCallback, useEffect, useRef, useState, type FormEvent } from 'react'
 import { LEAD_COPY, type LeadCopy } from '@/lib/lead-copy'
+import { botLink } from '@/lib/bot-link'
 import { FORMS_URL, GOOGLE_FORM_ACTION, GOOGLE_FORM_FIELDS, METRIKA_COUNTER_ID, METRIKA_GOALS } from '@/lib/site'
 
 /**
+ * Кнопки заявки ведут в Telegram-бота (lib/bot-link.ts): там анкета, выбор времени
+ * знакомства и напоминания. Ссылка с атрибутом data-form открывает форму ниже — запасной путь.
+ *
  * Заявка прямо на сайте — окно поверх страницы (на телефоне выезжает снизу).
  *
  * Открывается по любой ссылке на Google-форму (FORMS_URL): слушатель делегированный,
@@ -96,6 +100,14 @@ export default function LeadForm({ copy: t = LEAD_COPY }: { copy?: LeadCopy }) {
       if (!link || link.dataset.direct !== undefined || !isFormLink(link.getAttribute('href') || '')) return
       // Цели Метрики на клик считает MetrikaGoals — его слушатель тоже на document, мы его не глушим
       e.preventDefault()
+      if (link.dataset.form === undefined) {
+        const url = botLink(storedUtm(), window.location.pathname)
+        // Телефон — в приложение Telegram в той же вкладке (с паузой, чтобы цель Метрики
+        // успела уйти); компьютер — новой вкладкой, сайт остаётся открытым
+        if (window.matchMedia('(pointer: coarse)').matches) window.setTimeout(() => window.location.assign(url), 150)
+        else window.open(url, '_blank', 'noopener')
+        return
+      }
       lastFocus.current = link
       // Фокус в «Имя и фамилия» — прямо в обработчике нажатия: iOS поднимает клавиатуру
       // только так. Для этого окно делаем видимым сразу, не дожидаясь рендера React
