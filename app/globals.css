@@ -1293,6 +1293,22 @@ html[data-theme="dark"] .theme-toggle__icon--dark {
   color: var(--text-dim);
 }
 
+.tcard__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Пиксельная аватарка 20×20: картинка ровно 40px (×2, на ретине ×4) + рамка 2px с каждой стороны */
+.tcard__ava {
+  width: 44px;
+  height: 44px;
+  flex-shrink: 0;
+  border: 2px solid var(--ink);
+  border-radius: 10px;
+  image-rendering: pixelated;
+}
+
 .tcard strong {
   color: var(--text);
   font-weight: 700;
