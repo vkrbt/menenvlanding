@@ -73,7 +73,10 @@ export default function Pricing() {
               {p.badge && <div className="pricing__badge">{p.badge}</div>}
               <p className="pricing__label">{typo(p.label)}</p>
               <div className="pricing__price">
-                <span className="pricing__amount">{p.amount}</span>
+                <span className="pricing__amount">
+                  {p.amount}
+                  <a href="#payment-note" className="price-mark" aria-label="Об оплате из других стран">*</a>
+                </span>
                 <span className="pricing__period">/ встреча</span>
               </div>
               <p className={p.noteAccent ? 'pricing__note pricing__note--accent' : 'pricing__note'}>{typo(p.note)}</p>
@@ -89,6 +92,10 @@ export default function Pricing() {
             </div>
           ))}
         </div>
+
+        <p className="payment-note" id="payment-note">
+          {typo('* Принимаем оплату из любой страны — для каждого подберём удобный способ.')}
+        </p>
 
         <p className="pricing__footer-note">
           <TypoLines

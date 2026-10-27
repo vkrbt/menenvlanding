@@ -51,7 +51,10 @@ export default function Offer() {
         <div className="offer__panel">
           <p className="offer__start">{typo([`Старт ${startPhrase()}`, RECRUITMENT_NOTE].filter(Boolean).join(' · '))}</p>
           <p className="offer__price">
-            <span className="offer__amount">от {PRICE_FROM}</span>
+            <span className="offer__amount">
+              от {PRICE_FROM}
+              <a href="#offer-payment-note" className="price-mark" aria-label="Об оплате из других стран">*</a>
+            </span>
             <span className="offer__period">за встречу</span>
           </p>
           <p className="offer__terms">
@@ -64,6 +67,9 @@ export default function Offer() {
           </p>
         </div>
       </div>
+      <p className="container payment-note" id="offer-payment-note">
+        {typo('* Принимаем оплату из любой страны — для каждого подберём удобный способ.')}
+      </p>
     </section>
     </Typo>
   )
