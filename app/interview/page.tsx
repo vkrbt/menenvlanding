@@ -5,14 +5,14 @@ import InterviewChecklist from './InterviewChecklist'
 import './interview.css'
 
 /**
- * Чеклист знакомства с кандидатом — для ведущих, открыть рядом с Meet и отмечать по ходу.
- * Исходник текста — plans/interview-checklist.md, порядок и фразы — plans/intro-meeting-flow.md.
+ * Шпаргалка знакомства с кандидатом — для ведущих, открыть рядом с Meet.
+ * Повторяет PDF «Шпаргалка созвона — Мужская среда»: 8 шагов разговора слева, справочные карточки справа.
  *
  * Как и /qr, от индексации закрыта в трёх местах: noindex ниже, Disallow
  * в app/robots.ts и заголовок X-Robots-Tag в vercel.json. В sitemap.ts страницы нет.
  */
 export const metadata: Metadata = {
-  title: 'Чеклист знакомства — служебная страница',
+  title: 'Шпаргалка знакомства — служебная страница',
   robots: {
     index: false,
     follow: false,
@@ -28,12 +28,12 @@ export default function InterviewPage() {
 
       <section className="section interview-page">
         <div className="container interview-page__inner">
-          <h1 className="section-title">Чеклист знакомства</h1>
-          <p className="interview-page__lead">
-            Знакомство на 10–15 минут, в течение 48 часов после заявки. Главный вопрос, на который отвечаем себе к концу: подходит ли
-            этот человек в эту группу сейчас и к нам как к ведущим. Отметки хранятся только
-            в этом браузере.
-          </p>
+          <div className="interview-page__head">
+            <h1 className="section-title">Знакомство · 15–20 минут</h1>
+            <p className="interview-page__lead">
+              Он говорит 70% времени. Записывай его слова — в блоке 6 они вернутся к нему.
+            </p>
+          </div>
           <InterviewChecklist />
         </div>
       </section>

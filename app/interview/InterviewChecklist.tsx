@@ -1,173 +1,153 @@
 'use client'
 
-import { useEffect, useRef, useState } from 'react'
+import { Fragment, useEffect, useRef, useState } from 'react'
 import { BOT_URL } from '@/lib/bot-link'
 import { startPhrase } from '@/lib/group'
-import { BLOCK_SIZE, GROUP_MEETINGS, MEETING_TIME, PRICE_BLOCK, PRICE_PROGRAM, PRICE_SINGLE } from '@/lib/site'
+import { BLOCK_SIZE, GROUP_MEETINGS, MEETING_TIME, PRICE_BLOCK, PRICE_PROGRAM, PRICE_SINGLE, SITE_URL } from '@/lib/site'
 
-/** Ключ в localStorage. Поменять суффикс, если пункты переставлены и старые отметки собьются */
-const STORAGE_KEY = 'interview-checklist-v1'
+/** Ключ в localStorage. Поменять суффикс, если пункты «ок» переставлены и старые отметки собьются */
+const STORAGE_KEY = 'interview-checklist-v2'
 const NAME_KEY = 'interview-checklist-name'
 
 /** Неразрывные пробелы из MEETING_TIME в сообщении не нужны: мессенджер переносит сам */
 const TIME = MEETING_TIME.replace(/\u00A0/g, ' ')
 const PRICES = `€${PRICE_PROGRAM} за всю программу, €${PRICE_BLOCK} за блок из ${BLOCK_SIZE} встреч или €${PRICE_SINGLE} за встречу`
 const RECRUITMENT_ENDS = '15 ноября'
-
-type Item = { text: string; hint?: string; message?: (name: string) => string }
-type Group = { title: string; items: Item[] }
-type Section = { id: string; title: string; note?: string; groups: Group[] }
+const SITE = SITE_URL.replace('https://', '')
 
 const afterCallMessage = (name: string) =>
   `${name}, спасибо за разговор! Коротко: старт в среду, ${startPhrase()}, в ${TIME}, дальше раз в две недели. ` +
   `Место за тобой после первой оплаты: ${PRICES}. Оплатить можно в боте: ${BOT_URL}. ` +
-  `Набор закрывается ${RECRUITMENT_ENDS}. Если остались вопросы, пиши.`
+  `Всё про группу — на ${SITE}. Набор закрывается ${RECRUITMENT_ENDS}. Если остались вопросы, пиши.`
 
 const waitlistMessage = (name: string) =>
   `Привет, ${name}! Набор в «Мужскую среду» закрывается в воскресенье, ${RECRUITMENT_ENDS}, первая встреча ${startPhrase()}. ` +
   'Место ещё есть, если хочешь. Если решил не сейчас, это нормально, позову в следующую группу.'
 
-const SECTIONS: Section[] = [
+type Step = {
+  title: string
+  minutes: string
+  quotes: string[]
+  /** Короткие вопросы в две колонки — только у скрининга */
+  list?: string[]
+  facts?: string
+  /** Вывод, который нельзя пропустить: подсвечен цветом */
+  alert?: string
+  hint?: string
+  tone?: 'alert' | 'final'
+}
+
+const STEPS: Step[] = [
   {
-    id: 'before',
-    title: 'Перед звонком',
-    groups: [
-      {
-        title: '',
-        items: [
-          { text: 'Перечитать заявку: имя, город, UTM-метка' },
-          { text: 'Решить, кто ведёт разговор, Влад или Женя, или оба' },
-          { text: 'Держать под рукой контакт, куда направить, если группа не подходит (индивидуальный психолог, нарколог)' },
-        ],
-      },
-    ],
+    title: 'Рамка',
+    minutes: '1 мин',
+    quotes: ['«Задача — понять, подходит ли тебе группа, а ты ей. Сказать „не моё“ — нормальный исход»'],
+    hint: 'Снять напряжение и оставить себе право отказать',
   },
   {
-    id: 'questions',
-    title: 'Вопросы по порядку',
-    groups: [
-      {
-        title: '1. Снять напряжение',
-        items: [
-          { text: '«Это не экзамен. Хочу понять, что тебя привело, и рассказать, как всё устроено»' },
-          { text: '«Как ты сейчас, нормально так разговаривать?»', hint: 'Смотрим, как он держится в разговоре с незнакомым' },
-        ],
-      },
-      {
-        title: '2. Что привело',
-        items: [
-          { text: '«Что сейчас происходит в жизни?»' },
-          { text: '«Почему решил написать именно сейчас?»' },
-          { text: '«Сам решил или кто-то посоветовал?»', hint: 'Если «жена сказала, иначе уйдёт», прояснить, чего хочет он сам' },
-        ],
-      },
-      {
-        title: '3. Чего ждёт',
-        items: [
-          { text: `«Что должно случиться, чтобы через ${GROUP_MEETINGS} встреч ты сказал: не зря ходил?»` },
-          { text: '«Что ты готов поменять в себе?»' },
-          { text: 'Помочь сформулировать 1–2 темы, с которыми он придёт на первую встречу', hint: 'Чем конкретнее, тем лучше' },
-        ],
-      },
-      {
-        title: '4. Опыт',
-        items: [
-          { text: '«Был у психолога или в группе? Как это было, что дало?»' },
-          { text: 'Если опыт плохой, расспросить, что именно не понравилось' },
-        ],
-      },
-      {
-        title: '5. Близкие люди',
-        items: [
-          {
-            text: '«Есть рядом кто-то, с кем ты регулярно общаешься: жена, друг, брат, терапевт?»',
-            hint: 'Нужна хотя бы одна долгая связь',
-          },
-        ],
-      },
-      {
-        title: '6. Отсечка, спросить прямо',
-        items: [
-          { text: '«Не было ли за последние полгода чего-то тяжёлого: развод, смерть близкого, увольнение, переезд?»' },
-          { text: '«Бывают мысли не жить?»' },
-          { text: '«Нет ли того, что пьёшь, употребляешь или играешь так, что это уже управляет жизнью?»' },
-          { text: '«Сейчас лечишься у врача? Нет ли такого, что группа должна заменить лечение?»' },
-        ],
-      },
-      {
-        title: '7. Формат и рамки',
-        items: [
-          { text: 'Рассказать: тема каждой встречи известна заранее, говоришь сколько хочешь, советов и оценок никто не раздаёт' },
-          {
-            text: 'Онлайн: камера и звук включены, ничего параллельно не делаем',
-            hint: 'Особенно проговорить с айтишниками, у них привычка выключаться на созвонах',
-          },
-          { text: `«Получится ходить все ${GROUP_MEETINGS} встреч, раз в две недели по средам?»`, hint: 'Командировки, дети, смены' },
-          { text: `Время: ${TIME}`, hint: 'Если он в другом поясе, вместе пересчитать на его время' },
-          { text: 'Пропуск оплачивается, на встречи приходим без опозданий' },
-          { text: `Цена: €${PRICE_PROGRAM} за всю программу, €${PRICE_BLOCK} за ${BLOCK_SIZE} встречи, €${PRICE_SINGLE} за одну. «Тебе это комфортно по деньгам?»` },
-        ],
-      },
-      {
-        title: '8. Вопросы и следующий шаг',
-        items: [
-          { text: '«Что ещё хочешь спросить?»' },
-          { text: '«Если подходит, место за тобой после первой оплаты. Ссылку пришлю сегодня»' },
-          { text: '«Кстати, откуда ты о нас узнал?»', hint: 'Записать' },
-        ],
-      },
-    ],
+    title: 'Что привело',
+    minutes: '3–4 мин',
+    quotes: ['«Что тебя привело? Почему именно сейчас?»'],
+    hint: 'Если общо: что конкретно происходит · как давно · что уже пробовал',
   },
   {
-    id: 'stop',
-    title: 'На что смотреть по ходу',
-    note: 'Если что-то насторожило, не пропускаем, задаём ещё пару вопросов на эту тему. Правило из лекции: если что-то будет напрягать, не берём. Один неподходящий участник может развалить группу.',
-    groups: [
-      {
-        title: 'Не берём — честно говорим, что группа сейчас не подходит, и подсказываем, куда обратиться',
-        items: [
-          { text: 'Острый кризис: развод меньше полугода назад, утрата, увольнение или переезд меньше 3 месяцев назад' },
-          { text: 'Мысли о суициде' },
-          { text: 'Активная зависимость: алкоголь, наркотики, ставки' },
-          { text: 'Группа вместо лечения у врача или вместо юриста' },
-          { text: 'Явное расстройство личности, грубые нарушения мышления и речи' },
-        ],
-      },
-      {
-        title: 'Думаем вдвоём после звонка',
-        items: [
-          { text: '«Постараюсь ходить», частые командировки' },
-          { text: 'Платит не он сам, или деньги впритык' },
-          { text: 'Пришёл не сам, мотивация непонятная' },
-          { text: 'В группе уже есть его родственник, друг, коллега или начальник' },
-          { text: 'Сильно выделяется среди остальных: возраст, взгляды, ситуация' },
-          { text: 'Любит доказывать свою правоту, тянет разговор на себя' },
-          { text: 'Не слышит рамки: спорит про оплату пропусков, опоздал на сам звонок' },
-          { text: 'Держится за нереальные ожидания и не готов их переформулировать' },
-          { text: 'Очень неприятен или, наоборот, очень симпатичен ведущему' },
-        ],
-      },
-    ],
+    title: 'Как ты сейчас',
+    minutes: '3 мин',
+    quotes: ['«Расскажи коротко о себе. Как ты сейчас, от 1 до 10?»'],
+    hint: 'Смотрим: может ли говорить о себе · слышит ли вопросы · не винит ли во всём других',
   },
   {
-    id: 'after',
-    title: 'После звонка',
-    groups: [
-      {
-        title: '',
-        items: [
-          { text: 'В тот же день отправить сообщение с итогом и ссылкой на оплату', message: afterCallMessage },
-          { text: 'Если сомневается, не уговаривать: «Подумай до выходных, в пятницу напишу»' },
-          { text: 'Не готов — в лист ожидания, 12–13 ноября написать ещё раз', message: waitlistMessage },
-          { text: 'Записать: откуда узнал, его темы на первую встречу, что насторожило' },
-        ],
-      },
+    title: 'Скрининг безопасности',
+    minutes: '2 мин',
+    quotes: ['«Несколько вопросов, которые задаём всем — для безопасности группы»'],
+    list: [
+      'Диагнозы, препараты?',
+      'Тяжёлое за полгода: потеря, развод, увольнение?',
+      'Алкоголь, вещества — управляют днём?',
+      'Бывали мысли не жить? (прямо и спокойно)',
     ],
+    alert: 'Остро → сначала индивидуальная помощь, группа потом',
+    tone: 'alert',
+  },
+  {
+    title: 'Опыт и ожидания',
+    minutes: '2 мин',
+    quotes: [
+      '«Был у психолога или в группах?»',
+      `«Что должно произойти, чтобы через ${GROUP_MEETINGS} встреч ты сказал „не зря“?»`,
+    ],
+    hint: 'Ждёт советов или хочет «исправить» другого → честно сказать, что группа про другое',
+  },
+  {
+    title: 'Группа — через его слова',
+    minutes: '4–5 мин',
+    quotes: ['«Ты сказал [его слова] — об этом у нас встреча [номер]»'],
+    facts:
+      `Тематическая, для старта · ${GROUP_MEETINGS} встреч · среды раз в 2 недели · ${TIME} · 3 часа · ` +
+      'подкаст к каждой · тема → разговор → обмен, без советов',
+    hint: 'Условия и правила — по одному, с «ок?» после каждого (карточка «Получить „ок“»)',
+  },
+  {
+    title: 'Что может помешать',
+    minutes: '2 мин',
+    quotes: [`«Что может помешать тебе прийти и ходить все ${GROUP_MEETINGS} встреч?»`],
+    hint: 'Вместо «есть вопросы?» — так всплывают деньги, график, страх, «жена не поймёт»',
+  },
+  {
+    title: 'Решение',
+    minutes: '2 мин',
+    quotes: ['«Мне кажется, тебе в группе будет хорошо — и нам с тобой тоже. Идёшь?»'],
+    tone: 'final',
   },
 ]
 
-const itemId = (s: Section, gi: number, ii: number) => `${s.id}-${gi}-${ii}`
-const TOTAL = SECTIONS.reduce((n, s) => n + s.groups.reduce((m, g) => m + g.items.length, 0), 0)
+const OUTCOMES = [
+  {
+    title: 'Да',
+    quote: `«Сразу за все ${GROUP_MEETINGS} или блоками по ${BLOCK_SIZE}?»`,
+    hint: 'Ссылка на оплату · «Место держу до [день]»',
+  },
+  {
+    title: '«Подумаю»',
+    quote: '«Что именно хочешь обдумать?»',
+    hint: 'Снять сомнение сейчас · или договориться о дне ответа',
+  },
+  {
+    title: 'Не подходит',
+    quote: '«Сейчас тебе больше поможет [индивидуальная работа / врач]»',
+    hint: 'Подсказать, куда обратиться · в группу можно вернуться позже',
+  },
+]
+
+/** Условия группы: по одному, после каждого ждём «ок» и отмечаем */
+const OKS = [
+  { text: '3 часа в тихом месте, с компьютера, камера и звук включены, трезвым.', ask: 'Получится по средам?' },
+  { text: 'Все встречи — в приоритете, пропуск оплачивается.', ask: 'Ок?' },
+  { text: 'Решишь уйти — приходишь попрощаться, не пропадаешь.', ask: 'Договорились?' },
+  { text: 'Насколько открываться — решаешь сам, тянуть никто не будет.', ask: '' },
+]
+
+const RED_FLAGS = [
+  'Острый кризис: недавняя потеря, развод, мысли не жить',
+  'Алкоголь или вещества управляют жизнью',
+  'Ждёт советов и решений вместо разговора',
+  'Цель — «исправить» жену, начальника, родителей',
+  'Перебивает, не слышит вопросов — три часа слушать других не сможет',
+]
+
+const OBJECTIONS = [
+  {
+    q: '«Не умею говорить о чувствах»',
+    a: 'Половина группы скажет то же на первой встрече. Достаточно говорить о том, что происходит.',
+  },
+  {
+    q: '«Дорого»',
+    a:
+      `Встреча 3 часа — по цене часа у психолога: €${PRICE_PROGRAM / GROUP_MEETINGS} при оплате всей программы. ` +
+      `Можно блоками по ${BLOCK_SIZE} (€${PRICE_BLOCK}) или по одной (€${PRICE_SINGLE}).`,
+  },
+  { q: '«Вдруг там знакомый»', a: 'Конфиденциальность: что было на встрече — остаётся на встрече.' },
+]
 
 export default function InterviewChecklist() {
   const [checked, setChecked] = useState<Record<string, boolean>>({})
@@ -191,10 +171,11 @@ export default function InterviewChecklist() {
     localStorage.setItem(NAME_KEY, name)
   }, [checked, name, loaded])
 
-  const done = Object.values(checked).filter(Boolean).length
+  const who = name.trim() || '[имя]'
 
   function reset() {
-    if (done > 0 && !window.confirm('Снять все отметки и стереть имя?')) return
+    const dirty = name !== '' || Object.values(checked).some(Boolean)
+    if (dirty && !window.confirm('Снять отметки и стереть имя?')) return
     setChecked({})
     setName('')
   }
@@ -212,46 +193,119 @@ export default function InterviewChecklist() {
             autoComplete="off"
           />
         </label>
-        <span className="interview__progress">
-          {done} из {TOTAL}
-        </span>
         <button className="btn btn--outline btn--sm" type="button" onClick={reset}>
           Новый кандидат
         </button>
       </div>
 
-      {SECTIONS.map((s) => (
-        <section className="interview__section" key={s.id}>
-          <h2>{s.title}</h2>
-          {s.note && <p className="interview__note">{s.note}</p>}
-          {s.groups.map((g, gi) => (
-            <div className="interview__group" key={gi}>
-              {g.title && <h3>{g.title}</h3>}
-              <ul>
-                {g.items.map((item, ii) => {
-                  const id = itemId(s, gi, ii)
-                  return (
-                    <li key={id} className={checked[id] ? 'is-done' : undefined}>
-                      <label className="interview__item">
-                        <input
-                          type="checkbox"
-                          checked={!!checked[id]}
-                          onChange={(e) => setChecked((c) => ({ ...c, [id]: e.target.checked }))}
-                        />
-                        <span>
-                          {item.text}
-                          {item.hint && <small>{item.hint}</small>}
-                        </span>
-                      </label>
-                      {item.message && <MessageBox text={item.message(name.trim() || '[имя]')} />}
-                    </li>
-                  )
-                })}
-              </ul>
-            </div>
+      <div className="interview__layout">
+        <div className="interview__flow">
+          {STEPS.map((s, i) => (
+            <Fragment key={s.title}>
+              {i > 0 && (
+                <div className="interview__arrow" aria-hidden="true">
+                  ↓
+                </div>
+              )}
+              <section className={s.tone ? `interview__step interview__step--${s.tone}` : 'interview__step'}>
+                <header>
+                  <span className="interview__num">{i + 1}</span>
+                  <h2>{s.title}</h2>
+                  <span className="interview__min">{s.minutes}</span>
+                </header>
+                {s.quotes.map((q) => (
+                  <p className="interview__quote" key={q}>
+                    {q}
+                  </p>
+                ))}
+                {s.list && (
+                  <ul className="interview__list">
+                    {s.list.map((l) => (
+                      <li key={l}>{l}</li>
+                    ))}
+                  </ul>
+                )}
+                {s.facts && <p className="interview__facts">{s.facts}</p>}
+                {s.alert && <p className="interview__alert">{s.alert}</p>}
+                {s.hint && <p className="interview__hint">{s.hint}</p>}
+              </section>
+            </Fragment>
           ))}
-        </section>
-      ))}
+
+          <div className="interview__arrow" aria-hidden="true">
+            ↙ ↓ ↘
+          </div>
+          <div className="interview__outcomes">
+            {OUTCOMES.map((o) => (
+              <section className="interview__outcome" key={o.title}>
+                <h3>{o.title}</h3>
+                <p className="interview__quote">{o.quote}</p>
+                <p className="interview__hint">{o.hint}</p>
+              </section>
+            ))}
+          </div>
+        </div>
+
+        <aside className="interview__side">
+          <section className="interview__card">
+            <h2 className="interview__label">Блок 6 · получить «ок» на каждое</h2>
+            <ul className="interview__oks">
+              {OKS.map((o, i) => {
+                const id = `ok-${i}`
+                return (
+                  <li key={id} className={checked[id] ? 'is-done' : undefined}>
+                    <label>
+                      <input
+                        type="checkbox"
+                        checked={!!checked[id]}
+                        onChange={(e) => setChecked((c) => ({ ...c, [id]: e.target.checked }))}
+                      />
+                      <span>
+                        {o.text} {o.ask && <b>{o.ask}</b>}
+                      </span>
+                    </label>
+                  </li>
+                )
+              })}
+            </ul>
+            <p className="interview__hint">Замялся на пункте — разберитесь сейчас, до оплаты</p>
+          </section>
+
+          <section className="interview__card interview__card--alert">
+            <h2 className="interview__label">Красные флаги</h2>
+            <ul className="interview__dots">
+              {RED_FLAGS.map((f) => (
+                <li key={f}>{f}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="interview__card">
+            <h2 className="interview__label">Частые возражения</h2>
+            {OBJECTIONS.map((o) => (
+              <div className="interview__objection" key={o.q}>
+                <b>{o.q}</b>
+                <p>{o.a}</p>
+              </div>
+            ))}
+          </section>
+
+          <section className="interview__card interview__card--muted">
+            <h2 className="interview__label">После знакомства · в тот же день</h2>
+            <p>
+              <b>Ему:</b> резюме договорённостей + ссылка на оплату + сайт
+            </p>
+            <MessageBox text={afterCallMessage(who)} />
+            <p>
+              <b>Себе, 3 строки:</b> запрос · цель его словами · сомнения
+            </p>
+            <p>
+              <b>Сказал «подумаю»</b> и пропал — ближе к концу набора:
+            </p>
+            <MessageBox text={waitlistMessage(who)} />
+          </section>
+        </aside>
+      </div>
     </div>
   )
 }
