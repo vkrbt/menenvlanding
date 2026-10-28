@@ -1,0 +1,137 @@
+/* Стили служебной страницы /interview. Импортируются только из app/interview/page.tsx,
+   поэтому на остальные страницы не протекают — как и qr.css. */
+
+.interview-page { padding-top: 140px; }
+
+.interview-page__inner { max-width: 820px; }
+
+.interview-page__lead {
+  color: var(--text-muted);
+  margin: -16px 0 32px;
+  font-size: 16px;
+}
+
+/* Имя, счётчик и сброс — липкая полоска, чтобы были под рукой во время разговора */
+.interview__bar {
+  position: sticky;
+  top: var(--mnav-top, 72px);
+  z-index: 5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px 20px;
+  padding: 14px 0;
+  margin-bottom: 8px;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.interview__name {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1 1 240px;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.interview__name input {
+  font: inherit;
+  font-size: 16px;
+  color: inherit;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 9px 12px;
+}
+
+.interview__progress {
+  font-size: 14px;
+  color: var(--text-muted);
+  padding-bottom: 10px;
+  font-variant-numeric: tabular-nums;
+}
+
+.interview__section { margin-top: 40px; }
+
+.interview__section h2 {
+  font-size: 24px;
+  margin: 0 0 12px;
+}
+
+.interview__note {
+  color: var(--text-muted);
+  font-size: 15px;
+  margin: 0 0 16px;
+}
+
+.interview__group { margin-top: 20px; }
+
+.interview__group h3 {
+  font-size: 17px;
+  margin: 0 0 8px;
+}
+
+.interview__group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.interview__group li { border-top: 1px solid var(--border); }
+
+.interview__item {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  padding: 12px 0;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 1.45;
+}
+
+.interview__item input {
+  flex: none;
+  width: 20px;
+  height: 20px;
+  margin: 2px 0 0;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.interview__item small {
+  display: block;
+  margin-top: 2px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
+
+.interview__group li.is-done .interview__item > span {
+  color: var(--text-muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--border);
+}
+
+/* Готовое сообщение кандидату с кнопкой копирования */
+.interview__message {
+  margin: 0 0 14px 32px;
+  padding: 14px 16px;
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+
+.interview__message p {
+  margin: 0 0 12px;
+  font-size: 15px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+.interview__message-foot {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+  color: var(--text-muted);
+}
