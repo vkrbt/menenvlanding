@@ -875,13 +875,12 @@
   z-index: 40;
   /* Снизу — безопасная зона iPhone (полоска «домой»), но не меньше 24px: во встроенных браузерах она бывает 0 */
   padding: 14px max(20px, env(safe-area-inset-right)) max(24px, calc(env(safe-area-inset-bottom) + 14px)) max(20px, env(safe-area-inset-left));
-  background: var(--bg);
-  border-top: 1px solid var(--border);
-  box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.06);
+  pointer-events: none; /* без подложки: клики мимо кнопки уходят странице */
   transition: transform 0.25s ease, opacity 0.25s ease;
 }
 .lt-sticky.is-hidden { transform: translateY(110%); opacity: 0; pointer-events: none; }
 .lt-sticky__btn {
+  pointer-events: auto;
   display: flex;
   align-items: center;
   justify-content: center;
