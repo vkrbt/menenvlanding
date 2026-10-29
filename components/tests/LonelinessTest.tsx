@@ -204,6 +204,17 @@ function Result({ result: r, onRestart }: { result: LonelinessResult; onRestart:
   useEffect(() => setSrc(sourceFromSearch(window.location.search)), [])
   const tgHref = `${BOT_URL}?start=${botPayload(r, src)}`
 
+  // Кнопка в бота, прибитая к низу экрана на мобильном; прячется, когда видна кнопка в карточке Telegram
+  const tgCard = useRef<HTMLElement>(null)
+  const [tgCardVisible, setTgCardVisible] = useState(false)
+  useEffect(() => {
+    const el = tgCard.current
+    if (!el || typeof IntersectionObserver === 'undefined') return
+    const io = new IntersectionObserver(([e]) => setTgCardVisible(e.isIntersecting), { threshold: 0.4 })
+    io.observe(el)
+    return () => io.disconnect()
+  }, [])
+
   const barrier = r.silent.filter((x) => x.kind === 'b').length
   const absent = r.silent.length - barrier
   const silentTitle =
@@ -298,7 +309,7 @@ function Result({ result: r, onRestart }: { result: LonelinessResult; onRestart:
         </div>
       </section>
 
-      <section className="lt-tg">
+      <section className="lt-tg" ref={tgCard}>
         <h3>Продолжение — в Telegram</h3>
         <ul>
           <li>{typo('Разбор твоего типа: откуда это берётся и чем обходится')}</li>
@@ -334,6 +345,19 @@ function Result({ result: r, onRestart }: { result: LonelinessResult; onRestart:
       <p className="tres__disclaimer">
         {typo('Ответы посчитаны в твоём браузере и пропадут, когда ты закроешь страницу. В бота уходит только то, что ты отправишь кнопкой.')}
       </p>
+
+      <div className={tgCardVisible ? 'lt-sticky is-hidden' : 'lt-sticky'} aria-hidden={tgCardVisible}>
+        <a
+          className="lt-sticky__btn"
+          href={tgHref}
+          target="_blank"
+          rel="noopener"
+          tabIndex={tgCardVisible ? -1 : 0}
+          onClick={() => reachGoal(METRIKA_GOALS.lonelyTgClick)}
+        >
+          Получить разбор в Telegram →
+        </a>
+      </div>
     </div>
   )
 }
