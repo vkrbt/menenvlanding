@@ -5,6 +5,7 @@ import SiteHeader from '@/components/SiteHeader'
 import { testsHubGraph } from '@/lib/jsonld'
 import { OG_IMAGE, SITE_URL, TESTS_URL } from '@/lib/site'
 import { questionCount, questionsLabel, TESTS } from '@/lib/tests/registry'
+import { LONELINESS_SLUG, QUESTIONS as LONELY_QUESTIONS } from '@/lib/tests/loneliness'
 import './tests.css'
 import ScrollAnimations from '@/components/ScrollAnimations'
 import Typo from '@/components/Typo'
@@ -75,6 +76,26 @@ export default function TestsHub() {
               </ul>
             </section>
           ))}
+
+          {/* Авторские тесты — отдельно: выше обещаны классические шкалы, а эти не валидированы */}
+          <section className="thub__group" aria-labelledby="t-own">
+            <h2 className="thub__topic-title" id="t-own">Авторские тесты «Мужской среды»</h2>
+            <p className="thub__own-note">
+              Вопросы составили ведущие группы. Это не классические шкалы и не скрининг — повод
+              посмотреть на себя со стороны.
+            </p>
+            <ul className="thub">
+              <li>
+                <a className="thub__card" href={`${TESTS_URL}/${LONELINESS_SLUG}`}>
+                  <span className="thub__title">Друзья есть. А поговорить не с кем?</span>
+                  <span className="thub__measures">
+                    Есть ли рядом твои люди — компания и те, с кем можно честно, — и о чём ты молчишь
+                  </span>
+                  <span className="thub__meta">{LONELY_QUESTIONS.length} вопросов · около 4 мин</span>
+                </a>
+              </li>
+            </ul>
+          </section>
 
           <p className="tpage__disclaimer thub__disclaimer">
             Тесты — это скрининг, а не диагноз, и они не заменяют консультацию специалиста.

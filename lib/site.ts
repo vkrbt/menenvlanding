@@ -129,6 +129,13 @@ export const METRIKA_GOALS = {
    */
   testStart: 'test_start',
   testComplete: 'test_complete',
+  /**
+   * Авторский тест «Поговорить не с кем»: начало, результат, переход в бота за разбором.
+   * Параметр — только slug; тип и темы уходят в бота по клику самого человека, не в Метрику
+   */
+  lonelyStart: 'lonely_test_start',
+  lonelyComplete: 'lonely_test_complete',
+  lonelyTgClick: 'lonely_test_tg_click',
 } as const
 export const YOUTUBE_URL = 'https://www.youtube.com/@men-env'
 export const YOUTUBE_LABEL = 'youtube.com/@men-env'

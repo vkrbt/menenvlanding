@@ -3,6 +3,7 @@ import { nonEmptyClusters, postsOfCluster, topicCanonical } from '@/lib/clusters
 import { getAllPosts } from '@/lib/posts'
 import { BLOG_URL, SITE_URL, TESTS_URL } from '@/lib/site'
 import { TESTS } from '@/lib/tests/registry'
+import { LONELINESS_SLUG } from '@/lib/tests/loneliness'
 
 // output: 'export' требует явно объявить маршрут статическим
 export const dynamic = 'force-static'
@@ -28,6 +29,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     })),
+    // Авторский тест — отдельный маршрут, в реестре шкал его нет
+    { url: `${SITE_URL}${TESTS_URL}/${LONELINESS_SLUG}`, lastModified: newest, changeFrequency: 'monthly', priority: 0.7 },
     // Страницы пагинации: приоритет ниже листинга — это маршрут обхода, а не цель
     // Пагинация в карту не попадает: она закрыта в robots.txt (краулинговый
     // бюджет). Держать в sitemap то, что запрещено обходить, — противоречие.
