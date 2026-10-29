@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import JsonLd from '@/components/JsonLd'
 import SiteFooter from '@/components/SiteFooter'
 import SiteHeader from '@/components/SiteHeader'
@@ -19,6 +19,9 @@ const CANONICAL = `${SITE_URL}${TESTS_URL}/${LONELINESS_SLUG}`
 const TITLE = 'Друзья есть. А поговорить не с кем? Тест — «Мужская среда»'
 const DESCRIPTION =
   'Авторский тест «Мужской среды»: есть ли рядом твои люди и о чём ты молчишь. 18 вопросов, около 4 минут, анонимно.'
+
+/** Кнопка в бота прибита к низу экрана: без cover браузер не отдаёт env(safe-area-inset-bottom) */
+export const viewport: Viewport = { width: 'device-width', initialScale: 1, viewportFit: 'cover' }
 
 export const metadata: Metadata = {
   title: { absolute: TITLE },
