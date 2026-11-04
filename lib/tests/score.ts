@@ -34,16 +34,32 @@ export function score(scale: Scale, answers: Answers): ScoreResult {
     totals.set(sub, (totals.get(sub) ?? 0) + points)
     counts.set(sub, (counts.get(sub) ?? 0) + 1)
   }
+  // Голосование: счёт голосов и номер вопроса, на котором категория набрала каждый счёт
+  const voteSubs = new Set(scale.subscales.filter((s) => s.aggregate === 'vote').map((s) => s.id))
+  const votes = new Map<string, Map<number, number>>()
+  const reached = new Map<string, Map<string, number>>()
+  const vote = (sub: string, cat: number, step: number) => {
+    const v = votes.get(sub) ?? new Map<number, number>()
+    const n = (v.get(cat) ?? 0) + 1
+    v.set(cat, n)
+    votes.set(sub, v)
+    const r = reached.get(sub) ?? new Map<string, number>()
+    r.set(`${cat}:${n}`, step)
+    reached.set(sub, r)
+  }
   const floating: Option[] = []
-  for (const item of scale.items) {
-    if (zeroed.has(item.id)) continue
+  scale.items.forEach((item, step) => {
+    if (zeroed.has(item.id)) return
     const option = item.options.find((o) => o.value === answers[item.id])!
     if (option.span) {
       floating.push(option)
-      continue
+      return
     }
-    for (const [sub, points] of Object.entries(option.scores)) add(sub, points)
-  }
+    for (const [sub, points] of Object.entries(option.scores)) {
+      if (voteSubs.has(sub)) vote(sub, points, step)
+      else add(sub, points)
+    }
+  })
 
   // «Плывущие» графы — после всех остальных: им нужно среднее соседей
   // без них самих, поэтому опираемся на снимок до первой подстановки
@@ -66,6 +82,18 @@ export function score(scale: Scale, answers: Answers): ScoreResult {
     ok: true,
     subscales: scale.subscales.map((s) => {
       const total = totals.get(s.id) ?? 0
+      if (s.aggregate === 'vote') {
+        const v = votes.get(s.id) ?? new Map<number, number>()
+        const top = Math.max(0, ...v.values())
+        const r = reached.get(s.id)!
+        // Ничья — у кого этот счёт появился раньше
+        const raw = top
+          ? [...v.entries()]
+              .filter(([, n]) => n === top)
+              .sort(([a], [b]) => r.get(`${a}:${top}`)! - r.get(`${b}:${top}`)!)[0][0]
+          : NaN
+        return { id: s.id, raw, value: raw, category: top ? categorize(s, raw) : undefined, votes: Object.fromEntries(v) }
+      }
       if (s.aggregate === 'mean') {
         const count = counts.get(s.id) ?? 0
         // Среднее в сотых с округлением. Делители 1–7 не дают значений между
@@ -97,7 +125,12 @@ export function validateScale(scale: Scale): string[] {
   for (const s of scale.subscales) {
     let min = 0
     let max = 0
-    if (s.aggregate === 'mean') {
+    if (s.aggregate === 'vote') {
+      // Итог — номер категории, за которую можно проголосовать
+      const pts = scale.items.flatMap((i) => i.options.flatMap((o) => (o.scores[s.id] === undefined ? [] : [o.scores[s.id]])))
+      min = Math.min(...pts)
+      max = Math.max(...pts)
+    } else if (s.aggregate === 'mean') {
       // Среднее лежит между наименьшим и наибольшим вкладом любого варианта; в сотых
       const pts = scale.items.flatMap((i) =>
         i.options.flatMap((o) =>

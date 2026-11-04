@@ -138,6 +138,15 @@ export default async function TestPage({ params }: { params: Promise<Params> }) 
             </nav>
             <h1 className="blog-hero__title">{scale.title}</h1>
             <p className="blog-hero__sub">{scale.measures}</p>
+            {scale.author && (
+              <p className="tpage__author">
+                Автор теста —{' '}
+                <a href={scale.author.url} target="_blank" rel="noopener noreferrer">
+                  {scale.author.name}
+                </a>
+                , {scale.author.role}
+              </p>
+            )}
             <ul className="tpage__facts">
               <li>{questionsLabel(questionCount(scale))}</li>
               <li>около {scale.minutes} мин</li>

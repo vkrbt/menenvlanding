@@ -5,6 +5,20 @@
 
 .tpage { padding-bottom: 96px; }
 
+.tpage__author {
+  margin-top: 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+.tpage__author a {
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--accent-soft-border);
+}
+.tpage__author a:hover { color: var(--link-hover); }
+
 .tpage__facts {
   display: flex;
   flex-wrap: wrap;
@@ -105,6 +119,14 @@
   line-height: 1.3;
   letter-spacing: -0.015em;
   color: var(--text);
+}
+
+/* Авторский раздел: автор на карточке */
+.thub__author {
+  margin-top: -4px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
 }
 
 .thub__measures {
@@ -458,6 +480,15 @@
   font-size: 0.95rem;
   line-height: 1.6;
   color: var(--text-muted);
+}
+
+/* Голосование (авторские тесты конституции): расклад ответов под выводом */
+.tres__votes {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--text-dim);
 }
 
 .tres__descriptive {

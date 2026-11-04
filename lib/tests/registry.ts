@@ -13,6 +13,8 @@ import { who5 } from './scales/who5.ts'
 import { zung } from './scales/zung.ts'
 import { sast } from './scales/sast.ts'
 import { vasilchenko } from './scales/vasilchenko.ts'
+import { dabrinskayaSa } from './scales/dabrinskaya-sa.ts'
+import { dabrinskayaFemale, dabrinskayaMale } from './scales/dabrinskaya-constitution.ts'
 import type { Scale } from './types.ts'
 
 export { TESTS_URL } from '../site.ts'
@@ -28,8 +30,35 @@ export type TestEntry = {
   related: string[]
 }
 
-/** Порядок — порядок карточек в хабе */
+/** Раздел авторских тестов экспертов «Мужской среды» — в хабе он первый */
+export const AUTHOR_TOPIC = 'Авторские тесты «Мужской среды»'
+
+/** Порядок — порядок карточек в хабе; разделы идут в порядке первого появления темы */
 export const TESTS: TestEntry[] = [
+  {
+    scale: dabrinskayaSa,
+    topic: AUTHOR_TOPIC,
+    seoTitle: 'Тест на зависимость от секса онлайн — 20 вопросов от сексолога Анны Дабринской',
+    seoDescription:
+      'Авторский тест сексолога Анны Дабринской: 20 вопросов о сексе, фантазиях, порно и мастурбации, пять уровней результата. Анонимно, результат сразу.',
+    related: ['pornozavisimost', 'kak-izbavitsya-ot-pornozavisimosti'],
+  },
+  {
+    scale: dabrinskayaMale,
+    topic: AUTHOR_TOPIC,
+    seoTitle: 'Тест на половую конституцию для мужчин — сколько секса нужно именно тебе',
+    seoDescription:
+      'Авторский тест сексолога Анны Дабринской по мотивам шкалы Васильченко: 7 вопросов, трохантерный индекс считается сам. Слабая, средняя или сильная конституция. Анонимно.',
+    related: ['propalo-zhelanie-v-otnosheniyah', 'problemy-s-potentsiey-ot-stressa'],
+  },
+  {
+    scale: dabrinskayaFemale,
+    topic: AUTHOR_TOPIC,
+    seoTitle: 'Тест на половую конституцию для женщин — индивидуальная норма секса',
+    seoDescription:
+      'Авторский тест сексолога Анны Дабринской по мотивам шкалы Ботневой: 10 вопросов, трохантерный индекс считается сам. Слабая, средняя, сильная конституция или редкий вариант. Анонимно.',
+    related: ['propalo-zhelanie-v-otnosheniyah'],
+  },
   {
     scale: beck,
     topic: 'Депрессия',

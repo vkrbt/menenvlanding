@@ -59,6 +59,33 @@ function Card({ scale, sub, r }: { scale: Scale; sub: Subscale; r: SubscaleResul
     )
   }
   const ex = r.category ? explanation(scale.slug, sub.id, r.category.severity, r.category.id) : undefined
+  // Голосование: число здесь — номер категории, показывать его нечего; показываем расклад голосов
+  if (sub.aggregate === 'vote') {
+    return (
+      <section className="tres__card">
+        <h3 className="tres__name">{sub.title}</h3>
+        <p className="tres__title">{r.category ? typo(r.category.label) : '—'}</p>
+        {ex?.title && ex.title.toLowerCase() !== r.category?.label.toLowerCase() && (
+          <p className="tres__official">{typo(ex.title)}</p>
+        )}
+        {ex?.text.split('\n').map((para) => (
+          <p className="tres__text" key={para}>
+            {typo(para)}
+          </p>
+        ))}
+        {r.votes && (
+          <p className="tres__votes">
+            {typo(
+              'Ответов за каждый вариант: ' +
+                sub.categories
+                  .map((c) => `${c.label.split(' ')[0].toLowerCase()} — ${r.votes![c.min] ?? 0}`)
+                  .join(', '),
+            )}
+          </p>
+        )}
+      </section>
+    )
+  }
   return (
     <section className="tres__card">
       <h3 className="tres__name">{sub.title}</h3>
@@ -122,6 +149,8 @@ export default function TestResult({
   const risk = result.flags.find((f) => f.id === 'suicide')?.level
   // У типологических шкал (половая конституция) высокая ступень — тип, а не проблема
   const toSpecialist = (!scale.typology && maxSeverity >= SPECIALIST_FROM_SEVERITY) || risk !== undefined
+  // Авторский тест: вместо общего совета — запись к автору, как в оригинале теста
+  const toAuthor = scale.author?.consult && (scale.typology || maxSeverity >= 1)
 
   // Шкалы «рисуются», когда попадают в экран: сегменты растут слева направо, маркер
   // доезжает до результата. Без JS и при reduced motion — сразу итоговое состояние.
@@ -175,7 +204,19 @@ export default function TestResult({
 
       {risk !== undefined && <CrisisBlock urgent={risk === 2} />}
 
-      {toSpecialist && (
+      {toAuthor && (
+        <section className="tres__next">
+          <h3>Консультация у автора теста</h3>
+          <p>
+            {typo(`Автор теста — ${scale.author!.name}, ${scale.author!.role}. Тест — не диагноз: точнее разобраться поможет разговор со специалистом, записаться к автору можно по ссылке.`)}
+          </p>
+          <a href={scale.author!.consult} className="btn btn--primary" target="_blank" rel="noopener noreferrer">
+            Записаться на консультацию
+          </a>
+        </section>
+      )}
+
+      {toSpecialist && !scale.author && (
         <section className="tres__next">
           <h3>Что делать дальше</h3>
           <p>

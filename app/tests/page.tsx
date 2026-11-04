@@ -4,7 +4,7 @@ import SiteFooter from '@/components/SiteFooter'
 import SiteHeader from '@/components/SiteHeader'
 import { testsHubGraph } from '@/lib/jsonld'
 import { OG_IMAGE, SITE_URL, TESTS_URL } from '@/lib/site'
-import { questionCount, questionsLabel, TESTS } from '@/lib/tests/registry'
+import { AUTHOR_TOPIC, questionCount, questionsLabel, TESTS, type TestEntry } from '@/lib/tests/registry'
 import { LONELINESS_SLUG, QUESTIONS as LONELY_QUESTIONS } from '@/lib/tests/loneliness'
 import './tests.css'
 import ScrollAnimations from '@/components/ScrollAnimations'
@@ -28,10 +28,33 @@ export const metadata: Metadata = {
   twitter: { card: 'summary_large_image', images: [OG_IMAGE] },
 }
 
-/** Темы в порядке первого появления в реестре */
-const groups = [...new Set(TESTS.map((t) => t.topic))].map(
-  (topic) => [topic, TESTS.filter((t) => t.topic === topic)] as const,
+/** Классические шкалы по темам — в порядке первого появления темы в реестре */
+const classic = TESTS.filter((t) => t.topic !== AUTHOR_TOPIC)
+const groups = [...new Set(classic.map((t) => t.topic))].map(
+  (topic) => [topic, classic.filter((t) => t.topic === topic)] as const,
 )
+
+/** Авторские тесты экспертов выпусков: идут в раздел авторских рядом с тестом ведущих */
+const authored = TESTS.filter((t) => t.topic === AUTHOR_TOPIC)
+
+function Card({ scale }: TestEntry) {
+  return (
+    <li>
+      <a className="thub__card" href={`${TESTS_URL}/${scale.slug}`}>
+        <span className="thub__title">{scale.title}</span>
+        {scale.author && (
+          <span className="thub__author">
+            {scale.author.name}, {scale.author.role}
+          </span>
+        )}
+        <span className="thub__measures">{scale.measures}</span>
+        <span className="thub__meta">
+          {questionsLabel(questionCount(scale))} · около {scale.minutes} мин
+        </span>
+      </a>
+    </li>
+  )
+}
 
 export default function TestsHub() {
   return (
@@ -52,37 +75,19 @@ export default function TestsHub() {
             <p className="blog-hero__sub">
               Классические психологические шкалы, по которым работают врачи и психологи. Каждый
               тест считается ровно так, как в первоисточнике: ключи и пороги сверены с методиками,
-              а не взяты с других сайтов. Анонимно — ответы не покидают твой браузер.
+              а не взяты с других сайтов. Первым разделом — авторские тесты ведущих и экспертов наших выпусков.
+              Анонимно — ответы не покидают твой браузер.
             </p>
           </div>
         </section>
 
         <section className="container">
-          {groups.map(([topic, tests]) => (
-            <section className="thub__group" key={topic} aria-labelledby={`t-${topic}`}>
-              <h2 className="thub__topic-title" id={`t-${topic}`}>{topic}</h2>
-              <ul className="thub">
-                {tests.map(({ scale }) => (
-                  <li key={scale.slug}>
-                    <a className="thub__card" href={`${TESTS_URL}/${scale.slug}`}>
-                      <span className="thub__title">{scale.title}</span>
-                      <span className="thub__measures">{scale.measures}</span>
-                      <span className="thub__meta">
-                        {questionsLabel(questionCount(scale))} · около {scale.minutes} мин
-                      </span>
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          ))}
-
-          {/* Авторские тесты — отдельно: выше обещаны классические шкалы, а эти не валидированы */}
+          {/* Авторские тесты — первым разделом и отдельно от классики: выше обещаны классические шкалы, а эти не валидированы */}
           <section className="thub__group" aria-labelledby="t-own">
-            <h2 className="thub__topic-title" id="t-own">Авторские тесты «Мужской среды»</h2>
+            <h2 className="thub__topic-title" id="t-own">{AUTHOR_TOPIC}</h2>
             <p className="thub__own-note">
-              Вопросы составили ведущие группы. Это не классические шкалы и не скрининг — повод
-              посмотреть на себя со стороны.
+              Вопросы составили ведущие группы и эксперты наших выпусков. Это не классические шкалы:
+              вопросы, подсчёт и выводы — авторские. Повод посмотреть на себя со стороны.
             </p>
             <ul className="thub">
               <li>
@@ -94,8 +99,22 @@ export default function TestsHub() {
                   <span className="thub__meta">{LONELY_QUESTIONS.length} вопросов · около 4 мин</span>
                 </a>
               </li>
+              {authored.map((t) => (
+                <Card key={t.scale.slug} {...t} />
+              ))}
             </ul>
           </section>
+
+          {groups.map(([topic, tests]) => (
+            <section className="thub__group" key={topic} aria-labelledby={`t-${topic}`}>
+              <h2 className="thub__topic-title" id={`t-${topic}`}>{topic}</h2>
+              <ul className="thub">
+                {tests.map((t) => (
+                  <Card key={t.scale.slug} {...t} />
+                ))}
+              </ul>
+            </section>
+          ))}
 
           <p className="tpage__disclaimer thub__disclaimer">
             Тесты — это скрининг, а не диагноз, и они не заменяют консультацию специалиста.

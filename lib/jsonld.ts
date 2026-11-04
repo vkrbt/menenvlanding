@@ -295,6 +295,9 @@ export function testGraph(test: TestEntry) {
         isPartOf: { '@id': WEBSITE_ID },
         publisher: { '@id': ORG_ID },
         about: { '@type': 'Thing', name: test.topic },
+        ...(test.scale.author
+          ? { author: { '@type': 'Person', name: test.scale.author.name, jobTitle: test.scale.author.role, url: test.scale.author.url } }
+          : {}),
       },
       {
         '@type': 'BreadcrumbList',
