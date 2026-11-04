@@ -149,8 +149,6 @@ export default function TestResult({
   const risk = result.flags.find((f) => f.id === 'suicide')?.level
   // У типологических шкал (половая конституция) высокая ступень — тип, а не проблема
   const toSpecialist = (!scale.typology && maxSeverity >= SPECIALIST_FROM_SEVERITY) || risk !== undefined
-  // Авторский тест: вместо общего совета — запись к автору, как в оригинале теста
-  const toAuthor = scale.author?.consult && (scale.typology || maxSeverity >= 1)
 
   // Шкалы «рисуются», когда попадают в экран: сегменты растут слева направо, маркер
   // доезжает до результата. Без JS и при reduced motion — сразу итоговое состояние.
@@ -204,19 +202,7 @@ export default function TestResult({
 
       {risk !== undefined && <CrisisBlock urgent={risk === 2} />}
 
-      {toAuthor && (
-        <section className="tres__next">
-          <h3>Консультация у автора теста</h3>
-          <p>
-            {typo(`Автор теста — ${scale.author!.name}, ${scale.author!.role}. Тест — не диагноз: точнее разобраться поможет разговор со специалистом, записаться к автору можно по ссылке.`)}
-          </p>
-          <a href={scale.author!.consult} className="btn btn--primary" target="_blank" rel="noopener noreferrer">
-            Записаться на консультацию
-          </a>
-        </section>
-      )}
-
-      {toSpecialist && !scale.author && (
+      {toSpecialist && (
         <section className="tres__next">
           <h3>Что делать дальше</h3>
           <p>

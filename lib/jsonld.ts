@@ -296,7 +296,11 @@ export function testGraph(test: TestEntry) {
         publisher: { '@id': ORG_ID },
         about: { '@type': 'Thing', name: test.topic },
         ...(test.scale.author
-          ? { author: { '@type': 'Person', name: test.scale.author.name, jobTitle: test.scale.author.role, url: test.scale.author.url } }
+          ? {
+              author: test.scale.author.organization
+                ? { '@type': 'Organization', name: test.scale.author.name, url: test.scale.author.url }
+                : { '@type': 'Person', name: test.scale.author.name, jobTitle: test.scale.author.role, url: test.scale.author.url },
+            }
           : {}),
       },
       {

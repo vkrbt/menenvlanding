@@ -13,8 +13,8 @@ import { who5 } from './scales/who5.ts'
 import { zung } from './scales/zung.ts'
 import { sast } from './scales/sast.ts'
 import { vasilchenko } from './scales/vasilchenko.ts'
-import { dabrinskayaSa } from './scales/dabrinskaya-sa.ts'
-import { dabrinskayaFemale, dabrinskayaMale } from './scales/dabrinskaya-constitution.ts'
+import { sa20 } from './scales/sa20.ts'
+import { constitutionQuickFemale, constitutionQuickMale } from './scales/constitution-quick.ts'
 import type { Scale } from './types.ts'
 
 export { TESTS_URL } from '../site.ts'
@@ -30,35 +30,11 @@ export type TestEntry = {
   related: string[]
 }
 
-/** Раздел авторских тестов экспертов «Мужской среды» — в хабе он первый */
+/** Раздел авторских тестов «Мужской среды» — в хабе он первый */
 export const AUTHOR_TOPIC = 'Авторские тесты «Мужской среды»'
 
 /** Порядок — порядок карточек в хабе; разделы идут в порядке первого появления темы */
 export const TESTS: TestEntry[] = [
-  {
-    scale: dabrinskayaSa,
-    topic: AUTHOR_TOPIC,
-    seoTitle: 'Тест на зависимость от секса онлайн — 20 вопросов от сексолога Анны Дабринской',
-    seoDescription:
-      'Авторский тест сексолога Анны Дабринской: 20 вопросов о сексе, фантазиях, порно и мастурбации, пять уровней результата. Анонимно, результат сразу.',
-    related: ['pornozavisimost', 'kak-izbavitsya-ot-pornozavisimosti'],
-  },
-  {
-    scale: dabrinskayaMale,
-    topic: AUTHOR_TOPIC,
-    seoTitle: 'Тест на половую конституцию для мужчин — сколько секса нужно именно тебе',
-    seoDescription:
-      'Авторский тест сексолога Анны Дабринской по мотивам шкалы Васильченко: 7 вопросов, трохантерный индекс считается сам. Слабая, средняя или сильная конституция. Анонимно.',
-    related: ['propalo-zhelanie-v-otnosheniyah', 'problemy-s-potentsiey-ot-stressa'],
-  },
-  {
-    scale: dabrinskayaFemale,
-    topic: AUTHOR_TOPIC,
-    seoTitle: 'Тест на половую конституцию для женщин — индивидуальная норма секса',
-    seoDescription:
-      'Авторский тест сексолога Анны Дабринской по мотивам шкалы Ботневой: 10 вопросов, трохантерный индекс считается сам. Слабая, средняя, сильная конституция или редкий вариант. Анонимно.',
-    related: ['propalo-zhelanie-v-otnosheniyah'],
-  },
   {
     scale: beck,
     topic: 'Депрессия',
@@ -156,12 +132,36 @@ export const TESTS: TestEntry[] = [
     related: ['pornozavisimost', 'kak-izbavitsya-ot-pornozavisimosti'],
   },
   {
+    scale: sa20,
+    topic: 'Сексуальность',
+    seoTitle: 'Тест на зависимость от секса онлайн — «20 вопросов» Sexaholics Anonymous',
+    seoDescription:
+      '«20 вопросов» сообщества анонимных сексоголиков (SA) на русском: секс, фантазии, порно и мастурбация, пять уровней результата. Анонимно, результат сразу.',
+    related: ['pornozavisimost', 'kak-izbavitsya-ot-pornozavisimosti'],
+  },
+  {
     scale: vasilchenko,
     topic: 'Сексуальность',
     seoTitle: 'Половая конституция по Васильченко онлайн — тест с трохантерным индексом',
     seoDescription:
       'Шкала векторного определения половой конституции мужчины Г.С. Васильченко: 7 признаков, трохантерный индекс считается сам по росту и длине ноги. Анонимно.',
     related: ['propalo-zhelanie-v-otnosheniyah', 'problemy-s-potentsiey-ot-stressa'],
+  },
+  {
+    scale: constitutionQuickMale,
+    topic: 'Сексуальность',
+    seoTitle: 'Тест на половую конституцию для мужчин — сколько секса нужно именно тебе',
+    seoDescription:
+      'Короткий тест по шкале половой конституции Г.С. Васильченко: 7 вопросов, трохантерный индекс считается сам. Слабая, средняя или сильная конституция. Анонимно.',
+    related: ['propalo-zhelanie-v-otnosheniyah', 'problemy-s-potentsiey-ot-stressa'],
+  },
+  {
+    scale: constitutionQuickFemale,
+    topic: 'Сексуальность',
+    seoTitle: 'Тест на половую конституцию для женщин — индивидуальная норма секса',
+    seoDescription:
+      'Тест по шкале половой конституции женщины И.Л. Ботневой: 10 вопросов, трохантерный индекс считается сам. Слабая, средняя, сильная конституция или редкий вариант. Анонимно.',
+    related: ['propalo-zhelanie-v-otnosheniyah'],
   },
   {
     scale: who5,
