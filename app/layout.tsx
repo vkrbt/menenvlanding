@@ -15,6 +15,8 @@ import './globals.css'
  */
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
+  // Bing Webmaster Tools
+  other: { 'msvalidate.01': '514318290B69651D09B5BF2B92A92CCD' },
   icons: {
     icon: [
       { url: '/favicon.ico', sizes: '48x48' },
