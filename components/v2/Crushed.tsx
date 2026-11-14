@@ -27,7 +27,7 @@ export default function Crushed() {
           <span key={s} className="v2-stone v2-crush__stone" style={{ ['--i' as string]: i }}>{s}</span>
         ))}
       </div>
-      <img className="v2-crush__man" src="/v2/crushed.webp" alt="" width={700} height={974} loading="lazy" />
+      <img className="v2-crush__man" src="/v2/crushed.webp" alt="" width={700} height={1028} loading="lazy" />
     </div>
   )
 }

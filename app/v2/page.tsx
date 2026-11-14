@@ -109,7 +109,7 @@ export default function V2Page() {
                 </ul>
               </div>
               <div className="v2-hero__art" aria-hidden="true">
-                <img className="v2-hero__man" src="/v2/push.webp" alt="" width={900} height={839} fetchPriority="high" />
+                <img className="v2-hero__man" src="/v2/push.webp" alt="" width={900} height={786} fetchPriority="high" />
                 <span className="v2-stone v2-hero__stone">Должен</span>
               </div>
             </div>
@@ -122,7 +122,7 @@ export default function V2Page() {
               <ul className="v2-quotes">
                 {QUOTES.map((q, i) => (
                   <li className="v2-quote" key={q.t} style={{ ['--tilt' as string]: `${i % 2 ? 1.2 : -1.2}deg` }}>
-                    <img className="v2-quote__face" src="/v2/bust.webp" alt="" width={700} height={1313} loading="lazy" />
+                    <img className="v2-quote__face" src="/v2/bust.webp" alt="" width={700} height={1114} loading="lazy" />
                     <p>«{q.t}»</p>
                     <span>(с) Джейсон Стетем</span>
                     
@@ -218,7 +218,7 @@ export default function V2Page() {
 
           <section className="v2-final">
             <div className="v2-wrap">
-              <img className="v2-final__face" src="/v2/thumbs.webp" alt="Стетем показывает большой палец" width={700} height={885} />
+              <img className="v2-final__face" src="/v2/thumbs.webp" alt="Стетем показывает большой палец" width={700} height={882} />
               <h2 className="v2-h2">Стетем ждёт. Он не любит ждать</h2>
               <p className="v2-lead">Старт {startPhrase()}, {RECRUITMENT_NOTE.toLowerCase()}. Созвон бесплатный.</p>
               <Cta />

@@ -102,7 +102,7 @@ export default function QuizV2() {
   if (!started) {
     return (
       <div className="v2-quiz">
-        <img className="v2-quiz__face" src="/v2/bust.webp" alt="" width={700} height={1313} />
+        <img className="v2-quiz__face" src="/v2/bust.webp" alt="" width={700} height={1114} />
         <div>
           <p className="v2-quiz__lead">Не уверен, что тебе в группу? Пять вопросов, и Стетем скажет, как есть.</p>
           <button
