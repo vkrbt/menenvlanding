@@ -36,12 +36,12 @@ const QUESTIONS: Array<{ q: string; a: string[] }> = [
 
 type Outcome = { mood: string; name: string; title: string; text: string; cta: boolean; meme: string; top: string; bottom: string }
 
-/** Исход теста: какой ты Стетем и мем-картинка (кадр нарисован нами, подписи верх/низ как у мемов) */
+/** Исход теста: Стетем говорит, кто ты, плюс мем-картинка (кадр нарисован нами, подписи верх/низ как у мемов) */
 function outcome(score: number): Outcome {
   if (score >= 7) {
     return {
       mood: 'nod',
-      name: 'Стетем — одинокий волк',
+      name: 'одинокий волк',
       title: 'Ты тащишь всё сам',
       meme: '/v2/meme-wolf.jpg',
       top: 'Волк слабее льва и тигра',
@@ -53,18 +53,18 @@ function outcome(score: number): Outcome {
   if (score >= 4) {
     return {
       mood: 'grin',
-      name: 'Стетем у гаража',
-      title: 'С мужиками говоришь, но не о главном',
-      meme: '/v2/meme-garage.jpg',
-      top: 'Настоящие мужики не в клубе',
-      bottom: 'Они в гараже. И молчат',
-      text: 'Кое-что ты проговариваешь, кое-что держишь при себе. Приходи на бесплатный созвон на 10–15 минут, разберёмся, что именно. Не зайдёт, так и скажешь.',
+      name: 'тигр в клетке',
+      title: 'Сила есть, а наружу не выходит',
+      meme: '/v2/meme-tiger.jpg',
+      top: 'Тигр не выступает в цирке',
+      bottom: 'Но и из клетки не выходит',
+      text: 'С мужиками ты говоришь, но про главное молчишь. Что-то проговариваешь, а остальное держишь в себе, и оно рычит изнутри. Приходи на бесплатный созвон на 10–15 минут. Не зайдёт, так и скажешь.',
       cta: true,
     }
   }
   return {
     mood: 'sigh',
-    name: 'Стетем в стае',
+    name: 'вожак стаи',
     title: 'У тебя есть свои люди',
     meme: '/v2/meme-pack.jpg',
     top: 'Утром йога',
@@ -102,7 +102,7 @@ export default function QuizV2() {
   if (!started) {
     return (
       <div className="v2-quiz">
-        <img className="v2-quiz__face" src="/v2/bust.webp" alt="" width={700} height={930} />
+        <img className="v2-quiz__face" src="/v2/bust.webp" alt="" width={700} height={1313} />
         <div>
           <p className="v2-quiz__lead">Не уверен, что тебе в группу? Пять вопросов, и Стетем скажет, как есть.</p>
           <button
@@ -111,6 +111,8 @@ export default function QuizV2() {
             onClick={() => {
               setStarted(true)
               reachGoal(METRIKA_GOALS.testStart)
+              // мемы грузим заранее, чтобы в результате картинка была сразу
+              ;['wolf', 'tiger', 'pack'].forEach((m) => { new Image().src = `/v2/meme-${m}.jpg` })
             }}
           >
             Пройти тест
@@ -130,7 +132,7 @@ export default function QuizV2() {
           <figcaption className="v2-meme__bottom">{o.bottom}</figcaption>
         </figure>
         <div>
-          <p className="v2-quiz__kicker">Ты — </p>
+          <p className="v2-quiz__kicker">Стетем говорит: ты —</p>
           <h3 className="v2-quiz__title">{o.name}</h3>
           <p className="v2-quiz__sub">{o.title}</p>
           <p className="v2-quiz__lead">{o.text}</p>
