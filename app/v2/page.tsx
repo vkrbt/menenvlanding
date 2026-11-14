@@ -153,7 +153,14 @@ export default function V2Page() {
               <h2 className="v2-h2">Узнал себя?</h2>
               <ul className="v2-signs">
                 {SIGNS.map((s) => (
-                  <li key={s}><span aria-hidden="true">⚠</span>{s}</li>
+                  <li key={s}>
+                    <svg className="v2-signs__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                      <path d="M10.3 3.9 1.9 18.5A2 2 0 0 0 3.6 21.5h16.8a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z" stroke="currentColor" strokeWidth="2" strokeLinejoin="round" />
+                      <path d="M12 9.5v4.5" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" />
+                      <circle cx="12" cy="17.4" r="1.25" fill="currentColor" />
+                    </svg>
+                    {s}
+                  </li>
                 ))}
               </ul>
               <p className="v2-conclusion">Хоть один пункт про тебя? Не жди, пока всё развалится.</p>

@@ -152,7 +152,7 @@
 .v2-signs-grid { display: grid; gap: 28px; align-items: center; }
 .v2-signs { display: grid; gap: 10px; margin: 24px 0; }
 .v2-signs li { display: flex; gap: 14px; align-items: flex-start; padding: 14px 16px; font-weight: 600; background: var(--card); border: 2px solid var(--line); border-bottom-width: 4px; border-radius: 12px; }
-.v2-signs span { color: var(--gold); font-size: 20px; line-height: 1.15; }
+.v2-signs__icon { flex: none; margin-top: 2px; color: var(--gold); }
 .v2-conclusion { font-size: 20px; font-weight: 800; margin-bottom: 20px; }
 
 .v2-crush { position: relative; display: flex; flex-direction: column; align-items: center; padding-top: 10px; overflow: hidden; background: radial-gradient(ellipse 60% 55% at 50% 60%, var(--glow), transparent 70%); border-bottom: 4px solid var(--line); }
@@ -164,10 +164,11 @@
 
 /* ---------- строка, которая сбивает героя с ног (как блок у Ясно); движение и удар — в KnockBand.tsx ---------- */
 .v2-knock { --fs: clamp(30px, 5vw, 64px); position: relative; height: clamp(240px, 30vw, 380px); overflow: hidden; background: var(--bg2); }
-.v2-knock__band { position: absolute; left: -10%; right: -10%; top: 64%; rotate: -4deg; z-index: 2; }
+/* строка ровно посередине по высоте: после того как героя снесло, сверху и снизу одинаково */
+.v2-knock__band { position: absolute; left: -10%; right: -10%; top: calc(50% - var(--fs) / 2); rotate: -4deg; z-index: 2; }
 .v2-knock__row { display: flex; gap: 1.2em; width: max-content; font: 600 var(--fs)/1 'Manrope', sans-serif; letter-spacing: -0.02em; color: var(--fg); white-space: nowrap; will-change: transform; }
 /* ноги внутри строки: она идёт на уровне голеней */
-.v2-knock__man { position: absolute; left: 50%; bottom: calc(36% - var(--fs) * .95); z-index: 1; height: 64%; width: auto; translate: -50% 0; transform-origin: 50% 85%; filter: drop-shadow(0 12px 12px var(--shadow)); }
+.v2-knock__man { position: absolute; left: 50%; bottom: calc(50% - var(--fs) * .45); z-index: 1; height: 50%; width: auto; translate: -50% 0; transform-origin: 50% 85%; filter: drop-shadow(0 12px 12px var(--shadow)); }
 .v2-knock__man.is-hit { animation: v2-knock-hit 1s cubic-bezier(.2, .7, .4, 1) forwards; }
 /* сносит туда же, куда едет строка — влево, кувырком, за экран; обратно не возвращается */
 @keyframes v2-knock-hit {
