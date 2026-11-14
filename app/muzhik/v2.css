@@ -289,13 +289,16 @@ html:has(.v2) { scroll-behavior: smooth; }
   .v2-crush.is-on .v2-crush__man, .v2-crush.is-on .v2-crush__pile { animation: v2-nail 2s linear forwards; }
 }
 /* герой с «Должен»: резко вылетает из-за правого края, останавливается справа и потихоньку тащит
-   влево до своего места; пауза — и снова. --from: где он останавливается после вылета */
+   влево до своего места; пауза, коротко уезжает обратно за правый край — и снова. --from: где он останавливается после вылета */
 .v2-hero__art { --from: 40%; }
 @media (max-width: 759px) { .v2-hero__art { --from: 55%; } }
 @keyframes v2-drag {
   0% { translate: 110vw 0; animation-timing-function: cubic-bezier(.15, .8, .3, 1); }
   5% { translate: var(--from) 0; animation-timing-function: linear; }
-  85%, 100% { translate: 0 0; }
+  82% { translate: 0 0; }
+  /* пауза, потом коротко уезжает обратно за правый край — оттуда и вылетает в новом круге */
+  93% { translate: 0 0; animation-timing-function: cubic-bezier(.6, 0, .9, .4); }
+  97%, 100% { translate: 110vw 0; }
 }
 
 @keyframes v2-flash { from { opacity: 0; transform: translateY(6px); } }
