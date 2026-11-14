@@ -307,7 +307,8 @@
   transition: background-color 0.15s, transform 0.1s, box-shadow 0.1s;
 }
 
-.trun__option:hover { background: var(--hover-bg-strong); }
+/* только на устройствах с мышью: на телефоне :hover залипает на последнем нажатом варианте и переезжает на следующий вопрос */
+@media (hover: hover) { .trun__option:hover { background: var(--hover-bg-strong); } }
 .trun__option:active { transform: translateY(2px); box-shadow: 0 0 0 var(--ink); }
 
 .trun__option:focus-visible {
