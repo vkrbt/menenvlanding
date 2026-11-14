@@ -11,7 +11,8 @@ import { useEffect, useRef } from 'react'
  */
 const WORDS = ['Выгорание', 'Одиночество', 'Деньги', 'Тревога', 'Злость', 'Алкоголь', 'Кризис на работе', 'Сложные отношения', 'Нет сил', 'Стыд', 'Бессонница', 'Зависимости']
 
-const FAST = 900 // px/с — слова вылетают
+const FAST = 450 // px/с — слова вылетают (не слишком быстро, чтобы успеть увидеть)
+const START_DELAY = 1100 // мс: герой сначала стоит, слова вылетают с паузой после появления блока
 const SPEED = 130 // px/с — обычная бегущая строка после удара
 
 export default function KnockBand() {
@@ -50,7 +51,7 @@ export default function KnockBand() {
       timer = window.setTimeout(() => {
         state = 'done'
         w.classList.remove('is-on')
-      }, 1600)
+      }, 2200)
     }
 
     const tick = (t: number) => {
@@ -66,16 +67,23 @@ export default function KnockBand() {
     }
 
     r.style.transform = `translateX(${x}px)`
+    let started = false
+    let delay = 0
     const io = new IntersectionObserver(([e]) => {
       cancelAnimationFrame(raf)
+      clearTimeout(delay)
       last = 0
-      if (e.isIntersecting) raf = requestAnimationFrame(tick)
-    }, { threshold: 0.5 })
+      if (!e.isIntersecting) return
+      // первый раз — с паузой, чтобы при скролле успеть увидеть, как он стоит
+      if (started) raf = requestAnimationFrame(tick)
+      else delay = window.setTimeout(() => { started = true; raf = requestAnimationFrame(tick) }, START_DELAY)
+    }, { threshold: 0.6 })
     io.observe(el)
     return () => {
       io.disconnect()
       cancelAnimationFrame(raf)
       clearTimeout(timer)
+      clearTimeout(delay)
     }
   }, [])
 

@@ -198,7 +198,7 @@ html:has(.v2) { scroll-behavior: smooth; }
 .v2-knock__band { position: absolute; left: -10%; right: -10%; top: calc(50% - var(--fs) / 2); rotate: -4deg; z-index: 2; }
 .v2-knock__row { display: flex; gap: 1.2em; width: max-content; font: 600 var(--fs)/1 'Manrope', sans-serif; letter-spacing: -0.02em; color: var(--fg); white-space: nowrap; will-change: transform; }
 .v2-knock__man { position: absolute; left: 50%; top: calc(50% - 62% * .3); z-index: 1; height: 62%; width: auto; translate: -50% 0; transform-origin: 50% 70%; filter: drop-shadow(0 12px 12px var(--shadow)); }
-.v2-knock__man.is-hit { animation: v2-knock-hit 1s cubic-bezier(.2, .7, .4, 1) forwards; }
+.v2-knock__man.is-hit { animation: v2-knock-hit 1.6s cubic-bezier(.2, .7, .4, 1) forwards; }
 /* сносит туда же, куда едет строка — влево, кувырком, за экран; обратно не возвращается */
 @keyframes v2-knock-hit {
   0% { transform: none; }
