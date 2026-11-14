@@ -37,11 +37,11 @@ const SIGNS = [
 
 /** Шипы на «Должен»: подпись и середина шипа в % от картинки drag.webp */
 const SPIKES: Array<[string, number, number]> = [
-  ['семья', 31, 21],
-  ['работа', 51.6, 32.6],
-  ['бизнес', 64.7, 31.2],
-  ['ипотека', 89.5, 33.2],
-  ['усталость', 92, 62.2],
+  ['семья', 28.9, 14],
+  ['работа', 52.4, 32.2],
+  ['бизнес', 65.3, 31.4],
+  ['ипотека', 89, 30.6],
+  ['усталость', 92, 61.6],
 ]
 
 const FACTS: Array<[string, string, string]> = [
@@ -120,7 +120,7 @@ export default function V2Page() {
                 </ul>
               </div>
               <div className="v2-hero__art" aria-hidden="true">
-                <img className="v2-hero__drag" src="/v2/drag.webp" alt="" width={1100} height={502} fetchPriority="high" />
+                <img className="v2-hero__drag" src="/v2/drag.webp" alt="" width={1100} height={455} fetchPriority="high" />
                 {SPIKES.map(([w, x, y]) => (
                   <span key={w} className="v2-spike" style={{ left: `${x}%`, top: `${y}%` }}>{w}</span>
                 ))}
@@ -178,8 +178,6 @@ export default function V2Page() {
             </div>
           </section>
 
-          <HostsV2 />
-
           <section className="v2-section v2-section--yellow" id="test">
             <div className="v2-wrap">
               <h2 className="v2-h2">Тебе в группу? Пройди тест</h2>
@@ -187,6 +185,8 @@ export default function V2Page() {
               <QuizV2 />
             </div>
           </section>
+
+          <HostsV2 />
 
           <section className="v2-section">
             <div className="v2-wrap">
