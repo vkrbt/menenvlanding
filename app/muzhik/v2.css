@@ -288,10 +288,12 @@ html:has(.v2) { scroll-behavior: smooth; }
   /* каждый камень вбивает героя ниже, как гвоздь; внизу он и остаётся */
   .v2-crush.is-on .v2-crush__man, .v2-crush.is-on .v2-crush__pile { animation: v2-nail 2s linear forwards; }
 }
+/* насколько далеко уползает картинка: на телефоне она узкая, поэтому сдвиг в процентах больше */
+.v2-hero__art { --drag: -7%; }
+@media (max-width: 759px) { .v2-hero__art { --drag: -16%; } }
 @keyframes v2-drag {
   0%, 100% { translate: 0 0; }
-  45% { translate: -7% 0; }
-  55% { translate: -7% 0; }
+  45%, 55% { translate: var(--drag) 0; }
 }
 @keyframes v2-flash { from { opacity: 0; transform: translateY(6px); } }
 @keyframes v2-drop { 0% { opacity: 1; translate: 0 -260px; } 80% { translate: 0 6px; } 100% { opacity: 1; translate: 0 0; } }
