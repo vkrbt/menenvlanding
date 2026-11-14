@@ -288,6 +288,9 @@
   .v2-hero__art { margin-right: -4vw; }
   .v2-signs-grid { grid-template-columns: 360px 1fr; }
   .v2-quotes { grid-template-columns: repeat(2, 1fr); }
+  /* «Узнал себя?» — парами в два столбца */
+  .v2-signs { grid-template-columns: 1fr 1fr; }
+  .v2-signs li { height: 100%; }
   .v2-facts { grid-template-columns: repeat(2, 1fr); }
   .v2-offer { grid-template-columns: 1.4fr 1fr; align-items: start; }
   .v2-quiz { grid-template-columns: 180px 1fr; }
