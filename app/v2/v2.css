@@ -147,7 +147,7 @@
 /* высота ровно в одну строку: мысли разной длины не двигают кнопки ниже */
 .v2-pov__line { display: block; height: 1.2em; overflow: hidden; white-space: nowrap; font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 900; font-size: min(6.2vw, 32px); line-height: 1.15; color: var(--gold); }
 .v2-pov__word { display: inline-block; }
-/* самые длинные мысли («Некому сказать «доброе утро»») мельче, чтобы остаться в одну строку */
+/* самые длинные мысли («Некому обо мне позаботиться») мельче, чтобы остаться в одну строку */
 .v2-pov__word--long { font-size: .8em; }
 
 /* ---------- узнал себя ---------- */
