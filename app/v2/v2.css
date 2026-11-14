@@ -228,6 +228,10 @@
 @media (max-width: 759px) {
   .v2-hero { padding-top: 20px; background: radial-gradient(ellipse 90% 30% at 50% 14%, var(--glow), transparent 70%), #070709; }
   .v2-hero__art { order: -1; margin-top: -8px; }
+  /* телефон: отступы меньше; блок с камнями поднят — после «вбивания» сверху остаётся пустота на 88px */
+  .v2-hero { padding-bottom: 24px; }
+  .v2-section, .v2 .hosts { padding: 44px 0; }
+  .v2-crush { margin-top: -70px; }
 }
 @media (max-width: 420px) {
   .v2-top { padding: 8px 10px; }
