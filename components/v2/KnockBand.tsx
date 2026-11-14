@@ -18,7 +18,7 @@ export default function KnockBand() {
   const box = useRef<HTMLDivElement>(null)
   const row = useRef<HTMLParagraphElement>(null)
   const man = useRef<HTMLImageElement>(null)
-  const wasted = useRef<HTMLParagraphElement>(null)
+  const wasted = useRef<HTMLParagraphElement>(null) // «потрачено» шрифтом как у «wasted» в GTA, картинкой: у Pricedown нет кириллицы
 
   useEffect(() => {
     const el = box.current, r = row.current, m = man.current, w = wasted.current
@@ -87,7 +87,7 @@ export default function KnockBand() {
         </p>
       </div>
       <img ref={man} className="v2-knock__man" src="/v2/stand.webp" alt="" width={420} height={1398} loading="lazy" />
-      <p ref={wasted} className="v2-knock__wasted">ПОТРАЧЕНО</p>
+      <p ref={wasted} className="v2-knock__wasted"><img src="/v2/wasted.webp" alt="" width={1000} height={166} /></p>
     </div>
   )
 }

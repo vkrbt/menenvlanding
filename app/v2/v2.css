@@ -163,11 +163,11 @@
 .v2-crush__man { position: relative; z-index: 1; width: min(320px, 80%); height: auto; filter: drop-shadow(0 18px 18px rgba(0, 0, 0, .6)); }
 
 /* ---------- строка, которая сбивает героя с ног (как блок у Ясно); движение и удар — в KnockBand.tsx ---------- */
-.v2-knock { --fs: clamp(30px, 5vw, 64px); position: relative; height: clamp(300px, 40vw, 500px); overflow: hidden; background: var(--bg2); }
+.v2-knock { --fs: clamp(30px, 5vw, 64px); position: relative; height: clamp(240px, 30vw, 380px); overflow: hidden; background: var(--bg2); }
 .v2-knock__band { position: absolute; left: -10%; right: -10%; top: 64%; rotate: -4deg; z-index: 2; }
 .v2-knock__row { display: flex; gap: 1.2em; width: max-content; font: 600 var(--fs)/1 'Manrope', sans-serif; letter-spacing: -0.02em; color: var(--fg); white-space: nowrap; will-change: transform; }
 /* ноги внутри строки: она идёт на уровне голеней */
-.v2-knock__man { position: absolute; left: 50%; bottom: calc(36% - var(--fs) * .95); z-index: 1; height: 56%; width: auto; translate: -50% 0; transform-origin: 50% 85%; filter: drop-shadow(0 12px 12px var(--shadow)); }
+.v2-knock__man { position: absolute; left: 50%; bottom: calc(36% - var(--fs) * .95); z-index: 1; height: 64%; width: auto; translate: -50% 0; transform-origin: 50% 85%; filter: drop-shadow(0 12px 12px var(--shadow)); }
 .v2-knock__man.is-hit { animation: v2-knock-hit 1s cubic-bezier(.2, .7, .4, 1) forwards; }
 /* сносит туда же, куда едет строка — влево, кувырком, за экран; обратно не возвращается */
 @keyframes v2-knock-hit {
@@ -175,9 +175,8 @@
   12% { transform: rotate(-35deg) translate(-10px, -10px); }
   100% { transform: translate(-70vw, -40px) rotate(-540deg); opacity: 0; }
 }
-.v2-knock__wasted { position: absolute; inset: 0; z-index: 3; display: grid; place-items: center; opacity: 0; pointer-events: none;
-  font: 900 clamp(44px, 9vw, 120px)/1 var(--v2-head), 'Manrope', sans-serif; letter-spacing: .02em; color: #d11a1a;
-  -webkit-text-stroke: 2px #000; text-shadow: 3px 3px 0 #000; transform: scale(1.4); transition: opacity .25s, transform .25s; }
+.v2-knock__wasted { position: absolute; inset: 0; z-index: 3; display: grid; place-items: center; opacity: 0; pointer-events: none; transform: scale(1.4); transition: opacity .25s, transform .25s; }
+.v2-knock__wasted img { width: clamp(220px, 46vw, 600px); height: auto; filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .35)); }
 .v2-knock__wasted.is-on { opacity: 1; transform: none; }
 
 /* ---------- факты ---------- */
