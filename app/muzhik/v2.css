@@ -280,21 +280,24 @@ html:has(.v2) { scroll-behavior: smooth; }
 
 /* ---------- анимации ---------- */
 @media (prefers-reduced-motion: no-preference) {
-  /* герой тянет «Должен»: картинка с табличками понемногу ползёт вперёд и откатывается обратно */
-  .v2-hero__art { animation: v2-drag 12s ease-in-out infinite; }
+  /* герой тянет «Должен» справа налево (подробности у @keyframes v2-drag) */
+  .v2-hero__art { animation: v2-drag 16s infinite; }
   .v2-pov__word { animation: v2-flash .18s ease-out; }
   .v2-crush__stone { opacity: 0; translate: 0 -260px; }
   .v2-crush.is-on .v2-crush__stone { animation: v2-drop .55s cubic-bezier(.5, 0, .75, 0) forwards; animation-delay: calc((4 - var(--i)) * .35s); }
   /* каждый камень вбивает героя ниже, как гвоздь; внизу он и остаётся */
   .v2-crush.is-on .v2-crush__man, .v2-crush.is-on .v2-crush__pile { animation: v2-nail 2s linear forwards; }
 }
-/* насколько далеко уползает картинка: на телефоне она узкая, поэтому сдвиг в процентах больше */
-.v2-hero__art { --drag: -7%; }
-@media (max-width: 759px) { .v2-hero__art { --drag: -16%; } }
+/* герой с «Должен»: резко вылетает из-за правого края, останавливается справа и потихоньку тащит
+   влево до своего места; пауза — и снова. --from: где он останавливается после вылета */
+.v2-hero__art { --from: 40%; }
+@media (max-width: 759px) { .v2-hero__art { --from: 55%; } }
 @keyframes v2-drag {
-  0%, 100% { translate: 0 0; }
-  45%, 55% { translate: var(--drag) 0; }
+  0% { translate: 110vw 0; animation-timing-function: cubic-bezier(.15, .8, .3, 1); }
+  5% { translate: var(--from) 0; animation-timing-function: linear; }
+  85%, 100% { translate: 0 0; }
 }
+
 @keyframes v2-flash { from { opacity: 0; transform: translateY(6px); } }
 @keyframes v2-drop { 0% { opacity: 1; translate: 0 -260px; } 80% { translate: 0 6px; } 100% { opacity: 1; translate: 0 0; } }
 @keyframes v2-nail {
