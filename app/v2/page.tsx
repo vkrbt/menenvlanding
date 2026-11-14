@@ -194,7 +194,7 @@ export default function V2Page() {
                 </ul>
                 <aside className="v2-price">
                   <p className="v2-price__start">Старт {startPhrase()}</p>
-                  <p className="v2-price__amount">€{PRICE_PROGRAM} <span className="v2-price__tag">за {GROUP_MEETINGS} встреч</span></p>
+                  <p className="v2-price__amount">€{PRICE_PROGRAM}<span className="v2-price__tag">за {GROUP_MEETINGS} встреч</span></p>
                   <p className="v2-price__total">({PRICE_FROM} за встречу)</p>
                   <p className="v2-price__or">Не обязательно сразу. Можно в рассрочку:</p>
                   <div className="v2-price__plans">

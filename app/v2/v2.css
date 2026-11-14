@@ -197,7 +197,7 @@
 .v2-price__start { font-weight: 800; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); }
 .v2-price__amount { font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 900; font-size: 72px; line-height: 1.05; }
 /* синий шильдик, как карточка «Тема встречи» на главной */
-.v2-price__tag { display: inline-block; vertical-align: middle; rotate: -4deg; margin-left: 6px; padding: 6px 10px; font: 800 13px/1 'Manrope', sans-serif; letter-spacing: .06em; text-transform: uppercase; color: #fff; background: var(--btn); border: 2px solid var(--btn-ink); border-radius: 8px; box-shadow: 0 2px 0 var(--btn-ink); }
+.v2-price__tag { display: inline-block; vertical-align: middle; rotate: -4deg; margin-left: 4px; padding: 6px 10px; font: 800 13px/1 'Manrope', sans-serif; letter-spacing: .06em; text-transform: uppercase; color: #fff; background: var(--btn); border: 2px solid var(--btn-ink); border-radius: 8px; box-shadow: 0 2px 0 var(--btn-ink); }
 .v2-price__note, .v2-price__hint { font-size: 14px; color: var(--muted); margin-bottom: 18px; }
 .v2-price__total { font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 800; font-size: 26px; line-height: 1.1; color: var(--muted); margin: 2px 0 16px; }
 .v2-price__or { font-weight: 800; font-size: 15px; margin-bottom: 10px; }
