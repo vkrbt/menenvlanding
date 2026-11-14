@@ -258,7 +258,7 @@ export default function V2Page() {
 
           <section className="v2-section v2-section--paper">
             <div className="v2-wrap v2-wrap--narrow">
-              <h2 className="v2-h2">Что обычно спрашивают</h2>
+              <h2 className="v2-h2">Нестыдные вопросы про группу</h2>
               <div className="v2-faq-main">
                 <Faq items={FAQ.map(([q, a]) => ({ q, a }))} />
               </div>
