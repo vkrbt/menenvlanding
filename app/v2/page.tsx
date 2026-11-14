@@ -8,6 +8,7 @@ import Thoughts from '@/components/v2/Thoughts'
 import { THOUGHTS } from '@/components/v2/pov-thoughts'
 import ThemeToggle from '@/components/ThemeToggle'
 import Faq from '@/components/Faq'
+import Program from '@/components/home/Program'
 import Typo from '@/components/Typo'
 import { startPhrase } from '@/lib/group'
 import { FORMS_URL, GROUP_MEETINGS, MEETING_TIME, PRICE_BLOCK, PRICE_FROM, PRICE_PROGRAM, PRICE_SINGLE, BLOCK_SIZE, RECRUITMENT_NOTE, SITE_URL } from '@/lib/site'
@@ -242,6 +243,8 @@ export default function V2Page() {
               </div>
             </div>
           </section>
+
+          <Program />
 
           <HostsV2 />
 

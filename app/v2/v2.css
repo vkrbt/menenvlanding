@@ -91,7 +91,7 @@
 .v2-h2 { font-size: clamp(28px, 4.6vw, 44px); margin-bottom: 12px; }
 .v2-lead { font-size: 18px; color: var(--muted); margin-bottom: 28px; max-width: 640px; }
 .v2-section { padding: 72px 0; }
-.v2 .hosts { padding: 72px 0; }
+.v2 .hosts, .v2 .program { padding: 72px 0; }
 /* ведущие — нарисованные фигуры без фона: квадратная рамка со свечением, фигура по пояс */
 .v2 .host-card__avatar { aspect-ratio: 1; background: radial-gradient(ellipse 60% 60% at 50% 45%, var(--glow), transparent 70%), var(--bg2); }
 .v2 .host-card__avatar img { width: 86%; margin: 7% auto 0; filter: drop-shadow(0 14px 14px var(--shadow)); }
@@ -305,7 +305,7 @@
   .v2-hero__art { order: -1; margin-top: -8px; }
   /* телефон: отступы меньше; блок с камнями поднят — после «вбивания» сверху остаётся пустота на 88px */
   .v2-hero { padding-bottom: 24px; }
-  .v2-section, .v2 .hosts { padding: 44px 0; }
+  .v2-section, .v2 .hosts, .v2 .program { padding: 44px 0; }
   .v2-crush { margin-top: -70px; }
 }
 @media (max-width: 420px) {
