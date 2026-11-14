@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 
-import { THOUGHTS } from './pov-thoughts'
+import { THOUGHTS, mixThoughts } from './pov-thoughts'
 
 /** Мужские мысли мелькают по одной; при reduced-motion стоит первая. */
 export default function Thoughts() {
@@ -11,12 +11,8 @@ export default function Thoughts() {
   const [i, setI] = useState(0)
 
   useEffect(() => {
-    const rest = THOUGHTS.slice(1)
-    for (let k = rest.length - 1; k > 0; k--) {
-      const j = Math.floor(Math.random() * (k + 1))
-      ;[rest[k], rest[j]] = [rest[j], rest[k]]
-    }
-    setOrder([THOUGHTS[0], ...rest])
+    // на каждый заход свой порядок, но соседние мысли всё так же из разных тем
+    setOrder(mixThoughts(Math.random, THOUGHTS[0]))
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
     const t = setInterval(() => setI((n) => (n + 1) % THOUGHTS.length), 1400)
     return () => clearInterval(t)

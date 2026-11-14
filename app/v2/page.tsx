@@ -158,7 +158,7 @@ export default function V2Page() {
 
           <section className="v2-section">
             <div className="v2-wrap">
-              <h2 className="v2-h2">Молчать опасно. Вот цифры</h2>
+              <h2 className="v2-h2">Молчание лишь маскирует проблему. Вот статистика</h2>
               <ul className="v2-facts">
                 {FACTS.map(([n, t, src]) => (
                   <li key={n}><b>{n}</b><p>{t}</p><small>{src}</small></li>
