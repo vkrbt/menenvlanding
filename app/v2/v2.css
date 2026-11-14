@@ -147,6 +147,8 @@
 /* высота ровно в одну строку: мысли разной длины не двигают кнопки ниже */
 .v2-pov__line { display: block; height: 1.2em; overflow: hidden; white-space: nowrap; font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 900; font-size: min(6.2vw, 32px); line-height: 1.15; color: var(--gold); }
 .v2-pov__word { display: inline-block; }
+/* самые длинные мысли («Некому сказать «доброе утро»») мельче, чтобы остаться в одну строку */
+.v2-pov__word--long { font-size: .8em; }
 
 /* ---------- узнал себя ---------- */
 .v2-signs-grid { display: grid; gap: 28px; align-items: center; }
@@ -164,11 +166,10 @@
 
 /* ---------- строка, которая сбивает героя с ног (как блок у Ясно); движение и удар — в KnockBand.tsx ---------- */
 .v2-knock { --fs: clamp(30px, 5vw, 64px); position: relative; height: clamp(240px, 30vw, 380px); overflow: hidden; background: var(--bg2); }
-/* строка ровно посередине по высоте: после того как героя снесло, сверху и снизу одинаково */
+/* строка ровно посередине блока (сверху и снизу поровну), герой стоит так, что она бьёт в грудь (~30% роста сверху) */
 .v2-knock__band { position: absolute; left: -10%; right: -10%; top: calc(50% - var(--fs) / 2); rotate: -4deg; z-index: 2; }
 .v2-knock__row { display: flex; gap: 1.2em; width: max-content; font: 600 var(--fs)/1 'Manrope', sans-serif; letter-spacing: -0.02em; color: var(--fg); white-space: nowrap; will-change: transform; }
-/* ноги внутри строки: она идёт на уровне голеней */
-.v2-knock__man { position: absolute; left: 50%; bottom: calc(50% - var(--fs) * .45); z-index: 1; height: 50%; width: auto; translate: -50% 0; transform-origin: 50% 85%; filter: drop-shadow(0 12px 12px var(--shadow)); }
+.v2-knock__man { position: absolute; left: 50%; top: calc(50% - 62% * .3); z-index: 1; height: 62%; width: auto; translate: -50% 0; transform-origin: 50% 70%; filter: drop-shadow(0 12px 12px var(--shadow)); }
 .v2-knock__man.is-hit { animation: v2-knock-hit 1s cubic-bezier(.2, .7, .4, 1) forwards; }
 /* сносит туда же, куда едет строка — влево, кувырком, за экран; обратно не возвращается */
 @keyframes v2-knock-hit {

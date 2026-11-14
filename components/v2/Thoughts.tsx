@@ -21,7 +21,7 @@ export default function Thoughts() {
   return (
     <p className="v2-pov">
       <span className="v2-pov__line" aria-live="off">
-        <span key={i} className="v2-pov__word">{order[i]}</span>
+        <span key={i} className={order[i].length > 25 ? 'v2-pov__word v2-pov__word--long' : 'v2-pov__word'}>{order[i]}</span>
       </span>
     </p>
   )
