@@ -212,7 +212,7 @@ export default function V2Page() {
 
           <section className="v2-section v2-section--yellow" id="test">
             <div className="v2-wrap">
-              <h2 className="v2-h2">Тебе в группу? Пройди тест</h2>
+              <h2 className="v2-h2">Волк, медведь или конь? Пройди тест</h2>
               <p className="v2-lead">Пять вопросов, минута. Ответы нигде не сохраняются.</p>
               <QuizV2 />
             </div>

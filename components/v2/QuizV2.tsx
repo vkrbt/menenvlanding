@@ -131,7 +131,7 @@ export default function QuizV2() {
       <div className="v2-quiz">
         <img className="v2-quiz__face" src="/v2/bust.webp" alt="" width={700} height={1114} />
         <div>
-          <p className="v2-quiz__lead">Не уверен, что тебе в группу? Пять вопросов, и узнаешь, кто ты.</p>
+          <p className="v2-quiz__lead">Пять вопросов о том, как ты справляешься, когда тяжело. В конце узнаешь, кто ты из пяти.</p>
           <button
             type="button"
             className="v2-btn v2-btn--red"
