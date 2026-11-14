@@ -47,7 +47,9 @@
 
 /* ---------- типографика ---------- */
 .v2-h1, .v2-h2, .v2-quiz__title { font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 800; line-height: 1.04; letter-spacing: -0.03em; text-wrap: balance; }
-.v2-h1 { font-size: clamp(38px, 6vw, 66px); margin: 12px 0 16px; }
+/* заголовок первого экрана — ровно две строки: размер считается от ширины, чтобы «Устал тащить» влезало */
+.v2-h1 { font-size: clamp(30px, 11vw, 62px); margin: 12px 0 16px; }
+.v2-h1 span { display: block; white-space: nowrap; }
 .v2-h2 { font-size: clamp(28px, 4.6vw, 44px); margin-bottom: 12px; }
 .v2-lead { font-size: 18px; color: var(--muted); margin-bottom: 28px; max-width: 640px; }
 .v2-section { padding: 72px 0; }
@@ -66,7 +68,7 @@
 
 /* стена «должен»: давящие слова бегут за героем */
 .v2-wall { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-around; pointer-events: none; color: #fff; opacity: .05; }
-.v2-wall__row { display: flex; gap: 36px; width: max-content; font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 900; font-size: clamp(44px, 8vw, 96px); line-height: 1; text-transform: uppercase; white-space: nowrap; animation: v2-slide 300s linear infinite; }
+.v2-wall__row { display: flex; gap: 36px; width: max-content; font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 900; font-size: clamp(44px, 8vw, 96px); line-height: 1; text-transform: uppercase; white-space: nowrap; animation: v2-slide 200s linear infinite; }
 .v2-wall__row--rev { animation-direction: reverse; }
 @keyframes v2-slide { to { transform: translateX(-50%); } }
 
@@ -86,7 +88,7 @@
 /* мужские мысли под заголовком */
 .v2-pov { margin: -4px 0 18px; }
 /* высота ровно в одну строку: мысли разной длины не двигают кнопки ниже */
-.v2-pov__line { display: block; height: 1.2em; overflow: hidden; white-space: nowrap; font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 900; font-size: clamp(22px, 3vw, 32px); line-height: 1.15; color: var(--gold); }
+.v2-pov__line { display: block; height: 1.2em; overflow: hidden; white-space: nowrap; font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 900; font-size: min(6.2vw, 32px); line-height: 1.15; color: var(--gold); }
 .v2-pov__word { display: inline-block; }
 
 /* ---------- узнал себя ---------- */
@@ -195,6 +197,8 @@
 /* ---------- раскладка ---------- */
 @media (min-width: 760px) {
   .v2-hero__grid { grid-template-columns: minmax(0, .85fr) minmax(0, 1.3fr); }
+  .v2-h1 { font-size: clamp(30px, 5.4vw, 62px); }
+  .v2-pov__line { font-size: clamp(18px, 2.8vw, 32px); }
   .v2-hero__art { margin-right: -4vw; }
   .v2-signs-grid { grid-template-columns: 360px 1fr; }
   .v2-facts { grid-template-columns: repeat(2, 1fr); }

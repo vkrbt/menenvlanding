@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from 'next'
-import Hosts from '@/components/home/Hosts'
 import Crushed from '@/components/v2/Crushed'
+import HostsV2 from '@/components/v2/HostsV2'
 import LogoSvg from '@/components/v2/LogoSvg'
 import QuizV2 from '@/components/v2/QuizV2'
 import Thoughts from '@/components/v2/Thoughts'
@@ -37,11 +37,11 @@ const SIGNS = [
 
 /** Шипы на «Должен»: подпись и середина шипа в % от картинки drag.webp */
 const SPIKES: Array<[string, number, number]> = [
-  ['семья', 32.4, 19.8],
-  ['работа', 50.8, 32.8],
-  ['бизнес', 64.7, 29.9],
-  ['ипотека', 88.2, 32.8],
-  ['усталость', 91.5, 58.7],
+  ['семья', 31, 21],
+  ['работа', 51.6, 32.6],
+  ['бизнес', 64.7, 31.2],
+  ['ипотека', 89.5, 33.2],
+  ['усталость', 92, 62.2],
 ]
 
 const FACTS: Array<[string, string, string]> = [
@@ -95,17 +95,18 @@ export default function V2Page() {
             <div className="v2-wall" aria-hidden="true">
               {[0, 1, 2, 3].map((r) => (
                 <p key={r} className={r % 2 ? 'v2-wall__row v2-wall__row--rev' : 'v2-wall__row'}>
-                  {[...THOUGHTS.slice(r * 4), ...THOUGHTS.slice(0, r * 4), ...THOUGHTS.slice(r * 4), ...THOUGHTS.slice(0, r * 4)].map((w, k) => <span key={k}>{w}</span>)}
+                  {/* у каждой строки свои 8 мыслей, повтор дважды — для бесшовной прокрутки на −50% */}
+                  {[...THOUGHTS.slice(r * 12, r * 12 + 8), ...THOUGHTS.slice(r * 12, r * 12 + 8)].map((w, k) => <span key={k}>{w}</span>)}
                 </p>
               ))}
             </div>
             <div className="v2-wrap v2-hero__grid">
               <div>
                 <p className="v2-sticker v2-sticker--tilt">Мужская терапевтическая группа онлайн</p>
-                <h1 className="v2-h1">Устал тащить всё на себе?</h1>
+                <h1 className="v2-h1"><span>Устал тащить</span> <span>всё на себе?</span></h1>
                 <Thoughts />
                 <p className="v2-hero__sub">
-                  Работа, семья, деньги и вечное «надо больше», и всё это в одной голове. Девять встреч в Zoom с мужиками, которые тащат то же самое. Ведут психолог и психиатр.
+                  Работа, семья, деньги и вечное «надо больше», и всё это в одной голове. Собираем в группу мужчин, которые тащат так же, как и ты. Ведут психолог и психиатр.
                 </p>
                 <div className="v2-hero__actions">
                   <Cta />
@@ -119,7 +120,7 @@ export default function V2Page() {
                 </ul>
               </div>
               <div className="v2-hero__art" aria-hidden="true">
-                <img className="v2-hero__drag" src="/v2/drag.webp" alt="" width={1100} height={504} fetchPriority="high" />
+                <img className="v2-hero__drag" src="/v2/drag.webp" alt="" width={1100} height={502} fetchPriority="high" />
                 {SPIKES.map(([w, x, y]) => (
                   <span key={w} className="v2-spike" style={{ left: `${x}%`, top: `${y}%` }}>{w}</span>
                 ))}
@@ -177,7 +178,7 @@ export default function V2Page() {
             </div>
           </section>
 
-          <Hosts />
+          <HostsV2 />
 
           <section className="v2-section v2-section--yellow" id="test">
             <div className="v2-wrap">
