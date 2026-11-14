@@ -29,6 +29,16 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { width: 'device-width', initialScale: 1 }
 
+/** Переделанные мем-цитаты «пацанской мудрости» под группу */
+const QUOTES = [
+  'Утром йога — вечером «Мужская Среда»',
+  'Волк слабее льва и тигра, но он ходит в стае. Хватит быть одиноким волком',
+  'Не важно, в какой ты жопе. Важно, чтобы было с кем об этом поговорить',
+  'Настоящий мужик всегда стирает носки и сообщения. Но иногда пишет: «Мне хреново»',
+  'Утром деньги — вечером терапия',
+  'Буйвол внутри меня просыпается, когда ты на «Мужскую Среду» не собираешься',
+]
+
 const SIGNS = [
   'После работы сидишь в машине у дома. Домой не хочется',
   'Глушишь всё спортом, пивом или работой',
@@ -142,6 +152,21 @@ export default function V2Page() {
                   <span key={w} className={big ? 'v2-spike' : 'v2-spike v2-spike--small'} style={{ left: `${x}%`, top: `${y}%`, rotate: `${rot}deg` }}>{w}</span>
                 ))}
               </div>
+            </div>
+          </section>
+
+          <section className="v2-section">
+            <div className="v2-wrap">
+              <h2 className="v2-h2">Мудрость, которую мы заслужили</h2>
+              <ul className="v2-quotes">
+                {QUOTES.map((q, i) => (
+                  <li className="v2-quote" key={q} style={{ rotate: `${i % 2 ? 0.8 : -0.8}deg` }}>
+                    <img className="v2-quote__face" src="/v2/bust.webp" alt="" width={700} height={1114} loading="lazy" />
+                    <p>«{q}»</p>
+                    <span>(с) Пацанская мудрость</span>
+                  </li>
+                ))}
+              </ul>
             </div>
           </section>
 
