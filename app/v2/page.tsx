@@ -16,7 +16,7 @@ const HEAD_FONT = 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800
  * тест прямо на странице. Закрыта от индексации: каноническая страница — главная.
  */
 export const metadata: Metadata = {
-  title: { absolute: 'Стетем зовёт тебя в мужскую группу — «Мужская среда»' },
+  title: { absolute: 'Устал тащить всё на себе? Мужская группа — «Мужская среда»' },
   description: 'Терапевтическая группа для мужиков онлайн: 9 встреч в Zoom, психолог и психиатр. Первый созвон бесплатный.',
   alternates: { canonical: SITE_URL },
   robots: { index: false, follow: false },
@@ -99,7 +99,7 @@ export default function V2Page() {
             </div>
             <div className="v2-wrap v2-hero__grid">
               <div>
-                <p className="v2-sticker v2-sticker--tilt">Стетем зовёт тебя на мужскую группу</p>
+                <p className="v2-sticker v2-sticker--tilt">Мужская терапевтическая группа онлайн</p>
                 <h1 className="v2-h1">Устал тащить всё на себе?</h1>
                 <Thoughts />
                 <p className="v2-hero__sub">
@@ -210,8 +210,8 @@ export default function V2Page() {
 
           <section className="v2-final">
             <div className="v2-wrap">
-              <img className="v2-final__face" src="/v2/thumbs.webp" alt="Стетем показывает большой палец" width={700} height={882} />
-              <h2 className="v2-h2">Стетем ждёт. Он не любит ждать</h2>
+              <img className="v2-final__face" src="/v2/thumbs.webp" alt="" width={700} height={882} />
+              <h2 className="v2-h2">Хватит тащить в одиночку</h2>
               <p className="v2-lead">Старт {startPhrase()}, {RECRUITMENT_NOTE.toLowerCase()}. Созвон бесплатный.</p>
               <Cta />
             </div>
@@ -221,7 +221,7 @@ export default function V2Page() {
         <footer className="v2-foot">
           <div className="v2-wrap">
             <p>
-              Стетем здесь пародийный персонаж, нарисованный нами. Цитаты — переделки известных интернет-мемов, а не слова реального актёра. С ним и его правообладателями мы не связаны, рекламу он не делает. Группа не заменяет лечение.
+              Персонаж на картинках нарисован нами, он пародийный. Подписи на мемах — переделки известных интернет-мемов. С реальными людьми и правообладателями мы не связаны. Группа не заменяет лечение.
             </p>
             <p><a href="/">Основной сайт</a> · <a href="/privacy">Политика конфиденциальности</a></p>
           </div>

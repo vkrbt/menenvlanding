@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { FORMS_URL, METRIKA_COUNTER_ID, METRIKA_GOALS, TESTS_URL } from '@/lib/site'
 
 /**
- * Шуточный тест на странице /v2: пять вопросов, три исхода. Не диагностика и не шкала —
+ * Короткий тест на странице /v2: пять вопросов, три исхода. Не диагностика и не шкала —
  * это крючок для сомневающихся. Ответы живут только в памяти компонента, в Метрику уходит
  * только факт начала и конца (без ответов), как у остальных тестов сайта.
  */
@@ -36,14 +36,14 @@ const QUESTIONS: Array<{ q: string; a: string[] }> = [
 
 type Outcome = { mood: string; name: string; title: string; text: string; cta: boolean; meme: string; top: string; bottom: string }
 
-/** Исход теста: Стетем говорит, кто ты, плюс мем-картинка (кадр нарисован нами, подписи верх/низ как у мемов) */
+/** Исход теста: кто ты, плюс мем-картинка (кадр нарисован нами, подписи Lobster впечатаны в картинку) */
 function outcome(score: number): Outcome {
   if (score >= 7) {
     return {
       mood: 'nod',
       name: 'одинокий волк',
       title: 'Ты тащишь всё сам',
-      meme: '/v2/meme-wolf.jpg',
+      meme: '/v2/lob-wolf.jpg',
       top: 'Волк слабее льва и тигра',
       bottom: 'Но он ходит в стае',
       text: 'Ты тащишь всё один, а «нормально» у тебя давно не про самочувствие. Таких мужиков много, и группа сделана ровно для них: девять встреч, десять человек, двое ведущих.',
@@ -55,7 +55,7 @@ function outcome(score: number): Outcome {
       mood: 'grin',
       name: 'тигр в клетке',
       title: 'Сила есть, а наружу не выходит',
-      meme: '/v2/meme-tiger.jpg',
+      meme: '/v2/lob-tiger.jpg',
       top: 'Тигр не выступает в цирке',
       bottom: 'Но и из клетки не выходит',
       text: 'С мужиками ты говоришь, но про главное молчишь. Что-то проговариваешь, а остальное держишь в себе, и оно рычит изнутри. Приходи на бесплатный созвон на 10–15 минут. Не зайдёт, так и скажешь.',
@@ -66,7 +66,7 @@ function outcome(score: number): Outcome {
     mood: 'sigh',
     name: 'вожак стаи',
     title: 'У тебя есть свои люди',
-    meme: '/v2/meme-pack.jpg',
+    meme: '/v2/lob-pack.jpg',
     top: 'Утром йога',
     bottom: 'Вечером с братьями',
     text: 'С тобой есть кому поговорить по-настоящему, это редкость. Если захочется глубже, загляни в наш большой тест про то, о чём мужчины молчат.',
@@ -104,7 +104,7 @@ export default function QuizV2() {
       <div className="v2-quiz">
         <img className="v2-quiz__face" src="/v2/bust.webp" alt="" width={700} height={1114} />
         <div>
-          <p className="v2-quiz__lead">Не уверен, что тебе в группу? Пять вопросов, и Стетем скажет, как есть.</p>
+          <p className="v2-quiz__lead">Не уверен, что тебе в группу? Пять вопросов, и узнаешь, кто ты.</p>
           <button
             type="button"
             className="v2-btn v2-btn--red"
@@ -112,7 +112,7 @@ export default function QuizV2() {
               setStarted(true)
               reachGoal(METRIKA_GOALS.testStart)
               // мемы грузим заранее, чтобы в результате картинка была сразу
-              ;['wolf', 'tiger', 'pack'].forEach((m) => { new Image().src = `/v2/meme-${m}.jpg` })
+              ;['wolf', 'tiger', 'pack'].forEach((m) => { new Image().src = `/v2/lob-${m}.jpg` })
             }}
           >
             Пройти тест
@@ -127,12 +127,10 @@ export default function QuizV2() {
     return (
       <div className="v2-quiz v2-quiz--result" aria-live="polite">
         <figure className="v2-meme">
-          <img src={o.meme} alt={`Мем: ${o.name}`} width={600} height={600} />
-          <figcaption className="v2-meme__top">{o.top}</figcaption>
-          <figcaption className="v2-meme__bottom">{o.bottom}</figcaption>
+          <img src={o.meme} alt={`Мем: «${o.top}. ${o.bottom}»`} width={900} height={900} />
         </figure>
         <div>
-          <p className="v2-quiz__kicker">Стетем говорит: ты —</p>
+          <p className="v2-quiz__kicker">Ты —</p>
           <h3 className="v2-quiz__title">{o.name}</h3>
           <p className="v2-quiz__sub">{o.title}</p>
           <p className="v2-quiz__lead">{o.text}</p>
