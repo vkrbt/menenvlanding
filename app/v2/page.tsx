@@ -1,10 +1,13 @@
 import type { Metadata, Viewport } from 'next'
 import Crushed from '@/components/v2/Crushed'
 import HostsV2 from '@/components/v2/HostsV2'
+import KnockBand from '@/components/v2/KnockBand'
 import LogoSvg from '@/components/v2/LogoSvg'
 import QuizV2 from '@/components/v2/QuizV2'
 import Thoughts from '@/components/v2/Thoughts'
 import { THOUGHTS } from '@/components/v2/pov-thoughts'
+import ThemeToggle from '@/components/ThemeToggle'
+import Faq from '@/components/Faq'
 import Typo from '@/components/Typo'
 import { startPhrase } from '@/lib/group'
 import { FORMS_URL, GROUP_MEETINGS, MEETING_TIME, PRICE_BLOCK, PRICE_FROM, PRICE_PROGRAM, PRICE_SINGLE, BLOCK_SIZE, RECRUITMENT_NOTE, SITE_URL } from '@/lib/site'
@@ -75,12 +78,14 @@ const STEPS = [
 ]
 
 const FAQ = [
-  ['Я не умею говорить о чувствах', 'Половина группы скажет то же самое на первой встрече. Говорить «о чувствах» не обязательно, достаточно говорить о том, что происходит. Остальное подтянется.'],
-  ['Это для тех, у кого проблемы? У меня вроде всё ок', 'У большинства участников тоже «вроде всё ок». Просто они заметили, что «ок» и «хорошо» разные вещи. Диагноз не нужен, нужен интерес.'],
-  ['Это терапия или просто разговоры?', 'Терапия. Один состав, общие правила, двое ведущих. Но это не лечение: диагнозов не ставим, лекарства не назначаем. Если поймём, что тебе сейчас нужнее врач, скажем прямо.'],
-  ['А вдруг там мой знакомый?', 'Значит, вы оба нормальные мужики, которые решили попробовать. А что было на встрече, остаётся на встрече: у группы есть правило конфиденциальности.'],
-  ['Камеру надо включать?', 'Да, на все три часа, кроме перерывов. Разговор лицом к лицу работает иначе. Подключайся с компьютера, в наушниках, из тихого места.'],
-  ['Можно прийти не с первой встречи?', 'Нет. Темы идут по порядку, и разговор получается, когда приходят одни и те же люди. Состав набираем до старта.'],
+  ['Зачем мне в группу, если я и так всё понимаю?', 'Понимание само по себе проблем не решает. Можно всё про себя знать и раз за разом попадать в те же сценарии. Книги и ролики терапию не заменяют: меняется что-то, когда говоришь с живыми людьми и видишь, как они на тебя реагируют.'],
+  ['В группу идут, когда уже совсем плохо?', 'Нет. Большинство приходит, когда «вроде всё нормально», но что-то давно не так: устал, всё бесит, не с кем поговорить. Ждать, пока всё развалится, не нужно.'],
+  ['Чем это отличается от разговора с друзьями?', 'Друзья обычно утешают, советуют или переводят в шутку. В группе есть ведущие и правила: тебя дослушают, не будут раздавать советы и оценки, а другие мужики честно скажут, как это выглядит со стороны.'],
+  ['С чего начать?', 'С заявки и бесплатного созвона на 10–15 минут. Познакомимся, расскажем, как всё устроено, ответим на вопросы. Если поймёшь, что это не твоё, просто скажешь.'],
+  ['Придётся пить таблетки?', 'Нет. Группа — это разговор, таблетки там не выписывают. Один из ведущих психиатр-нарколог, и если увидим, что тебе сейчас нужнее врач, скажем прямо.'],
+  ['Кто-то узнает, что было на встрече?', 'Нет. У группы правило конфиденциальности: что было на встрече, остаётся на встрече. Даже если там окажется знакомый, правило действует и для него.'],
+  ['Как проходит встреча?', `Раз в две недели по средам, ${MEETING_TIME}. Три часа в Zoom, камера включена. У каждой встречи своя тема: дело и деньги, отношения, зависимости, злость, детство, мама, папа. Тема — повод начать, дальше говорим о том, что происходит у каждого.`],
+  ['Сколько это стоит?', `€${PRICE_PROGRAM} за все ${GROUP_MEETINGS} встреч. Можно в рассрочку: по €${PRICE_BLOCK} за блок из ${BLOCK_SIZE} встреч или по €${PRICE_SINGLE} за каждую встречу. Первый созвон бесплатный.`],
 ]
 
 function Cta({ children = 'Занять место в группе', red = true }: { children?: string; red?: boolean }) {
@@ -96,6 +101,7 @@ export default function V2Page() {
           <a href="/" className="v2-top__logo"><LogoSvg /></a>
           <nav className="v2-top__nav">
             <a href="#test" className="v2-top__test">Пройти тест</a>
+            <ThemeToggle />
             <Cta>Хочу в группу</Cta>
           </nav>
         </header>
@@ -156,6 +162,8 @@ export default function V2Page() {
             </div>
           </section>
 
+          <KnockBand />
+
           <section className="v2-section">
             <div className="v2-wrap">
               <h2 className="v2-h2">Молчание лишь маскирует проблему. Вот статистика</h2>
@@ -167,9 +175,17 @@ export default function V2Page() {
             </div>
           </section>
 
+          <section className="v2-section v2-section--yellow" id="test">
+            <div className="v2-wrap">
+              <h2 className="v2-h2">Тебе в группу? Пройди тест</h2>
+              <p className="v2-lead">Пять вопросов, минута. Ответы нигде не сохраняются.</p>
+              <QuizV2 />
+            </div>
+          </section>
+
           <section className="v2-section v2-section--paper">
             <div className="v2-wrap">
-              <h2 className="v2-h2">Что ты получаешь</h2>
+              <h2 className="v2-h2">Что будет на группе</h2>
               <div className="v2-offer">
                 <ul className="v2-get">
                   {GET.map(([t, d]) => (
@@ -178,21 +194,17 @@ export default function V2Page() {
                 </ul>
                 <aside className="v2-price">
                   <p className="v2-price__start">Старт {startPhrase()}</p>
-                  <p className="v2-price__amount">{PRICE_FROM}</p>
-                  <p className="v2-price__per">за встречу</p>
-                  <p className="v2-price__note">€{PRICE_PROGRAM} за все {GROUP_MEETINGS} встреч сразу. Можно блоками по {BLOCK_SIZE} (€{PRICE_BLOCK}) или по €{PRICE_SINGLE} за каждую.</p>
+                  <p className="v2-price__amount">€{PRICE_PROGRAM} <span className="v2-price__tag">за {GROUP_MEETINGS} встреч</span></p>
+                  <p className="v2-price__total">({PRICE_FROM} за встречу)</p>
+                  <p className="v2-price__or">Не обязательно сразу. Можно в рассрочку:</p>
+                  <div className="v2-price__plans">
+                    <p className="v2-price__plan v2-price__plan--hot"><b>€{PRICE_SINGLE}</b><span>перед каждой встречей</span></p>
+                    <p className="v2-price__plan"><b>€{PRICE_BLOCK}</b><span>за блок из {BLOCK_SIZE} встреч</span></p>
+                  </div>
                   <Cta />
                   <p className="v2-price__hint">{MEETING_TIME}. Сначала бесплатный созвон, место твоё после первой оплаты.</p>
                 </aside>
               </div>
-            </div>
-          </section>
-
-          <section className="v2-section v2-section--yellow" id="test">
-            <div className="v2-wrap">
-              <h2 className="v2-h2">Тебе в группу? Пройди тест</h2>
-              <p className="v2-lead">Пять вопросов, минута. Ответы нигде не сохраняются.</p>
-              <QuizV2 />
             </div>
           </section>
 
@@ -211,14 +223,9 @@ export default function V2Page() {
 
           <section className="v2-section v2-section--paper">
             <div className="v2-wrap v2-wrap--narrow">
-              <h2 className="v2-h2">Нестыдные вопросы</h2>
-              <div className="v2-faq">
-                {FAQ.map(([q, a]) => (
-                  <details key={q}>
-                    <summary>{q}</summary>
-                    <p>{a}</p>
-                  </details>
-                ))}
+              <h2 className="v2-h2">Нестыдные вопросы про группу</h2>
+              <div className="v2-faq-main">
+                <Faq items={FAQ.map(([q, a]) => ({ q, a }))} />
               </div>
             </div>
           </section>

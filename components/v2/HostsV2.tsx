@@ -4,7 +4,7 @@ import { typo } from '@/lib/typo'
 const HOSTS = [
   {
     name: 'Влад',
-    photo: '/photos/vlad.png',
+    photo: '/v2/host-vlad.webp',
     social: VLAD.url,
     handle: VLAD.handle,
     roles: ['Психолог'],
@@ -13,7 +13,7 @@ const HOSTS = [
   },
   {
     name: 'Женя',
-    photo: '/photos/eugene.jpeg',
+    photo: '/v2/host-zhenya.webp',
     social: ZHENYA.url,
     handle: ZHENYA.handle,
     roles: ['Психиатр-нарколог'],
@@ -22,7 +22,7 @@ const HOSTS = [
   },
 ]
 
-/** «Кто ведёт» для /v2: вёрстка и классы главной (components/home/Hosts), тексты свои — от первого лица */
+/** «Кто ведёт» для /v2: вёрстка и классы главной (components/home/Hosts); ведущие нарисованы в стиле героя лендинга, тексты от первого лица */
 export default function HostsV2() {
   return (
     <section className="section hosts" id="hosts">
