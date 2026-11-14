@@ -1,5 +1,7 @@
 import type { Metadata, Viewport } from 'next'
+import Hosts from '@/components/home/Hosts'
 import Crushed from '@/components/v2/Crushed'
+import LogoSvg from '@/components/v2/LogoSvg'
 import QuizV2 from '@/components/v2/QuizV2'
 import Thoughts from '@/components/v2/Thoughts'
 import { THOUGHTS } from '@/components/v2/pov-thoughts'
@@ -35,11 +37,11 @@ const SIGNS = [
 
 /** Шипы на «Должен»: подпись и середина шипа в % от картинки drag.webp */
 const SPIKES: Array<[string, number, number]> = [
-  ['семья', 32.7, 19.5],
-  ['работа', 50.3, 32.6],
-  ['бизнес', 65.1, 29.7],
-  ['ипотека', 89.2, 31.8],
-  ['усталость', 91.5, 59.3],
+  ['семья', 32.4, 19.8],
+  ['работа', 50.8, 32.8],
+  ['бизнес', 64.7, 29.9],
+  ['ипотека', 88.2, 32.8],
+  ['усталость', 91.5, 58.7],
 ]
 
 const FACTS: Array<[string, string, string]> = [
@@ -81,7 +83,7 @@ export default function V2Page() {
       <div className="v2">
         <link rel="stylesheet" href={HEAD_FONT} precedence="default" />
         <header className="v2-top">
-          <a href="/" className="v2-top__logo" aria-label="Мужская среда">МУЖСКАЯ СРЕДА</a>
+          <a href="/" className="v2-top__logo"><LogoSvg /></a>
           <nav className="v2-top__nav">
             <a href="#test" className="v2-top__test">Пройти тест</a>
             <Cta>Хочу в группу</Cta>
@@ -117,7 +119,7 @@ export default function V2Page() {
                 </ul>
               </div>
               <div className="v2-hero__art" aria-hidden="true">
-                <img className="v2-hero__drag" src="/v2/drag.webp" alt="" width={1100} height={502} fetchPriority="high" />
+                <img className="v2-hero__drag" src="/v2/drag.webp" alt="" width={1100} height={504} fetchPriority="high" />
                 {SPIKES.map(([w, x, y]) => (
                   <span key={w} className="v2-spike" style={{ left: `${x}%`, top: `${y}%` }}>{w}</span>
                 ))}
@@ -174,6 +176,8 @@ export default function V2Page() {
               </div>
             </div>
           </section>
+
+          <Hosts />
 
           <section className="v2-section v2-section--yellow" id="test">
             <div className="v2-wrap">

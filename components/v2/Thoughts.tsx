@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 
 import { THOUGHTS } from './pov-thoughts'
 
-/** Мысли из рилса мелькают по одной; при reduced-motion стоит первая. */
+/** Мужские мысли мелькают по одной; при reduced-motion стоит первая. */
 export default function Thoughts() {
   const [i, setI] = useState(0)
 
@@ -16,7 +16,6 @@ export default function Thoughts() {
 
   return (
     <p className="v2-pov">
-      <span className="v2-pov__label">POV: мозг мужика</span>
       <span className="v2-pov__line" aria-live="off">
         <span key={i} className="v2-pov__word">{THOUGHTS[i]}</span>
       </span>

@@ -130,8 +130,7 @@ export default function QuizV2() {
           <img src={o.meme} alt={`Мем: «${o.top}. ${o.bottom}»`} width={900} height={900} />
         </figure>
         <div>
-          <p className="v2-quiz__kicker">Ты —</p>
-          <h3 className="v2-quiz__title">{o.name}</h3>
+          <h3 className="v2-quiz__title">Ты — {o.name}</h3>
           <p className="v2-quiz__sub">{o.title}</p>
           <p className="v2-quiz__lead">{o.text}</p>
           <div className="v2-quiz__actions">
