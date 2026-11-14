@@ -3,10 +3,11 @@ import Crushed from '@/components/v2/Crushed'
 import HostsV2 from '@/components/v2/HostsV2'
 import KnockBand from '@/components/v2/KnockBand'
 import LogoSvg from '@/components/v2/LogoSvg'
+import MenuV2 from '@/components/v2/MenuV2'
 import QuizV2 from '@/components/v2/QuizV2'
 import Thoughts from '@/components/v2/Thoughts'
 import { THOUGHTS } from '@/components/v2/pov-thoughts'
-import ThemeToggle from '@/components/ThemeToggle'
+import SiteFooter from '@/components/SiteFooter'
 import Faq from '@/components/Faq'
 import Program from '@/components/home/Program'
 import Typo from '@/components/Typo'
@@ -18,14 +19,13 @@ import './v2.css'
 const HEAD_FONT = 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800;900&family=Oswald:wght@400&display=swap'
 
 /**
- * Версия лендинга для проверки гипотезы: оффер на самого человека, шуточный стиль,
- * тест прямо на странице. Закрыта от индексации: каноническая страница — главная.
+ * Второй лендинг: оффер на самого человека, шуточный стиль, тест прямо на странице.
+ * С 14.11.2026 открыт для поиска, адрес /muzhik (бывший /v2, с него редирект в vercel.json), canonical и sitemap — на /muzhik.
  */
 export const metadata: Metadata = {
   title: { absolute: 'Устал тащить всё на себе? Мужская группа — «Мужская среда»' },
   description: 'Терапевтическая группа для мужиков онлайн: 9 встреч в Zoom, психолог и психиатр. Первый созвон бесплатный.',
-  alternates: { canonical: SITE_URL },
-  robots: { index: false, follow: false },
+  alternates: { canonical: `${SITE_URL}/muzhik` },
 }
 
 export const viewport: Viewport = { width: 'device-width', initialScale: 1 }
@@ -114,9 +114,8 @@ export default function V2Page() {
         <header className="v2-top">
           <a href="/" className="v2-top__logo"><LogoSvg /></a>
           <nav className="v2-top__nav">
-            <a href="#test" className="v2-top__test">Пройти тест</a>
-            <ThemeToggle />
             <Cta>Хочу в группу</Cta>
+            <MenuV2 />
           </nav>
         </header>
 
@@ -173,7 +172,7 @@ export default function V2Page() {
             </div>
           </section>
 
-          <section className="v2-section v2-section--blue">
+          <section className="v2-section v2-section--blue" id="signs">
             <div className="v2-wrap">
               <div className="v2-signs-grid">
               <Crushed />
@@ -219,7 +218,7 @@ export default function V2Page() {
             </div>
           </section>
 
-          <section className="v2-section v2-section--paper">
+          <section className="v2-section v2-section--paper" id="offer">
             <div className="v2-wrap">
               <h2 className="v2-h2">Что будет на группе</h2>
               <div className="v2-offer">
@@ -259,7 +258,7 @@ export default function V2Page() {
             </div>
           </section>
 
-          <section className="v2-section v2-section--paper">
+          <section className="v2-section v2-section--paper" id="faq">
             <div className="v2-wrap v2-wrap--narrow">
               <h2 className="v2-h2">Нестыдные вопросы про группу</h2>
               <div className="v2-faq-main">
@@ -278,14 +277,15 @@ export default function V2Page() {
           </section>
         </main>
 
-        <footer className="v2-foot">
+        <div className="v2-foot">
           <div className="v2-wrap">
             <p>
               Персонаж на картинках нарисован нами, он пародийный. Подписи на мемах — переделки известных интернет-мемов. С реальными людьми и правообладателями мы не связаны. Группа не заменяет лечение.
             </p>
-            <p><a href="/">Основной сайт</a> · <a href="/privacy">Политика конфиденциальности</a></p>
+            <p><a href="/privacy">Политика конфиденциальности</a></p>
           </div>
-        </footer>
+        </div>
+        <SiteFooter />
       </div>
     </Typo>
   )

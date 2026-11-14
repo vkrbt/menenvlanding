@@ -114,6 +114,11 @@
   ],
   "redirects": [
     {
+      "source": "/v2",
+      "destination": "/muzhik",
+      "permanent": true
+    },
+    {
       "source": "/vstrecha",
       "destination": "/",
       "permanent": true
