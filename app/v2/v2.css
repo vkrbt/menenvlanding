@@ -165,22 +165,15 @@
 /* ---------- строка, которая сбивает героя с ног (как блок у Ясно); движение и удар — в KnockBand.tsx ---------- */
 .v2-knock { --fs: clamp(30px, 5vw, 64px); position: relative; height: clamp(300px, 40vw, 500px); overflow: hidden; background: var(--bg2); }
 .v2-knock__band { position: absolute; left: -10%; right: -10%; top: 64%; rotate: -4deg; z-index: 2; }
-/* промежутки широкие: в них герой успевает встать, пока не доехало следующее слово */
-.v2-knock__row { display: flex; gap: 3em; width: max-content; font: 600 var(--fs)/1 'Manrope', sans-serif; letter-spacing: -0.02em; color: var(--fg); white-space: nowrap; will-change: transform; }
+.v2-knock__row { display: flex; gap: 1.2em; width: max-content; font: 600 var(--fs)/1 'Manrope', sans-serif; letter-spacing: -0.02em; color: var(--fg); white-space: nowrap; will-change: transform; }
 /* ноги внутри строки: она идёт на уровне голеней */
 .v2-knock__man { position: absolute; left: 50%; bottom: calc(36% - var(--fs) * .95); z-index: 1; height: 56%; width: auto; translate: -50% 0; transform-origin: 50% 85%; filter: drop-shadow(0 12px 12px var(--shadow)); }
 .v2-knock__man.is-hit { animation: v2-knock-hit 1s cubic-bezier(.2, .7, .4, 1) forwards; }
-.v2-knock__man.is-drop { animation: v2-knock-drop .55s cubic-bezier(.5, 0, .75, 0) both; }
-/* сносит туда же, куда едет строка — влево, кувырком */
+/* сносит туда же, куда едет строка — влево, кувырком, за экран; обратно не возвращается */
 @keyframes v2-knock-hit {
   0% { transform: none; }
   12% { transform: rotate(-35deg) translate(-10px, -10px); }
   100% { transform: translate(-70vw, -40px) rotate(-540deg); opacity: 0; }
-}
-@keyframes v2-knock-drop {
-  0% { transform: translateY(-120vh); opacity: 1; }
-  85% { transform: translateY(6px); }
-  100% { transform: none; opacity: 1; }
 }
 .v2-knock__wasted { position: absolute; inset: 0; z-index: 3; display: grid; place-items: center; opacity: 0; pointer-events: none;
   font: 900 clamp(44px, 9vw, 120px)/1 var(--v2-head), 'Manrope', sans-serif; letter-spacing: .02em; color: #d11a1a;
@@ -274,6 +267,7 @@
   94% { translate: 0 94px; } 97%, 100% { translate: 0 88px; }
 }
 @media (prefers-reduced-motion: reduce) {
+  .v2-knock__man { display: none; }
   .v2-wall__row { animation: none; }
   .v2-btn, .v2-opt, .v2-quiz__bar span { transition: none; }
 }

@@ -3,15 +3,16 @@
 import { useEffect, useRef } from 'react'
 
 /**
- * Наклонная бегущая строка с проблемами, которая буквально сбивает героя с ног (идея — блок у Ясно).
- * Герой стоит в строке, она идёт на уровне голеней. Когда слово доезжает до его ног, его сносит:
- * летит кувырком, на экране «ПОТРАЧЕНО» как в GTA San Andreas, потом он падает обратно в промежуток
- * между словами — и следующее слово сносит снова. Удар считается по реальному положению слов.
- * Строка едет только пока блок в экране; при reduced-motion всё стоит.
+ * Бегущая строка с проблемами, которая сбивает героя с ног (идея — блок у Ясно). Один раз:
+ * герой стоит в пустой полосе, справа на скорости вылетают слова, первое сносит его за экран
+ * («ПОТРАЧЕНО» как в GTA San Andreas), дальше остаётся просто бегущая строка. Удар считается
+ * по реальному положению слов. Начинается, когда блок наполовину в экране; при reduced-motion
+ * герой не показывается, строка стоит.
  */
 const WORDS = ['Выгорание', 'Одиночество', 'Деньги', 'Тревога', 'Злость', 'Алкоголь', 'Кризис на работе', 'Сложные отношения', 'Нет сил', 'Стыд', 'Бессонница', 'Зависимости']
 
-const SPEED = 130 // px в секунду
+const FAST = 900 // px/с — слова вылетают
+const SPEED = 130 // px/с — обычная бегущая строка после удара
 
 export default function KnockBand() {
   const box = useRef<HTMLDivElement>(null)
@@ -24,61 +25,52 @@ export default function KnockBand() {
     if (!el || !r || !m || !w) return
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
 
-    let visible = false
     let raf = 0
     let last = 0
-    let x = 0
-    let state: 'stand' | 'hit' | 'gone' = 'stand'
+    let x = el.clientWidth * 1.1 // строка начинается за правым краем — полоса пустая
+    let v = FAST
+    let state: 'stand' | 'hit' | 'done' = 'stand'
     let timer = 0
     const spans = Array.from(r.children) as HTMLElement[]
 
-    // какие слова сейчас перекрывают ноги героя (по горизонтали)
-    const underFeet = () => {
+    // доехало ли первое слово до ног героя
+    const reachedFeet = () => {
       const mr = m.getBoundingClientRect()
-      const l = mr.left + mr.width * 0.3, rr = mr.right - mr.width * 0.3
-      return spans.some((s) => {
-        const b = s.getBoundingClientRect()
-        return b.left < rr && b.right > l
+      const feet = mr.left + mr.width * 0.65
+      return spans.some((sp) => {
+        const b = sp.getBoundingClientRect()
+        return b.left < feet && b.right > mr.left
       })
     }
 
     const hit = () => {
       state = 'hit'
-      m.classList.remove('is-drop')
-      void m.offsetWidth
       m.classList.add('is-hit')
       w.classList.add('is-on')
       timer = window.setTimeout(() => {
-        state = 'gone'
+        state = 'done'
         w.classList.remove('is-on')
-      }, 1900)
-    }
-
-    const respawn = () => {
-      state = 'stand'
-      m.classList.remove('is-hit')
-      void m.offsetWidth
-      m.classList.add('is-drop')
+      }, 1600)
     }
 
     const tick = (t: number) => {
       const dt = last ? Math.min(t - last, 50) / 1000 : 0
       last = t
+      if (state !== 'stand') v += (SPEED - v) * Math.min(1, dt * 1.5) // после удара плавно тормозит до обычной скорости
       const half = r.scrollWidth / 2
-      x -= SPEED * dt
+      x -= v * dt
       if (x <= -half) x += half
       r.style.transform = `translateX(${x}px)`
-      if (state === 'stand' && underFeet()) hit()
-      else if (state === 'gone' && !underFeet()) respawn()
+      if (state === 'stand' && reachedFeet()) hit()
       raf = requestAnimationFrame(tick)
     }
 
+    r.style.transform = `translateX(${x}px)`
     const io = new IntersectionObserver(([e]) => {
-      visible = e.isIntersecting
       cancelAnimationFrame(raf)
       last = 0
-      if (visible) raf = requestAnimationFrame(tick)
-    }, { threshold: 0.2 })
+      if (e.isIntersecting) raf = requestAnimationFrame(tick)
+    }, { threshold: 0.5 })
     io.observe(el)
     return () => {
       io.disconnect()
