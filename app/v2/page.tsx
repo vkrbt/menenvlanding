@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from 'next'
 import Crushed from '@/components/v2/Crushed'
 import QuizV2 from '@/components/v2/QuizV2'
+import Thoughts from '@/components/v2/Thoughts'
+import { THOUGHTS } from '@/components/v2/pov-thoughts'
 import Typo from '@/components/Typo'
 import { startPhrase } from '@/lib/group'
-import { FORMS_URL, GROUP_MEETINGS, GROUP_SEATS, MEETING_TIME, PRICE_BLOCK, PRICE_FROM, PRICE_PROGRAM, PRICE_SINGLE, BLOCK_SIZE, RECRUITMENT_NOTE, SITE_URL } from '@/lib/site'
+import { FORMS_URL, GROUP_MEETINGS, MEETING_TIME, PRICE_BLOCK, PRICE_FROM, PRICE_PROGRAM, PRICE_SINGLE, BLOCK_SIZE, RECRUITMENT_NOTE, SITE_URL } from '@/lib/site'
 import './v2.css'
 
 /** Заголовки v2: Inter Tight — жирный и компактный, Dela Gothic One в блоках не помещалась */
@@ -22,25 +24,30 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { width: 'device-width', initialScale: 1 }
 
-const QUOTES: Array<{ t: string; mood: string }> = [
-  { t: 'Утром йога — вечером «Мужская Среда»', mood: 'nod' },
-  { t: 'Волк слабее льва и тигра, но он ходит в стае. Хватит быть одиноким волком', mood: 'stare' },
-  { t: 'Не важно, в какой ты жопе. Важно, чтобы было с кем об этом поговорить', mood: 'sigh' },
-  { t: 'Настоящий мужик всегда стирает носки и сообщения. Но иногда пишет: «Мне хреново»', mood: 'grin' },
-  { t: 'Утром деньги — вечером терапия', mood: 'nod' },
-  { t: 'Буйвол внутри меня просыпается, когда ты на «Мужскую Среду» не собираешься', mood: 'stare' },
-]
-
 const SIGNS = [
-  'Тебя всю жизнь спрашивают: «Почему не женат? Почему без машины? Когда дети?» А чего хочешь ты, не спрашивает никто',
-  'Другу пишешь «ты где пропал, козёл?», а имеешь в виду «я соскучился»',
+  'После работы сидишь в машине у дома. Домой не хочется',
+  'Глушишь всё спортом, пивом или работой',
+  'Всё бесит, все достали',
+  'Не помнишь, когда последний раз говорил с кем-то по душам',
+  'Работа и деньги больше не радуют',
   'На «как дела?» отвечаешь «нормально». Уже полгода',
-  'Тащишь работу, семью и ипотеку, устал, а сказать некому',
-  'Срываешься на близких и потом три дня себя за это жрёшь',
-  'С мужиками говоришь про работу, тачки и футбол. Про остальное нет',
 ]
 
-const WALL = ['Должен быть сильным', 'Не ной', 'Молчи и терпи', 'Заплакал — не мужик', 'Решай всё сам', 'Тащи семью', 'Не жалуйся', 'Будь мужиком']
+/** Шипы на «Должен»: подпись и середина шипа в % от картинки drag.webp */
+const SPIKES: Array<[string, number, number]> = [
+  ['семья', 32.7, 19.5],
+  ['работа', 50.3, 32.6],
+  ['бизнес', 65.1, 29.7],
+  ['ипотека', 89.2, 31.8],
+  ['усталость', 91.5, 59.3],
+]
+
+const FACTS: Array<[string, string, string]> = [
+  ['2 000 000', 'мужчин в год умирают из-за алкоголя. Это три из четырёх смертей от выпивки в мире.', 'ВОЗ, 2024'],
+  ['100 в час', 'смертей в мире связывают с одиночеством. Больше 870 тысяч в год.', 'ВОЗ, 2025'],
+  ['15%', 'мужчин в США без единого близкого друга. В 1990 году таких было 3%.', 'Survey Center on American Life, 2021'],
+  ['5 лет', 'на столько в среднем мужчины в мире живут меньше женщин. В России разрыв почти 11 лет: 68 против 78,7.', 'ВОЗ, 2025; Росстат, 2023'],
+]
 
 const GET = [
   ['Место, где можно сказать вслух', 'Всё, что обычно глотаешь. Без «ты что, слабак» и без «просто возьми себя в руки».'],
@@ -86,20 +93,21 @@ export default function V2Page() {
             <div className="v2-wall" aria-hidden="true">
               {[0, 1, 2, 3].map((r) => (
                 <p key={r} className={r % 2 ? 'v2-wall__row v2-wall__row--rev' : 'v2-wall__row'}>
-                  {[...WALL.slice(r), ...WALL.slice(0, r), ...WALL.slice(r), ...WALL.slice(0, r)].map((w, k) => <span key={k}>{w}</span>)}
+                  {[...THOUGHTS.slice(r * 4), ...THOUGHTS.slice(0, r * 4), ...THOUGHTS.slice(r * 4), ...THOUGHTS.slice(0, r * 4)].map((w, k) => <span key={k}>{w}</span>)}
                 </p>
               ))}
             </div>
             <div className="v2-wrap v2-hero__grid">
               <div>
-                <p className="v2-sticker v2-sticker--tilt">Мужская терапевтическая группа онлайн</p>
-                <h1 className="v2-h1">Стетем зовёт тебя на мужскую группу</h1>
+                <p className="v2-sticker v2-sticker--tilt">Стетем зовёт тебя на мужскую группу</p>
+                <h1 className="v2-h1">Устал тащить всё на себе?</h1>
+                <Thoughts />
                 <p className="v2-hero__sub">
-                  Ты тащишь работу, семью и «нормально». Хватит молча. Девять встреч в Zoom, до {GROUP_SEATS} мужиков, психолог и психиатр. Говорим о том, о чём обычно молчат.
+                  Работа, семья, деньги и вечное «надо больше», и всё это в одной голове. Девять встреч в Zoom с мужиками, которые тащат то же самое. Ведут психолог и психиатр.
                 </p>
                 <div className="v2-hero__actions">
                   <Cta />
-                  <a href="#test" className="v2-btn">Пройти тест: тебе сюда?</a>
+                  <a href="#test" className="v2-btn">Пройти тест</a>
                 </div>
                 <ul className="v2-chips">
                   <li>{GROUP_MEETINGS} встреч по 3 часа</li>
@@ -109,26 +117,11 @@ export default function V2Page() {
                 </ul>
               </div>
               <div className="v2-hero__art" aria-hidden="true">
-                <img className="v2-hero__man" src="/v2/push.webp" alt="" width={900} height={786} fetchPriority="high" />
-                <span className="v2-stone v2-hero__stone">Должен</span>
-              </div>
-            </div>
-          </section>
-
-          <section className="v2-section">
-            <div className="v2-wrap">
-              <h2 className="v2-h2">Стетем говорит</h2>
-              <p className="v2-lead">Известные цитаты, переписанные под нас.</p>
-              <ul className="v2-quotes">
-                {QUOTES.map((q, i) => (
-                  <li className="v2-quote" key={q.t} style={{ ['--tilt' as string]: `${i % 2 ? 1.2 : -1.2}deg` }}>
-                    <img className="v2-quote__face" src="/v2/bust.webp" alt="" width={700} height={1114} loading="lazy" />
-                    <p>«{q.t}»</p>
-                    <span>(с) Джейсон Стетем</span>
-                    
-                  </li>
+                <img className="v2-hero__drag" src="/v2/drag.webp" alt="" width={1100} height={502} fetchPriority="high" />
+                {SPIKES.map(([w, x, y]) => (
+                  <span key={w} className="v2-spike" style={{ left: `${x}%`, top: `${y}%` }}>{w}</span>
                 ))}
-              </ul>
+              </div>
             </div>
           </section>
 
@@ -143,7 +136,7 @@ export default function V2Page() {
                   <li key={s}><span aria-hidden="true">⚠</span>{s}</li>
                 ))}
               </ul>
-              <p className="v2-conclusion">Хоть один пункт про тебя? Значит, ты по адресу.</p>
+              <p className="v2-conclusion">Хоть один пункт про тебя? Не жди, пока всё развалится.</p>
               <Cta />
               </div>
               </div>
@@ -152,13 +145,12 @@ export default function V2Page() {
 
           <section className="v2-section">
             <div className="v2-wrap">
-              <h2 className="v2-h2">Так было не всегда</h2>
+              <h2 className="v2-h2">Молчать опасно. Вот цифры</h2>
               <ul className="v2-facts">
-                <li><b>5 000 фото</b><p>Историк Джон Ибсон собрал больше пяти тысяч старых снимков, где мужики сидят друг у друга на коленях и держатся за руки. Современные фотостудии в ответ: двое мужчин на общее фото к нам не приходят.</p></li>
-                <li><b>3% → 15%</b><p>Столько мужчин в США не имели ни одного близкого друга в 1990 и в 2021 году. Сейчас это каждый седьмой.</p></li>
-                <li><b>−5 лет</b><p>На столько в среднем мужчины живут меньше женщин (данные ВОЗ). Идут к врачам реже и терпят до последнего.</p></li>
+                {FACTS.map(([n, t, src]) => (
+                  <li key={n}><b>{n}</b><p>{t}</p><small>{src}</small></li>
+                ))}
               </ul>
-              <p className="v2-conclusion">«Молчи и терпи» дорого обходится. Группа нужна, чтобы это прекратить.</p>
             </div>
           </section>
 

@@ -42,7 +42,7 @@
 
 /* ---------- типографика ---------- */
 .v2-h1, .v2-h2, .v2-quiz__title { font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 900; line-height: 1.02; letter-spacing: -0.015em; text-wrap: balance; }
-.v2-h1 { font-size: clamp(40px, 8vw, 76px); margin: 16px 0; text-transform: uppercase; }
+.v2-h1 { font-size: clamp(38px, 6vw, 64px); margin: 16px 0; text-transform: uppercase; }
 .v2-h2 { font-size: clamp(28px, 4.6vw, 44px); margin-bottom: 12px; }
 .v2-lead { font-size: 18px; color: var(--muted); margin-bottom: 28px; max-width: 640px; }
 .v2-section { padding: 72px 0; border-top: 1px solid var(--line); }
@@ -68,7 +68,7 @@
 
 /* стена «должен»: давящие слова бегут за героем */
 .v2-wall { position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-around; pointer-events: none; color: var(--text); opacity: .05; }
-.v2-wall__row { display: flex; gap: 36px; width: max-content; font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 900; font-size: clamp(44px, 8vw, 96px); line-height: 1; text-transform: uppercase; white-space: nowrap; animation: v2-slide 60s linear infinite; }
+.v2-wall__row { display: flex; gap: 36px; width: max-content; font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 900; font-size: clamp(44px, 8vw, 96px); line-height: 1; text-transform: uppercase; white-space: nowrap; animation: v2-slide 300s linear infinite; }
 .v2-wall__row--rev { animation-direction: reverse; }
 @keyframes v2-slide { to { transform: translateX(-50%); } }
 
@@ -80,17 +80,17 @@
   text-shadow: 1px 1px 0 #70747b, 2px 2px 0 #65696f, 3px 3px 0 #5b5e64, 4px 4px 0 #505358, 5px 5px 0 #46494d, 6px 6px 0 #3c3e42, 7px 7px 0 #333538, 12px 16px 22px rgba(0, 0, 0, .6);
 }
 
-.v2-hero__art { position: relative; display: flex; flex-direction: row; align-items: flex-end; justify-content: center; min-height: 240px; }
-.v2-hero__man { position: relative; z-index: 2; flex: 0 0 auto; width: 44%; max-width: 280px; height: auto; margin-right: -9%; filter: drop-shadow(0 18px 18px rgba(0, 0, 0, .6)); }
-.v2-hero__stone { position: relative; z-index: 1; flex: 0 0 auto; font-size: clamp(56px, 9vw, 112px); margin-bottom: 2%; transform-origin: left bottom; }
-@keyframes v2-push { 0%, 100% { transform: translateX(0) rotate(0); } 45% { transform: translateX(10px) rotate(.6deg); } 55% { transform: translateX(9px) rotate(.5deg); } }
+.v2-hero__art { position: relative; }
+.v2-hero__drag { display: block; width: 100%; max-width: none; height: auto; filter: drop-shadow(0 18px 18px rgba(0, 0, 0, .6)); }
+/* подписи на шипах «Должен»: x/y — середина шипа */
+.v2-spike { position: absolute; translate: -50% -50%; padding: 3px 8px; font-weight: 800; font-size: clamp(11px, 1.5vw, 15px); line-height: 1.1; white-space: nowrap; color: #fff; background: var(--btn); border-radius: 3px; box-shadow: 0 4px 12px rgba(0, 0, 0, .45); }
 
-/* ---------- цитаты ---------- */
-.v2-quotes { display: grid; gap: 16px; margin-top: 8px; }
-.v2-quote { display: grid; grid-template-columns: 72px 1fr; gap: 4px 16px; align-items: center; padding: 18px 20px; background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: 4px; }
-.v2-quote__face { grid-row: 1 / 3; width: 72px; height: 72px; object-fit: cover; object-position: 50% 0; border-radius: 50%; background: radial-gradient(circle at 50% 30%, #c9d0ee, #8e97c2); border: 1px solid var(--line); }
-.v2-quote p { font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.28; }
-.v2-quote span { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
+/* мысли из рилса «POV: мозг мужика» */
+.v2-pov { margin: -4px 0 18px; }
+.v2-pov__label { display: block; font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin-bottom: 4px; }
+/* высота всегда на две строки: мысли разной длины не двигают кнопки ниже */
+.v2-pov__line { display: block; height: 2.3em; overflow: hidden; font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 900; font-size: clamp(22px, 3vw, 32px); line-height: 1.15; text-transform: uppercase; color: var(--gold); }
+.v2-pov__word { display: inline-block; }
 
 /* ---------- узнал себя ---------- */
 .v2-signs-grid { display: grid; gap: 28px; align-items: center; }
@@ -99,7 +99,7 @@
 .v2-signs span { color: var(--gold); font-size: 20px; line-height: 1.15; }
 .v2-conclusion { font-size: 20px; font-weight: 800; margin-bottom: 20px; }
 
-.v2-crush { position: relative; display: flex; flex-direction: column; align-items: center; padding-top: 10px; background: radial-gradient(ellipse 60% 55% at 50% 60%, rgba(90, 110, 255, .25), transparent 70%); }
+.v2-crush { position: relative; display: flex; flex-direction: column; align-items: center; padding-top: 10px; overflow: hidden; background: radial-gradient(ellipse 60% 55% at 50% 60%, rgba(90, 110, 255, .25), transparent 70%); border-bottom: 4px solid #3a4170; }
 .v2-crush__pile { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; margin-bottom: -8%; }
 .v2-crush__stone { font-size: clamp(30px, 5vw, 46px); margin-top: -6px; }
 .v2-crush__stone:nth-child(odd) { transform: rotate(-3deg); }
@@ -111,6 +111,7 @@
 .v2-facts li { padding: 22px; background: var(--card); border: 1px solid var(--line); border-radius: 4px; }
 .v2-facts b { display: block; margin-bottom: 10px; font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 900; font-size: 40px; line-height: 1.05; color: var(--gold); }
 .v2-facts p { color: var(--muted); }
+.v2-facts small { display: block; margin-top: 10px; font-size: 12px; color: var(--muted); opacity: .8; }
 
 /* ---------- оффер и цена ---------- */
 .v2-offer { display: grid; gap: 28px; margin-top: 24px; }
@@ -177,13 +178,22 @@
 
 /* ---------- анимации ---------- */
 @media (prefers-reduced-motion: no-preference) {
-  .v2-hero__stone { animation: v2-push 2.4s ease-in-out infinite; }
+  .v2-pov__word { animation: v2-flash .18s ease-out; }
   .v2-crush__stone { opacity: 0; translate: 0 -260px; }
   .v2-crush.is-on .v2-crush__stone { animation: v2-drop .55s cubic-bezier(.5, 0, .75, 0) forwards; animation-delay: calc((4 - var(--i)) * .35s); }
-  .v2-crush.is-on .v2-crush__man { animation: v2-sink 1.9s steps(1) forwards; }
+  /* каждый камень вбивает Стетема ниже, как гвоздь; внизу он и остаётся */
+  .v2-crush.is-on .v2-crush__man, .v2-crush.is-on .v2-crush__pile { animation: v2-nail 2s linear forwards; }
 }
+@keyframes v2-flash { from { opacity: 0; transform: translateY(6px); } }
 @keyframes v2-drop { 0% { opacity: 1; translate: 0 -260px; } 80% { translate: 0 6px; } 100% { opacity: 1; translate: 0 0; } }
-@keyframes v2-sink { 0% { translate: 0 0; } 20% { translate: 0 4px; } 40% { translate: 0 8px; } 60% { translate: 0 12px; } 80% { translate: 0 16px; } }
+@keyframes v2-nail {
+  0%, 21.9% { translate: 0 0; }
+  24% { translate: 0 22px; } 27%, 39.4% { translate: 0 16px; }
+  41.5% { translate: 0 40px; } 44.5%, 56.9% { translate: 0 34px; }
+  59% { translate: 0 58px; } 62%, 74.4% { translate: 0 52px; }
+  76.5% { translate: 0 76px; } 79.5%, 91.9% { translate: 0 70px; }
+  94% { translate: 0 94px; } 97%, 100% { translate: 0 88px; }
+}
 @media (prefers-reduced-motion: reduce) {
   .v2-wall__row { animation: none; }
   .v2-btn, .v2-opt, .v2-quiz__bar span { transition: none; }
@@ -191,11 +201,10 @@
 
 /* ---------- раскладка ---------- */
 @media (min-width: 760px) {
-  .v2-hero__grid { grid-template-columns: 1fr 1fr; }
-  .v2-hero__art { min-height: 360px; }
-  .v2-quotes { grid-template-columns: repeat(2, 1fr); }
+  .v2-hero__grid { grid-template-columns: minmax(0, .85fr) minmax(0, 1.3fr); }
+  .v2-hero__art { margin-right: -4vw; }
   .v2-signs-grid { grid-template-columns: 360px 1fr; }
-  .v2-facts { grid-template-columns: repeat(3, 1fr); }
+  .v2-facts { grid-template-columns: repeat(2, 1fr); }
   .v2-offer { grid-template-columns: 1.4fr 1fr; align-items: start; }
   .v2-quiz { grid-template-columns: 180px 1fr; }
   .v2-quiz--q { display: block; }
@@ -206,7 +215,7 @@
 /* телефон: картинка над заголовком, шапка в одну строку */
 @media (max-width: 759px) {
   .v2-hero { padding-top: 20px; background: radial-gradient(ellipse 90% 30% at 50% 14%, rgba(90, 110, 255, .22), transparent 70%), var(--bg); }
-  .v2-hero__art { order: -1; min-height: 0; margin-top: -8px; }
+  .v2-hero__art { order: -1; margin-top: -8px; }
 }
 @media (max-width: 420px) {
   .v2-top { padding: 8px 10px; }
