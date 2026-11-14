@@ -152,8 +152,8 @@
 
 /* ---------- цитаты «пацанской мудрости» ---------- */
 .v2-quotes { display: grid; gap: 14px; margin-top: 20px; list-style: none; padding: 0; }
-.v2-quote { display: grid; grid-template-columns: 64px 1fr; gap: 4px 16px; align-items: center; padding: 18px 20px; background: var(--card); border: 2px solid var(--line); border-bottom-width: 4px; border-radius: 12px; }
-.v2-quote__face { grid-row: 1 / 3; width: 64px; height: 64px; object-fit: cover; object-position: 50% 4%; border-radius: 50%; background: var(--bg2); border: 2px solid var(--line); }
+.v2-quote { display: grid; grid-template-columns: 76px 1fr; gap: 4px 16px; align-items: center; padding: 18px 20px; background: var(--card); border: 2px solid var(--line); border-bottom-width: 4px; border-radius: 12px; }
+.v2-quote__face { grid-row: 1 / 3; width: 76px; height: 76px; object-fit: cover; object-position: 50% 0; border-radius: 50%; background: var(--bg2); border: 2px solid var(--line); }
 .v2-quote p { font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 800; font-size: 19px; line-height: 1.28; letter-spacing: -0.01em; }
 .v2-quote span { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--gold); font-weight: 700; }
 

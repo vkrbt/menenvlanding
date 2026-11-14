@@ -30,7 +30,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = { width: 'device-width', initialScale: 1 }
 
-/** Переделанные мем-цитаты «пацанской мудрости» под группу */
+/** Переделанные мем-цитаты «пацанской мудрости» под группу; у каждой свой портрет героя public/v2/quote-N.webp (в другой одежде, почти везде лысый) */
 const QUOTES = [
   'Утром йога — вечером «Мужская Среда»',
   'Волк слабее льва и тигра, но он ходит в стае. Хватит быть одиноким волком',
@@ -164,7 +164,7 @@ export default function V2Page() {
               <ul className="v2-quotes">
                 {QUOTES.map((q, i) => (
                   <li className="v2-quote" key={q} style={{ rotate: `${i % 2 ? 0.8 : -0.8}deg` }}>
-                    <img className="v2-quote__face" src="/v2/bust.webp" alt="" width={700} height={1114} loading="lazy" />
+                    <img className="v2-quote__face" src={`/v2/quote-${i + 1}.webp`} alt="" width={240} height={240} loading="lazy" />
                     <p>«{q}»</p>
                     <span>(с) Пацанская мудрость</span>
                   </li>
