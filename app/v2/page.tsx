@@ -10,8 +10,8 @@ import { startPhrase } from '@/lib/group'
 import { FORMS_URL, GROUP_MEETINGS, MEETING_TIME, PRICE_BLOCK, PRICE_FROM, PRICE_PROGRAM, PRICE_SINGLE, BLOCK_SIZE, RECRUITMENT_NOTE, SITE_URL } from '@/lib/site'
 import './v2.css'
 
-/** Заголовки v2: Inter Tight — жирный и компактный, Dela Gothic One в блоках не помещалась */
-const HEAD_FONT = 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800;900&display=swap'
+/** Заголовки v2: Inter Tight — жирный и компактный; Oswald — надписи на деревянных табличках */
+const HEAD_FONT = 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800;900&family=Oswald:wght@400&display=swap'
 
 /**
  * Версия лендинга для проверки гипотезы: оффер на самого человека, шуточный стиль,
@@ -35,13 +35,23 @@ const SIGNS = [
   'На «как дела?» отвечаешь «нормально». Уже полгода',
 ]
 
-/** Шипы на «Должен»: подпись и середина шипа в % от картинки drag.webp */
-const SPIKES: Array<[string, number, number]> = [
-  ['семья', 28.9, 14],
-  ['работа', 52.4, 32.2],
-  ['бизнес', 65.3, 31.4],
-  ['ипотека', 89, 30.6],
-  ['усталость', 92, 61.6],
+/**
+ * Деревянные таблички на шипах «Должен»: слово, центр таблички в % от картинки drag.webp,
+ * крупный ли шип (на телефоне видны только крупные), наклон в градусах
+ */
+const SPIKES: Array<[string, number, number, boolean, number]> = [
+  ['будь мужиком', 28.5, 16, true, -4],
+  ['потерпи', 52.5, 28, true, 3],
+  ['не ной', 65.3, 25, true, -3],
+  ['ответственность', 86, 22, true, 4],
+  ['усталость', 92, 62, true, -2],
+  ['работа', 21, 36, false, -6],
+  ['семья', 41, 44, false, 5],
+  ['дети', 58.5, 44, false, -4],
+  ['родители', 75.5, 44, false, 3],
+  ['вина', 86.5, 47, false, -5],
+  ['недосып', 45, 86, false, 4],
+  ['переезд', 72, 86, false, -3],
 ]
 
 const FACTS: Array<[string, string, string]> = [
@@ -121,8 +131,8 @@ export default function V2Page() {
               </div>
               <div className="v2-hero__art" aria-hidden="true">
                 <img className="v2-hero__drag" src="/v2/drag.webp" alt="" width={1100} height={455} fetchPriority="high" />
-                {SPIKES.map(([w, x, y]) => (
-                  <span key={w} className="v2-spike" style={{ left: `${x}%`, top: `${y}%` }}>{w}</span>
+                {SPIKES.map(([w, x, y, big, rot]) => (
+                  <span key={w} className={big ? 'v2-spike' : 'v2-spike v2-spike--small'} style={{ left: `${x}%`, top: `${y}%`, rotate: `${rot}deg` }}>{w}</span>
                 ))}
               </div>
             </div>
