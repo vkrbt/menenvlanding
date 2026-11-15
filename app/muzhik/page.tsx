@@ -149,26 +149,11 @@ export default function V2Page() {
                 </ul>
               </div>
               <div className="v2-hero__art" aria-hidden="true">
-                <img className="v2-hero__drag" src="/v2/drag-sh.webp" alt="" width={1100} height={455} fetchPriority="high" />
+                <img className="v2-hero__drag" src="/v2/drag-sh.webp" alt="" width={1196} height={551} fetchPriority="high" />
                 {SPIKES.map(([w, x, y, big, rot]) => (
                   <span key={w} className={big ? 'v2-spike' : 'v2-spike v2-spike--small'} style={{ left: `${x}%`, top: `${y}%`, rotate: `${rot}deg` }}>{w}</span>
                 ))}
               </div>
-            </div>
-          </section>
-
-          <section className="v2-section">
-            <div className="v2-wrap">
-              <h2 className="v2-h2">Мудрость, которую мы заслужили</h2>
-              <ul className="v2-quotes">
-                {QUOTES.map((q, i) => (
-                  <li className="v2-quote" key={q} style={{ rotate: `${i % 2 ? 0.8 : -0.8}deg` }}>
-                    <img className="v2-quote__face" src={`/v2/quote-${i + 1}.webp`} alt="" width={240} height={240} loading="lazy" />
-                    <p>«{q}»</p>
-                    <span>(с) Пацанская мудрость</span>
-                  </li>
-                ))}
-              </ul>
             </div>
           </section>
 
@@ -246,6 +231,21 @@ export default function V2Page() {
           <Program />
 
           <HostsV2 />
+
+          <section className="v2-section">
+            <div className="v2-wrap">
+              <h2 className="v2-h2">Мудрость, которую мы заслужили</h2>
+              <ul className="v2-quotes">
+                {QUOTES.map((q, i) => (
+                  <li className="v2-quote" key={q} style={{ rotate: `${i % 2 ? 0.8 : -0.8}deg` }}>
+                    <img className="v2-quote__face" src={`/v2/quote-${i + 1}.webp`} alt="" width={240} height={240} loading="lazy" />
+                    <p>«{q}»</p>
+                    <span>(с) Пацанская мудрость</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </section>
 
           <section className="v2-section">
             <div className="v2-wrap">
