@@ -27,7 +27,8 @@ export default function KnockBand() {
 
     let raf = 0
     let last = 0
-    let x = el.clientWidth * 1.1 // строка начинается ровно за правым краем (полоса сдвинута на 10% влево) — полоса пустая
+    // строка уже выехала на треть экрана справа (полоса сдвинута на 10% влево) — до героя доезжает быстро
+    let x = el.clientWidth * (0.1 + 2 / 3)
     let state: 'stand' | 'hit' | 'done' = 'stand'
     let timer = 0
     const spans = Array.from(r.children) as HTMLElement[]
