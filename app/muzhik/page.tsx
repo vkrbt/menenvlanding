@@ -40,6 +40,9 @@ const QUOTES = [
   'Буйвол внутри меня просыпается, когда ты на «Мужскую Среду» не собираешься',
 ]
 
+/** Наклон карточек цитат: у каждой свой, в разные стороны — как налепленные стикеры */
+const QUOTE_TILTS = [-1.3, 0.9, 1.6, -0.5, -0.9, 1.3]
+
 const SIGNS = [
   'Держишь всё в себе, потому что «мужик должен»',
   'Не можешь расслабиться без пива, рилсов и еды',
@@ -239,7 +242,7 @@ export default function V2Page() {
               <h2 className="v2-h2">Мудрость, которую мы заслужили</h2>
               <ul className="v2-quotes">
                 {QUOTES.map((q, i) => (
-                  <li className="v2-quote" key={q} style={{ rotate: `${i % 2 ? 0.8 : -0.8}deg` }}>
+                  <li className="v2-quote" key={q} style={{ rotate: `${QUOTE_TILTS[i % QUOTE_TILTS.length]}deg` }}>
                     <img className="v2-quote__face" src={`/v2/quote-${i + 1}.webp`} alt="" width={240} height={240} loading="lazy" />
                     <p>«{q}»</p>
                     <span>(с) Пацанская мудрость</span>
