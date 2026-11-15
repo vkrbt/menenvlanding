@@ -188,7 +188,10 @@ html:has(.v2) { scroll-behavior: smooth; }
 .v2-signs-grid { display: grid; gap: 28px; align-items: center; }
 .v2-signs { display: grid; gap: 10px; margin: 24px 0; }
 .v2-signs li { display: flex; gap: 14px; align-items: flex-start; padding: 14px 16px; font-weight: 600; background: var(--card); border: 2px solid var(--line); border-bottom-width: 4px; border-radius: 12px; }
-.v2-signs__icon { flex: none; margin-top: 2px; color: var(--gold); }
+.v2-signs li { align-items: center; }
+.v2-signs__icon { flex: none; display: grid; place-items: center; width: 42px; height: 42px; font-size: 24px; line-height: 1; background: var(--bg2); border: 2px solid var(--line); border-bottom-width: 3px; border-radius: 10px; rotate: -4deg; }
+.v2-signs li:nth-child(even) .v2-signs__icon { rotate: 3deg; }
+.v2-signs li:nth-child(3n) .v2-signs__icon { rotate: -2deg; }
 .v2-conclusion { font-size: 20px; font-weight: 800; margin-bottom: 20px; }
 
 .v2-crush { position: relative; display: flex; flex-direction: column; align-items: center; padding-top: 10px; overflow: hidden; background: radial-gradient(ellipse 60% 55% at 50% 60%, var(--glow), transparent 70%); border-bottom: 4px solid var(--line); }
