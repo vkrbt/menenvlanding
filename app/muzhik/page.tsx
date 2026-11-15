@@ -13,6 +13,7 @@ import Program from '@/components/home/Program'
 import Typo from '@/components/Typo'
 import { startPhrase } from '@/lib/group'
 import { FORMS_URL, GROUP_MEETINGS, MEETING_TIME, PRICE_BLOCK, PRICE_FROM, PRICE_PROGRAM, PRICE_SINGLE, BLOCK_SIZE, RECRUITMENT_NOTE, SITE_URL } from '@/lib/site'
+import { SignIcon } from '@/components/v2/SignIcon'
 import './v2.css'
 
 /** Заголовки v2: Inter Tight — жирный и компактный; Oswald — надписи на деревянных табличках */
@@ -43,16 +44,16 @@ const QUOTES = [
 /** Наклон карточек цитат: у каждой свой, в разные стороны — как налепленные стикеры */
 const QUOTE_TILTS = [-1.3, 0.9, 1.6, -0.5, -0.9, 1.3]
 
-/** «Узнал себя?»: у каждого пункта свой значок-стикер по смыслу вместо одинакового «внимание» */
+/** «Узнал себя?»: у каждого пункта свой рисованный значок по смыслу (components/v2/SignIcon.tsx), не эмодзи — одинаково на всех системах */
 const SIGNS: { icon: string; text: string }[] = [
-  { icon: '🤐', text: 'Держишь всё в себе, потому что «мужик должен»' },
-  { icon: '🍺', text: 'Не можешь расслабиться без пива, рилсов и еды' },
-  { icon: '🪫', text: 'Чувство пустоты глушишь женщинами, спортом и работой' },
-  { icon: '💥', text: 'Срываешься на своих, а потом сам себя грызёшь' },
-  { icon: '🚗', text: 'После работы сидишь в машине, не можешь зайти домой' },
-  { icon: '📵', text: 'Друзья вроде есть, а позвонить некому' },
-  { icon: '🫥', text: 'Не помнишь, когда в последний раз получал удовольствие' },
-  { icon: '🏆', text: 'Достижения и деньги перестали радовать как раньше' },
+  { icon: 'zip', text: 'Держишь всё в себе, потому что «мужик должен»' },
+  { icon: 'beer', text: 'Не можешь расслабиться без пива, рилсов и еды' },
+  { icon: 'battery', text: 'Чувство пустоты глушишь женщинами, спортом и работой' },
+  { icon: 'burst', text: 'Срываешься на своих, а потом сам себя грызёшь' },
+  { icon: 'car', text: 'После работы сидишь в машине, не можешь зайти домой' },
+  { icon: 'nophone', text: 'Друзья вроде есть, а позвонить некому' },
+  { icon: 'meh', text: 'Не помнишь, когда в последний раз получал удовольствие' },
+  { icon: 'trophy', text: 'Достижения и деньги перестали радовать как раньше' },
 ]
 
 /**
@@ -172,7 +173,7 @@ export default function V2Page() {
               <ul className="v2-signs">
                 {SIGNS.map((s) => (
                   <li key={s.text}>
-                    <span className="v2-signs__icon" aria-hidden="true">{s.icon}</span>
+                    <SignIcon name={s.icon} />
                     {s.text}
                   </li>
                 ))}
