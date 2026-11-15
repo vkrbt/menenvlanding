@@ -143,7 +143,7 @@ html:has(.v2) { scroll-behavior: smooth; }
 }
 
 .v2-hero__art { position: relative; }
-.v2-hero__drag { display: block; width: 100%; max-width: none; height: auto; filter: drop-shadow(0 18px 18px rgba(0, 0, 0, .6)); }
+.v2-hero__drag { display: block; width: 100%; max-width: none; height: auto; } /* тень запечена в картинку: CSS drop-shadow на движущейся картинке iOS Safari рисует серым прямоугольником */
 /* деревянные таблички на шипах «Должен»: размер от ширины картинки (cqi), чтобы не наезжали друг на друга */
 .v2-hero__art { container-type: inline-size; }
 .v2-spike {

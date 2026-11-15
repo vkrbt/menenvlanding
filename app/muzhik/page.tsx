@@ -149,7 +149,7 @@ export default function V2Page() {
                 </ul>
               </div>
               <div className="v2-hero__art" aria-hidden="true">
-                <img className="v2-hero__drag" src="/v2/drag.webp" alt="" width={1100} height={455} fetchPriority="high" />
+                <img className="v2-hero__drag" src="/v2/drag-sh.webp" alt="" width={1100} height={455} fetchPriority="high" />
                 {SPIKES.map(([w, x, y, big, rot]) => (
                   <span key={w} className={big ? 'v2-spike' : 'v2-spike v2-spike--small'} style={{ left: `${x}%`, top: `${y}%`, rotate: `${rot}deg` }}>{w}</span>
                 ))}
