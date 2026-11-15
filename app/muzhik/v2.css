@@ -142,12 +142,16 @@ html:has(.v2) { scroll-behavior: smooth; }
   text-shadow: 1px 1px 0 #70747b, 2px 2px 0 #65696f, 3px 3px 0 #5b5e64, 4px 4px 0 #505358, 5px 5px 0 #46494d, 6px 6px 0 #3c3e42, 7px 7px 0 #333538, 12px 16px 22px rgba(0, 0, 0, .6);
 }
 
-.v2-hero__art { position: relative; }
+/* .v2-hero__art — движущийся блок. iPhone Safari обрезает его слой по границам блока, поэтому вокруг рисунка
+   поля под тень (24/48/72 px от 1100 — в % от ширины колонки), а сами поля вынесены отрицательными margin.
+   Внутри .v2-hero__stage ровно по рисунку: от него считаются позиции табличек */
+.v2-hero__art { position: relative; padding: 2.1818% 4.3636% 6.5455%; margin: -2.1818% -4.3636% -6.5455%; }
+.v2-hero__stage { position: relative; }
 /* тень запечена в картинку (CSS drop-shadow на iPhone обрезался по краям картинки прямоугольником); вокруг
    рисунка 1100×455 прозрачные поля 48/48/24/72 px под тень — выносим их за рамку, чтобы таблички (в % от рисунка) стояли на месте */
 .v2-hero__drag { display: block; width: calc(100% * 1196 / 1100); max-width: none; height: auto; margin: calc(-100% * 24 / 1100) 0 calc(-100% * 72 / 1100) calc(-100% * 48 / 1100); }
 /* деревянные таблички на шипах «Должен»: размер от ширины картинки (cqi), чтобы не наезжали друг на друга */
-.v2-hero__art { container-type: inline-size; }
+.v2-hero__stage { container-type: inline-size; }
 .v2-spike {
   position: absolute; translate: -50% -50%; font-size: 1.9cqi;
   padding: .3em .75em .25em; white-space: nowrap;
@@ -292,9 +296,9 @@ html:has(.v2) { scroll-behavior: smooth; }
 }
 /* герой с «Должен»: резко вылетает из-за правого края, останавливается справа и потихоньку тащит
    влево до своего места; пауза, коротко уезжает обратно за правый край — и снова. --from: где он останавливается после вылета */
-.v2-hero__art { --from: 40%; }
+.v2-hero__art { --from: 37%; } /* % от ширины блока вместе с полями (1196/1100 рисунка) */
 /* телефон: вылетает сразу так, чтобы из-за правого края было видно «Долж» (Ж кончается на ~73% ширины рисунка, запас на шипы; слева поле 16px) */
-@media (max-width: 759px) { .v2-hero__art { --from: calc(100vw - 16px - 76%); } }
+@media (max-width: 759px) { .v2-hero__art { --from: calc(100vw - 16px - 70%); } }
 @keyframes v2-drag {
   0% { translate: 110vw 0; animation-timing-function: cubic-bezier(.15, .8, .3, 1); }
   5% { translate: var(--from) 0; animation-timing-function: linear; }
@@ -325,7 +329,7 @@ html:has(.v2) { scroll-behavior: smooth; }
   .v2-hero__grid { grid-template-columns: minmax(0, .85fr) minmax(0, 1.3fr); }
   .v2-h1 { font-size: clamp(30px, 5.4vw, 62px); }
   .v2-pov__line { font-size: clamp(18px, 2.8vw, 32px); }
-  .v2-hero__art { margin-right: -4vw; }
+  .v2-hero__art { margin-right: calc(-4.3636% - 4vw); }
   .v2-signs-grid { grid-template-columns: 360px 1fr; }
   .v2-quotes { grid-template-columns: repeat(2, 1fr); }
   /* «Узнал себя?» — парами в два столбца */
@@ -342,7 +346,7 @@ html:has(.v2) { scroll-behavior: smooth; }
 /* телефон: картинка над заголовком, шапка в одну строку */
 @media (max-width: 759px) {
   .v2-hero { padding-top: 20px; background: radial-gradient(ellipse 90% 30% at 50% 14%, var(--glow), transparent 70%), var(--page); }
-  .v2-hero__art { order: -1; margin-top: -8px; }
+  .v2-hero__art { order: -1; margin-top: calc(-2.1818% - 8px); }
   /* телефон: отступы меньше; блок с камнями поднят — после «вбивания» сверху остаётся пустота на 88px */
   .v2-hero { padding-bottom: 24px; }
   .v2-section, .v2 .hosts, .v2 .program { padding: 44px 0; }
