@@ -11,9 +11,9 @@ import { useEffect, useRef } from 'react'
  */
 const WORDS = ['Выгорание', 'Одиночество', 'Деньги', 'Тревога', 'Злость', 'Алкоголь', 'Кризис на работе', 'Сложные отношения', 'Нет сил', 'Стыд', 'Бессонница', 'Зависимости']
 
-const FAST = 450 // px/с — слова вылетают (не слишком быстро, чтобы успеть увидеть)
-const START_DELAY = 1100 // мс: герой сначала стоит, слова вылетают с паузой после появления блока
-const SPEED = 130 // px/с — обычная бегущая строка после удара
+const START_DELAY = 300 // мс: короткая пауза после появления блока, чтобы увидеть, что герой стоит
+// скорость строки одна и та же всё время (до удара и после); на широком экране быстрее, чтобы до героя не ехать долго
+const speedFor = (w: number) => Math.min(320, Math.max(160, w * 0.3)) // px/с
 
 export default function KnockBand() {
   const box = useRef<HTMLDivElement>(null)
@@ -28,8 +28,7 @@ export default function KnockBand() {
 
     let raf = 0
     let last = 0
-    let x = el.clientWidth * 1.1 // строка начинается за правым краем — полоса пустая
-    let v = FAST
+    let x = el.clientWidth * 1.1 // строка начинается ровно за правым краем (полоса сдвинута на 10% влево) — полоса пустая
     let state: 'stand' | 'hit' | 'done' = 'stand'
     let timer = 0
     const spans = Array.from(r.children) as HTMLElement[]
@@ -57,7 +56,7 @@ export default function KnockBand() {
     const tick = (t: number) => {
       const dt = last ? Math.min(t - last, 50) / 1000 : 0
       last = t
-      if (state !== 'stand') v += (SPEED - v) * Math.min(1, dt * 1.5) // после удара плавно тормозит до обычной скорости
+      const v = speedFor(el.clientWidth)
       const half = r.scrollWidth / 2
       x -= v * dt
       if (x <= -half) x += half
