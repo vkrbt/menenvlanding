@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 
 /**
- * Каменные слова падают на героя, когда блок появляется в экране.
+ * Каменные слова падают на героя, когда блок на 60% в экране; ушёл из экрана — всё возвращается, и так каждый раз.
  * Без JS и при reduced-motion камни просто лежат на месте.
  */
 const STONES = ['Тревога', 'Должен', 'Выгорание', 'Молчи и терпи', 'Ипотека']
@@ -15,7 +15,11 @@ export default function Crushed() {
   useEffect(() => {
     const el = ref.current
     if (!el) return
-    const io = new IntersectionObserver(([e]) => e.isIntersecting && setOn(true), { threshold: 0.35 })
+    // каждый раз заново: на 60% в экране камни падают, совсем ушёл из экрана — герой снова стоит
+    const io = new IntersectionObserver(([e]) => {
+      if (e.intersectionRatio >= 0.6) setOn(true)
+      else if (!e.isIntersecting) setOn(false)
+    }, { threshold: [0, 0.6] })
     io.observe(el)
     return () => io.disconnect()
   }, [])
