@@ -138,8 +138,9 @@ html:has(.v2) { scroll-behavior: smooth; }
 .v2-stone {
   display: inline-block;
   font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 900; line-height: .95; letter-spacing: -0.02em;
-  color: #8f949b;
-  text-shadow: 1px 1px 0 #70747b, 2px 2px 0 #65696f, 3px 3px 0 #5b5e64, 4px 4px 0 #505358, 5px 5px 0 #46494d, 6px 6px 0 #3c3e42, 7px 7px 0 #333538, 12px 16px 22px rgba(0, 0, 0, .6);
+  /* тёмный гранит со светлой кромкой сверху — читается на белом фоне, остаётся камнем */
+  color: #5d636c;
+  text-shadow: 0 -1px 0 #b4bac2, 1px 1px 0 #43474e, 2px 2px 0 #3b3e44, 3px 3px 0 #33363b, 4px 4px 0 #2c2e33, 5px 5px 0 #25272b, 6px 6px 0 #1f2024, 7px 7px 0 #18191c, 12px 16px 22px rgba(0, 0, 0, .55);
 }
 
 /* .v2-hero__art — движущийся блок. iPhone Safari обрезает его слой по границам блока, поэтому вокруг рисунка
@@ -206,13 +207,29 @@ html:has(.v2) { scroll-behavior: smooth; }
 /* строка ровно посередине блока (сверху и снизу поровну), герой стоит так, что она бьёт в грудь (~30% роста сверху) */
 .v2-knock__band { position: absolute; left: -10%; right: -10%; top: calc(50% - var(--fs) / 2); rotate: -4deg; z-index: 2; }
 .v2-knock__row { display: flex; gap: 1.2em; width: max-content; font: 600 var(--fs)/1 'Manrope', sans-serif; letter-spacing: -0.02em; color: var(--fg); white-space: nowrap; will-change: transform; }
-.v2-knock__man { position: absolute; left: 50%; top: calc(50% - 62% * .3); z-index: 1; height: 62%; width: auto; translate: -50% 0; transform-origin: 50% 70%; filter: drop-shadow(0 12px 12px var(--shadow)); }
-.v2-knock__man.is-hit { animation: v2-knock-hit 1.6s cubic-bezier(.2, .7, .4, 1) forwards; }
-/* сносит туда же, куда едет строка — влево, кувырком, за экран; обратно не возвращается */
-@keyframes v2-knock-hit {
-  0% { transform: none; }
-  12% { transform: rotate(-35deg) translate(-10px, -10px); }
-  100% { transform: translate(-70vw, -40px) rotate(-540deg); opacity: 0; }
+.v2-knock__man { position: absolute; left: 50%; top: calc(50% - 62% * .3); z-index: 1; height: 62%; aspect-ratio: 420 / 1398; translate: -50% 0; transform-origin: 50% 97%; filter: drop-shadow(0 12px 12px var(--shadow)); }
+.v2-knock__man img { position: absolute; inset: 0; width: 100%; height: 100%; }
+.v2-knock__shard { visibility: hidden; }
+/* Удар: отшатнулся назад, падает навзничь туда, куда едет строка (влево), пару раз подпрыгивает на полу */
+.v2-knock__man.is-hit { animation: v2-knock-fall 1.25s forwards; }
+@keyframes v2-knock-fall {
+  0% { transform: none; animation-timing-function: cubic-bezier(.2, .8, .4, 1); }
+  14% { transform: translateX(-18px) rotate(-12deg); animation-timing-function: cubic-bezier(.55, 0, .9, .4); }
+  62% { transform: translateX(-26px) rotate(-86deg); animation-timing-function: ease-out; }
+  74% { transform: translateX(-27px) rotate(-76deg); animation-timing-function: ease-in; }
+  84% { transform: translateX(-28px) rotate(-86deg); animation-timing-function: ease-out; }
+  91% { transform: translateX(-28px) rotate(-82deg); animation-timing-function: ease-in; }
+  100% { transform: translateX(-28px) rotate(-86deg); }
+}
+/* Лежит — раскалывается: целая картинка уступает место осколкам, они расходятся, оседают и тают */
+.v2-knock__man.is-broken { filter: none; }
+.v2-knock__man.is-broken .v2-knock__whole { visibility: hidden; }
+.v2-knock__man.is-broken .v2-knock__shard { visibility: visible; animation: v2-knock-crumble 3.2s var(--d) cubic-bezier(.3, .1, .3, 1) forwards; }
+@keyframes v2-knock-crumble {
+  0% { transform: none; opacity: 1; filter: none; }
+  12% { transform: translate(calc(var(--dx) * .25), calc(var(--dy) * .3)) rotate(calc(var(--rot) * .2)); opacity: 1; filter: none; }
+  45% { opacity: .75; filter: blur(.5px) grayscale(.4); }
+  100% { transform: translate(var(--dx), var(--dy)) rotate(var(--rot)) scale(.92); opacity: 0; filter: blur(4px) grayscale(1); }
 }
 .v2-knock__wasted { position: absolute; inset: 0; z-index: 3; display: grid; place-items: center; opacity: 0; pointer-events: none; transform: scale(1.4); transition: opacity .25s, transform .25s; }
 .v2-knock__wasted img { width: clamp(220px, 46vw, 600px); height: auto; filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .35)); }
