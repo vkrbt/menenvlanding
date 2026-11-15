@@ -293,7 +293,8 @@ html:has(.v2) { scroll-behavior: smooth; }
 /* герой с «Должен»: резко вылетает из-за правого края, останавливается справа и потихоньку тащит
    влево до своего места; пауза, коротко уезжает обратно за правый край — и снова. --from: где он останавливается после вылета */
 .v2-hero__art { --from: 40%; }
-@media (max-width: 759px) { .v2-hero__art { --from: 55%; } }
+/* телефон: вылетает сразу так, чтобы из-за правого края было видно «Долж» (Ж кончается на ~73% ширины рисунка, запас на шипы; слева поле 16px) */
+@media (max-width: 759px) { .v2-hero__art { --from: calc(100vw - 16px - 76%); } }
 @keyframes v2-drag {
   0% { translate: 110vw 0; animation-timing-function: cubic-bezier(.15, .8, .3, 1); }
   5% { translate: var(--from) 0; animation-timing-function: linear; }
