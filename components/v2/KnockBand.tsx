@@ -11,7 +11,6 @@ import { useEffect, useRef } from 'react'
  */
 const WORDS = ['Выгорание', 'Одиночество', 'Деньги', 'Тревога', 'Злость', 'Алкоголь', 'Кризис на работе', 'Сложные отношения', 'Нет сил', 'Стыд', 'Бессонница', 'Зависимости']
 
-const START_DELAY = 300 // мс: короткая пауза после появления блока, чтобы увидеть, что герой стоит
 // скорость строки одна и та же всё время (до удара и после); на широком экране быстрее, чтобы до героя не ехать долго
 const speedFor = (w: number) => Math.min(320, Math.max(160, w * 0.3)) // px/с
 
@@ -66,23 +65,16 @@ export default function KnockBand() {
     }
 
     r.style.transform = `translateX(${x}px)`
-    let started = false
-    let delay = 0
     const io = new IntersectionObserver(([e]) => {
       cancelAnimationFrame(raf)
-      clearTimeout(delay)
       last = 0
-      if (!e.isIntersecting) return
-      // первый раз — с паузой, чтобы при скролле успеть увидеть, как он стоит
-      if (started) raf = requestAnimationFrame(tick)
-      else delay = window.setTimeout(() => { started = true; raf = requestAnimationFrame(tick) }, START_DELAY)
+      if (e.isIntersecting) raf = requestAnimationFrame(tick) // без паузы: строка едет сразу, как блок в кадре
     }, { threshold: 0.6 })
     io.observe(el)
     return () => {
       io.disconnect()
       cancelAnimationFrame(raf)
       clearTimeout(timer)
-      clearTimeout(delay)
     }
   }, [])
 
