@@ -16,37 +16,20 @@ const WORDS = ['Выгорание', 'Одиночество', 'Деньги', '
 const speedFor = (w: number) => Math.min(320, Math.max(160, w * 0.3)) // px/с
 
 /**
- * Осколки героя: сетка 3×6 со сдвинутыми узлами — неровные трещины. Каждый осколок — та же картинка с clip-path,
- * вместе они складываются в целого героя. Сдвиги и наклоны в системе картинки (он лежит головой влево:
- * её «вправо» — это вверх на экране, «вниз» — вправо), поэтому оседание — отрицательный dx.
+ * Герой ломается на 4 крупных куска с рваными краями: голова с плечами, две половины корпуса, ноги.
+ * Каждый кусок — та же картинка с clip-path, вместе складываются в целого героя. Сдвиги и наклоны в системе
+ * картинки (он лежит головой влево: её «вправо» — вверх на экране, «вниз» — вправо), поэтому оседание — отрицательный dx.
  */
-const SHARDS = (() => {
-  const xs = [0, 34, 67, 100]
-  const ys = [0, 17, 33, 49, 65, 82, 100]
-  const j = (i: number, k: number, amp: number) => (i === 0 || k === 0 ? 0 : Math.sin(i * 12.9898 + k * 78.233) * amp)
-  const pt = (c: number, r: number) => {
-    const x = c === 0 || c === xs.length - 1 ? xs[c] : xs[c] + j(c, r + 1, 7)
-    const y = r === 0 || r === ys.length - 1 ? ys[r] : ys[r] + j(r, c + 3, 5)
-    return [x, y] as const
-  }
-  const out: { clip: string; dx: number; dy: number; rot: number; delay: number }[] = []
-  for (let r = 0; r < ys.length - 1; r++) {
-    for (let c = 0; c < xs.length - 1; c++) {
-      const q = [pt(c, r), pt(c + 1, r), pt(c + 1, r + 1), pt(c, r + 1)]
-      const cx = q.reduce((a, p) => a + p[0], 0) / 4
-      const n = r * 3 + c
-      const rnd = (k: number) => Math.sin(n * 91.7 + k * 17.3) // -1…1, одинаково при каждой сборке
-      out.push({
-        clip: `polygon(${q.map(([x, y]) => `${x.toFixed(1)}% ${y.toFixed(1)}%`).join(', ')})`,
-        dx: -(cx / 100) * 26 - 4 + rnd(1) * 6, // верхние (по экрану) осколки оседают сильнее
-        dy: rnd(2) * 14, // расползаются вдоль тела
-        rot: rnd(3) * 28,
-        delay: (Math.abs(rnd(4)) * 0.9 + (r / ys.length) * 0.5), // крошится не разом
-      })
-    }
-  }
-  return out
-})()
+const SHARDS: { clip: string; dx: number; dy: number; rot: number; delay: number }[] = [
+  // голова и плечи
+  { clip: 'polygon(0% 0%, 100% 0%, 100% 24%, 78% 27%, 61% 22%, 44% 29%, 27% 25%, 0% 28%)', dx: -8, dy: -16, rot: -14, delay: 0.15 },
+  // корпус, левая половина (по картинке)
+  { clip: 'polygon(0% 28%, 27% 25%, 44% 29%, 52% 41%, 46% 52%, 55% 63%, 0% 61%)', dx: -4, dy: -3, rot: 7, delay: 0.45 },
+  // корпус, правая половина
+  { clip: 'polygon(44% 29%, 61% 22%, 78% 27%, 100% 24%, 100% 60%, 74% 64%, 55% 63%, 46% 52%, 52% 41%)', dx: -16, dy: 5, rot: -9, delay: 0.3 },
+  // ноги
+  { clip: 'polygon(0% 61%, 55% 63%, 74% 64%, 100% 60%, 100% 100%, 0% 100%)', dx: -5, dy: 14, rot: 6, delay: 0.6 },
+]
 
 export default function KnockBand() {
   const box = useRef<HTMLDivElement>(null)

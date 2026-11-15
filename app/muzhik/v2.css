@@ -138,9 +138,12 @@ html:has(.v2) { scroll-behavior: smooth; }
 .v2-stone {
   display: inline-block;
   font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 900; line-height: .95; letter-spacing: -0.02em;
-  /* тёмный гранит со светлой кромкой сверху — читается на белом фоне, остаётся камнем */
-  color: #5d636c;
-  text-shadow: 0 -1px 0 #b4bac2, 1px 1px 0 #43474e, 2px 2px 0 #3b3e44, 3px 3px 0 #33363b, 4px 4px 0 #2c2e33, 5px 5px 0 #25272b, 6px 6px 0 #1f2024, 7px 7px 0 #18191c, 12px 16px 22px rgba(0, 0, 0, .55);
+  /* светлая лицевая грань в тёмном контуре, объём заметно темнее — буквы читаются отдельно от глубины и от фона */
+  color: #b3bac3;
+  text-shadow:
+    -1px 0 0 #1c1e22, 0 -1px 0 #1c1e22, -1px -1px 0 #1c1e22, 1px -1px 0 #1c1e22, -1px 1px 0 #1c1e22,
+    1px 1px 0 #1c1e22, 2px 2px 0 #2a2d32, 3px 3px 0 #2a2d32, 4px 4px 0 #24262a, 5px 5px 0 #24262a, 6px 6px 0 #1e2023, 7px 7px 0 #1e2023,
+    10px 14px 16px rgba(0, 0, 0, .32);
 }
 
 /* .v2-hero__art — движущийся блок. iPhone Safari обрезает его слой по границам блока, поэтому вокруг рисунка
@@ -196,8 +199,9 @@ html:has(.v2) { scroll-behavior: smooth; }
 .v2-conclusion { font-size: 20px; font-weight: 800; margin-bottom: 20px; }
 
 .v2-crush { position: relative; display: flex; flex-direction: column; align-items: center; padding-top: 10px; overflow: hidden; background: radial-gradient(ellipse 60% 55% at 50% 60%, var(--glow), transparent 70%); border-bottom: 4px solid var(--line); }
-.v2-crush__pile { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; margin-bottom: -8%; }
-.v2-crush__stone { font-size: clamp(30px, 5vw, 46px); margin-top: -6px; }
+/* Safari обрезает тени анимированных слоёв по их рамке — стопке и каждому камню поля под тень, вынесенные отрицательным margin */
+.v2-crush__pile { position: relative; z-index: 2; display: flex; flex-direction: column; align-items: center; padding: 24px 40px 40px; margin: -24px -40px calc(-8% - 40px); }
+.v2-crush__stone { font-size: clamp(30px, 5vw, 46px); padding: .12em .3em .4em; margin: calc(-6px - .12em) -.3em -.4em; }
 .v2-crush__stone:nth-child(odd) { transform: rotate(-3deg); }
 .v2-crush__stone:nth-child(even) { transform: rotate(2.5deg); }
 .v2-crush__man { position: relative; z-index: 1; width: min(320px, 80%); height: auto; filter: drop-shadow(0 18px 18px rgba(0, 0, 0, .6)); }
