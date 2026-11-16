@@ -134,16 +134,27 @@ html:has(.v2) { scroll-behavior: smooth; }
 .v2-wall__row--rev { animation-direction: reverse; }
 @keyframes v2-slide { to { transform: translateX(-50%); } }
 
-/* камень: бетонные буквы с объёмом */
+/* камень: сам span — прозрачный текст (держит размер); ::before — объём и тёмный контур, ::after — лицевая грань
+   с фактурой камня (мелкое зерно + пятна + светлее сверху) через background-clip: text. Слоями, потому что тень текста
+   поверх такой заливки браузеры рисуют криво */
 .v2-stone {
-  display: inline-block;
+  position: relative; display: inline-block;
   font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 900; line-height: .95; letter-spacing: -0.02em;
-  /* светлая лицевая грань в тёмном контуре, объём заметно темнее — буквы читаются отдельно от глубины и от фона */
-  color: #b3bac3;
+  color: transparent;
+}
+.v2-stone::before, .v2-stone::after { content: attr(data-t); position: absolute; inset: 0; }
+.v2-stone::before {
+  color: #1c1e22;
   text-shadow:
     -1px 0 0 #1c1e22, 0 -1px 0 #1c1e22, -1px -1px 0 #1c1e22, 1px -1px 0 #1c1e22, -1px 1px 0 #1c1e22,
     1px 1px 0 #1c1e22, 2px 2px 0 #2a2d32, 3px 3px 0 #2a2d32, 4px 4px 0 #24262a, 5px 5px 0 #24262a, 6px 6px 0 #1e2023, 7px 7px 0 #1e2023,
     10px 14px 16px rgba(0, 0, 0, .32);
+}
+.v2-stone::after {
+  color: transparent;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .08 0 0 0 0 .08 0 0 0 0 .09 0 0 0 1.6 -.62'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E"), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='320' height='320'%3E%3Cfilter id='b'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.045' numOctaves='4' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .2 0 0 0 0 .2 0 0 0 0 .22 0 0 0 1.4 -.5'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23b)'/%3E%3C/svg%3E"), linear-gradient(180deg, #d3d8de 0%, #b2b8c0 45%, #8e959e 100%);
+  background-size: 180px 180px, 320px 320px, 100% 100%;
+  -webkit-background-clip: text; background-clip: text;
 }
 
 /* .v2-hero__art — движущийся блок. iPhone Safari обрезает его слой по границам блока, поэтому вокруг рисунка

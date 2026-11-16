@@ -28,7 +28,7 @@ export default function Crushed() {
     <div ref={ref} className={on ? 'v2-crush is-on' : 'v2-crush'} aria-hidden="true">
       <div className="v2-crush__pile">
         {STONES.map((s, i) => (
-          <span key={s} className="v2-stone v2-crush__stone" style={{ ['--i' as string]: i }}>{s}</span>
+          <span key={s} className="v2-stone v2-crush__stone" data-t={s} style={{ ['--i' as string]: i }}>{s}</span>
         ))}
       </div>
       <img className="v2-crush__man" src="/v2/crushed.webp" alt="" width={700} height={1028} loading="lazy" />
