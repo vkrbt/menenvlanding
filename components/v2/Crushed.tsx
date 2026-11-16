@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from 'react'
  * Каменные слова падают на героя, когда блок на 60% в экране; ушёл из экрана — всё возвращается, и так каждый раз.
  * Без JS и при reduced-motion камни просто лежат на месте.
  */
-const STONES = ['Тревога', 'Должен', 'Выгорание', 'Молчи и терпи', 'Ипотека']
+const STONES = ['Тревога', 'Должен', 'Выгорание', 'Будь мужиком', 'Ипотека']
 
 export default function Crushed() {
   const ref = useRef<HTMLDivElement>(null)
