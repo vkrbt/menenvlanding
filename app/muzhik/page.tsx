@@ -24,7 +24,7 @@ const HEAD_FONT = 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800
  * С 14.11.2026 открыт для поиска, адрес /muzhik (бывший /v2, с него редирект в vercel.json), canonical и sitemap — на /muzhik.
  */
 export const metadata: Metadata = {
-  title: { absolute: 'Устал тащить всё на себе? Мужская группа — «Мужская среда»' },
+  title: { absolute: 'Мужская терапевтическая группа онлайн — «Мужская среда»' },
   description: 'Терапевтическая группа для мужиков онлайн: 9 встреч в Zoom, психолог и психиатр. Первый созвон бесплатный.',
   alternates: { canonical: `${SITE_URL}/muzhik` },
 }
