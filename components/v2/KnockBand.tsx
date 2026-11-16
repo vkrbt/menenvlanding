@@ -122,7 +122,7 @@ export default function KnockBand() {
           />
         ))}
       </div>
-      <p ref={wasted} className="v2-knock__wasted"><img src="/v2/wasted.webp" alt="" width={1000} height={166} /></p>
+      <p ref={wasted} className="v2-knock__wasted"><img src="/v2/wasted-sh.webp" alt="" width={1050} height={230} /></p>
     </div>
   )
 }

@@ -4,7 +4,7 @@ import { typo } from '@/lib/typo'
 const HOSTS = [
   {
     name: 'Влад',
-    photo: '/v2/host-vlad.webp',
+    photo: '/v2/host-vlad-sh.webp',
     social: VLAD.url,
     handle: VLAD.handle,
     roles: ['Психолог'],
@@ -13,7 +13,7 @@ const HOSTS = [
   },
   {
     name: 'Женя',
-    photo: '/v2/host-zhenya.webp',
+    photo: '/v2/host-zhenya-sh.webp',
     social: ZHENYA.url,
     handle: ZHENYA.handle,
     roles: ['Психиатр-нарколог'],

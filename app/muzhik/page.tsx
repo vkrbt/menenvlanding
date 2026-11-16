@@ -272,7 +272,7 @@ export default function V2Page() {
 
           <section className="v2-final">
             <div className="v2-wrap">
-              <img className="v2-final__face" src="/v2/thumbs.webp" alt="" width={700} height={882} />
+              <img className="v2-final__face" src="/v2/thumbs-sh.webp" alt="" width={872} height={1112} />
               <h2 className="v2-h2">Хватит тащить в одиночку</h2>
               <p className="v2-lead">Старт {startPhrase()}, {RECRUITMENT_NOTE.toLowerCase()}. Созвон бесплатный.</p>
               <Cta />

@@ -129,7 +129,7 @@ export default function QuizV2() {
   if (!started) {
     return (
       <div className="v2-quiz">
-        <img className="v2-quiz__face" src="/v2/bust.webp" alt="" width={700} height={1114} />
+        <img className="v2-quiz__face" src="/v2/bust-sh.webp" alt="" width={884} height={1360} />
         <div>
           <p className="v2-quiz__lead">Пять вопросов о том, как ты справляешься, когда тяжело. В конце узнаешь, какой ты мужик.</p>
           <button

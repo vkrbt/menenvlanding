@@ -115,7 +115,9 @@ html:has(.v2) { scroll-behavior: smooth; }
 .v2 .hosts, .v2 .program { padding: 72px 0; }
 /* ведущие — нарисованные фигуры без фона: квадратная рамка со свечением, фигура по пояс */
 .v2 .host-card__avatar { aspect-ratio: 1; background: radial-gradient(ellipse 60% 60% at 50% 45%, var(--glow), transparent 70%), var(--bg2); }
-.v2 .host-card__avatar img { width: 86%; margin: 7% auto 0; filter: drop-shadow(0 14px 14px var(--shadow)); }
+/* тени у картинок запечены в *-sh.webp с прозрачными полями (CSS drop-shadow Safari рисует с прямоугольными обрезами);
+   поля вынесены отрицательными margin, чтобы рисунок остался прежнего размера. Ведущие: рисунок 760, поля 38/38/38/63 */
+.v2 .host-card__avatar img { max-width: none; width: calc(86% * 836 / 760); margin: calc(7% - 86% * 38 / 760) auto calc(-86% * 63 / 760); }
 .v2-section--blue { background: transparent; }
 .v2-section--yellow { background: radial-gradient(ellipse 60% 70% at 50% 0%, var(--glow), transparent 70%); }
 .v2-sticker { display: inline-block; font-weight: 600; font-size: 15px; color: var(--muted); }
@@ -142,7 +144,7 @@ html:has(.v2) { scroll-behavior: smooth; }
   font-family: var(--v2-head), 'Manrope', sans-serif; font-weight: 900; line-height: .95; letter-spacing: -0.02em;
   color: transparent;
 }
-.v2-stone::before, .v2-stone::after { content: attr(data-t); position: absolute; inset: 0; }
+.v2-stone::before, .v2-stone::after { content: attr(data-t); position: absolute; inset: 0; padding: inherit; }
 .v2-stone::before {
   color: #1c1e22;
   text-shadow:
@@ -215,7 +217,7 @@ html:has(.v2) { scroll-behavior: smooth; }
 .v2-crush__stone { font-size: clamp(30px, 5vw, 46px); padding: .12em .3em .4em; margin: calc(-6px - .12em) -.3em -.4em; }
 .v2-crush__stone:nth-child(odd) { transform: rotate(-3deg); }
 .v2-crush__stone:nth-child(even) { transform: rotate(2.5deg); }
-.v2-crush__man { position: relative; z-index: 1; width: min(320px, 80%); height: auto; filter: drop-shadow(0 18px 18px rgba(0, 0, 0, .6)); }
+.v2-crush__man { --w: min(320px, 80%); position: relative; z-index: 1; max-width: none; width: calc(var(--w) * 820 / 700); height: auto; margin: calc(var(--w) * -60 / 700) calc(var(--w) * -60 / 700) calc(var(--w) * -100 / 700); } /* рисунок 700, поля 60/60/60/100 */
 
 /* ---------- строка, которая сбивает героя с ног (как блок у Ясно); движение и удар — в KnockBand.tsx ---------- */
 .v2-knock { --fs: clamp(30px, 5vw, 64px); position: relative; height: clamp(240px, 30vw, 380px); overflow: hidden; background: var(--bg2); }
@@ -247,7 +249,7 @@ html:has(.v2) { scroll-behavior: smooth; }
   100% { transform: translate(var(--dx), var(--dy)) rotate(var(--rot)) scale(.92); opacity: 0; filter: blur(4px) grayscale(1); }
 }
 .v2-knock__wasted { position: absolute; inset: 0; z-index: 3; display: grid; place-items: center; opacity: 0; pointer-events: none; transform: scale(1.4); transition: opacity .25s, transform .25s; }
-.v2-knock__wasted img { width: clamp(220px, 46vw, 600px); height: auto; filter: drop-shadow(0 4px 10px rgba(0, 0, 0, .35)); }
+.v2-knock__wasted img { --w: clamp(220px, 46vw, 600px); max-width: none; width: calc(var(--w) * 1050 / 1000); height: auto; margin: calc(var(--w) * -25 / 1000) calc(var(--w) * -25 / 1000) calc(var(--w) * -32 / 1000); } /* рисунок 1000, поля 25/25/25/32 */
 .v2-knock__wasted.is-on { opacity: 1; transform: none; }
 
 /* ---------- факты ---------- */
@@ -283,7 +285,7 @@ html:has(.v2) { scroll-behavior: smooth; }
 .v2-quiz { display: grid; gap: 22px; align-items: center; padding: 26px; background: var(--card); border: 2px solid var(--line); border-bottom-width: 4px; border-radius: 12px; box-shadow: 0 16px 40px var(--shadow); }
 .v2-quiz--q { display: block; }
 .v2-quiz--result { grid-template-columns: 1fr; }
-.v2-quiz__face { width: 160px; height: auto; justify-self: center; filter: drop-shadow(0 14px 14px rgba(0, 0, 0, .6)); }
+.v2-quiz__face { max-width: none; width: calc(160px * 884 / 700); height: auto; justify-self: center; margin: calc(160px * -92 / 700) calc(160px * -92 / 700) calc(160px * -154 / 700); } /* рисунок 700, поля 92/92/92/154 */
 .v2-quiz__lead { font-size: 18px; color: var(--muted); margin-bottom: 18px; }
 .v2-quiz__title { font-size: 26px; margin-bottom: 10px; }
 .v2-quiz--result .v2-quiz__title { font-size: clamp(32px, 4.6vw, 46px); }
@@ -313,9 +315,9 @@ html:has(.v2) { scroll-behavior: smooth; }
 /* ---------- вопросы ---------- */
 
 /* ---------- финал ---------- */
-.v2-final { padding: 72px 0; text-align: center; background: radial-gradient(ellipse 50% 60% at 50% 30%, var(--final-glow), transparent 70%); }
+.v2-final { padding: 72px 0; text-align: center; background: radial-gradient(ellipse 50% 45% at 50% 42%, var(--final-glow), transparent 70%); }
 .v2-final .v2-lead { margin-inline: auto; }
-.v2-final__face { width: 220px; height: auto; margin: 0 auto 14px; filter: drop-shadow(0 18px 18px rgba(0, 0, 0, .7)); }
+.v2-final__face { max-width: none; width: calc(220px * 872 / 700); height: auto; margin: calc(220px * -86 / 700) auto calc(14px - 220px * 144 / 700); } /* рисунок 700, поля 86/86/86/144 */
 .v2-foot { padding: 28px 0 40px; font-size: 13px; color: var(--foot); border-top: 1px solid var(--foot-line); }
 .v2-foot p + p { margin-top: 8px; }
 
