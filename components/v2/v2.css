@@ -7,7 +7,7 @@
   --bg: #070709; --text: #fff; --text-muted: #c8c8d8; --text-dim: #888898;
   --pane: #0f0f18; --ink: #4a4a5e; --bg-2: #0f0f18; --bg-3: #161622;
   --badge-text: #7b8fff; --badge-bg: rgba(0, 13, 195, .15); --badge-border: rgba(0, 13, 195, .4);
-  --v2-head: 'Inter Tight';
+  --v2-head: var(--font-v2-head);
   --bg2: #0f0f18;
   --card: #0f0f18;           /* --pane главной */
   --line: #4a4a5e;           /* --ink главной: обводка карточек */
@@ -170,7 +170,7 @@ html:has(.v2) { scroll-behavior: smooth; }
 .v2-spike {
   position: absolute; translate: -50% -50%; font-size: 1.9cqi;
   padding: .3em .75em .25em; white-space: nowrap;
-  font-family: Oswald, 'Manrope', sans-serif; font-weight: 400; line-height: 1; text-transform: uppercase; letter-spacing: .07em; color: #2a160a;
+  font-family: var(--font-v2-sign), 'Manrope', sans-serif; font-weight: 400; line-height: 1; text-transform: uppercase; letter-spacing: .07em; color: #2a160a;
   background: repeating-linear-gradient(90deg, rgba(60, 30, 10, .12) 0 1px, transparent 1px 6px), repeating-linear-gradient(0deg, rgba(255, 230, 190, .08) 0 2px, transparent 2px 5px), linear-gradient(180deg, #c08a55, #8d5b30);
   border: 1px solid #4a2a12; border-radius: 3px; text-shadow: 0 1px 0 rgba(255, 220, 170, .35);
   box-shadow: inset 0 1px 0 rgba(255, 235, 200, .35), inset 0 -2px 0 rgba(0, 0, 0, .25), 0 4px 8px rgba(0, 0, 0, .55);

@@ -1,3 +1,4 @@
+import { Inter_Tight, Oswald } from 'next/font/google'
 import Crushed from '@/components/v2/Crushed'
 import HostsV2 from '@/components/v2/HostsV2'
 import KnockBand from '@/components/v2/KnockBand'
@@ -15,8 +16,13 @@ import { FORMS_URL, GROUP_MEETINGS, MEETING_TIME, MEETING_WEEKDAY, PRICE_BLOCK, 
 import { SignIcon } from '@/components/v2/SignIcon'
 import './v2.css'
 
-/** Заголовки v2: Inter Tight — жирный и компактный; Oswald — надписи на деревянных табличках */
-const HEAD_FONT = 'https://fonts.googleapis.com/css2?family=Inter+Tight:wght@800;900&family=Oswald:wght@400&display=swap'
+/**
+ * Заголовки: Inter Tight — жирный и компактный; Oswald — надписи на деревянных табличках.
+ * Через next/font, а не ссылкой на Google Fonts: файлы отдаются с нашего домена с preload, а запасной
+ * шрифт подогнан по метрикам — при подмене текст не меняет размеров (было CLS 0.13 на десктопе, 18.11.2026)
+ */
+const interTight = Inter_Tight({ subsets: ['latin', 'cyrillic'], weight: ['800', '900'], variable: '--font-v2-head', display: 'swap' })
+const oswald = Oswald({ subsets: ['latin', 'cyrillic'], weight: '400', variable: '--font-v2-sign', display: 'swap' })
 
 /**
  * Лендинг «Устал тащить всё на себе?»: оффер на самого человека, шуточный стиль, тест прямо на странице.
@@ -108,8 +114,7 @@ function Cta({ children = 'Занять место в группе', red = true 
 export default function MuzhikLanding() {
   return (
     <Typo>
-      <div className="v2">
-        <link rel="stylesheet" href={HEAD_FONT} precedence="default" />
+      <div className={`v2 ${interTight.variable} ${oswald.variable}`}>
         <header className="v2-top">
           <a href="/" className="v2-top__logo"><LogoSvg /></a>
           <nav className="v2-top__nav">
