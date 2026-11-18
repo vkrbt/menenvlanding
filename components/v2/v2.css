@@ -113,11 +113,9 @@ html:has(.v2) { scroll-behavior: smooth; }
 .v2-lead { font-size: 18px; color: var(--muted); margin-bottom: 28px; max-width: 640px; }
 .v2-section { padding: 72px 0; }
 .v2 .hosts, .v2 .program { padding: 72px 0; }
-/* ведущие — нарисованные фигуры без фона: квадратная рамка со свечением, фигура по пояс */
-.v2 .host-card__avatar { aspect-ratio: 1; background: radial-gradient(ellipse 60% 60% at 50% 45%, var(--glow), transparent 70%), var(--bg2); }
-/* тени у картинок запечены в *-sh.webp с прозрачными полями (CSS drop-shadow Safari рисует с прямоугольными обрезами);
-   поля вынесены отрицательными margin, чтобы рисунок остался прежнего размера. Ведущие: рисунок 760, поля 38/38/38/63 */
-.v2 .host-card__avatar img { max-width: none; width: calc(86% * 836 / 760); margin: calc(7% - 86% * 38 / 760) auto calc(-86% * 63 / 760); }
+/* ведущие — настоящие квадратные фото, как на прежней главной (вернули 18.11.2026) */
+.v2 .host-card__avatar { aspect-ratio: 1; }
+.v2 .host-card__avatar img { width: 100%; height: 100%; object-fit: cover; }
 .v2-section--blue { background: transparent; }
 .v2-section--yellow { background: radial-gradient(ellipse 60% 70% at 50% 0%, var(--glow), transparent 70%); }
 .v2-sticker { display: inline-block; font-weight: 600; font-size: 15px; color: var(--muted); }
