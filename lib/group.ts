@@ -1,6 +1,4 @@
-import { GROUP_START, GROUP_START_APPROX } from './site'
-
-const TWO_WEEKS_MS = 14 * 24 * 60 * 60 * 1000
+import { GROUP_START_APPROX, MEETING_DATES } from './site'
 
 const DAY_FORMAT = new Intl.DateTimeFormat('ru-RU', {
   day: 'numeric',
@@ -9,21 +7,20 @@ const DAY_FORMAT = new Intl.DateTimeFormat('ru-RU', {
 })
 
 /**
- * Дата встречи по номеру, с нуля. Пока старт не назначен — null.
- * Шаг ровно 14 суток в UTC: при переводе часов сдвигается час, но не день,
- * а на странице выводится только день
+ * Дата встречи по номеру, с нуля — из списка MEETING_DATES (шаг не ровный: на праздники
+ * перерыв бывает длиннее). Пока дат нет или такой встречи в списке нет — null
  */
 export function meetingDate(index: number): Date | null {
-  if (!GROUP_START) return null
-  return new Date(new Date(GROUP_START).getTime() + index * TWO_WEEKS_MS)
+  const d = MEETING_DATES[index]
+  return d ? new Date(d) : null
 }
 
-/** «18 ноября» — по варшавскому календарю */
+/** «5 декабря» — по варшавскому календарю */
 export function formatDay(date: Date): string {
   return DAY_FORMAT.format(date)
 }
 
-/** Хвост к слову «Старт»: «18 ноября», пока даты нет — «в ноябре 2026» */
+/** Хвост к слову «Старт»: «5 декабря», пока даты нет — GROUP_START_APPROX */
 export function startPhrase(): string {
   const start = meetingDate(0)
   return start ? formatDay(start) : GROUP_START_APPROX

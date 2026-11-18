@@ -5,6 +5,7 @@ import {
   GROUP_MEETINGS,
   GROUP_SEATS,
   MEETING_TIME,
+  MEETING_WEEKDAY,
   PRICE_FROM,
   PRICE_PROGRAM,
   RECRUITMENT_NOTE,
@@ -16,7 +17,7 @@ import TypoLines from '@/components/TypoLines'
 import Typo from '@/components/Typo'
 
 const INCLUDES = [
-  `${GROUP_MEETINGS} встреч по 3 часа в Zoom, раз в две недели по средам в ${MEETING_TIME}`,
+  `${GROUP_MEETINGS} встреч по 3 часа в Zoom, раз в две недели ${MEETING_WEEKDAY} в ${MEETING_TIME}`,
   'Программа из восьми тем и итоговая встреча',
   `Постоянный состав, до ${GROUP_SEATS} человек`,
   `Два ведущих: ${VLAD.profession} и ${ZHENYA.profession}`,

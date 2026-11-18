@@ -19,8 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     // Без хвостового слеша — так же, как canonical на страницах (trailingSlash: false)
     { url: SITE_URL, lastModified: newest, changeFrequency: 'weekly', priority: 1.0 },
-    // Второй лендинг «Устал тащить всё на себе?» — открыт для поиска с 14.11.2026
-    { url: `${SITE_URL}/muzhik`, lastModified: newest, changeFrequency: 'weekly', priority: 0.8 },
     { url: `${SITE_URL}/book`, lastModified: newest, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${SITE_URL}${BLOG_URL}`, lastModified: newest, changeFrequency: 'weekly', priority: 0.8 },
     // Самотесты: вход по симптомным запросам, хаб чуть выше самих тестов

@@ -115,7 +115,12 @@
   "redirects": [
     {
       "source": "/v2",
-      "destination": "/muzhik",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/muzhik",
+      "destination": "/",
       "permanent": true
     },
     {

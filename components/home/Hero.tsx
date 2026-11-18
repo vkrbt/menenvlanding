@@ -1,12 +1,12 @@
 import TypoLines from '@/components/TypoLines'
 import { startPhrase } from '@/lib/group'
-import { FORMS_URL, GROUP_MEETINGS, GROUP_PITCH, GROUP_SEATS, MEETING_TIME, PRICE_FROM, RECRUITMENT_NOTE } from '@/lib/site'
+import { FORMS_URL, GROUP_MEETINGS, GROUP_PITCH, GROUP_SEATS, MEETING_TIME, MEETING_WEEKDAY, PRICE_FROM, RECRUITMENT_NOTE } from '@/lib/site'
 import { typo } from '@/lib/typo'
 
 export default function Hero() {
   const facts = [
     `${GROUP_MEETINGS} встреч по 3 часа`,
-    'По средам раз в 2 недели',
+    `${MEETING_WEEKDAY[0].toUpperCase()}${MEETING_WEEKDAY.slice(1)} раз в 2 недели`,
     MEETING_TIME,
     `До ${GROUP_SEATS} человек`,
     `От ${PRICE_FROM} за встречу`,
