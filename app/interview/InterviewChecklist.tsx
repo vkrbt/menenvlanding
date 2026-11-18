@@ -12,17 +12,16 @@ const NAME_KEY = 'interview-checklist-name'
 /** Неразрывные пробелы из MEETING_TIME в сообщении не нужны: мессенджер переносит сам */
 const TIME = MEETING_TIME.replace(/\u00A0/g, ' ')
 const PRICES = `€${PRICE_PROGRAM} за всю программу, €${PRICE_BLOCK} за блок из ${BLOCK_SIZE} встреч или €${PRICE_SINGLE} за встречу`
-const RECRUITMENT_ENDS = '15 ноября'
 const SITE = SITE_URL.replace('https://', '')
 
 const afterCallMessage = (name: string) =>
   `${name}, спасибо за разговор! Коротко: старт в субботу, ${startPhrase()}, в ${TIME}, дальше раз в две недели. ` +
   `Место за тобой после первой оплаты: ${PRICES}. Оплатить можно в боте: ${BOT_URL}. ` +
-  `Всё про группу — на ${SITE}. Набор закрывается ${RECRUITMENT_ENDS}. Если остались вопросы, пиши.`
+  `Всё про группу — на ${SITE}. Если остались вопросы, пиши.`
 
 const waitlistMessage = (name: string) =>
-  `Привет, ${name}! Набор в «Мужскую среду» закрывается в воскресенье, ${RECRUITMENT_ENDS}, первая встреча ${startPhrase()}. ` +
-  'Место ещё есть, если хочешь. Если решил не сейчас, это нормально, позову в следующую группу.'
+  `Привет, ${name}! Первая встреча «Мужской среды» — ${startPhrase()}, место ещё есть, если хочешь. ` +
+  'Если решил не сейчас, это нормально, позову в следующую группу.'
 
 type Step = {
   title: string
